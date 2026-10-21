@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "project": "Lang",
+  "bug_ids": [1, 3, 4],
+  "work_root": ".work/defects4j",
+  "results_root": "results/milestone1",
+  "timeouts_seconds": {
+    "checkout": 900,
+    "compile": 600,
+    "test": 600,
+    "export": 120
+  }
+}

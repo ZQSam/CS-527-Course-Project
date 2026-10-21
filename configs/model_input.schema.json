@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person A to B model input, version 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_kind", "bug_id", "project", "bug_number", "status", "provenance", "candidate_limit", "candidate_count", "candidates", "failing_tests", "warnings"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_kind": {"const": "model_input"},
+    "status": {"const": "complete"},
+    "bug_id": {"type": "string", "minLength": 1},
+    "project": {"enum": ["Lang", "Math", "Chart", "Time"]},
+    "bug_number": {"$ref": "#/$defs/positive_integer"},
+    "candidate_limit": {"$ref": "#/$defs/positive_integer"},
+    "candidate_count": {"$ref": "#/$defs/positive_integer"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "candidates": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/candidate"}},
+    "failing_tests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/failing_test"}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "positive_integer": {"type": "integer", "minimum": 1},
+    "text": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["benchmark", "version", "checkout_head", "original_buggy_revision", "coverage_run_id", "baseline_run_id", "defects4j_release", "defects4j_commit", "java_version", "gzoltar_version", "tree_sitter_version", "tree_sitter_java_version"],
+      "properties": {
+        "benchmark": {"const": "Defects4J"},
+        "version": {"type": "string", "pattern": "^[1-9][0-9]*b$"},
+        "checkout_head": {"$ref": "#/$defs/commit"},
+        "original_buggy_revision": {"$ref": "#/$defs/commit"},
+        "defects4j_commit": {"$ref": "#/$defs/commit"},
+        "coverage_run_id": {"$ref": "#/$defs/text"},
+        "baseline_run_id": {"$ref": "#/$defs/text"},
+        "defects4j_release": {"$ref": "#/$defs/text"},
+        "java_version": {"$ref": "#/$defs/text"},
+        "gzoltar_version": {"$ref": "#/$defs/text"},
+        "tree_sitter_version": {"$ref": "#/$defs/text"},
+        "tree_sitter_java_version": {"$ref": "#/$defs/text"}
+      }
+    },
+    "candidate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["method_id", "source_path", "qualified_class", "method_name", "parameter_types", "start_line", "end_line", "source", "source_sha256", "method_sha256", "ochiai_score", "sbfl_rank", "rank_min", "rank_max", "tie_size"],
+      "properties": {
+        "method_id": {"$ref": "#/$defs/text"},
+        "source_path": {"$ref": "#/$defs/text"},
+        "qualified_class": {"$ref": "#/$defs/text"},
+        "method_name": {"$ref": "#/$defs/text"},
+        "parameter_types": {"type": "array", "items": {"type": "string"}},
+        "start_line": {"$ref": "#/$defs/positive_integer"},
+        "end_line": {"$ref": "#/$defs/positive_integer"},
+        "source": {"$ref": "#/$defs/text"},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "method_sha256": {"$ref": "#/$defs/sha256"},
+        "ochiai_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "sbfl_rank": {"$ref": "#/$defs/positive_integer"},
+        "rank_min": {"$ref": "#/$defs/positive_integer"},
+        "rank_max": {"$ref": "#/$defs/positive_integer"},
+        "tie_size": {"$ref": "#/$defs/positive_integer"}
+      }
+    },
+    "failing_test": {
+      "type": "object", "additionalProperties": false,
+      "required": ["test_id", "executed_class", "declaring_class", "source_method_id", "source_path", "start_line", "end_line", "source", "source_file_text", "source_encoding", "source_sha256", "method_sha256", "source_resolution", "error_message", "stack_trace", "raw_output"],
+      "properties": {
+        "test_id": {"$ref": "#/$defs/text"},
+        "executed_class": {"$ref": "#/$defs/text"},
+        "declaring_class": {"$ref": "#/$defs/text"},
+        "source_method_id": {"$ref": "#/$defs/text"},
+        "source_path": {"$ref": "#/$defs/text"},
+        "start_line": {"$ref": "#/$defs/positive_integer"},
+        "end_line": {"$ref": "#/$defs/positive_integer"},
+        "source": {"$ref": "#/$defs/text"},
+        "source_file_text": {"$ref": "#/$defs/text"},
+        "source_encoding": {"enum": ["utf-8", "latin-1"]},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "method_sha256": {"$ref": "#/$defs/sha256"},
+        "source_resolution": {"enum": ["declared", "stack_trace"]},
+        "error_message": {"$ref": "#/$defs/text"},
+        "stack_trace": {"$ref": "#/$defs/text"},
+        "raw_output": {"$ref": "#/$defs/text"}
+      }
+    }
+  }
+}

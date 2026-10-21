@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "profile": "B",
+  "run_id": "20261021T042616955482Z",
+  "bugs": [
+    "Lang-1",
+    "Lang-3",
+    "Lang-4"
+  ],
+  "files": [
+    {
+      "path": "Lang-1.json",
+      "sha256": "6187a5ed2d1ce13adbe1651dc7a292ed7edfeee92a3b14befba3514f45f05044",
+      "size_bytes": 116217
+    },
+    {
+      "path": "Lang-3.json",
+      "sha256": "72ab2187148d7a2459955eea287bd0f48d02b055c7f45b7ea97c11f2706be083",
+      "size_bytes": 109976
+    },
+    {
+      "path": "Lang-4.json",
+      "sha256": "8aaa7645804552966ccb3a96486d7d22279682ab50a276dcf9a76d5a37e02967",
+      "size_bytes": 39209
+    },
+    {
+      "path": "README.md",
+      "sha256": "f1e623dc355b5cea4a9de5ca177116a7e51bb3ba73715fbe399165af96100f76",
+      "size_bytes": 2783
+    },
+    {
+      "path": "index.json",
+      "sha256": "66e3f895fe5c2dd4c6ea6e4ffb11ad83f3d9fb065156838b3ab09ea6e2f792f7",
+      "size_bytes": 697
+    },
+    {
+      "path": "model_input.schema.json",
+      "sha256": "ab63e12a75f81a60339152d4cc9ebba29782279e360caaafe9f57416c734534c",
+      "size_bytes": 4815
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+test_compressed_raw_matrix_has_identical_rows_and_fingerprints (test_coverage.CoverageValidationTests.test_compressed_raw_matrix_has_identical_rows_and_fingerprints) ... ok
+test_duplicate_completions_and_suite_ids_are_rejected (test_coverage.CoverageValidationTests.test_duplicate_completions_and_suite_ids_are_rejected) ... ok
+test_extra_or_missing_instrumented_failures_are_rejected (test_coverage.CoverageValidationTests.test_extra_or_missing_instrumented_failures_are_rejected) ... ok
+test_ignored_tests_are_preserved_as_skipped (test_coverage.CoverageValidationTests.test_ignored_tests_are_preserved_as_skipped) ... ok
+test_matrix_dimensions_and_outcome_labels_are_validated (test_coverage.CoverageValidationTests.test_matrix_dimensions_and_outcome_labels_are_validated) ... ok
+test_unquoted_java_signature_commas_do_not_split_spectrum_ids (test_coverage.CoverageValidationTests.test_unquoted_java_signature_commas_do_not_split_spectrum_ids) ... ok
+test_zero_hit_row_needs_instrumented_completion_evidence (test_coverage.CoverageValidationTests.test_zero_hit_row_needs_instrumented_completion_evidence) ... ok
+test_checkout_never_overwrites_an_existing_directory (test_d4j.ExecutionTests.test_checkout_never_overwrites_an_existing_directory) ... ok
+test_failed_launch_has_durable_evidence (test_d4j.ExecutionTests.test_failed_launch_has_durable_evidence) ... ok
+test_invalid_test_arguments_leave_failure_evidence_untouched (test_d4j.ExecutionTests.test_invalid_test_arguments_leave_failure_evidence_untouched) ... ok
+test_parsed_failure_count_must_match_summary (test_d4j.ExecutionTests.test_parsed_failure_count_must_match_summary) ... ok
+test_stale_failure_file_does_not_corrupt_a_passing_run (test_d4j.ExecutionTests.test_stale_failure_file_does_not_corrupt_a_passing_run) ... ok
+test_stale_failure_file_does_not_count_as_fresh_evidence (test_d4j.ExecutionTests.test_stale_failure_file_does_not_count_as_fresh_evidence) ... ok
+test_timeout_records_failure_instead_of_hanging (test_d4j.ExecutionTests.test_timeout_records_failure_instead_of_hanging) ... ok
+test_corrupt_and_duplicate_blocks_are_rejected (test_d4j.FailureParsingTests.test_corrupt_and_duplicate_blocks_are_rejected) ... ok
+test_empty_is_no_failure (test_d4j.FailureParsingTests.test_empty_is_no_failure) ... ok
+test_missing_or_ambiguous_summary_is_rejected (test_d4j.FailureParsingTests.test_missing_or_ambiguous_summary_is_rejected) ... ok
+test_multiple_tests_preserve_causes_and_stack_lines (test_d4j.FailureParsingTests.test_multiple_tests_preserve_causes_and_stack_lines) ... ok
+test_archive_roundtrip_and_nested_manifest_inventory (test_handoff.ArchiveTests.test_archive_roundtrip_and_nested_manifest_inventory) ... ok
+test_changed_or_unlisted_file_is_rejected (test_handoff.ArchiveTests.test_changed_or_unlisted_file_is_rejected) ... ok
+test_extra_zip_entry_is_rejected (test_handoff.ArchiveTests.test_extra_zip_entry_is_rejected) ... ok
+test_nonportable_paths_are_rejected (test_handoff.ArchiveTests.test_nonportable_paths_are_rejected) ... ok
+test_complete_input_preserves_raw_test_bytes_and_error_evidence (test_handoff.ModelInputTests.test_complete_input_preserves_raw_test_bytes_and_error_evidence) ... ok
+test_fixed_version_and_changed_method_identity_are_rejected (test_handoff.ModelInputTests.test_fixed_version_and_changed_method_identity_are_rejected) ... ok
+test_inherited_failure_uses_explicit_declaring_frame (test_handoff.ModelInputTests.test_inherited_failure_uses_explicit_declaring_frame) ... ok
+test_missing_fields_and_invalid_rank_do_not_pass (test_handoff.ModelInputTests.test_missing_fields_and_invalid_rank_do_not_pass) ... ok
+test_oracle_labels_cannot_enter_candidate_or_root (test_handoff.ModelInputTests.test_oracle_labels_cannot_enter_candidate_or_root) ... ok
+test_source_tampering_fails_even_with_other_fields_intact (test_handoff.ModelInputTests.test_source_tampering_fails_even_with_other_fields_intact) ... ok
+test_unknown_or_ambiguous_inherited_source_is_rejected (test_handoff.ModelInputTests.test_unknown_or_ambiguous_inherited_source_is_rejected) ... ok
+test_constructor_inner_and_anonymous_methods_have_distinct_ids (test_java.JavaIdentityTests.test_constructor_inner_and_anonymous_methods_have_distinct_ids) ... ok
+test_generic_bounds_disambiguate_overloads (test_java.JavaIdentityTests.test_generic_bounds_disambiguate_overloads) ... ok
+test_gzoltar_nested_constructor_name_maps_to_declared_constructor (test_java.JavaIdentityTests.test_gzoltar_nested_constructor_name_maps_to_declared_constructor) ... ok
+test_interface_abstract_methods_are_not_executable_candidates (test_java.JavaIdentityTests.test_interface_abstract_methods_are_not_executable_candidates) ... ok
+test_same_line_overloads_use_parameter_signature (test_java.JavaIdentityTests.test_same_line_overloads_use_parameter_signature) ... ok
+test_syntax_errors_fail_instead_of_guessing_boundaries (test_java.JavaIdentityTests.test_syntax_errors_fail_instead_of_guessing_boundaries) ... ok
+test_dstar_zero_and_infinite_scores_are_explicit (test_sbfl.FormulaTests.test_dstar_zero_and_infinite_scores_are_explicit) ... ok
+test_physical_line_or_then_method_max_not_method_hit_counts (test_sbfl.FormulaTests.test_physical_line_or_then_method_max_not_method_hit_counts) ... ok
+test_required_ochiai_fixture (test_sbfl.FormulaTests.test_required_ochiai_fixture) ... ok
+test_ties_remain_explicit_and_order_is_deterministic (test_sbfl.FormulaTests.test_ties_remain_explicit_and_order_is_deterministic) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.198s
+
+OK

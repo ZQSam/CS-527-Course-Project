@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "profile": "B",
+  "bugs": [
+    {
+      "bug_id": "Lang-1",
+      "path": "Lang-1.json",
+      "sha256": "6187a5ed2d1ce13adbe1651dc7a292ed7edfeee92a3b14befba3514f45f05044",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-3",
+      "path": "Lang-3.json",
+      "sha256": "72ab2187148d7a2459955eea287bd0f48d02b055c7f45b7ea97c11f2706be083",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-4",
+      "path": "Lang-4.json",
+      "sha256": "8aaa7645804552966ccb3a96486d7d22279682ab50a276dcf9a76d5a37e02967",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    }
+  ]
+}

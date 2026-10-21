@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "release_id": "person-a-lang-v1",
+  "source_handoff_run_id": "20261021T042616955482Z",
+  "coverage_run_id": "20261021T035617823403Z",
+  "bugs": [
+    "Lang-1",
+    "Lang-3",
+    "Lang-4"
+  ],
+  "B": {
+    "directory": "data/sample/B",
+    "manifest_sha256": "7232f03039527fa76f8e2066f6c9c22ba04fc81141f110a4ed79f45c3cee39ab"
+  },
+  "C": {
+    "archive": "data/sample/person-a-lang-C.zip",
+    "sha256": "dc9eafb1e2f8e4b5ef3f618a849d8f205b4864bd08aae25e0dbee2512858808e",
+    "size_bytes": 6417544
+  }
+}

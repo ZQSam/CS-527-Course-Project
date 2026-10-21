@@ -1,0 +1,172 @@
+{
+  "status": "passed",
+  "B": {
+    "profile": "B",
+    "status": "passed",
+    "bugs": [
+      "Lang-1",
+      "Lang-3",
+      "Lang-4"
+    ]
+  },
+  "C": {
+    "profile": "C",
+    "status": "passed",
+    "bugs": [
+      {
+        "bug_id": "Lang-1",
+        "passing_tests": 2290,
+        "failing_tests": 1,
+        "ranked_methods": 2403,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-3",
+        "passing_tests": 2285,
+        "failing_tests": 1,
+        "ranked_methods": 2396,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-4",
+        "passing_tests": 2284,
+        "failing_tests": 1,
+        "ranked_methods": 2393,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      }
+    ]
+  },
+  "bc_model_inputs_byte_identical": true,
+  "clean_staged_tree": {
+    "status": "passed",
+    "method": "git archive of staged files into a fresh temporary directory",
+    "unpublished_files_required": false,
+    "records": {
+      "B_no_third_party_dependencies": {
+        "profile": "B",
+        "status": "passed",
+        "bugs": [
+          "Lang-1",
+          "Lang-3",
+          "Lang-4"
+        ],
+        "directory": "data/sample/B",
+        "release_id": "person-a-lang-v1"
+      },
+      "C_first_extract_no_third_party_dependencies": {
+        "profile": "C",
+        "status": "passed",
+        "bugs": [
+          {
+            "bug_id": "Lang-1",
+            "passing_tests": 2290,
+            "failing_tests": 1,
+            "ranked_methods": 2403,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          },
+          {
+            "bug_id": "Lang-3",
+            "passing_tests": 2285,
+            "failing_tests": 1,
+            "ranked_methods": 2396,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          },
+          {
+            "bug_id": "Lang-4",
+            "passing_tests": 2284,
+            "failing_tests": 1,
+            "ranked_methods": 2393,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          }
+        ],
+        "directory": ".work/sample/C",
+        "release_id": "person-a-lang-v1"
+      },
+      "C_repeat_no_overwrite": {
+        "profile": "C",
+        "status": "passed",
+        "bugs": [
+          {
+            "bug_id": "Lang-1",
+            "passing_tests": 2290,
+            "failing_tests": 1,
+            "ranked_methods": 2403,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          },
+          {
+            "bug_id": "Lang-3",
+            "passing_tests": 2285,
+            "failing_tests": 1,
+            "ranked_methods": 2396,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          },
+          {
+            "bug_id": "Lang-4",
+            "passing_tests": 2284,
+            "failing_tests": 1,
+            "ranked_methods": 2393,
+            "candidate_count": 20,
+            "source_reparse": "not_requested"
+          }
+        ],
+        "directory": ".work/sample/C",
+        "release_id": "person-a-lang-v1"
+      },
+      "C_source_reparse": {
+        "profile": "C",
+        "status": "passed",
+        "bugs": [
+          {
+            "bug_id": "Lang-1",
+            "passing_tests": 2290,
+            "failing_tests": 1,
+            "ranked_methods": 2403,
+            "candidate_count": 20,
+            "source_reparse": "matched"
+          },
+          {
+            "bug_id": "Lang-3",
+            "passing_tests": 2285,
+            "failing_tests": 1,
+            "ranked_methods": 2396,
+            "candidate_count": 20,
+            "source_reparse": "matched"
+          },
+          {
+            "bug_id": "Lang-4",
+            "passing_tests": 2284,
+            "failing_tests": 1,
+            "ranked_methods": 2393,
+            "candidate_count": 20,
+            "source_reparse": "matched"
+          }
+        ],
+        "directory": ".work/sample/C",
+        "release_id": "person-a-lang-v1"
+      },
+      "example_README.md": [
+        "Lang-1 20 1",
+        "Lang-3 20 1",
+        "Lang-4 20 1"
+      ],
+      "example_docs/person_a_handoff_c.md": [
+        "Lang-1 src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "Lang-3 src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "Lang-4 src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
+      ],
+      "offline_unit_tests": {
+        "status": "passed",
+        "tests": 39
+      },
+      "modified_dataset_refused_and_preserved": true
+    }
+  }
+}

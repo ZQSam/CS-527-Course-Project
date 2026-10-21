@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "project": "Lang",
+  "bug_ids": [1, 3, 4],
+  "baseline_summary": "results/milestone1/summary.json",
+  "results_root": "results/milestone2",
+  "coverage_root": "data/coverage",
+  "ranking_root": "data/sbfl",
+  "coverage_timeout_seconds": 900,
+  "top_k": 20,
+  "dstar_exponent": 2
+}

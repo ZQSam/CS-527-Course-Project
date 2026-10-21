@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "coverage_summary": "results/milestone2/summary.json",
+  "candidate_limit": 20,
+  "bundle_root": "data/handoff",
+  "archive_root": "output/handoff",
+  "results_root": "results/handoff",
+  "model_input_schema": "configs/model_input.schema.json"
+}
