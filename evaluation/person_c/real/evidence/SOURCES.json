@@ -1,0 +1,34 @@
+{
+  "retrieved_date": "2026-10-21",
+  "sources": [
+    {
+      "local_file": "real/evidence/patches/Lang-1.src.patch",
+      "url": "https://github.com/rjust/defects4j/blob/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/1.src.patch",
+      "sha256": "a0c88e6d5f969a94b565e001533d893caca20d8bf45c3a4c0f101389370c7319"
+    },
+    {
+      "local_file": "real/evidence/patches/Lang-3.src.patch",
+      "url": "https://github.com/rjust/defects4j/blob/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/3.src.patch",
+      "sha256": "1f0bfc886bc37656c2af1bf1cf5b7fc0dda0839d18bca83056e40c69e057143d"
+    },
+    {
+      "local_file": "real/evidence/patches/Lang-4.src.patch",
+      "url": "https://github.com/rjust/defects4j/blob/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/4.src.patch",
+      "sha256": "4e1338f4167ba29c8204b114df2af719c45d68efdbb5c0169bb1732c1deee1bc"
+    },
+    {
+      "local_file": "real/evidence/active-bugs.csv",
+      "url": "https://github.com/rjust/defects4j/blob/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/active-bugs.csv",
+      "sha256": "f8687e8569b00725b5468efc8ab15c57e413f511c9be15202c224208c7d0eb9d"
+    },
+    {
+      "local_file": "vendor/person_a_java.py",
+      "url": "https://github.com/ZQSam/CS-527-Course-Project/blob/99e7b385023f5d601f8cca01125c52ca02cba674/fl/java.py",
+      "sha256": "cdb49410edfa318917b7e143efa0634482bc7bb76f5e5b413099c4cc4a237722"
+    }
+  ],
+  "archive": {
+    "url": "https://raw.githubusercontent.com/ZQSam/CS-527-Course-Project/99e7b385023f5d601f8cca01125c52ca02cba674/data/sample/person-a-lang-C.zip",
+    "sha256": "dc9eafb1e2f8e4b5ef3f618a849d8f205b4864bd08aae25e0dbee2512858808e"
+  }
+}

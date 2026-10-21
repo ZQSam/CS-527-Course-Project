@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-10-21",
+  "review_type": "patch/source validation completed; teammate review pending",
+  "label_policy": "All patch-touched existing production methods and explicit constructors; first-hit metrics. Field-only/new-method-only cases require separate exclusion review. Mixed field/method changes remain included with limitations recorded.",
+  "records": [
+    {
+      "bug_id": "Lang-1",
+      "patch_sha256": "a0c88e6d5f969a94b565e001533d893caca20d8bf45c3a4c0f101389370c7319",
+      "buggy_sha256": "14ebbdea51d9028d433e3605258f12ca2a2b658c0c3316017bc3031e4ac490d2",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "rationale": "已逐块核对：十六进制前导零与长度边界检查均位于 createNumber(String)，错误版第 450–614 行。补丁的纯新增代码按方法内部插入点映射。",
+      "outside_method_policy": null
+    },
+    {
+      "bug_id": "Lang-3",
+      "patch_sha256": "1f0bfc886bc37656c2af1bf1cf5b7fc0dda0839d18bca83056e40c69e057143d",
+      "buggy_sha256": "49d8579b8af8e086cf5c3e892a01e0d93148a948a49c06fa233417a44ec31d0f",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "rationale": "已逐块核对：修复加入 Float/Double 精度条件及对应闭括号，四个插入点均位于已有 createNumber(String)，错误版第 450–610 行；不是新增方法。",
+      "outside_method_policy": null
+    },
+    {
+      "bug_id": "Lang-4",
+      "patch_sha256": "4e1338f4167ba29c8204b114df2af719c45d68efdbb5c0169bb1732c1deee1bc",
+      "buggy_sha256": "2031256bc8e3a8e497a6a6166181ab33f1985a778bcca0911f91fd5978464465",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
+      ],
+      "outside_method_changes": [
+        {
+          "buggy_line": 31,
+          "insertion_gap": null
+        }
+      ],
+      "included": true,
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "rationale": "已逐块核对：第 46、51 行位于已有构造方法，第 77 行位于 translate；第 31 行是类字段类型修改。保留两个被修改的已有方法，不把字段强行映射为方法。",
+      "outside_method_policy": "保留混合修改案例；方法级标签只代表被补丁修改的已有方法/显式构造方法，类字段修改另行记录，不能声称标签覆盖全部根因。"
+    }
+  ]
+}

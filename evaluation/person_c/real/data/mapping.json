@@ -1,0 +1,279 @@
+[
+  {
+    "source_path": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java",
+    "patch_direction": "fixed_to_buggy",
+    "buggy_git_blob": "1e6ccdc0263658381c2636e973b5567db28e5f45",
+    "reconstructed_fixed_git_blob": "70b8d646642c5cff41adeaa5d3e73eea6c44f20b",
+    "buggy_sha256": "14ebbdea51d9028d433e3605258f12ca2a2b658c0c3316017bc3031e4ac490d2",
+    "patch_sha256": "a0c88e6d5f969a94b565e001533d893caca20d8bf45c3a4c0f101389370c7319",
+    "hunks": [
+      {
+        "fixed_start": 464,
+        "fixed_count": 20,
+        "buggy_start": 464,
+        "buggy_count": 11
+      }
+    ],
+    "changes": [
+      {
+        "buggy_lines": [],
+        "insertion_gap": 466,
+        "fixed_lines": [
+          "            char firstSigDigit = 0; // strip leading zeroes",
+          "            for(int i = pfxLen; i < str.length(); i++) {",
+          "                firstSigDigit = str.charAt(i);",
+          "                if (firstSigDigit == '0') { // count leading zeroes",
+          "                    pfxLen++;",
+          "                } else {",
+          "                    break;",
+          "                }",
+          "            }"
+        ],
+        "buggy_text": [],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      },
+      {
+        "buggy_lines": [
+          468
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "            if (hexDigits > 16 || (hexDigits == 16 && firstSigDigit > '7')) { // too many for Long"
+        ],
+        "buggy_text": [
+          "            if (hexDigits > 16) { // too many for Long"
+        ],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      },
+      {
+        "buggy_lines": [
+          471
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "            if (hexDigits > 8 || (hexDigits == 8 && firstSigDigit > '7')) { // too many for an int"
+        ],
+        "buggy_text": [
+          "            if (hexDigits > 8) { // too many for an int"
+        ],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      }
+    ],
+    "mapped_method_ids": [
+      "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+    ],
+    "outside_method_changes": [],
+    "bug_id": "Lang-1",
+    "original_buggy_revision": "2c454a4ce3fe771098746879b166ede2284b94f4",
+    "original_fixed_revision": "687b2e62b7c6e81cd9d5c872b7fa9cc8fd3f1509",
+    "checkout_head": "1fd2290c2660ece96eebf021c7f85e66fb4a5e0d",
+    "method_boundaries": [
+      {
+        "method_id": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "start_line": 450,
+        "end_line": 614,
+        "method_sha256": "d5c71d6c6a9aac97609c02ddb6df7d9ca7b25b75c78b6e37656d5dc8ae8ff621"
+      }
+    ]
+  },
+  {
+    "source_path": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java",
+    "patch_direction": "fixed_to_buggy",
+    "buggy_git_blob": "c5840215619e7a6930e32d26c9e0e1da9101646f",
+    "reconstructed_fixed_git_blob": "1e6ccdc0263658381c2636e973b5567db28e5f45",
+    "buggy_sha256": "49d8579b8af8e086cf5c3e892a01e0d93148a948a49c06fa233417a44ec31d0f",
+    "patch_sha256": "1f0bfc886bc37656c2af1bf1cf5b7fc0dda0839d18bca83056e40c69e057143d",
+    "hunks": [
+      {
+        "fixed_start": 590,
+        "fixed_count": 22,
+        "buggy_start": 590,
+        "buggy_count": 18
+      }
+    ],
+    "changes": [
+      {
+        "buggy_lines": [],
+        "insertion_gap": 592,
+        "fixed_lines": [
+          "            if(numDecimals <= 7){// If number has 7 or fewer digits past the decimal point then make it a float"
+        ],
+        "buggy_text": [],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      },
+      {
+        "buggy_lines": [],
+        "insertion_gap": 596,
+        "fixed_lines": [
+          "            }"
+        ],
+        "buggy_text": [],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      },
+      {
+        "buggy_lines": [],
+        "insertion_gap": 600,
+        "fixed_lines": [
+          "            if(numDecimals <= 16){// If number has between 8 and 16 digits past the decimal point then make it a double"
+        ],
+        "buggy_text": [],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      },
+      {
+        "buggy_lines": [],
+        "insertion_gap": 604,
+        "fixed_lines": [
+          "            }"
+        ],
+        "buggy_text": [],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+        ]
+      }
+    ],
+    "mapped_method_ids": [
+      "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+    ],
+    "outside_method_changes": [],
+    "bug_id": "Lang-3",
+    "original_buggy_revision": "1f001d06a2bde5ee4e3204ab38c4b1db8e95db0b",
+    "original_fixed_revision": "2c9c8753165dc7ce5dd1d5a6d741b445b33302c2",
+    "checkout_head": "d772f87150b96e152dfaa8ff97a58352ac069b5b",
+    "method_boundaries": [
+      {
+        "method_id": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "start_line": 450,
+        "end_line": 610,
+        "method_sha256": "4f54c7545050988e315de28463299ead80c65bba447a5ef021a8d569519b355c"
+      }
+    ]
+  },
+  {
+    "source_path": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java",
+    "patch_direction": "fixed_to_buggy",
+    "buggy_git_blob": "8ed51bc3c1d720b8041598fdd75004593637057d",
+    "reconstructed_fixed_git_blob": "9cf45f8f41205ac4fcb180bd41486f661f556ce3",
+    "buggy_sha256": "2031256bc8e3a8e497a6a6166181ab33f1985a778bcca0911f91fd5978464465",
+    "patch_sha256": "4e1338f4167ba29c8204b114df2af719c45d68efdbb5c0169bb1732c1deee1bc",
+    "hunks": [
+      {
+        "fixed_start": 28,
+        "fixed_count": 7,
+        "buggy_start": 28,
+        "buggy_count": 7
+      },
+      {
+        "fixed_start": 43,
+        "fixed_count": 12,
+        "buggy_start": 43,
+        "buggy_count": 12
+      },
+      {
+        "fixed_start": 74,
+        "fixed_count": 7,
+        "buggy_start": 74,
+        "buggy_count": 7
+      }
+    ],
+    "changes": [
+      {
+        "buggy_lines": [
+          31
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "    private final HashMap<String, CharSequence> lookupMap;"
+        ],
+        "buggy_text": [
+          "    private final HashMap<CharSequence, CharSequence> lookupMap;"
+        ],
+        "method_ids": []
+      },
+      {
+        "buggy_lines": [
+          46
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "        lookupMap = new HashMap<String, CharSequence>();"
+        ],
+        "buggy_text": [
+          "        lookupMap = new HashMap<CharSequence, CharSequence>();"
+        ],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+        ]
+      },
+      {
+        "buggy_lines": [
+          51
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "                this.lookupMap.put(seq[0].toString(), seq[1]);"
+        ],
+        "buggy_text": [
+          "                this.lookupMap.put(seq[0], seq[1]);"
+        ],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+        ]
+      },
+      {
+        "buggy_lines": [
+          77
+        ],
+        "insertion_gap": null,
+        "fixed_lines": [
+          "            final CharSequence result = lookupMap.get(subSeq.toString());"
+        ],
+        "buggy_text": [
+          "            final CharSequence result = lookupMap.get(subSeq);"
+        ],
+        "method_ids": [
+          "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
+        ]
+      }
+    ],
+    "mapped_method_ids": [
+      "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+      "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
+    ],
+    "outside_method_changes": [
+      {
+        "buggy_line": 31,
+        "insertion_gap": null
+      }
+    ],
+    "bug_id": "Lang-4",
+    "original_buggy_revision": "4ddbd99c5805781bd3c2287ab7920fecc23dab53",
+    "original_fixed_revision": "fb47b96ab635d7cc6e9edefdddc46f1baf63b117",
+    "checkout_head": "6bc34a908258703d8e1b3739e80c67b93f947807",
+    "method_boundaries": [
+      {
+        "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+        "start_line": 45,
+        "end_line": 63,
+        "method_sha256": "a594fd69b071e9c24a303b0bb10c332575e18a91c0862f3a7631e96aaac2f460"
+      },
+      {
+        "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+        "start_line": 68,
+        "end_line": 84,
+        "method_sha256": "69dc1f4893345259e54054ed6d980222eaf5bba30cf9c83967473f9d1318fb5b"
+      }
+    ]
+  }
+]

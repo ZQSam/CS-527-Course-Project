@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "REPLACE_WITH_TEAM_VERSION",
+    "revision": "REPLACE_WITH_DEFECTS4J_COMMIT"
+  },
+  "records": []
+}

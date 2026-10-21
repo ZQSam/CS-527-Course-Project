@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "label_definition": "patch-touched existing production methods and explicit constructors",
+  "records": [
+    {
+      "bug_id": "Lang-1",
+      "status": "reviewed",
+      "faulty_methods": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+      ],
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
+    },
+    {
+      "bug_id": "Lang-3",
+      "status": "reviewed",
+      "faulty_methods": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+      ],
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
+    },
+    {
+      "bug_id": "Lang-4",
+      "status": "reviewed",
+      "faulty_methods": [
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
+      ],
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending",
+      "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+Validation update: 2026-10-21, Person C real-data integration.
+
+Observed checks:
+- 25 Person C unittest cases passed (16 existing evaluator cases + 9 patch/data integration cases).
+- Existing repository suite: 32 passed, 7 WSL/Linux-only cases skipped on macOS; no failures.
+- Reimport using the pinned archive and shared parser matched checked-in data byte-for-byte.
+- Baseline and synthetic reports regenerated with relative input paths after repository integration.
+- Original Person A ZIP SHA-256 matched dc9eafb1e2f8e4b5ef3f618a849d8f205b4864bd08aae25e0dbee2512858808e.
+- All 764 manifest file hashes and sizes matched; archive contains 765 entries including manifest.json.
+- Shared parser (tree-sitter 0.25.2 / tree-sitter-java 0.23.5) independently reparsed 303 indexed production files and matched 7,192 method records.
+- Exact buggy blob and reconstructed fixed blob matched each of the three official patches; original buggy revisions matched pinned Defects4J active-bugs.csv.
+- Patch mapping retained pure insertions, constructor edits and the unmapped Lang-4 field change.
+- Full ranking membership/order/tie metadata validated. A's B candidate lists matched Ochiai top20.
+- Real CLI runs scored 3 dev bugs x 2 configurations for MRR@20 and full MRR.
+- Ochiai and DStar: Top-1/3/5=3/3, MRR@20=1.0, full MRR=1.0, shared-candidate hit rate=3/3.
+- All earliest correct hits are singleton rank 1; optimistic/pessimistic tie handling does not change these results.
+- Tests confirmed no held-out eval bugs exist in this dev manifest and missing B predictions keep N=3.
+
+Commands:
+  python3 -m unittest discover -s tests -v
+  python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels.json --predictions real/data/ochiai.json real/data/dstar.json --split dev --output-dir real/results/mrr20
+  python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels.json --predictions real/data/ochiai.json real/data/dstar.json --split dev --rank-cutoff 0 --output-dir real/results/full
+
+Limits:
+- Labels are patch-validated; independent teammate/human review remains pending.
+- No Java tests rerun or coverage recollected in C's environment.
+- No LLM calls, real B outputs or measured model costs; B template is explicitly not_run.
+- No course-server submission is implied by this package.
+- demo/ and demo_result/ remain synthetic fixtures, separate from real/.

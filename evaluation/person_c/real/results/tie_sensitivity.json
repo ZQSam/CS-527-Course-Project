@@ -1,0 +1,50 @@
+[
+  {
+    "configuration": "ochiai",
+    "bug_id": "Lang-1",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  },
+  {
+    "configuration": "ochiai",
+    "bug_id": "Lang-3",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  },
+  {
+    "configuration": "ochiai",
+    "bug_id": "Lang-4",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  },
+  {
+    "configuration": "dstar",
+    "bug_id": "Lang-1",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  },
+  {
+    "configuration": "dstar",
+    "bug_id": "Lang-3",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  },
+  {
+    "configuration": "dstar",
+    "bug_id": "Lang-4",
+    "first_hit_display_rank": 1,
+    "optimistic_first_hit_rank": 1,
+    "pessimistic_first_hit_rank": 1,
+    "note": "All earliest-hit tie groups are singleton in this cohort; tie sensitivity does not change these metrics."
+  }
+]

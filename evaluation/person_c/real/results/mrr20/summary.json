@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "split": "dev",
+  "purpose": "integration/development pilot; not held-out evaluation",
+  "label_definition": "patch-touched existing production methods and explicit constructors",
+  "label_reviews": [
+    {
+      "bug_id": "Lang-1",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending"
+    },
+    {
+      "bug_id": "Lang-3",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending"
+    },
+    {
+      "bug_id": "Lang-4",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
+      "human_review_status": "pending"
+    }
+  ],
+  "rank_cutoff": 20,
+  "mrr_metric": "MRR@20",
+  "failure_policy": "zero-credit; no implicit fallback or dropped cases",
+  "included_bug_ids": [
+    "Lang-1",
+    "Lang-3",
+    "Lang-4"
+  ],
+  "excluded_bugs": [],
+  "results": [
+    {
+      "configuration_id": "ochiai",
+      "ranking_scope": "full",
+      "configuration": {
+        "code_revision": "99e7b385023f5d601f8cca01125c52ca02cba674",
+        "tie_policy": "score descending, method_id ascending",
+        "method_score": "maximum physical-line score",
+        "dstar_exponent": null,
+        "candidate_set_origin": "A Ochiai top20, shared with B"
+      },
+      "ignored_registered_records": 0,
+      "summary": {
+        "n": 3,
+        "status_counts": {
+          "ok": 3
+        },
+        "top1_hits": 3,
+        "top1_accuracy": 1.0,
+        "top3_hits": 3,
+        "top3_accuracy": 1.0,
+        "top5_hits": 3,
+        "top5_accuracy": 1.0,
+        "mean_reciprocal_rank": 1.0,
+        "candidate_sets_known": 3,
+        "candidate_sets_total": 3,
+        "candidate_set_sizes": {
+          "20": 3
+        },
+        "candidate_hits_known": 3,
+        "candidate_hit_rate_observed": 1.0,
+        "candidate_recall": 1.0,
+        "usage": {
+          "input_tokens": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "output_tokens": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "cost_usd": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "latency_seconds": {
+            "known_records": 0,
+            "total_records": 3,
+            "observed_total": null,
+            "total_if_complete": null,
+            "mean_if_complete": null
+          }
+        }
+      },
+      "per_bug": [
+        {
+          "bug_id": "Lang-1",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-3",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-4",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        }
+      ]
+    },
+    {
+      "configuration_id": "dstar",
+      "ranking_scope": "full",
+      "configuration": {
+        "code_revision": "99e7b385023f5d601f8cca01125c52ca02cba674",
+        "tie_policy": "score descending, method_id ascending",
+        "method_score": "maximum physical-line score",
+        "dstar_exponent": 2,
+        "candidate_set_origin": "A Ochiai top20, shared with B"
+      },
+      "ignored_registered_records": 0,
+      "summary": {
+        "n": 3,
+        "status_counts": {
+          "ok": 3
+        },
+        "top1_hits": 3,
+        "top1_accuracy": 1.0,
+        "top3_hits": 3,
+        "top3_accuracy": 1.0,
+        "top5_hits": 3,
+        "top5_accuracy": 1.0,
+        "mean_reciprocal_rank": 1.0,
+        "candidate_sets_known": 3,
+        "candidate_sets_total": 3,
+        "candidate_set_sizes": {
+          "20": 3
+        },
+        "candidate_hits_known": 3,
+        "candidate_hit_rate_observed": 1.0,
+        "candidate_recall": 1.0,
+        "usage": {
+          "input_tokens": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "output_tokens": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "cost_usd": {
+            "known_records": 3,
+            "total_records": 3,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "latency_seconds": {
+            "known_records": 0,
+            "total_records": 3,
+            "observed_total": null,
+            "total_if_complete": null,
+            "mean_if_complete": null
+          }
+        }
+      },
+      "per_bug": [
+        {
+          "bug_id": "Lang-1",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-3",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-4",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        }
+      ]
+    }
+  ],
+  "paired_against_first_configuration": [
+    {
+      "baseline": "ochiai",
+      "configuration_id": "dstar",
+      "top1_improved_bug_ids": [],
+      "top1_regressed_bug_ids": [],
+      "top1_net_change": 0,
+      "candidate_set_mismatch_bug_ids": [],
+      "candidate_set_unknown_bug_ids": [],
+      "candidate_sets_verified_equal": true
+    }
+  ],
+  "input_files": [
+    {
+      "path": "real/data/manifest.json",
+      "sha256": "dc0f80599d0fc234ac9d846ef3ccf5c9184b7c6c74afbf64237a026e3406d725"
+    },
+    {
+      "path": "real/data/labels.json",
+      "sha256": "d6ed17221df1572a55e7b003736c068184df90d34996f2de812e23f6dadbb1f4"
+    },
+    {
+      "path": "real/data/ochiai.json",
+      "sha256": "d07daf1591a605523a980a13699e7658e212bdecf1f6ad4534df791373325c16"
+    },
+    {
+      "path": "real/data/dstar.json",
+      "sha256": "c5e64aae3a7cdc9d8d8fb2abcb62af7769064e05a30c09816edb7d21241c4c62"
+    }
+  ]
+}
