@@ -12,18 +12,27 @@
   "label_reviews": [
     {
       "bug_id": "Lang-1",
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending"
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-3",
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending"
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-4",
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending"
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     }
   ],
   "rank_cutoff": 0,
@@ -294,7 +303,7 @@
     },
     {
       "path": "real/data/labels.json",
-      "sha256": "d6ed17221df1572a55e7b003736c068184df90d34996f2de812e23f6dadbb1f4"
+      "sha256": "d6bf29f0ad8aaccdbf339b9efc201106ae2ece636380c2c934402b3dd78ac9d3"
     },
     {
       "path": "real/data/ochiai.json",

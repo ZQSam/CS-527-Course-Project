@@ -14,8 +14,11 @@
       "faulty_methods": [
         "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
       ],
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation",
       "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
     },
     {
@@ -24,8 +27,11 @@
       "faulty_methods": [
         "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
       ],
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation",
       "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
     },
     {
@@ -35,8 +41,11 @@
         "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
         "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)"
       ],
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation",
       "source_note": "See mapping.json and review_decisions.json; pinned Defects4J 01f13c69425fb8a0db290d12b1d48da1641bf6a9; both patch-side blob IDs and buggy source/method hashes verified."
     }
   ]

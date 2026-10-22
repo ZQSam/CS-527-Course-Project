@@ -2,7 +2,7 @@
 
 本目录包含独立评估器、A 数据适配器、补丁标签证据、真实 baseline 和 B 输出接口。模型输入继续使用仓库的 `data/sample/B/`；本目录中的补丁与标签仅用于评估。
 
-已接入 Lang-1、Lang-3、Lang-4，均登记为 dev 联调样本。Ochiai/DStar 的 Top-1 为 3/3，MRR@20 和完整 MRR 均为 1.0。当前样本已达到 baseline 上限，不能据此声称 LLM 有提升。组员对标签的人工复核仍为 pending，B 模型输出尚未接入。
+已接入 Lang-1、Lang-3、Lang-4，均登记为 dev 联调样本。Ochiai/DStar 的 Top-1 为 3/3，MRR@20 和完整 MRR 均为 1.0。当前样本已达到 baseline 上限，不能据此声称 LLM 有提升。Person C（Alina Wu）已于 2026-10-22 确认标签复核完成，B 模型输出尚未接入。
 
 ## 复现
 

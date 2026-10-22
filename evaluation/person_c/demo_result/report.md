@@ -4,7 +4,7 @@ Synthetic fixtures only; do not use these numbers in your midterm results.
 
 Purpose: not specified
 Label definition: see labels input
-Review provenance (including pending human review, if any): see summary.json label_reviews.
+Review status, reviewer and confirmation date: see summary.json label_reviews.
 
 Dataset: `{'name': 'SyntheticFixture', 'version': '1', 'revision': 'fixture-v1'}`
 Split: `eval`

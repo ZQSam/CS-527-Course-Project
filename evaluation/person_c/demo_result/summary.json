@@ -13,32 +13,50 @@
     {
       "bug_id": "DEMO-001",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     },
     {
       "bug_id": "DEMO-002",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     },
     {
       "bug_id": "DEMO-003",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     },
     {
       "bug_id": "DEMO-004",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     },
     {
       "bug_id": "DEMO-005",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     },
     {
       "bug_id": "DEMO-006",
       "validation_method": null,
-      "human_review_status": null
+      "human_review_status": null,
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
     }
   ],
   "rank_cutoff": 20,

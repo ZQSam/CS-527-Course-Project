@@ -83,7 +83,7 @@ PYTHONPATH="$PWD/.deps" python3 scripts/prepare_sample.py --profile C --check-so
 | Lang-3 | 2285 | 1 | 2396 | 20 |
 | Lang-4 | 2284 | 1 | 2393 | 20 |
 
-这是一批中期流程样本。C 已完成三例补丁映射、方法级排除检查和 baseline 评估：Ochiai/DStar 的 Top-1 均为 3/3，MRR@20 与完整 MRR 均为 1.0。三例均登记为 dev，组员标签复核仍待完成，LLM 重排由 B 接续。详见 [C 的真实结果与局限](evaluation/person_c/real/README.md)。
+这是一批中期流程样本。C 已完成三例补丁映射、方法级排除检查和 baseline 评估：Ochiai/DStar 的 Top-1 均为 3/3，MRR@20 与完整 MRR 均为 1.0。三例均登记为 dev，Person C（Alina Wu）已于 2026-10-22 确认标签复核完成，LLM 重排由 B 接续。详见 [C 的真实结果与局限](evaluation/person_c/real/README.md)。
 同分方法的字母顺序只是稳定显示顺序，请保留 `rank_min` / `rank_max` / `tie_size`。
 
 ## 共同约定与验证

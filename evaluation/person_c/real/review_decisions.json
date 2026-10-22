@@ -1,6 +1,6 @@
 {
   "review_date": "2026-10-21",
-  "review_type": "patch/source validation completed; teammate review pending",
+  "review_type": "patch/source validation completed; Person C review confirmed on 2026-10-22",
   "label_policy": "All patch-touched existing production methods and explicit constructors; first-hit metrics. Field-only/new-method-only cases require separate exclusion review. Mixed field/method changes remain included with limitations recorded.",
   "records": [
     {
@@ -12,10 +12,13 @@
       ],
       "outside_method_changes": [],
       "included": true,
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
       "rationale": "已逐块核对：十六进制前导零与长度边界检查均位于 createNumber(String)，错误版第 450–614 行。补丁的纯新增代码按方法内部插入点映射。",
-      "outside_method_policy": null
+      "outside_method_policy": null,
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-3",
@@ -26,10 +29,13 @@
       ],
       "outside_method_changes": [],
       "included": true,
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
       "rationale": "已逐块核对：修复加入 Float/Double 精度条件及对应闭括号，四个插入点均位于已有 createNumber(String)，错误版第 450–610 行；不是新增方法。",
-      "outside_method_policy": null
+      "outside_method_policy": null,
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-4",
@@ -46,10 +52,13 @@
         }
       ],
       "included": true,
-      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification; teammate review pending",
-      "human_review_status": "pending",
+      "validation_method": "patch/source inspection plus exact blob, hash and shared-parser verification",
+      "human_review_status": "completed",
       "rationale": "已逐块核对：第 46、51 行位于已有构造方法，第 77 行位于 translate；第 31 行是类字段类型修改。保留两个被修改的已有方法，不把字段强行映射为方法。",
-      "outside_method_policy": "保留混合修改案例；方法级标签只代表被补丁修改的已有方法/显式构造方法，类字段修改另行记录，不能声称标签覆盖全部根因。"
+      "outside_method_policy": "保留混合修改案例；方法级标签只代表被补丁修改的已有方法/显式构造方法，类字段修改另行记录，不能声称标签覆盖全部根因。",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-22",
+      "human_review_basis": "reviewer_confirmation"
     }
   ]
 }

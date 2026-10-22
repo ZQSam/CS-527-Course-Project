@@ -41,6 +41,19 @@ def write_json(path, data):
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
+def human_review_metadata(decision):
+    decision = decision or {}
+    status = decision.get("human_review_status", "pending")
+    check(status in {"pending", "completed"}, "Unknown human review status")
+    if status == "completed":
+        check(bool(decision.get("human_reviewer")) and bool(decision.get("human_review_date")),
+              "Completed human review requires reviewer and date")
+    return {"human_review_status": status,
+            "human_reviewer": decision.get("human_reviewer"),
+            "human_review_date": decision.get("human_review_date"),
+            "human_review_basis": decision.get("human_review_basis")}
+
+
 def verify_patch(patch, buggy):
     """Verify '+' side against buggy bytes, reconstruct '-' side, check blob IDs.
 
@@ -236,7 +249,7 @@ def build(archive, evidence_dir, reviews=None, reparse=False):
             labels.append({"bug_id": bug, "status": "reviewed" if decision else "pending",
                            "faulty_methods": mapping["mapped_method_ids"],
                            "validation_method": decision["validation_method"] if decision else None,
-                           "human_review_status": "pending",
+                           **human_review_metadata(decision),
                            "source_note": f"See mapping.json and review_decisions.json; pinned Defects4J {D4J_COMMIT}; "
                                           "both patch-side blob IDs and buggy source/method hashes verified."})
             ranks = {metric: read(p)["methods"] for metric, p in entry["rankings"].items()}

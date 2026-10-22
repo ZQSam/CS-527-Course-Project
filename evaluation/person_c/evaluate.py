@@ -223,7 +223,8 @@ def evaluate(manifest, labels, prediction_docs, split="eval", cutoff=20, demo=Fa
             "purpose": manifest.get("purpose"),
             "label_definition": labels.get("label_definition"),
             "label_reviews": [{"bug_id": bug, "validation_method": truth_records[bug].get("validation_method"),
-                               "human_review_status": truth_records[bug].get("human_review_status")}
+                               **{key: truth_records[bug].get(key) for key in
+                                  ("human_review_status", "human_reviewer", "human_review_date", "human_review_basis")}}
                               for bug in selected],
             "rank_cutoff": cutoff, "mrr_metric": f"MRR@{cutoff}" if cutoff else "MRR",
             "failure_policy": "zero-credit; no implicit fallback or dropped cases",
@@ -243,7 +244,7 @@ def render_report(report):
              else "Results apply only to the registered included bugs in this split.", "",
              f"Purpose: {report.get('purpose') or 'not specified'}",
              f"Label definition: {report.get('label_definition') or 'see labels input'}",
-             "Review provenance (including pending human review, if any): see summary.json label_reviews.", "",
+             "Review status, reviewer and confirmation date: see summary.json label_reviews.", "",
              f"Dataset: `{report['dataset']}`", f"Split: `{report['split']}`",
              f"N: {len(report['included_bug_ids'])}",
              f"Metric: {report['mrr_metric']}; rank cutoff: {report['rank_cutoff'] or 'full'}.",

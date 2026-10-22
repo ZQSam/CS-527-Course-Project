@@ -4,7 +4,7 @@ Results apply only to the registered included bugs in this split.
 
 Purpose: integration/development pilot; not held-out evaluation
 Label definition: patch-touched existing production methods and explicit constructors
-Review provenance (including pending human review, if any): see summary.json label_reviews.
+Review status, reviewer and confirmation date: see summary.json label_reviews.
 
 Dataset: `{'name': 'Defects4J', 'version': 'v2.0.0', 'revision': '01f13c69425fb8a0db290d12b1d48da1641bf6a9'}`
 Split: `dev`

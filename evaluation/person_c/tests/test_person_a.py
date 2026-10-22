@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 from evaluate import InputError, evaluate
-from import_person_a import map_changes, verify_patch, verify_ranking
+from import_person_a import human_review_metadata, map_changes, verify_patch, verify_ranking
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -83,7 +83,14 @@ class PersonATests(unittest.TestCase):
                 self.assertEqual(result["summary"]["top1_hits"], 3)
                 self.assertEqual(result["summary"]["mean_reciprocal_rank"], 1.0)
                 self.assertEqual(result["summary"]["candidate_recall"], 1.0)
-            self.assertTrue(all(r["human_review_status"] == "pending" for r in report["label_reviews"]))
+            self.assertTrue(all(r["human_review_status"] == "completed" for r in report["label_reviews"]))
+            self.assertTrue(all(r["human_reviewer"] == "Alina Wu (Person C)" for r in report["label_reviews"]))
+
+    def test_review_confirmation_is_not_inferred_for_future_labels(self):
+        self.assertEqual(human_review_metadata(None)["human_review_status"], "pending")
+        self.assertEqual(human_review_metadata({})["human_review_status"], "pending")
+        with self.assertRaisesRegex(ValueError, "reviewer and date"):
+            human_review_metadata({"human_review_status": "completed"})
 
     def test_pending_B_records_keep_denominator(self):
         baseline = load("ochiai.json")

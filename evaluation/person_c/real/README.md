@@ -20,7 +20,7 @@
 | Lang-3 | `NumberUtils#createNumber(String)`，错误版 450–610 行 | 1 | 修复纯增加方法内语句，按插入点映射 |
 | Lang-4 | `LookupTranslator#<init>(CharSequence[][])`，45–63 行；`translate(CharSequence,int,Writer)`，68–84 行 | 1（构造方法为 2） | 第 31 行字段类型修改单独记录 |
 
-完整 ID（包含源文件路径、全限定类名、参数类型）在 [labels.json](data/labels.json)，逐块证据在 [mapping.json](data/mapping.json)，审阅理由在 [review_decisions.json](review_decisions.json)。标签已逐块核对补丁与源码，并通过自动校验；**尚未经过组员人工复核**。`status: reviewed` 表示这次 补丁映射核查，另有 `human_review_status: pending` 明确区分。
+完整 ID（包含源文件路径、全限定类名、参数类型）在 [labels.json](data/labels.json)，逐块证据在 [mapping.json](data/mapping.json)，审阅理由在 [review_decisions.json](review_decisions.json)。标签已逐块核对补丁与源码，并通过自动校验；**Person C（Alina Wu）已于 2026-10-22 确认复核完成**。`status: reviewed` 表示补丁映射核查完成，`human_review_status: completed` 及 reviewer/date/basis 字段记录本次复核确认。
 
 ## 核查依据
 
@@ -75,6 +75,6 @@ PYTHONPATH=.deps python3 import_person_a.py --archive /absolute/path/person-a-la
 1. B 先用当前三例完成一次重排输出，检查 method ID、候选集合、状态与用量；C 的 [B 输出模板](../handoff_B/README.md) 已准备。
 2. C 接到真实 B 输出后直接跑同一套标签和清单，报告持平/退步及成本，不预设会提升。
 3. A 扩充样本时，先固定 bug 范围和技术筛选规则，保留采集失败记录；不能只挑 Ochiai 排名较差的案例作为主评估集。
-4. 后续正式 eval 单独冻结；当前三例保留为 dev。至少请组员复核 Lang-4 的混合修改标签规则。
+4. 后续正式 eval 单独冻结；当前三例保留为 dev。Lang-4 的混合修改标签规则已随本次 Person C 复核确认。
 
 可用于中期汇报：我们完成了三例真实 Defects4J 数据的 baseline 与标签评估对接，发现小样本 baseline 已饱和，因此下一阶段扩大预先确定的样本范围并接入 LLM 对照。当前不能宣称 LLM 有效或完整端到端模型实验已完成。

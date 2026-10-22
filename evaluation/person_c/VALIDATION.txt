@@ -1,7 +1,7 @@
 Validation update: 2026-10-21, Person C real-data integration.
 
 Observed checks:
-- 25 Person C unittest cases passed (16 existing evaluator cases + 9 patch/data integration cases).
+- 26 Person C unittest cases passed (16 existing evaluator cases + 10 patch/data integration cases).
 - Existing repository suite: 32 passed, 7 WSL/Linux-only cases skipped on macOS; no failures.
 - Reimport using the pinned archive and shared parser matched checked-in data byte-for-byte.
 - Baseline and synthetic reports regenerated with relative input paths after repository integration.
@@ -22,7 +22,7 @@ Commands:
   python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels.json --predictions real/data/ochiai.json real/data/dstar.json --split dev --rank-cutoff 0 --output-dir real/results/full
 
 Limits:
-- Labels are patch-validated; independent teammate/human review remains pending.
+- Labels are patch-validated; Person C (Alina Wu) confirmed review completion on 2026-10-22. The record is based on reviewer confirmation, not an independent second review.
 - No Java tests rerun or coverage recollected in C's environment.
 - No LLM calls, real B outputs or measured model costs; B template is explicitly not_run.
 - No course-server submission is implied by this package.
