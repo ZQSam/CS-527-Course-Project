@@ -1,0 +1,163 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_run_summary",
+ "run_id": "haiku-v1-s5",
+ "provider": "anthropic",
+ "model_key": "haiku",
+ "model": "claude-haiku-5-5",
+ "num_samples": 5,
+ "dry_run": false,
+ "input_dir": "data/sample/B",
+ "prompt_version": "v1",
+ "transport": "messages",
+ "batch_ids": [],
+ "bugs": [
+  {
+   "bug_id": "Lang-1",
+   "status": "complete",
+   "shown": 3,
+   "dropped": 17,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 1.0,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "zero_score_omitted": 1
+   },
+   "evidence": {
+    "reasons": 15,
+    "grounded": 1,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 14,
+    "cites_stack_line": 1,
+    "grounded_rate": 0.0667,
+    "citation_rate": 0.0667
+   },
+   "calls": 5,
+   "cache_hits": 5,
+   "input_tokens": 30970,
+   "output_tokens": 1908,
+   "cost_usd": 0.00405,
+   "paid_usd_this_run": 0.0,
+   "latency_s": 12.138,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-3",
+   "status": "complete",
+   "shown": 4,
+   "dropped": 16,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 1.0,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "zero_score_omitted": 1
+   },
+   "evidence": {
+    "reasons": 15,
+    "grounded": 2,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 13,
+    "cites_stack_line": 0,
+    "grounded_rate": 0.1333,
+    "citation_rate": 0.1333
+   },
+   "calls": 5,
+   "cache_hits": 5,
+   "input_tokens": 24575,
+   "output_tokens": 3521,
+   "cost_usd": 0.004218,
+   "paid_usd_this_run": 0.0,
+   "latency_s": 20.672,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-4",
+   "status": "complete",
+   "shown": 2,
+   "dropped": 18,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "stability": {
+    "pairwise_kendall_tau_mean": 1.0,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "zero_score_omitted": 1
+   },
+   "evidence": {
+    "reasons": 10,
+    "grounded": 0,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 10,
+    "cites_stack_line": 0,
+    "grounded_rate": 0.0,
+    "citation_rate": 0.0
+   },
+   "calls": 5,
+   "cache_hits": 5,
+   "input_tokens": 10265,
+   "output_tokens": 2130,
+   "cost_usd": 0.002091,
+   "paid_usd_this_run": 0.0,
+   "latency_s": 13.963,
+   "estimated_cost_usd": 0.0
+  }
+ ],
+ "totals": {
+  "calls": 15,
+  "cache_hits": 15,
+  "input_tokens": 65810,
+  "output_tokens": 7559,
+  "cost_usd": 0.010359,
+  "paid_usd_this_run": 0.0,
+  "estimated_cost_usd": 0.0,
+  "latency_s": 46.773
+ },
+ "ledger_spent_usd": {
+  "before": 1.687156,
+  "after": 1.687156,
+  "cap": 25.0
+ }
+}
