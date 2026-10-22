@@ -18,7 +18,7 @@ cd cs527-llm-fl
 | 角色 | 立即使用的材料 | 开始阅读 |
 | --- | --- | --- |
 | **B：上下文 / LLM 重排 / 缓存 / 采样 / 融合** | [`data/sample/B/index.json`](data/sample/B/index.json)，每个 bug 一份完整模型输入 | [B 快速开始](docs/person_a_handoff_b.md) |
-| **C：补丁标签 / 评估 / 批量实验 / 报告** | [`data/sample/person-a-lang-C.zip`](data/sample/person-a-lang-C.zip)，含完整排名、覆盖率、源码快照与失败记录 | [C 快速开始](docs/person_a_handoff_c.md) |
+| **C：补丁标签 / 评估 / 批量实验 / 报告** | [`evaluation/person_c/`](evaluation/person_c/)，含标签证据、评估脚本与真实 baseline | [C 评估说明](evaluation/person_c/README.md) |
 | **需要重新采集数据** | `docker/`、`fl/`、`scripts/`、`configs/` | [环境和复现实验](docs/reproducing_person_a.md) |
 
 ## B：直接读取模型输入
@@ -83,7 +83,7 @@ PYTHONPATH="$PWD/.deps" python3 scripts/prepare_sample.py --profile C --check-so
 | Lang-3 | 2285 | 1 | 2396 | 20 |
 | Lang-4 | 2284 | 1 | 2393 | 20 |
 
-这是一批中期流程样本。C 的补丁标签、排除审核和 Top-k/MRR 评估尚待完成；LLM 重排由 B 接续。
+这是一批中期流程样本。C 已完成三例补丁映射、方法级排除检查和 baseline 评估：Ochiai/DStar 的 Top-1 均为 3/3，MRR@20 与完整 MRR 均为 1.0。三例均登记为 dev，Person C（Alina Wu）已于 2026-10-22 确认标签复核完成，LLM 重排由 B 接续。详见 [C 的真实结果与局限](evaluation/person_c/real/README.md)。
 同分方法的字母顺序只是稳定显示顺序，请保留 `rank_min` / `rank_max` / `tie_size`。
 
 ## 共同约定与验证
@@ -96,7 +96,19 @@ PYTHONPATH="$PWD/.deps" python3 scripts/prepare_sample.py --profile C --check-so
 - [样本版本与文件 SHA-256](data/sample/release.json)
 
 方法分数取**方法内部最高的行级分数**。B 的模型输入不包含修复补丁或正确答案；C 单独建立评估标签。
-历史环境/采集失败与方法级基准排除分开记录。`data/excluded.csv` 的空表头表示 C 尚未完成排除审核。
+历史环境/采集失败与方法级基准排除分开记录。原始 A 数据包中 `data/excluded.csv` 的空表头不是审核结论；C 的当前三例审核及混合字段/方法修改处理见 [review_decisions.json](evaluation/person_c/real/review_decisions.json)。
 
 仓库提交了复现代码、接口说明、可直接读取的 B 输入，以及压缩后的 C 数据。
 本机依赖、真实工作 checkout、旧交接包、个人自动化说明和临时文件保留在本地。
+
+## C：重跑评估
+
+不需要模型 API、Java 或重新采集覆盖率。从仓库根目录执行：
+
+```bash
+cd evaluation/person_c
+python3 -m unittest discover -s tests -v
+python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels.json --predictions real/data/ochiai.json real/data/dstar.json --split dev --output-dir runs/baseline-001
+```
+
+输出目录须不存在。完整 MRR 另加 `--rank-cutoff 0`。B 输出格式及后续比较命令见 [B→C 接口](evaluation/person_c/handoff_B/README.md)。当前三例用于联调，baseline 已饱和；正式效果比较需要扩大预先确定的样本范围。

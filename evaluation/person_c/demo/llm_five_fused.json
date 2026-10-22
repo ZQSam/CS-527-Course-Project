@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "data_kind": "synthetic",
+  "dataset": {
+    "name": "SyntheticFixture",
+    "version": "1",
+    "revision": "fixture-v1"
+  },
+  "configuration_id": "llm_five_fused",
+  "ranking_scope": "candidates",
+  "configuration": {
+    "model": "NOT_A_REAL_MODEL",
+    "note": "All predictions and usage values are fabricated fixtures for software testing, not measured results."
+  },
+  "records": [
+    {
+      "bug_id": "DEMO-001",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#B()",
+        "demo.Stats#A()",
+        "demo.Stats#C()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-002",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-003",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": null,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-004",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#C()",
+        "demo.Stats#A()",
+        "demo.Stats#B()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-005",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#B()",
+        "demo.Stats#A()",
+        "demo.Stats#C()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-006",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#C()",
+        "demo.Stats#A()",
+        "demo.Stats#B()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    },
+    {
+      "bug_id": "DEMO-007",
+      "status": "ok",
+      "error": "",
+      "candidate_method_ids": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "ranking": [
+        "demo.Stats#A()",
+        "demo.Stats#B()",
+        "demo.Stats#C()"
+      ],
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 100,
+        "cost_usd": 0.02,
+        "latency_seconds": 2.0
+      }
+    }
+  ]
+}

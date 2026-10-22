@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "data_kind": "synthetic",
+  "dataset": {
+    "name": "SyntheticFixture",
+    "version": "1",
+    "revision": "fixture-v1"
+  },
+  "bugs": [
+    {
+      "bug_id": "DEMO-001",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-002",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-003",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-004",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-005",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-006",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-007",
+      "split": "dev",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "DEMO-008",
+      "split": "eval",
+      "included": false,
+      "exclusion_reason": "Synthetic exclusion example"
+    }
+  ]
+}
