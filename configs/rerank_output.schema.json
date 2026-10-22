@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cs527/rerank_result/1.1",
+  "title": "Person B rerank result (one bug, one run)",
+  "description": "Every ranking is a permutation of the exact input candidate method_ids. Semantic checks live in rerank/runner.py::validate_result. 1.1 is additive over 1.0: degradations[], evidence_summary, per-reason evidence, config.effective_num_samples/transport, samples[].filled_from_sbfl.",
+  "type": "object",
+  "required": ["schema_version", "artifact_kind", "run_id", "bug_id", "input_sha256", "status", "created_at",
+               "config", "context", "rankings", "mean_rank_stats", "fused", "samples", "cost", "errors"],
+  "properties": {
+    "schema_version": {"enum": ["1.0", "1.1"]},
+    "artifact_kind": {"const": "rerank_result"},
+    "run_id": {"type": "string"},
+    "bug_id": {"type": "string", "pattern": "^(Lang|Math|Chart|Time)-[0-9]+$"},
+    "input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["complete", "partial", "failed", "dry_run"]},
+    "created_at": {"type": "string"},
+    "config": {
+      "type": "object",
+      "required": ["model_key", "provider", "model", "effort", "max_tokens", "prompt_version", "num_samples",
+                   "sampling", "context", "validation", "fusion"],
+      "properties": {
+        "prompt_version": {"enum": ["v1", "v2"]},
+        "effective_num_samples": {"type": "integer", "description": "1.1: samples actually planned after sampling.adaptive"},
+        "transport": {"enum": ["messages", "batch", "dry_run"]}
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["shown", "dropped", "truncated", "stack_marked_candidates", "estimated_tokens", "helpers_included"],
+      "properties": {
+        "shown": {"type": "array", "items": {"type": "string"}},
+        "dropped": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rankings": {
+      "type": "object",
+      "required": ["sbfl"],
+      "properties": {
+        "sbfl": {"$ref": "#/$defs/ranking"},
+        "single": {"$ref": "#/$defs/ranking"},
+        "mean": {"$ref": "#/$defs/ranking"}
+      },
+      "additionalProperties": false
+    },
+    "mean_rank_stats": {
+      "type": ["object", "null"],
+      "properties": {
+        "samples_used": {"type": "integer"},
+        "mean": {"type": "object", "additionalProperties": {"type": "number"}},
+        "std": {"type": "object", "additionalProperties": {"type": "number"}},
+        "stability": {"type": "object"}
+      }
+    },
+    "fused": {
+      "type": "object",
+      "required": ["method", "weights"],
+      "properties": {
+        "method": {"enum": ["weighted_rank", "rrf"]},
+        "weights": {"type": "array", "items": {"type": "string"}},
+        "single": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ranking"}},
+        "mean": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ranking"}}
+      }
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sample_index", "seed", "order_mode", "display_order", "labels", "status", "issues",
+                     "llm_ranking_shown", "ranking", "top3_reasons", "attempts", "usage", "cost_usd", "paid_usd",
+                     "latency_s"],
+        "properties": {
+          "status": {"enum": ["ok", "repaired", "failed", "error", "dry_run"]},
+          "ranking": {"$ref": "#/$defs/ranking"},
+          "filled_from_sbfl": {"type": "array", "items": {"type": "string"},
+                               "description": "1.1: shown candidates the model left out, appended in SBFL order"},
+          "top3_reasons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["method_id", "label", "reason"],
+              "properties": {"evidence": {"$ref": "#/$defs/evidence"}}
+            }
+          },
+          "attempts": {
+            "type": "array",
+            "items": {"type": "object", "required": ["attempt", "cache_key", "cache_hit"]}
+          }
+        }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "required": ["calls", "cache_hits", "input_tokens", "output_tokens", "cost_usd", "paid_usd_this_run",
+                   "latency_s", "estimated_cost_usd"]
+    },
+    "errors": {"type": "array"},
+    "degradations": {"type": "array", "items": {"$ref": "#/$defs/degradation"}},
+    "evidence_summary": {
+      "type": "object",
+      "required": ["reasons", "grounded", "partial", "test_only", "ungrounded", "no_citation", "cites_stack_line",
+                   "grounded_rate", "citation_rate"],
+      "properties": {
+        "grounded_rate": {"type": ["number", "null"]},
+        "citation_rate": {"type": ["number", "null"]}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "1.1"}}},
+      "then": {"required": ["degradations", "evidence_summary"]}
+    }
+  ],
+  "$defs": {
+    "ranking": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence": {
+      "type": "object",
+      "description": "Deterministic line-citation check (rerank/evidence.py); never changes a ranking.",
+      "required": ["status", "cited_lines", "in_candidate", "outside_candidate", "sibling_candidate", "unverified",
+                   "stack_marked"],
+      "properties": {
+        "status": {"enum": ["grounded", "partial", "test_only", "ungrounded", "no_citation"]},
+        "cited_lines": {"type": "array", "items": {"type": "integer"}},
+        "in_candidate": {"type": "array", "items": {"type": "integer"}},
+        "outside_candidate": {"type": "array", "items": {"type": "integer"}},
+        "sibling_candidate": {"type": "array", "items": {"type": "integer"},
+                              "description": "cited lines displayed for another shown candidate in the same file"},
+        "unverified": {"type": "array", "items": {"type": "integer"}},
+        "stack_marked": {"type": "array", "items": {"type": "integer"}}
+      }
+    },
+    "degradation": {
+      "type": "object",
+      "required": ["kind", "stage"],
+      "properties": {
+        "kind": {"enum": ["zero_score_omitted", "zero_score_shown_for_minimum", "method_truncated",
+                          "helpers_omitted_for_budget", "test_source_omitted", "context_over_budget",
+                          "adaptive_single_sample", "budget_abort", "hit_max_tokens", "model_refused",
+                          "sample_retried", "sample_repaired", "sample_failed", "sample_error"]},
+        "stage": {"enum": ["context", "sampling", "model", "budget"]},
+        "sample_index": {"type": "integer"}
+      }
+    }
+  }
+}

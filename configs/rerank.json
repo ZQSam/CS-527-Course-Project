@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.1",
+  "input_dir": "data/sample/B",
+  "output_root": "results/rerank",
+  "cache_dir": ".work/llm_cache",
+  "ledger": ".work/llm_cache/ledger.jsonl",
+  "env_file": ".env",
+  "prompt_version": "v2",
+  "models": {
+    "haiku": {"model": "claude-haiku-5-5", "effort": "low", "max_tokens": 8000},
+    "opus": {"model": "claude-opus-5-5", "effort": "low", "max_tokens": 8000}
+  },
+  "pricing_usd_per_mtok": {
+    "source": "claude-api skill model table, cached 2026-10-06; first-party API standard rates",
+    "claude-haiku-5-5": {"input": 0.10, "output": 0.50},
+    "claude-sonnet-5-5": {"input": 2.00, "output": 10.00},
+    "claude-opus-5-5": {"input": 4.00, "output": 20.00}
+  },
+  "context": {
+    "token_budget": 12000,
+    "chars_per_token": 2.4,
+    "drop_zero_score": true,
+    "show_sbfl_scores": false,
+    "max_jdk_frames": 4,
+    "max_project_frames": 12,
+    "include_test_helpers": true,
+    "max_helper_lines": 40,
+    "max_full_tests": 3,
+    "per_candidate_overhead_chars": 40
+  },
+  "sampling": {"num_samples": 5, "base_seed": 527, "order": "shuffle",
+               "adaptive": {"enabled": false, "single_sample_max_shown": 2}},
+  "validation": {"max_attempts": 2},
+  "fusion": {"method": "weighted_rank", "weights": [0.0, 0.25, 0.5, 0.75, 1.0], "rrf_k": 60},
+  "budget": {"max_cost_usd": 25.0, "dry_run_output_tokens": 600},
+  "batch": {"price_multiplier": 0.5, "poll_interval_s": 30, "max_wait_s": 86400,
+            "manifest_dir": ".work/llm_cache/batches"}
+}
