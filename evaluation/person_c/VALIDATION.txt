@@ -24,6 +24,20 @@ Commands:
 Limits:
 - Labels are patch-validated; Person C (Alina Wu) confirmed review completion on 2026-10-22. The record is based on reviewer confirmation, not an independent second review.
 - No Java tests rerun or coverage recollected in C's environment.
-- No LLM calls, real B outputs or measured model costs; B template is explicitly not_run.
+- At the baseline milestone, B outputs were not yet connected; see the B integration update below for current status.
 - No course-server submission is implied by this package.
 - demo/ and demo_result/ remain synthetic fixtures, separate from real/.
+
+Validation update: 2026-10-22, Person C B-output integration.
+
+- B source: immutable Git commit c753909d4582c46a9899bd99e893d2b412d662b5.
+- 46 Person C tests passed, including 20 new B adapter tests. Existing suite: 32 passed, 7 WSL/Linux-only skips on macOS.
+- Offline integration: 9 runs, 27 bug outputs, 119 attempt records, 102 unique cache keys.
+- 108 B variants plus 2 baselines scored on the same 3 dev bugs; every configuration has Top-1/3/5=3/3 and MRR@20=1.0.
+- All paired candidate sets match; scores agree with the earlier separate offline audit.
+- Batch attempt latency remains null in all 12 batch variants; upstream zero aggregation is recorded as a warning.
+- Deduplicated recorded request cost: 1.45098255 USD (approximately 1.450983), not a provider invoice.
+- Verified default eval rejects the all-dev manifest without writing output, and existing output directories are not overwritten.
+- Input files are read from Git blobs at the resolved commit; tests confirm working-copy edits cannot replace those blobs.
+- Current reproduction commands and the strict failure policy are in PERSON_B.md.
+- No new model calls or Java runs. No provider-attestation, invoice, semantic explanation, or held-out effectiveness claim.
