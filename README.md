@@ -112,3 +112,5 @@ python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels
 ```
 
 输出目录须不存在。完整 MRR 另加 `--rank-cutoff 0`。B 输出格式及后续比较命令见 [B→C 接口](evaluation/person_c/handoff_B/README.md)。当前三例用于联调，baseline 已饱和；正式效果比较需要扩大预先确定的样本范围。
+
+B 的固定提交已可直接离线适配和评分：见 [B 输出接入与复现](evaluation/person_c/PERSON_B.md) 和 [当前评分表](evaluation/person_c/real/results/person_b/report.md)。三例 dev 数据上的 108 个 B 配置均与 baseline 持平，不构成改善效果的证据。
