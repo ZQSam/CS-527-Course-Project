@@ -1,0 +1,247 @@
+{
+  "status": "passed",
+  "method": "Staged Git tree extracted into a fresh temporary directory",
+  "original_checkouts_required": false,
+  "docker_required_for_reading": false,
+  "shared_dependency": "Pinned Java parser only, for C source reparse",
+  "cohort": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "records": {
+    "B": {
+      "profile": "B",
+      "status": "passed",
+      "bugs": [
+        "Lang-5",
+        "Lang-6",
+        "Lang-7",
+        "Lang-8",
+        "Lang-9",
+        "Lang-10",
+        "Lang-11",
+        "Lang-12",
+        "Lang-13",
+        "Lang-14"
+      ],
+      "directory": "data/batches/lang-expansion-20261023/B",
+      "release_id": "lang-expansion-20261023"
+    },
+    "C": {
+      "profile": "C",
+      "status": "passed",
+      "bugs": [
+        {
+          "bug_id": "Lang-5",
+          "passing_tests": 2270,
+          "failing_tests": 1,
+          "ranked_methods": 2382,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-6",
+          "passing_tests": 2262,
+          "failing_tests": 1,
+          "ranked_methods": 2371,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-7",
+          "passing_tests": 2260,
+          "failing_tests": 1,
+          "ranked_methods": 2370,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-8",
+          "passing_tests": 2203,
+          "failing_tests": 2,
+          "ranked_methods": 2309,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-9",
+          "passing_tests": 2198,
+          "failing_tests": 2,
+          "ranked_methods": 2313,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-10",
+          "passing_tests": 2196,
+          "failing_tests": 2,
+          "ranked_methods": 2313,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-11",
+          "passing_tests": 2137,
+          "failing_tests": 1,
+          "ranked_methods": 2292,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-12",
+          "passing_tests": 2135,
+          "failing_tests": 2,
+          "ranked_methods": 2292,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-13",
+          "passing_tests": 2134,
+          "failing_tests": 1,
+          "ranked_methods": 2294,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        },
+        {
+          "bug_id": "Lang-14",
+          "passing_tests": 2072,
+          "failing_tests": 1,
+          "ranked_methods": 2230,
+          "candidate_count": 20,
+          "source_reparse": "matched"
+        }
+      ],
+      "directory": ".work/batches/lang-expansion-20261023/C",
+      "release_id": "lang-expansion-20261023"
+    },
+    "C_repeat": {
+      "profile": "C",
+      "status": "passed",
+      "bugs": [
+        {
+          "bug_id": "Lang-5",
+          "passing_tests": 2270,
+          "failing_tests": 1,
+          "ranked_methods": 2382,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-6",
+          "passing_tests": 2262,
+          "failing_tests": 1,
+          "ranked_methods": 2371,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-7",
+          "passing_tests": 2260,
+          "failing_tests": 1,
+          "ranked_methods": 2370,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-8",
+          "passing_tests": 2203,
+          "failing_tests": 2,
+          "ranked_methods": 2309,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-9",
+          "passing_tests": 2198,
+          "failing_tests": 2,
+          "ranked_methods": 2313,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-10",
+          "passing_tests": 2196,
+          "failing_tests": 2,
+          "ranked_methods": 2313,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-11",
+          "passing_tests": 2137,
+          "failing_tests": 1,
+          "ranked_methods": 2292,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-12",
+          "passing_tests": 2135,
+          "failing_tests": 2,
+          "ranked_methods": 2292,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-13",
+          "passing_tests": 2134,
+          "failing_tests": 1,
+          "ranked_methods": 2294,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        },
+        {
+          "bug_id": "Lang-14",
+          "passing_tests": 2072,
+          "failing_tests": 1,
+          "ranked_methods": 2230,
+          "candidate_count": 20,
+          "source_reparse": "not_requested"
+        }
+      ],
+      "directory": ".work/batches/lang-expansion-20261023/C",
+      "release_id": "lang-expansion-20261023"
+    },
+    "original_pilot_B": {
+      "profile": "B",
+      "status": "passed",
+      "bugs": [
+        "Lang-1",
+        "Lang-3",
+        "Lang-4"
+      ],
+      "directory": "data/sample/B",
+      "release_id": "person-a-lang-v1"
+    },
+    "existing_B_loader": {
+      "status": "passed",
+      "bugs": [
+        "Lang-5",
+        "Lang-6",
+        "Lang-7",
+        "Lang-8",
+        "Lang-9",
+        "Lang-10",
+        "Lang-11",
+        "Lang-12",
+        "Lang-13",
+        "Lang-14"
+      ],
+      "all_candidates": 20
+    },
+    "frozen_B_config_changed_fields": [
+      "input_dir"
+    ]
+  },
+  "secret_pattern_scan": "none_found",
+  "markdown_links": "passed"
+}

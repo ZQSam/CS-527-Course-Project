@@ -13,8 +13,9 @@ from fl.handoff import (digest, repo_path, require, validate_archive,
                         validate_b_profile, validate_c_profile, validate_profile)
 
 
-def prepare(repository: Path, profile: str, check_source: bool = False) -> dict:
-    release = json.loads((repository / "data/sample/release.json").read_text(encoding="utf-8"))
+def prepare(repository: Path, profile: str, check_source: bool = False,
+            release_path: str = "data/sample/release.json") -> dict:
+    release = json.loads(repo_path(repository, release_path).read_text(encoding="utf-8"))
     if profile == "B":
         root = repo_path(repository, release["B"]["directory"])
         require(digest((root / "manifest.json").read_bytes()) == release["B"]["manifest_sha256"],
@@ -25,7 +26,8 @@ def prepare(repository: Path, profile: str, check_source: bool = False) -> dict:
         require(digest(archive_path.read_bytes()) == release["C"]["sha256"],
                 "C archive does not match the published release")
         manifest = validate_archive(archive_path)
-        root = repository / ".work/sample/C"
+        root = repo_path(repository, release["C"].get("directory", ".work/sample/C"))
+        require(root.is_relative_to((repository / ".work").resolve()), "C extraction must stay in .work/")
         if root.exists():
             require(validate_profile(root) == manifest,
                     "Existing C dataset differs from this release; preserve it and move it before preparing a new release")
@@ -52,13 +54,15 @@ def prepare(repository: Path, profile: str, check_source: bool = False) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", choices=("B", "C"), required=True)
+    parser.add_argument("--release", default="data/sample/release.json",
+                        help="Repository-relative release manifest; defaults to the original pilot")
     parser.add_argument("--check-source", action="store_true",
                         help="Reparse C source using pinned Java parser dependencies")
     args = parser.parse_args()
     if args.check_source and args.profile != "C":
         parser.error("--check-source applies to C")
     repository = Path(__file__).resolve().parents[1]
-    print(json.dumps(prepare(repository, args.profile, args.check_source), indent=2))
+    print(json.dumps(prepare(repository, args.profile, args.check_source, args.release), indent=2))
 
 
 if __name__ == "__main__":

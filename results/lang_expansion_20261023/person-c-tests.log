@@ -1,0 +1,31 @@
+test_all_missing_predictions_still_use_registered_denominator (test_evaluate.EvaluatorTests.test_all_missing_predictions_still_use_registered_denominator) ... ok
+test_candidate_omission_and_hallucination_are_invalid (test_evaluate.EvaluatorTests.test_candidate_omission_and_hallucination_are_invalid) ... ok
+test_dataset_revision_mismatch_stops_evaluation (test_evaluate.EvaluatorTests.test_dataset_revision_mismatch_stops_evaluation) ... ok
+test_dev_and_excluded_cases_do_not_enter_eval (test_evaluate.EvaluatorTests.test_dev_and_excluded_cases_do_not_enter_eval) ... ok
+test_different_candidate_sets_flag_comparison (test_evaluate.EvaluatorTests.test_different_candidate_sets_flag_comparison) ... ok
+test_duplicate_bug_and_configuration_are_rejected (test_evaluate.EvaluatorTests.test_duplicate_bug_and_configuration_are_rejected) ... ok
+test_full_mrr_requires_full_scope_and_cutoff_is_honest (test_evaluate.EvaluatorTests.test_full_mrr_requires_full_scope_and_cutoff_is_honest) ... ok
+test_hand_calculated_metrics_and_fixed_denominator (test_evaluate.EvaluatorTests.test_hand_calculated_metrics_and_fixed_denominator) ... ok
+test_improvement_and_regression_are_paired (test_evaluate.EvaluatorTests.test_improvement_and_regression_are_paired) ... ok
+test_missing_cost_and_candidate_metadata_are_not_zero (test_evaluate.EvaluatorTests.test_missing_cost_and_candidate_metadata_are_not_zero) ... ok
+test_multiple_faulty_methods_use_first_hit (test_evaluate.EvaluatorTests.test_multiple_faulty_methods_use_first_hit) ... ok
+test_negative_or_nonfinite_usage_is_rejected (test_evaluate.EvaluatorTests.test_negative_or_nonfinite_usage_is_rejected) ... ok
+test_no_ground_truth_in_candidate_is_counted_as_miss (test_evaluate.EvaluatorTests.test_no_ground_truth_in_candidate_is_counted_as_miss) ... ok
+test_synthetic_requires_explicit_demo (test_evaluate.EvaluatorTests.test_synthetic_requires_explicit_demo) ... ok
+test_unregistered_prediction_is_rejected (test_evaluate.EvaluatorTests.test_unregistered_prediction_is_rejected) ... ok
+test_unreviewed_label_stops_instead_of_dropping_bug (test_evaluate.EvaluatorTests.test_unreviewed_label_stops_instead_of_dropping_bug) ... ok
+test_all_patch_directions_and_both_blob_sides (test_person_a.PersonATests.test_all_patch_directions_and_both_blob_sides) ... ok
+test_field_and_constructor_not_silently_lost (test_person_a.PersonATests.test_field_and_constructor_not_silently_lost) ... ok
+test_invalid_tie_metadata_rejected (test_person_a.PersonATests.test_invalid_tie_metadata_rejected) ... ok
+test_nested_method_ambiguity_stops_mapping (test_person_a.PersonATests.test_nested_method_ambiguity_stops_mapping) ... ok
+test_new_method_insertion_gap_is_not_assigned_to_neighbor (test_person_a.PersonATests.test_new_method_insertion_gap_is_not_assigned_to_neighbor) ... ok
+test_pending_B_records_keep_denominator (test_person_a.PersonATests.test_pending_B_records_keep_denominator) ... ok
+test_pure_insertions_map_to_existing_method (test_person_a.PersonATests.test_pure_insertions_map_to_existing_method) ... ok
+test_real_baseline_and_no_heldout_claim (test_person_a.PersonATests.test_real_baseline_and_no_heldout_claim) ... ok
+test_review_confirmation_is_not_inferred_for_future_labels (test_person_a.PersonATests.test_review_confirmation_is_not_inferred_for_future_labels) ... ok
+test_wrong_buggy_source_and_corrupt_fixed_side_rejected (test_person_a.PersonATests.test_wrong_buggy_source_and_corrupt_fixed_side_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.063s
+
+OK

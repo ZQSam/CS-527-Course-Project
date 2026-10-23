@@ -12,9 +12,11 @@ tmp/
 docs/person_a_milestone0.md
 data/*
 !data/sample/
+!data/batches/
 results/*
 !results/shared_sample/
 !results/rerank/
+!results/lang_expansion_20261023/
 output/
 .DS_Store
 Thumbs.db

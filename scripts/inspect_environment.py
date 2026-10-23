@@ -1,5 +1,6 @@
 """Record an allowlist of tool/version evidence, never the process environment."""
 
+import argparse
 import hashlib
 import json
 import os
@@ -10,7 +11,10 @@ from datetime import datetime, timezone
 
 
 def main():
-    output = Path("results/environment")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=Path("results/environment"))
+    args = parser.parse_args()
+    output = args.output
     output.mkdir(parents=True, exist_ok=True)
     commands = {
         "java": ["java", "-version"],

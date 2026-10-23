@@ -4,6 +4,7 @@ import argparse
 import csv
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -36,11 +37,12 @@ def render_report(summary: dict, root: Path):
         if result["status"] == "complete":
             coverage = Path(result["coverage_file"])
             ranked = Path(result["ranking_dir"])
-            # Reports live at results/milestone2, two directories below the repo.
-            lines.extend([f"- [Normalized per-test coverage](../../{coverage})",
-                          f"- [Complete Ochiai ranking](../../{ranked}/ochiai.csv)",
-                          f"- [Complete DStar ranking](../../{ranked}/dstar.csv)",
-                          f"- [Top candidates with buggy source](../../{ranked}/top20.json)",
+            def link(path):
+                return os.path.relpath(repository / path, root).replace(os.sep, "/")
+            lines.extend([f"- [Normalized per-test coverage]({link(coverage)})",
+                          f"- [Complete Ochiai ranking]({link(ranked / 'ochiai.csv')})",
+                          f"- [Complete DStar ranking]({link(ranked / 'dstar.csv')})",
+                          f"- [Top candidates with buggy source]({link(ranked / 'top20.json')})",
                           f"- [Mapping and reference checks]({evidence}/validation.json)"])
         else:
             lines.append(f"- Failure at `{result['stage']}`: {result['error']}")
