@@ -1,0 +1,78 @@
+{
+  "status": "frozen",
+  "registered_at_utc": "2026-10-23T23:33:55.642201+00:00",
+  "cohort": {
+    "schema_version": "1.0",
+    "cohort_id": "lang-expansion-20261023",
+    "registered_at_utc": "2026-10-23T23:33:55.642201+00:00",
+    "status": "frozen_before_new_baseline_runs",
+    "base_revision": "f17acd13825149134a92139d0031279f402f7cbb",
+    "project": "Lang",
+    "bug_ids": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "requested": [
+      "Lang-5",
+      "Lang-6",
+      "Lang-7",
+      "Lang-8",
+      "Lang-9",
+      "Lang-10",
+      "Lang-11",
+      "Lang-12",
+      "Lang-13",
+      "Lang-14"
+    ],
+    "previous_pilot": [
+      "Lang-1",
+      "Lang-3",
+      "Lang-4"
+    ],
+    "selection_rule": "The ten numerically smallest active Lang IDs absent from the original A pilot; no ranking or labels consulted for these new cases.",
+    "catalog": {
+      "path": "evaluation/person_c/real/evidence/active-bugs.csv",
+      "sha256": "f8687e8569b00725b5468efc8ab15c57e413f511c9be15202c224208c7d0eb9d",
+      "defects4j_release": "v2.0.0",
+      "defects4j_commit": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+    },
+    "environment": {
+      "image": "cs527-fl:d4j2.0.0-gzoltar1.7.3",
+      "expected_image_id": "sha256:f521454ed5a8354e230e941f7c25857ef071b2dada226a2f8db7924d779cbb60",
+      "java": "8u504",
+      "gzoltar": "1.7.3",
+      "tree_sitter": "0.25.2",
+      "tree_sitter_java": "0.23.5"
+    },
+    "policy": {
+      "replacement_after_failure": false,
+      "performance_based_removal": false,
+      "keep_baseline_top1_cases": true,
+      "retain_all_attempts": true,
+      "ground_truth_and_split_review": "Person C; not performed by this collection task",
+      "llm_calls": false
+    }
+  },
+  "config_sha256": {
+    "configs/cohorts/lang-expansion-20261023.json": "0b7b37a4d322a1fd2c85470275a6dc7ff41673eb8c120e54b15030bc359a5d15",
+    "configs/batches/lang-expansion-20261023/reproduction.json": "48d3c1b3f33c9925b51d18fa863b73dcc3aad75c8ff1440373176856a05fa8e2",
+    "configs/batches/lang-expansion-20261023/coverage.json": "24e6d10057418aeda499c2dbc32ad0462440460fb5e77b323ee2c036147c2962"
+  },
+  "collector_sha256_at_registration": {
+    "fl/d4j.py": "5d3e8f3c5a37e2b3a46c5837cd0e523c33bc591d6ff8d727be87b2f6743017a6",
+    "fl/coverage.py": "962603f07ab65b4ad4546d5c5270fb24121de27ab7fb6c33d6265d045200a13b",
+    "fl/java.py": "cdb49410edfa318917b7e143efa0634482bc7bb76f5e5b413099c4cc4a237722",
+    "fl/sbfl.py": "d51ae8b07fe1fe0218412c1c9154cafa70f82a03014ca769e18dae80f8c3bb6f",
+    "scripts/smoke_defects4j.py": "3badd4931e7dbececb1432de6200def85906bb90d6544347a13787d2bc53d992",
+    "scripts/run_milestone2.py": "1ff12972652794a1daa3dd20be5161fdcebac23632e9becb97854c36f960b736",
+    "docker/Dockerfile": "55d9abf3ce011639e80d39951f9136d774f717768be79080eb6ff01cb990e102"
+  }
+}
