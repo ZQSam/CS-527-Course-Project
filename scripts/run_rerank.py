@@ -10,12 +10,15 @@ Examples (from the repository root, inside .venv):
 
 import argparse
 import datetime
+import hashlib
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 
 sys.dont_write_bytecode = True
+CODE_FILES = ("rerank/*.py", "scripts/run_rerank.py", "configs/rerank.json")
 REPOSITORY = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY))
 
@@ -24,7 +27,7 @@ from rerank.cache import BudgetExceeded, ResponseCache, SpendLedger  # noqa: E40
 from rerank.data import load_bugs, load_config, load_env_file  # noqa: E402
 from rerank.llm import AnthropicProvider, FakeProvider  # noqa: E402
 from rerank.prompt import SYSTEM_PROMPTS  # noqa: E402
-from rerank.runner import run_bug, validate_result, write_json  # noqa: E402
+from rerank.runner import known_sum, run_bug, validate_result, write_json  # noqa: E402
 
 
 def main():
@@ -35,8 +38,11 @@ def main():
     parser.add_argument("--bugs", help="Comma-separated bug IDs (default: every bug in the index)")
     parser.add_argument("--samples", type=int, help="Samples per bug (default: config sampling.num_samples)")
     parser.add_argument("--order", choices=("shuffle", "sbfl"), help="Override candidate display order")
-    parser.add_argument("--all-candidates", action="store_true",
-                        help="Ablation: also show zero-score candidates to the model")
+    candidate_set = parser.add_mutually_exclusive_group()
+    candidate_set.add_argument("--nonzero-only", action="store_true",
+                               help="Secondary configuration: show only Ochiai > 0 candidates to the model")
+    candidate_set.add_argument("--all-candidates", action="store_true",
+                               help="Show all candidates (the main configuration; kept to reproduce older runs)")
     parser.add_argument("--run-id", help="Output folder name under output_root")
     parser.add_argument("--dry-run", action="store_true", help="Build prompts and estimate cost; no paid calls")
     parser.add_argument("--max-cost", type=float, help="Override the cumulative spend cap in USD")
@@ -55,6 +61,9 @@ def main():
         config["sampling"]["order"] = args.order
     if args.all_candidates:
         config["context"]["drop_zero_score"] = False
+    if args.nonzero_only:
+        config["context"]["drop_zero_score"] = True
+    config["code"] = code_provenance(REPOSITORY)
     if args.prompt_version:
         config["prompt_version"] = args.prompt_version
     if args.adaptive:
@@ -125,11 +134,14 @@ def main():
             handle.write(json.dumps(call, ensure_ascii=False, sort_keys=True) + "\n")
     totals = {field: round(sum(bug[field] for bug in summary_bugs), 6)
               for field in ("calls", "cache_hits", "input_tokens", "output_tokens", "cost_usd",
-                            "paid_usd_this_run", "estimated_cost_usd", "latency_s")}
+                            "paid_usd_this_run", "estimated_cost_usd")}
+    totals["latency_s"] = known_sum([bug["latency_s"] for bug in summary_bugs])
     summary = {"schema_version": "1.1", "artifact_kind": "rerank_run_summary", "run_id": run_id,
                "provider": provider.name, "model_key": model_key, "model": provider.model,
                "num_samples": num_samples, "dry_run": args.dry_run, "input_dir": config["input_dir"],
                "prompt_version": config["prompt_version"], "transport": "batch" if args.batch else "messages",
+               "candidate_set": "nonzero" if config["context"]["drop_zero_score"] else "all",
+               "fusion_primary_weight": config["fusion"]["primary_weight"], "code": config["code"],
                "batch_ids": batch_runner.batch_ids if batch_runner else [],
                "bugs": summary_bugs, "totals": totals,
                "ledger_spent_usd": {"before": round(spent_before, 6), "after": round(ledger.total(), 6),
@@ -137,6 +149,23 @@ def main():
     write_json(out_dir / "summary.json", summary)
     print(json.dumps({"run_id": run_id, "output": os.path.relpath(out_dir, REPOSITORY), **totals,
                       "ledger_after": summary["ledger_spent_usd"]["after"]}, indent=1))
+
+
+def code_provenance(repository: Path) -> dict:
+    """Git revision plus a content hash of the B code, so runs from uncommitted code stay identifiable."""
+    def git(*args):
+        try:
+            return subprocess.run(["git", "-C", str(repository), *args], capture_output=True, text=True,
+                                  check=True).stdout.strip()
+        except (OSError, subprocess.CalledProcessError):
+            return None
+    files = sorted(path for pattern in CODE_FILES for path in repository.glob(pattern))
+    content = hashlib.sha256()
+    for path in files:
+        content.update(path.relative_to(repository).as_posix().encode("utf-8") + b"\0" + path.read_bytes() + b"\0")
+    status = git("status", "--porcelain", "--", *CODE_FILES)
+    return {"git_revision": git("rev-parse", "HEAD"), "git_dirty": None if status is None else bool(status),
+            "code_sha256": content.hexdigest()}
 
 
 def _count_kinds(events: list) -> dict:

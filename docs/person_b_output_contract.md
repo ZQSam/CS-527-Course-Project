@@ -8,6 +8,30 @@ B 读取 A 的 `data/sample/B/`，输出每个 bug 的 SBFL / 单次 LLM / 多�
 **1.1 相对 1.0 只做增量**：排名、融合、成本字段含义不变；新增 `degradations[]`、`evidence_summary`、
 `samples[].top3_reasons[].evidence`、`samples[].filled_from_sbfl`、`config.effective_num_samples`、
 `config.transport`。已提交的 1.0 结果文件（`results/rerank/*-v1-*`）保持原样，schema 同时接受两种版本。
+2026-10-23 起又增量加入 `config.candidate_set`、`config.prompt_sha256`、`config.code`、`fusion.primary_weight`，
+并修正 batch 未知耗时：`latency_s` 未知时为 `null`（此前在 sample / bug / run 合计中被写成 0）。schema 版本仍为 1.1。
+
+## 冻结的中期配置（正式评估前固定，按 C 的 review）
+
+正式评估只使用下表配置；其余 run 是 dev 联调历史（`results/rerank/README.md` 中 role = `dev-exploration`）。
+共同设置：prompt `v2`、effort `low`、每 bug 5 次打乱采样（`base_seed = 527`）、逐条直接调用（中期不用 batch）、
+`weighted_rank` 融合，**主权重 `w = 0.5`**（事先固定、不调参；其余权重只作敏感性分析）。
+
+| 角色 | 模型 | 展示给模型的候选 | dev run | 运行命令要点 |
+| --- | --- | --- | --- | --- |
+| `main` 主配置 | Opus 5.5 | 全部 20 个 | `opus-v2-k20-s5` | `--model opus` |
+| `extra-haiku` 附加配置 | Haiku 5.5 | 全部 20 个 | `haiku-v2-k20-s5` | `--model haiku` |
+| `secondary-nonzero` 附加配置 | Opus 5.5 | 仅 Ochiai > 0 | `opus-v2-s5` | `--model opus --nonzero-only` |
+
+每个 run 对应 C 的主实验配置（C 适配器 `import_person_b.py` 的 `configuration_id` 为 `<run>/<名称>`）：
+
+| C 配置 | B 字段 | 用量口径 |
+| --- | --- | --- |
+| 单次 LLM：`<run>/single` | `rankings.single`（sample 0） | 只计 sample 0 的全部尝试 |
+| 5 次采样平均：`<run>/mean` | `rankings.mean` | 计全部 sample 的全部尝试 |
+| 平均排名 + SBFL 融合：`<run>/mean-fused-0.50` | `fused.mean["0.50"]` | 复用 `mean` 的调用，**不产生新费用、不可重复相加** |
+
+`fused.single[*]` 与其他权重同样复用已有调用，只作补充或敏感性分析。
 
 ## 目录
 
@@ -32,14 +56,18 @@ results/rerank/
 | `input_sha256` | 对应 A 的输入文件哈希；输入变化后旧结果失效 |
 | `status` | `complete`（全部 sample 成功）/ `partial` / `failed` |
 | `config` | provider、模型、effort、max_tokens、prompt 版本、采样数与种子、上下文与融合设置 |
-| `context.shown` / `context.dropped` | 送入模型的候选（Ochiai > 0）与未送入的零分候选 |
+| `context.shown` / `context.dropped` | 送入模型的候选与未送入的候选（主配置全部送入，`dropped` 为空；`nonzero` 配置只送 Ochiai > 0） |
 | `rankings.sbfl` | A 的原始 Ochiai 顺序（基线，原样） |
 | `rankings.single` | sample 0 的 LLM 排名（单次重排配置） |
 | `rankings.mean` | 成功 sample 的平均名次排名，平局按 SBFL 顺序 |
 | `mean_rank_stats` | 每个方法的平均名次 / 标准差，以及 sample 间 Kendall τ、top-1 一致率 |
 | `fused.single[w]` / `fused.mean[w]` | 融合排名，`w` 为 LLM 权重（`"0.00"` = 纯 SBFL，`"1.00"` = 纯 LLM） |
 | `samples[]` | 每次采样：种子、展示顺序、C01… 标签映射、状态、问题、完整排名、前三理由、每次尝试的 token/费用/耗时/原始响应 |
-| `cost` | 调用次数、缓存命中、token、费用（`cost_usd` 为生成结果的原始成本，`paid_usd_this_run` 为本次实际新花费） |
+| `cost` | 调用次数、缓存命中、token、费用（`cost_usd` 为生成结果的原始成本，`paid_usd_this_run` 为本次实际新花费）；`latency_s` 为各次请求耗时之和，任一请求耗时未知（batch）时为 `null`，不写 0 |
+| `config.candidate_set` | `all`（全部候选送入模型，主配置）/ `nonzero`（仅 Ochiai > 0） |
+| `config.fusion.primary_weight` | 事先固定的主融合权重（0.5），必须是 `fusion.weights` 之一 |
+| `config.prompt_sha256` | 所用 system prompt 文本的 SHA-256 |
+| `config.code` | `git_revision`、`git_dirty`（B 代码是否有未提交改动）与 `code_sha256`（`rerank/*.py`、`scripts/run_rerank.py`、`configs/rerank.json` 的内容哈希，未提交时也可核对） |
 | `config.prompt_version` | `v1`（1.0 结果使用）或 `v2`（要求理由引用行号，默认） |
 | `config.effective_num_samples` | 实际计划的采样数；开启 `sampling.adaptive` 时可能小于 `num_samples` |
 | `config.transport` | `messages`（逐条调用）/ `batch`（Message Batches，半价）/ `dry_run` |
@@ -83,15 +111,16 @@ v1 prompt 不要求引用，因此 v1 结果的 `citation_rate` 很低（重放 
 
 ## C 评估时需要注意
 
-1. **零分尾部是并列组，不是模型判断。** `rankings.*` 中位于 `len(context.shown)` 之后的方法是
-   Ochiai = 0 的并列候选（按字母序附在末尾）。真实缺陷若落在这里，应按 A 的 `rank_min`/`rank_max`
-   并列规则计分，不要把字母序当作名次差异。
+1. **零分尾部是并列组，不是模型判断（仅 `nonzero` 配置）。** 该配置下 `rankings.*` 中位于
+   `len(context.shown)` 之后的方法是 Ochiai = 0 的并列候选（按字母序附在末尾）。真实缺陷若落在这里，
+   应按 A 的 `rank_min`/`rank_max` 并列规则计分，不要把字母序当作名次差异。主配置中全部候选由模型排序。
 2. **融合的平局规则。** `weighted_rank` 分数相同时按 SBFL 顺序打破，因此 `w = 0.5` 时两个候选的对调
-   会回落到 SBFL 顺序。报告时请说明这一点，或用 `scripts/fuse.py` 扫描更细的权重。
-3. **调权重只用开发集。** 融合结果可随时离线重算（`scripts/fuse.py`），不需要再次调用模型；
-   请用 C 划定的开发 bug 选权重，在其余 bug 上报告。
-4. **失败 sample。** `status` 为 `failed`/`error` 的 sample 使用 SBFL 顺序兜底，不参与 `mean`；
-   `repaired` 表示模型漏排的候选按 SBFL 顺序补在末尾。两者都计入异常统计。
+   会回落到 SBFL 顺序。报告时请说明这一点。
+3. **主权重已事先固定为 0.5。** 其他权重和 `scripts/fuse.py` 的离线扫描只作敏感性分析，不在 eval bug 上挑权重。
+4. **失败 sample。** B 侧：`failed`/`error` 的 sample 使用 SBFL 顺序兜底，不参与 `mean`；`repaired` 表示模型漏排的
+   候选按 SBFL 顺序补在末尾，都计入 `degradations`。**C 的主评分口径更严格**（`import_person_b.py`）：single 要求
+   sample 0 为 `ok`，mean 要求全部计划 sample 为 `ok`，`repaired` 记为 `parse_error`、计零分。两种口径在所有
+   sample 为 `ok` 时一致；若要评估兜底或修复后的排名，需另建明确命名的配置并单独报告次数。
 5. **成本口径。** 每个 bug 的成本取 `cost.cost_usd`（含思考 token，按配置中的单价表计算）；
    `transport = batch` 的调用按 `batch.price_multiplier`（0.5）计价，`attempts[].batch_id` 记录所属 batch。
 6. **降级与证据只用于分析。** 可按 `degradations` 过滤或分层（例如排除含 `method_truncated` 的 bug 做敏感性分析），
@@ -103,10 +132,12 @@ v1 prompt 不要求引用，因此 v1 结果的 `citation_rate` 很低（重放 
 python3 -m venv .venv   # 或 uv venv --python 3.11 .venv；需要 Python 3.10+
 .venv/bin/pip install anthropic==0.125.0
 # .env 中写入 ANTHROPIC_API_KEY=...（已在 .gitignore 中）
-.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --dry-run          # 先估算成本
-.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --run-id haiku-v2-s5      # v2 prompt（默认）
-.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --batch --run-id haiku-v2-s5-batch  # 半价，异步
-.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --prompt-version v1 --run-id haiku-v1-s5  # 从缓存重放 v1
+.venv/bin/python scripts/run_rerank.py --model opus --samples 5 --dry-run          # 先估算成本
+.venv/bin/python scripts/run_rerank.py --model opus --samples 5 --run-id opus-v2-k20-s5      # 主配置
+.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --run-id haiku-v2-k20-s5    # 附加配置：Haiku
+.venv/bin/python scripts/run_rerank.py --model opus --samples 5 --nonzero-only --run-id opus-v2-s5  # 附加配置：仅非零候选
+.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --nonzero-only --batch --run-id haiku-v2-s5-batch  # 期末用：半价，异步
+.venv/bin/python scripts/run_rerank.py --model haiku --samples 5 --nonzero-only --prompt-version v1 --run-id haiku-v1-s5  # 从缓存重放 v1
 .venv/bin/python scripts/fuse.py --run results/rerank/haiku-v1-s5 --weights 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1
 .venv/bin/python scripts/summarize_rerank.py
 .venv/bin/python -m unittest tests.test_rerank   # 离线，不需要 API key
@@ -119,6 +150,9 @@ python3 -m venv .venv   # 或 uv venv --python 3.11 .venv；需要 Python 3.10+
 
 - 原代码常量已移入配置，取值与 v1 相同：`context.max_full_tests = 3`、`context.per_candidate_overhead_chars = 40`、
   `budget.dry_run_output_tokens = 600`。
+- `context.drop_zero_score = false`：主配置把全部候选送入模型；`--nonzero-only` 为附加配置（与 `--all-candidates` 互斥，
+  后者保留用于复现旧 run）。旧的 dev run 在重放时需带上它们当时的选项（例如 `--nonzero-only`）才能命中缓存。
+- `fusion.primary_weight = 0.5`：事先固定的主权重，加载配置时检查它属于 `fusion.weights`。
 - `prompt_version`：`v2`（默认）；`--prompt-version v1` 生成与 v1 完全相同的请求，已有 v1 run 全部命中缓存。
 - `sampling.adaptive = {"enabled": false, "single_sample_max_shown": 2}`：默认关闭以保持实验可复现；
   `--adaptive` 开启后，展示候选 ≤ 2 的 bug 只采样 1 次（记入 `degradations`）。

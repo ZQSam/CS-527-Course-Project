@@ -1,6 +1,7 @@
 """Per-bug reranking pipeline: context -> shuffled samples -> validation -> aggregation -> fusion."""
 
 import datetime
+import hashlib
 import json
 from pathlib import Path
 
@@ -152,7 +153,7 @@ def run_sample(bug: dict, context: dict, sample_index: int, provider, config: di
         "usage": _sum_usage(attempts),
         "cost_usd": round(sum(a.get("cost_usd", 0.0) for a in attempts), 6),
         "paid_usd": round(sum(a.get("paid_usd", 0.0) for a in attempts), 6),
-        "latency_s": round(sum(a.get("latency_s", 0.0) or 0.0 for a in attempts), 3),
+        "latency_s": known_sum([a.get("latency_s") for a in attempts]),
     }
     if user_text and sample_index == 0:
         sample["prompt_text"] = user_text
@@ -200,6 +201,13 @@ def effective_samples(requested: int, shown_count: int, sampling: dict) -> int:
     if adaptive.get("enabled") and requested > 1 and shown_count <= adaptive["single_sample_max_shown"]:
         return 1
     return requested
+
+
+def known_sum(values: list, digits: int = 3):
+    """Sum that stays None when any part is unknown (e.g. batch requests have no per-call latency)."""
+    if any(value is None for value in values):
+        return None
+    return round(sum(values), digits)
 
 
 def _attempt_rank(result: dict) -> tuple:
@@ -274,6 +282,9 @@ def run_bug(entry: dict, bug: dict, provider, model_key: str, config: dict, cach
             "model_key": model_key, "provider": provider.name, "model": provider.model,
             "effort": provider.effort, "max_tokens": provider.max_tokens, "prompt_version": config["prompt_version"],
             "num_samples": num_samples, "effective_num_samples": planned, "transport": _transport(provider, dry_run),
+            "candidate_set": "nonzero" if config["context"]["drop_zero_score"] else "all",
+            "prompt_sha256": hashlib.sha256(system_prompt(config["prompt_version"]).encode("utf-8")).hexdigest(),
+            "code": config.get("code"),
             "sampling": config["sampling"], "context": config["context"],
             "validation": config["validation"], "fusion": fusion_cfg,
         },
@@ -293,7 +304,7 @@ def run_bug(entry: dict, bug: dict, provider, model_key: str, config: dict, cach
             "output_tokens": sum(sample["usage"]["output_tokens"] for sample in samples),
             "cost_usd": round(sum(sample["cost_usd"] for sample in samples), 6),
             "paid_usd_this_run": round(sum(sample["paid_usd"] for sample in samples), 6),
-            "latency_s": round(sum(sample["latency_s"] for sample in samples), 3),
+            "latency_s": known_sum([sample["latency_s"] for sample in samples]),
             "estimated_cost_usd": round(sum(a.get("estimated_cost_usd", 0.0) for sample in samples
                                             for a in sample["attempts"]), 6),
         },

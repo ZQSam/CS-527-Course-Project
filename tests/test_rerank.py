@@ -13,11 +13,18 @@ from rerank.evidence import check_reason, cited_lines
 from rerank.fusion import fuse, sbfl_tie_ranks
 from rerank.llm import FakeProvider, call_cost
 from rerank.prompt import SYSTEM_PROMPTS, aliases, build_user_message
-from rerank.runner import RESULT_SCHEMA_VERSION, run_bug, validate_result
+from rerank.runner import RESULT_SCHEMA_VERSION, known_sum, run_bug, validate_result
 from rerank.sampling import display_order, kendall_tau, mean_rank
 from rerank.validate import needs_retry, validate_response
 
 REPOSITORY = Path(__file__).resolve().parents[1]
+
+
+def nonzero_config():
+    """The labeled secondary configuration (Ochiai > 0 candidates only), which most context tests exercise."""
+    config = load_config(REPOSITORY / "configs/rerank.json")
+    config["context"]["drop_zero_score"] = True
+    return config
 
 
 def sample_bugs():
@@ -104,7 +111,7 @@ class FusionTests(unittest.TestCase):
 class ContextTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.config = load_config(REPOSITORY / "configs/rerank.json")
+        cls.config = nonzero_config()
         cls.bugs = sample_bugs()
 
     def test_zero_score_candidates_are_dropped_and_kept_for_output(self):
@@ -158,7 +165,7 @@ class RunnerTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         root = Path(self.temporary.name)
-        self.config = load_config(REPOSITORY / "configs/rerank.json")
+        self.config = nonzero_config()
         self.cache = ResponseCache(root / "cache")
         self.ledger = SpendLedger(root / "ledger.jsonl", 1.0)
         self.entry, self.bug = sample_bugs()["Lang-1"]
@@ -299,9 +306,35 @@ class PromptVersionTests(unittest.TestCase):
         self.assertTrue(SYSTEM_PROMPTS["v2"].startswith(SYSTEM_PROMPTS["v1"]))
 
 
+class FrozenConfigTests(unittest.TestCase):
+    def test_main_configuration_shows_all_candidates_and_fixes_primary_weight(self):
+        config = load_config(REPOSITORY / "configs/rerank.json")
+        self.assertFalse(config["context"]["drop_zero_score"])
+        self.assertEqual(config["prompt_version"], "v2")
+        self.assertEqual(config["fusion"]["primary_weight"], 0.5)
+        self.assertIn(config["fusion"]["primary_weight"], config["fusion"]["weights"])
+        entry, bug = sample_bugs()["Lang-1"]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            result, _ = run_bug(entry, bug, FakeProvider(), "fake", config, ResponseCache(root / "c"),
+                                SpendLedger(root / "l.jsonl", 1.0), 1, False, "t")
+        self.assertEqual((len(result["context"]["shown"]), result["context"]["dropped"]), (20, []))
+        self.assertEqual(result["config"]["candidate_set"], "all")
+        self.assertEqual(len(result["config"]["prompt_sha256"]), 64)
+
+    def test_primary_weight_must_be_a_scored_weight(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "rerank.json"
+            config = json.loads((REPOSITORY / "configs/rerank.json").read_text(encoding="utf-8"))
+            config["fusion"]["primary_weight"] = 0.6
+            path.write_text(json.dumps(config), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_config(path)
+
+
 class ConfigConstantTests(unittest.TestCase):
     def setUp(self):
-        self.config = load_config(REPOSITORY / "configs/rerank.json")
+        self.config = nonzero_config()
         self.bug = sample_bugs()["Lang-1"][1]
 
     def test_former_constants_live_in_config(self):
@@ -347,7 +380,7 @@ class DegradationTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         root = Path(self.temporary.name)
-        self.config = load_config(REPOSITORY / "configs/rerank.json")
+        self.config = nonzero_config()
         self.cache = ResponseCache(root / "cache")
         self.ledger = SpendLedger(root / "ledger.jsonl", 1.0)
         self.entry, self.bug = sample_bugs()["Lang-1"]
@@ -473,6 +506,18 @@ class BatchTests(unittest.TestCase):
         self.assertEqual([r["rankings"] for r in again], [r["rankings"] for r in results])
         self.assertEqual(sum(r["cost"]["cache_hits"] for r in again), 4)
         self.assertEqual(sum(r["cost"]["paid_usd_this_run"] for r in again), 0)
+
+    def test_unknown_batch_latency_stays_null_at_every_level(self):
+        results, _ = self.run_batch(FakeBatchBackend(FakeProvider(model="claude-haiku-5-5")))
+        for result in results:
+            self.assertTrue(all(a["latency_s"] is None for s in result["samples"] for a in s["attempts"]))
+            self.assertEqual([s["latency_s"] for s in result["samples"]], [None, None])
+            self.assertIsNone(result["cost"]["latency_s"])
+        self.assertIsNone(known_sum([result["cost"]["latency_s"] for result in results]))
+        # Direct calls keep a measured number; a mix with any unknown part is unknown, never zero.
+        self.assertEqual(known_sum([0.5, 1.25]), 1.75)
+        self.assertIsNone(known_sum([0.5, None]))
+        self.assertEqual(known_sum([]), 0)
 
     def test_validation_retry_goes_out_in_a_second_round(self):
         bad = json.dumps({"ranking": ["C01"], "top3_reasons": []})

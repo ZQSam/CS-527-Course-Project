@@ -15,6 +15,7 @@ REQUIRED_KEYS = {
     "sampling": ("num_samples", "base_seed", "order", "adaptive"),
     "budget": ("max_cost_usd", "dry_run_output_tokens"),
     "batch": ("price_multiplier", "poll_interval_s", "max_wait_s", "manifest_dir"),
+    "fusion": ("method", "weights", "primary_weight"),
 }
 
 
@@ -27,6 +28,8 @@ def load_config(path: Path) -> dict:
     for section, keys in REQUIRED_KEYS.items():
         missing = [key for key in keys if key not in config[section]]
         require(not missing, f"Missing config keys in {section}: {missing}")
+    require(config["fusion"]["primary_weight"] in config["fusion"]["weights"],
+            "fusion.primary_weight must be one of fusion.weights")
     return config
 
 
