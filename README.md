@@ -19,6 +19,7 @@ cd cs527-llm-fl
 | --- | --- | --- |
 | **B：上下文 / LLM 重排 / 缓存 / 采样 / 融合** | [`data/sample/B/index.json`](data/sample/B/index.json)，每个 bug 一份完整模型输入 | [B 快速开始](docs/person_a_handoff_b.md) |
 | **C：补丁标签 / 评估 / 批量实验 / 报告** | [`evaluation/person_c/`](evaluation/person_c/)，含标签证据、评估脚本与真实 baseline | [C 评估说明](evaluation/person_c/README.md) |
+| **C：使用 B 的 LLM 重排结果** | [`results/rerank/index.json`](results/rerank/index.json)，每个 run 每个 bug 一份排名与成本 | [B → C 接口](docs/person_b_output_contract.md) |
 | **需要重新采集数据** | `docker/`、`fl/`、`scripts/`、`configs/` | [环境和复现实验](docs/reproducing_person_a.md) |
 
 ## B：直接读取模型输入
