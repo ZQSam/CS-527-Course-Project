@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "REPLACE_WITH_TEAM_VERSION",
+    "revision": "REPLACE_WITH_DEFECTS4J_COMMIT"
+  },
+  "configuration_id": "REPLACE_WITH_CONFIG_NAME",
+  "ranking_scope": "candidates",
+  "configuration": {
+    "model": null,
+    "model_parameters": {},
+    "prompt_version": null,
+    "sampling_count": null,
+    "shuffle_seed": null,
+    "fusion_weight": null,
+    "code_revision": null
+  },
+  "records": []
+}

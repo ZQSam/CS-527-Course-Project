@@ -1,0 +1,126 @@
+{
+  "a_commit": "99e7b385023f5d601f8cca01125c52ca02cba674",
+  "archive_sha256": "dc9eafb1e2f8e4b5ef3f618a849d8f205b4864bd08aae25e0dbee2512858808e",
+  "verified_manifest_files": 764,
+  "bugs": [
+    {
+      "bug_id": "Lang-1",
+      "method_count": 2403,
+      "source_files_checked": 101,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2290,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-3",
+      "method_count": 2396,
+      "source_files_checked": 101,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2285,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-4",
+      "method_count": 2393,
+      "source_files_checked": 101,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2284,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    }
+  ],
+  "historical_operational_failures": [
+    {
+      "milestone": "milestone1",
+      "run_id": "20261021T032518352329Z",
+      "bug_id": "Lang-1",
+      "stage": "full-test",
+      "error": "Expected triggers ['org.apache.commons.lang3.math.NumberUtilsTest::TestLang747'], observed failures ['org.apache.commons.lang3.SystemUtilsTest::testGetUserHome', 'org.apache.commons.lang3.math.NumberUtilsTest::TestLang747']",
+      "evidence": "results/milestone1/runs/20261021T032518352329Z/Lang-1/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone1",
+      "run_id": "20261021T032518352329Z",
+      "bug_id": "Lang-3",
+      "stage": "full-test",
+      "error": "Expected triggers ['org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss'], observed failures ['org.apache.commons.lang3.SystemUtilsTest::testGetUserHome', 'org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss']",
+      "evidence": "results/milestone1/runs/20261021T032518352329Z/Lang-3/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone1",
+      "run_id": "20261021T032518352329Z",
+      "bug_id": "Lang-4",
+      "stage": "full-test",
+      "error": "Expected triggers ['org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882'], observed failures ['org.apache.commons.lang3.SystemUtilsTest::testGetUserHome', 'org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882']",
+      "evidence": "results/milestone1/runs/20261021T032518352329Z/Lang-4/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone2",
+      "run_id": "20261021T034928236241Z",
+      "bug_id": "Lang-1",
+      "stage": "source-index",
+      "error": "ValueError: Duplicate method IDs in src/main/java/org/apache/commons/lang3/Validate.java",
+      "evidence": "results/milestone2/runs/20261021T034928236241Z/Lang-1/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone2",
+      "run_id": "20261021T034953153286Z",
+      "bug_id": "Lang-1",
+      "stage": "source-index",
+      "error": "ValueError: Duplicate method IDs in src/main/java/org/apache/commons/lang3/Validate.java: ['src/main/java/org/apache/commons/lang3/Validate.java::org.apache.commons.lang3.Validate#notEmpty(T,String,Object[])', 'src/main/java/org/apache/commons/lang3/Validate.java::org.apache.commons.lang3.Validate#notEmpty(T)', 'src/main/java/org/apache/commons/lang3/Validate.java::org.apache.commons.lang3.Validate#validIndex(T,int,String,Object[])', 'src/main/java/org/apache/commons/lang3/Validate.java::org.apache.commons.lang3.Validate#validIndex(T,int)']",
+      "evidence": "results/milestone2/runs/20261021T034953153286Z/Lang-1/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone2",
+      "run_id": "20261021T035113438856Z",
+      "bug_id": "Lang-1",
+      "stage": "coverage",
+      "error": "ValueError: Malformed GZoltar statement: org.apache.commons.lang3$AnnotationUtils#equals(java.lang.annotation.Annotation",
+      "evidence": "results/milestone2/runs/20261021T035113438856Z/Lang-1/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    },
+    {
+      "milestone": "milestone2",
+      "run_id": "20261021T035324285528Z",
+      "bug_id": "Lang-1",
+      "stage": "sbfl-and-validation",
+      "error": "ValueError: Unexplained source mapping failure: org.apache.commons.lang3.builder$ToStringStyle$DefaultToStringStyle#ToStringStyle$DefaultToStringStyle():2127",
+      "evidence": "results/milestone2/runs/20261021T035324285528Z/Lang-1/result.json",
+      "kind": "operational_or_pipeline_failure",
+      "methodological_exclusion": false,
+      "resolved_in_latest_coverage": true
+    }
+  ],
+  "coverage_recollected": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "purpose": "integration/development pilot; not held-out evaluation",
+  "selection": "All three bugs supplied by A, assigned dev before patch-derived scoring; no performance-based exclusions",
+  "bugs": [
+    {
+      "bug_id": "Lang-1",
+      "split": "dev",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-3",
+      "split": "dev",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-4",
+      "split": "dev",
+      "included": true,
+      "exclusion_reason": null
+    }
+  ]
+}

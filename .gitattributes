@@ -7,3 +7,11 @@
 Dockerfile text eol=lf
 *.pdf binary
 *.zip binary
+
+# Reproducible baseline rankings; keep source and label evidence visible in reviews.
+evaluation/person_c/real/data/ochiai.json linguist-generated=true
+evaluation/person_c/real/data/dstar.json linguist-generated=true
+
+# Preserve upstream evidence bytes, including original whitespace.
+evaluation/person_c/real/data/buggy_sources/** -text -whitespace
+evaluation/person_c/real/evidence/patches/*.patch -text -whitespace

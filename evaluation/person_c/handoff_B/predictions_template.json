@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "configuration_id": "llm_single",
+  "ranking_scope": "candidates",
+  "configuration": {
+    "model": null,
+    "prompt_version": null,
+    "sampling_count": 1,
+    "shuffle_seed": null,
+    "fusion_weight": null,
+    "code_revision": null
+  },
+  "records": [
+    {
+      "bug_id": "Lang-1",
+      "status": "not_run",
+      "candidate_method_ids": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createInteger(String)",
+        "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#isBlank(CharSequence)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+      ],
+      "ranking": [],
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_seconds": null
+      }
+    },
+    {
+      "bug_id": "Lang-3",
+      "status": "not_run",
+      "candidate_method_ids": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createFloat(String)",
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#isAllZeros(String)",
+        "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#isBlank(CharSequence)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)"
+      ],
+      "ranking": [],
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_seconds": null
+      }
+    },
+    {
+      "bug_id": "Lang-4",
+      "status": "not_run",
+      "candidate_method_ids": [
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+        "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+        "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+        "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)"
+      ],
+      "ranking": [],
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_seconds": null
+      }
+    }
+  ]
+}
