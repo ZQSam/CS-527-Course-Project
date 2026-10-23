@@ -1,0 +1,1401 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "opus-v2-k20-s5",
+ "bug_id": "Lang-4",
+ "input_sha256": "8aaa7645804552966ccb3a96486d7d22279682ab50a276dcf9a76d5a37e02967",
+ "status": "complete",
+ "created_at": "2026-10-23T18:08:12Z",
+ "config": {
+  "model_key": "opus",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "4fa089c8915166b4b2a09a7045d655a5bd1d3add",
+   "git_dirty": true,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [],
+  "estimated_tokens": 8553,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)": 2.0,
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])": 1.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 14.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 13.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 16.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 15.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 14.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 12.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 12.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 12.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 16.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 16.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 12.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 15.4,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 7.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 6.6,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 3.2,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)": 4.6,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)": 5.8,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)": 7.2
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)": 0.0,
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 4.049691346263317,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 3.059411708155671,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 3.1368774282716245,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 1.7435595774162693,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 3.7629775444453557,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 3.54400902933387,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 1.8547236990991407,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 5.344155686354955,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 3.8157568056677826,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 2.154065922853802,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 3.006659275674582,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 2.1540659228538015,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 2.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 3.2,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)": 1.2,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)": 0.39999999999999997
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.5789,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 3912777781256752216,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C03": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C07": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C10": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+     "label": "C04",
+     "reason": "L46 uses a HashMap keyed on raw CharSequence and L51 puts StringBuffer keys, whose equals/hashCode are identity-based, so content lookups fail; keys should be converted via toString().",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       46,
+       51
+      ],
+      "in_candidate": [
+       46,
+       51
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+     "label": "C08",
+     "reason": "L77 looks up the raw subSequence in lookupMap without converting it to a String, so StringBuffer-based content never matches and L83 returns 0.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       77,
+       83
+      ],
+      "in_candidate": [
+       77,
+       83
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+     "label": "C15",
+     "reason": "L3751 is generic array utility code unrelated to translation and is only a remote fallback candidate.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       3751
+      ],
+      "in_candidate": [
+       3751
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "4d850cd9b37b37464be495f1871148044562f2d8b66a7df930fb3d1b259a8aac",
+     "cache_hit": false,
+     "cost_usd": 0.039912,
+     "paid_usd": 0.039912,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8598,
+      "output_tokens": 276,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.096,
+     "request_id": "req_011CgKcdde8VZauKyY9jXdxp",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C04\",\"C08\",\"C15\",\"C07\",\"C17\",\"C01\",\"C10\",\"C03\",\"C02\",\"C05\",\"C06\",\"C09\",\"C11\",\"C12\",\"C13\",\"C14\",\"C16\",\"C18\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C04\",\"reason\":\"L46 uses a HashMap keyed on raw CharSequence and L51 puts StringBuffer keys, whose equals/hashCode are identity-based, so content lookups fail; keys should be converted via toString().\"},{\"candidate\":\"C08\",\"reason\":\"L77 looks up the raw subSequence in lookupMap without converting it to a String, so StringBuffer-based content never matches and L83 returns 0.\"},{\"candidate\":\"C15\",\"reason\":\"L3751 is generic array utility code unrelated to translation and is only a remote fallback candidate.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8598,
+    "output_tokens": 276
+   },
+   "cost_usd": 0.039912,
+   "paid_usd": 0.039912,
+   "latency_s": 4.096,
+   "prompt_text": "Bug: Lang-4 (1 failing test)\n\n## Failing test 1: org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Incorrect codepoint consumption expected:<3> but was:<0>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.apache.commons.lang3.text.translate.LookupTranslatorTest.testLang882(LookupTranslatorTest.java:48)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  43 | @Test\n  44 |     public void testLang882() throws IOException {\n  45 |         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer(\"one\"), new StringBuffer(\"two\") } });\n  46 |         final StringWriter out = new StringWriter();\n  47 |         final int result = lt.translate(new StringBuffer(\"one\"), 0, out);\n>>48 |         assertEquals(\"Incorrect codepoint consumption\", 3, result);\n  49 |         assertEquals(\"Incorrect value\", \"two\", out.toString());\n  50 |     }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 3777-3781)\n```java\n  3777 | public static boolean[] add(final boolean[] array, final boolean element) {\n  3778 |         final boolean[] newArray = (boolean[])copyArrayGrow1(array, Boolean.TYPE);\n  3779 |         newArray[newArray.length - 1] = element;\n  3780 |         return newArray;\n  3781 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 167-185)\n```java\n  167 | public static int hashCode(final Annotation a) {\n  168 |         int result = 0;\n  169 |         final Class<? extends Annotation> type = a.annotationType();\n  170 |         for (final Method m : type.getDeclaredMethods()) {\n  171 |             try {\n  172 |                 final Object value = m.invoke(a);\n  173 |                 if (value == null) {\n  174 |                     throw new IllegalStateException(\n  175 |                             String.format(\"Annotation method %s returned null\", m));\n  176 |                 }\n  177 |                 result += hashMember(m.getName(), value);\n  178 |             } catch (final RuntimeException ex) {\n  179 |                 throw ex;\n  180 |             } catch (final Exception ex) {\n  181 |                 throw new RuntimeException(ex);\n  182 |             }\n  183 |         }\n  184 |         return result;\n  185 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.ArrayUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 137-139)\n```java\n  137 | public ArrayUtils() {\n  138 |       super();\n  139 |     }\n```\n\n## C04\nmethod: org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])\nfile: src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java (lines 45-63)\n```java\n  45 | public LookupTranslator(final CharSequence[]... lookup) {\n  46 |         lookupMap = new HashMap<CharSequence, CharSequence>();\n  47 |         int _shortest = Integer.MAX_VALUE;\n  48 |         int _longest = 0;\n  49 |         if (lookup != null) {\n  50 |             for (final CharSequence[] seq : lookup) {\n  51 |                 this.lookupMap.put(seq[0], seq[1]);\n  52 |                 final int sz = seq[0].length();\n  53 |                 if (sz < _shortest) {\n  54 |                     _shortest = sz;\n  55 |                 }\n  56 |                 if (sz > _longest) {\n  57 |                     _longest = sz;\n  58 |                 }\n  59 |             }\n  60 |         }\n  61 |         shortest = _shortest;\n  62 |         longest = _longest;\n  63 |     }\n```\n\n## C05\nmethod: org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 122-153)\n```java\n  122 | public static boolean equals(final Annotation a1, final Annotation a2) {\n  123 |         if (a1 == a2) {\n  124 |             return true;\n  125 |         }\n  126 |         if (a1 == null || a2 == null) {\n  127 |             return false;\n  128 |         }\n  129 |         final Class<? extends Annotation> type = a1.annotationType();\n  130 |         final Class<? extends Annotation> type2 = a2.annotationType();\n  131 |         Validate.notNull(type, \"Annotation %s with null annotationType()\", a1);\n  132 |         Validate.notNull(type2, \"Annotation %s with null annotationType()\", a2);\n  133 |         if (!type.equals(type2)) {\n  134 |             return false;\n  135 |         }\n  136 |         try {\n  137 |             for (final Method m : type.getDeclaredMethods()) {\n  138 |                 if (m.getParameterTypes().length == 0\n  139 |                         && isValidAnnotationMemberType(m.getReturnType())) {\n  140 |                     final Object v1 = m.invoke(a1);\n  141 |                     final Object v2 = m.invoke(a2);\n  142 |                     if (!memberEquals(m.getReturnType(), v1, v2)) {\n  143 |                         return false;\n  144 |                     }\n  145 |                 }\n  146 |             }\n  147 |         } catch (final IllegalAccessException ex) {\n  148 |             return false;\n  149 |         } catch (final InvocationTargetException ex) {\n  150 |             return false;\n  151 |         }\n  152 |         return true;\n  153 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 242-251)\n```java\n  242 | private static int hashMember(final String name, final Object value) {\n  243 |         final int part1 = name.hashCode() * 127;\n  244 |         if (value.getClass().isArray()) {\n  245 |             return part1 ^ arrayMemberHash(value.getClass().getComponentType(), value);\n  246 |         }\n  247 |         if (value instanceof Annotation) {\n  248 |             return part1 ^ hashCode((Annotation) value);\n  249 |         }\n  250 |         return part1 ^ value.hashCode();\n  251 |     }\n```\n\n## C07\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 4021-4033)\n```java\n  4021 | public static <T> T[] add(final T[] array, final int index, final T element) {\n  4022 |         Class<?> clss = null;\n  4023 |         if (array != null) {\n  4024 |             clss = array.getClass().getComponentType();\n  4025 |         } else if (element != null) {\n  4026 |             clss = element.getClass();\n  4027 |         } else {\n  4028 |             throw new IllegalArgumentException(\"Array and element cannot both be null\");\n  4029 |         }\n  4030 |         @SuppressWarnings(\"unchecked\") // the add method creates an array of type clss, which is type T\n  4031 |         final T[] newArray = (T[]) add(array, index, element, clss);\n  4032 |         return newArray;\n  4033 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)\nfile: src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java (lines 68-84)\n```java\n  68 | @Override\n  69 |     public int translate(final CharSequence input, final int index, final Writer out) throws IOException {\n  70 |         int max = longest;\n  71 |         if (index + longest > input.length()) {\n  72 |             max = input.length() - index;\n  73 |         }\n  74 |         // descend so as to get a greedy algorithm\n  75 |         for (int i = max; i >= shortest; i--) {\n  76 |             final CharSequence subSeq = input.subSequence(index, index + i);\n  77 |             final CharSequence result = lookupMap.get(subSeq);\n  78 |             if (result != null) {\n  79 |                 out.write(result.toString());\n  80 |                 return i;\n  81 |             }\n  82 |         }\n  83 |         return 0;\n  84 |     }\n```\n\n## C09\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 71-85)\n```java\n  71 | @Override\n  72 |         protected String getShortClassName(final java.lang.Class<?> cls) {\n  73 |             Class<? extends Annotation> annotationType = null;\n  74 |             for (final Class<?> iface : ClassUtils.getAllInterfaces(cls)) {\n  75 |                 if (Annotation.class.isAssignableFrom(iface)) {\n  76 |                     @SuppressWarnings(\"unchecked\") // OK because we just checked the assignability\n  77 |                     final\n  78 |                     Class<? extends Annotation> found = (Class<? extends Annotation>) iface;\n  79 |                     annotationType = found;\n  80 |                     break;\n  81 |                 }\n  82 |             }\n  83 |             return new StringBuilder(annotationType == null ? \"\" : annotationType.getName())\n  84 |                     .insert(0, '@').toString();\n  85 |         }\n```\n\n## C10\nmethod: org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 4062-4064)\n```java\n  4062 | public static boolean[] add(final boolean[] array, final int index, final boolean element) {\n  4063 |         return (boolean[]) add(array, index, Boolean.valueOf(element), Boolean.TYPE);\n  4064 |     }\n```\n\n## C11\nmethod: org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 325-335)\n```java\n  325 | private static boolean annotationArrayMemberEquals(final Annotation[] a1, final Annotation[] a2) {\n  326 |         if (a1.length != a2.length) {\n  327 |             return false;\n  328 |         }\n  329 |         for (int i = 0; i < a1.length; i++) {\n  330 |             if (!equals(a1[i], a2[i])) {\n  331 |                 return false;\n  332 |             }\n  333 |         }\n  334 |         return true;\n  335 |     }\n```\n\n## C12\nmethod: org.apache.commons.lang3.AnnotationUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 107-108)\n```java\n  107 | public AnnotationUtils() {\n  108 |     }\n```\n\n## C13\nmethod: org.apache.commons.lang3.AnnotationUtils#toString(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 195-210)\n```java\n  195 | public static String toString(final Annotation a) {\n  196 |         final ToStringBuilder builder = new ToStringBuilder(a, TO_STRING_STYLE);\n  197 |         for (final Method m : a.annotationType().getDeclaredMethods()) {\n  198 |             if (m.getParameterTypes().length > 0) {\n  199 |                 continue; //wtf?\n  200 |             }\n  201 |             try {\n  202 |                 builder.append(m.getName(), m.invoke(a));\n  203 |             } catch (final RuntimeException ex) {\n  204 |                 throw ex;\n  205 |             } catch (final Exception ex) {\n  206 |                 throw new RuntimeException(ex);\n  207 |             }\n  208 |         }\n  209 |         return builder.build();\n  210 |     }\n```\n\n## C14\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 90-96)\n```java\n  90 | @Override\n  91 |         protected void appendDetail(final StringBuffer buffer, final String fieldName, Object value) {\n  92 |             if (value instanceof Annotation) {\n  93 |                 value = AnnotationUtils.toString((Annotation) value);\n  94 |             }\n  95 |             super.appendDetail(buffer, fieldName, value);\n  96 |         }\n```\n\n## C15\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object[],Object)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 3740-3754)\n```java\n  3740 | public static <T> T[] add(final T[] array, final T element) {\n  3741 |         Class<?> type;\n  3742 |         if (array != null){\n  3743 |             type = array.getClass();\n  3744 |         } else if (element != null) {\n  3745 |             type = element.getClass();\n  3746 |         } else {\n  3747 |             throw new IllegalArgumentException(\"Arguments cannot both be null\");\n  3748 |         }\n  3749 |         @SuppressWarnings(\"unchecked\") // type must be T\n  3750 |         final\n  3751 |         T[] newArray = (T[]) copyArrayGrow1(array, type);\n  3752 |         newArray[newArray.length - 1] = element;\n  3753 |         return newArray;\n  3754 |     }\n```\n\n## C16\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 344-370)\n```java\n  344 | private static int arrayMemberHash(final Class<?> componentType, final Object o) {\n  345 |         if (componentType.equals(Byte.TYPE)) {\n  346 |             return Arrays.hashCode((byte[]) o);\n  347 |         }\n  348 |         if (componentType.equals(Short.TYPE)) {\n  349 |             return Arrays.hashCode((short[]) o);\n  350 |         }\n  351 |         if (componentType.equals(Integer.TYPE)) {\n  352 |             return Arrays.hashCode((int[]) o);\n  353 |         }\n  354 |         if (componentType.equals(Character.TYPE)) {\n  355 |             return Arrays.hashCode((char[]) o);\n  356 |         }\n  357 |         if (componentType.equals(Long.TYPE)) {\n  358 |             return Arrays.hashCode((long[]) o);\n  359 |         }\n  360 |         if (componentType.equals(Float.TYPE)) {\n  361 |             return Arrays.hashCode((float[]) o);\n  362 |         }\n  363 |         if (componentType.equals(Double.TYPE)) {\n  364 |             return Arrays.hashCode((double[]) o);\n  365 |         }\n  366 |         if (componentType.equals(Boolean.TYPE)) {\n  367 |             return Arrays.hashCode((boolean[]) o);\n  368 |         }\n  369 |         return Arrays.hashCode((Object[]) o);\n  370 |     }\n```\n\n## C17\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 4295-4315)\n```java\n  4295 | private static Object add(final Object array, final int index, final Object element, final Class<?> clss) {\n  4296 |         if (array == null) {\n  4297 |             if (index != 0) {\n  4298 |                 throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: 0\");\n  4299 |             }\n  4300 |             final Object joinedArray = Array.newInstance(clss, 1);\n  4301 |             Array.set(joinedArray, 0, element);\n  4302 |             return joinedArray;\n  4303 |         }\n  4304 |         final int length = Array.getLength(array);\n  4305 |         if (index > length || index < 0) {\n  4306 |             throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: \" + length);\n  4307 |         }\n  4308 |         final Object result = Array.newInstance(clss, length + 1);\n  4309 |         System.arraycopy(array, 0, result, 0, index);\n  4310 |         Array.set(result, index, element);\n  4311 |         if (index < length) {\n  4312 |             System.arraycopy(array, index, result, index + 1, length - index);\n  4313 |         }\n  4314 |         return result;\n  4315 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 223-232)\n```java\n  223 | public static boolean isValidAnnotationMemberType(Class<?> type) {\n  224 |         if (type == null) {\n  225 |             return false;\n  226 |         }\n  227 |         if (type.isArray()) {\n  228 |             type = type.getComponentType();\n  229 |         }\n  230 |         return type.isPrimitive() || type.isEnum() || type.isAnnotation()\n  231 |                 || String.class.equals(type) || Class.class.equals(type);\n  232 |     }\n```\n\n## C19\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 287-316)\n```java\n  287 | private static boolean arrayMemberEquals(final Class<?> componentType, final Object o1, final Object o2) {\n  288 |         if (componentType.isAnnotation()) {\n  289 |             return annotationArrayMemberEquals((Annotation[]) o1, (Annotation[]) o2);\n  290 |         }\n  291 |         if (componentType.equals(Byte.TYPE)) {\n  292 |             return Arrays.equals((byte[]) o1, (byte[]) o2);\n  293 |         }\n  294 |         if (componentType.equals(Short.TYPE)) {\n  295 |             return Arrays.equals((short[]) o1, (short[]) o2);\n  296 |         }\n  297 |         if (componentType.equals(Integer.TYPE)) {\n  298 |             return Arrays.equals((int[]) o1, (int[]) o2);\n  299 |         }\n  300 |         if (componentType.equals(Character.TYPE)) {\n  301 |             return Arrays.equals((char[]) o1, (char[]) o2);\n  302 |         }\n  303 |         if (componentType.equals(Long.TYPE)) {\n  304 |             return Arrays.equals((long[]) o1, (long[]) o2);\n  305 |         }\n  306 |         if (componentType.equals(Float.TYPE)) {\n  307 |             return Arrays.equals((float[]) o1, (float[]) o2);\n  308 |         }\n  309 |         if (componentType.equals(Double.TYPE)) {\n  310 |             return Arrays.equals((double[]) o1, (double[]) o2);\n  311 |         }\n  312 |         if (componentType.equals(Boolean.TYPE)) {\n  313 |             return Arrays.equals((boolean[]) o1, (boolean[]) o2);\n  314 |         }\n  315 |         return Arrays.equals((Object[]) o1, (Object[]) o2);\n  316 |     }\n```\n\n## C20\nmethod: org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 263-277)\n```java\n  263 | private static boolean memberEquals(final Class<?> type, final Object o1, final Object o2) {\n  264 |         if (o1 == o2) {\n  265 |             return true;\n  266 |         }\n  267 |         if (o1 == null || o2 == null) {\n  268 |             return false;\n  269 |         }\n  270 |         if (type.isArray()) {\n  271 |             return arrayMemberEquals(type.getComponentType(), o1, o2);\n  272 |         }\n  273 |         if (type.isAnnotation()) {\n  274 |             return equals((Annotation) o1, (Annotation) o2);\n  275 |         }\n  276 |         return o1.equals(o2);\n  277 |     }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 14018445896045613951,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C02": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "C03": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C09": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C13": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+     "label": "C12",
+     "reason": "L46 uses a HashMap keyed by CharSequence and L51 stores StringBuffer keys, which use identity equality, so lookups with a different StringBuffer fail; keys should be converted to String.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       46,
+       51
+      ],
+      "in_candidate": [
+       46,
+       51
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+     "label": "C18",
+     "reason": "L77 looks up the raw subSequence in lookupMap; this only matches if the stored keys are Strings, so the translate lookup could alternatively be changed to use subSeq.toString() for the return of 0 at L83 to be avoided.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       77,
+       83
+      ],
+      "in_candidate": [
+       77,
+       83
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+     "label": "C01",
+     "reason": "L3751 is an unrelated array utility that is not exercised by the LookupTranslator test, so it is unlikely to be the cause.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       3751
+      ],
+      "in_candidate": [
+       3751
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "92b1495eb3ee68fa01c4d3a7e9069e9ac01346d9aa45e3277c0096a20888a415",
+     "cache_hit": false,
+     "cost_usd": 0.040632,
+     "paid_usd": 0.040632,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8598,
+      "output_tokens": 312,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.198,
+     "request_id": "req_011CgKcdw5dN464ZVJ6rX5rL",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C12\",\"C18\",\"C01\",\"C09\",\"C03\",\"C13\",\"C02\",\"C17\",\"C04\",\"C05\",\"C06\",\"C07\",\"C08\",\"C10\",\"C11\",\"C14\",\"C15\",\"C16\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C12\",\"reason\":\"L46 uses a HashMap keyed by CharSequence and L51 stores StringBuffer keys, which use identity equality, so lookups with a different StringBuffer fail; keys should be converted to String.\"},{\"candidate\":\"C18\",\"reason\":\"L77 looks up the raw subSequence in lookupMap; this only matches if the stored keys are Strings, so the translate lookup could alternatively be changed to use subSeq.toString() for the return of 0 at L83 to be avoided.\"},{\"candidate\":\"C01\",\"reason\":\"L3751 is an unrelated array utility that is not exercised by the LookupTranslator test, so it is unlikely to be the cause.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8598,
+    "output_tokens": 312
+   },
+   "cost_usd": 0.040632,
+   "paid_usd": 0.040632,
+   "latency_s": 4.198
+  },
+  {
+   "sample_index": 2,
+   "seed": 6386480104124843868,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C02": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C03": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C05": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C12": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+     "label": "C11",
+     "reason": "L46/L51 use a HashMap keyed by raw CharSequence (StringBuffer), which uses identity equals/hashCode, so lookups with another StringBuffer fail; keys should be converted to String.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       46,
+       51
+      ],
+      "in_candidate": [
+       46,
+       51
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+     "label": "C15",
+     "reason": "L77 looks up subSeq directly in lookupMap without toString(), so StringBuffer input never matches and L83 returns 0.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       77,
+       83
+      ],
+      "in_candidate": [
+       77,
+       83
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+     "label": "C01",
+     "reason": "L137 is an unrelated ArrayUtils constructor not exercised by the translator logic.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       137
+      ],
+      "in_candidate": [
+       137
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "c54c99ccb67489cf302afdbec2b77d4ba5d5421f7fa6b816801456863d180e42",
+     "cache_hit": false,
+     "cost_usd": 0.039732,
+     "paid_usd": 0.039732,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8598,
+      "output_tokens": 267,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.093,
+     "request_id": "req_011CgKceFBo93yoxtHfzYEo9",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C11\",\"C15\",\"C01\",\"C02\",\"C03\",\"C04\",\"C05\",\"C06\",\"C07\",\"C08\",\"C09\",\"C10\",\"C12\",\"C13\",\"C14\",\"C16\",\"C17\",\"C18\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C11\",\"reason\":\"L46/L51 use a HashMap keyed by raw CharSequence (StringBuffer), which uses identity equals/hashCode, so lookups with another StringBuffer fail; keys should be converted to String.\"},{\"candidate\":\"C15\",\"reason\":\"L77 looks up subSeq directly in lookupMap without toString(), so StringBuffer input never matches and L83 returns 0.\"},{\"candidate\":\"C01\",\"reason\":\"L137 is an unrelated ArrayUtils constructor not exercised by the translator logic.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8598,
+    "output_tokens": 267
+   },
+   "cost_usd": 0.039732,
+   "paid_usd": 0.039732,
+   "latency_s": 4.093
+  },
+  {
+   "sample_index": 3,
+   "seed": 1788479335179657004,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C02": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C06": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C09": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C11": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C17": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C19": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+     "label": "C08",
+     "reason": "L51 stores the StringBuffer key directly in a HashMap, and since StringBuffer uses identity equals/hashCode, lookups with an equal-content StringBuffer fail; the keys should be converted to String.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       51
+      ],
+      "in_candidate": [
+       51
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+     "label": "C02",
+     "reason": "L77 looks up the raw subSequence (a StringBuffer) in the map without converting it to String, so the lookup returns null and L83 returns 0.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       77,
+       83
+      ],
+      "in_candidate": [
+       77,
+       83
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+     "label": "C01",
+     "reason": "L3751 is unrelated array-growth utility code that the translator test does not exercise, so it is ranked only as a remote fallback.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       3751
+      ],
+      "in_candidate": [
+       3751
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "bee702d97279fccf5eb7d093525b4549b911108c07d3518e7b9d1f6f1368bafb",
+     "cache_hit": false,
+     "cost_usd": 0.040132,
+     "paid_usd": 0.040132,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8598,
+      "output_tokens": 287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 6.037,
+     "request_id": "req_011CgKceYbZL2NgVNo1nnAHT",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C08\",\"C02\",\"C01\",\"C06\",\"C09\",\"C19\",\"C11\",\"C17\",\"C03\",\"C04\",\"C05\",\"C07\",\"C10\",\"C12\",\"C13\",\"C14\",\"C15\",\"C16\",\"C18\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C08\",\"reason\":\"L51 stores the StringBuffer key directly in a HashMap, and since StringBuffer uses identity equals/hashCode, lookups with an equal-content StringBuffer fail; the keys should be converted to String.\"},{\"candidate\":\"C02\",\"reason\":\"L77 looks up the raw subSequence (a StringBuffer) in the map without converting it to String, so the lookup returns null and L83 returns 0.\"},{\"candidate\":\"C01\",\"reason\":\"L3751 is unrelated array-growth utility code that the translator test does not exercise, so it is ranked only as a remote fallback.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8598,
+    "output_tokens": 287
+   },
+   "cost_usd": 0.040132,
+   "paid_usd": 0.040132,
+   "latency_s": 6.037
+  },
+  {
+   "sample_index": 4,
+   "seed": 17391443361007449776,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C03": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C07": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C08": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C10": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C11": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C18": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],int,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+     "label": "C10",
+     "reason": "L46 uses a HashMap keyed by raw CharSequence (L51 puts StringBuffer keys), and StringBuffer lacks content-based equals/hashCode, so lookups never match; keys should be converted to String.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       46,
+       51
+      ],
+      "in_candidate": [
+       46,
+       51
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)",
+     "label": "C16",
+     "reason": "L77 looks up the subSequence directly in lookupMap without converting to String, so a lookup can fail on CharSequence identity, returning 0 at L83.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       77,
+       83
+      ],
+      "in_candidate": [
+       77,
+       83
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+     "label": "C03",
+     "reason": "L3751 is unrelated array utility code with no involvement in the translator path.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       3751
+      ],
+      "in_candidate": [
+       3751
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "1f073f21ee588971f702a43e97291645ed39786d308a6c38399dfbede244babe",
+     "cache_hit": false,
+     "cost_usd": 0.039872,
+     "paid_usd": 0.039872,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8598,
+      "output_tokens": 274,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.827,
+     "request_id": "req_011CgKcezTZAEXruU5KPNB1T",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C10\",\"C16\",\"C03\",\"C11\",\"C07\",\"C08\",\"C18\",\"C01\",\"C02\",\"C04\",\"C05\",\"C06\",\"C09\",\"C12\",\"C13\",\"C14\",\"C15\",\"C17\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C10\",\"reason\":\"L46 uses a HashMap keyed by raw CharSequence (L51 puts StringBuffer keys), and StringBuffer lacks content-based equals/hashCode, so lookups never match; keys should be converted to String.\"},{\"candidate\":\"C16\",\"reason\":\"L77 looks up the subSequence directly in lookupMap without converting to String, so a lookup can fail on CharSequence identity, returning 0 at L83.\"},{\"candidate\":\"C03\",\"reason\":\"L3751 is unrelated array utility code with no involvement in the translator path.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8598,
+    "output_tokens": 274
+   },
+   "cost_usd": 0.039872,
+   "paid_usd": 0.039872,
+   "latency_s": 3.827
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 0,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 42990,
+  "output_tokens": 1416,
+  "cost_usd": 0.20028,
+  "paid_usd_this_run": 0.20028,
+  "latency_s": 22.251,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

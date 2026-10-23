@@ -5,7 +5,7 @@
  "bug_id": "Lang-4",
  "input_sha256": "8aaa7645804552966ccb3a96486d7d22279682ab50a276dcf9a76d5a37e02967",
  "status": "complete",
- "created_at": "2026-10-22T01:25:39Z",
+ "created_at": "2026-10-23T18:06:50Z",
  "config": {
   "model_key": "haiku",
   "provider": "anthropic",
@@ -16,6 +16,13 @@
   "num_samples": 5,
   "effective_num_samples": 5,
   "transport": "batch",
+  "candidate_set": "nonzero",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "4fa089c8915166b4b2a09a7045d655a5bd1d3add",
+   "git_dirty": true,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
   "sampling": {
    "num_samples": 5,
    "base_seed": 527,
@@ -49,6 +56,7 @@
     0.75,
     1.0
    ],
+   "primary_weight": 0.5,
    "rrf_k": 60
   }
  },
@@ -556,7 +564,7 @@
    },
    "cost_usd": 0.000214,
    "paid_usd": 0.0,
-   "latency_s": 0.0,
+   "latency_s": null,
    "prompt_text": "Bug: Lang-4 (1 failing test)\n\n## Failing test 1: org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Incorrect codepoint consumption expected:<3> but was:<0>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.apache.commons.lang3.text.translate.LookupTranslatorTest.testLang882(LookupTranslatorTest.java:48)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  43 | @Test\n  44 |     public void testLang882() throws IOException {\n  45 |         final LookupTranslator lt = new LookupTranslator(new CharSequence[][] { { new StringBuffer(\"one\"), new StringBuffer(\"two\") } });\n  46 |         final StringWriter out = new StringWriter();\n  47 |         final int result = lt.translate(new StringBuffer(\"one\"), 0, out);\n>>48 |         assertEquals(\"Incorrect codepoint consumption\", 3, result);\n  49 |         assertEquals(\"Incorrect value\", \"two\", out.toString());\n  50 |     }\n```\n\n# Candidate methods (2)\n\n## C01\nmethod: org.apache.commons.lang3.text.translate.LookupTranslator#translate(CharSequence,int,Writer)\nfile: src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java (lines 68-84)\n```java\n  68 | @Override\n  69 |     public int translate(final CharSequence input, final int index, final Writer out) throws IOException {\n  70 |         int max = longest;\n  71 |         if (index + longest > input.length()) {\n  72 |             max = input.length() - index;\n  73 |         }\n  74 |         // descend so as to get a greedy algorithm\n  75 |         for (int i = max; i >= shortest; i--) {\n  76 |             final CharSequence subSeq = input.subSequence(index, index + i);\n  77 |             final CharSequence result = lookupMap.get(subSeq);\n  78 |             if (result != null) {\n  79 |                 out.write(result.toString());\n  80 |                 return i;\n  81 |             }\n  82 |         }\n  83 |         return 0;\n  84 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])\nfile: src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java (lines 45-63)\n```java\n  45 | public LookupTranslator(final CharSequence[]... lookup) {\n  46 |         lookupMap = new HashMap<CharSequence, CharSequence>();\n  47 |         int _shortest = Integer.MAX_VALUE;\n  48 |         int _longest = 0;\n  49 |         if (lookup != null) {\n  50 |             for (final CharSequence[] seq : lookup) {\n  51 |                 this.lookupMap.put(seq[0], seq[1]);\n  52 |                 final int sz = seq[0].length();\n  53 |                 if (sz < _shortest) {\n  54 |                     _shortest = sz;\n  55 |                 }\n  56 |                 if (sz > _longest) {\n  57 |                     _longest = sz;\n  58 |                 }\n  59 |             }\n  60 |         }\n  61 |         shortest = _shortest;\n  62 |         longest = _longest;\n  63 |     }\n```\n\nRank all 2 candidates (C01..C02) as JSON; cite candidate line numbers as L<number> in each reason."
   },
   {
@@ -672,7 +680,7 @@
    },
    "cost_usd": 0.000238,
    "paid_usd": 0.0,
-   "latency_s": 0.0
+   "latency_s": null
   },
   {
    "sample_index": 2,
@@ -787,7 +795,7 @@
    },
    "cost_usd": 0.000203,
    "paid_usd": 0.0,
-   "latency_s": 0.0
+   "latency_s": null
   },
   {
    "sample_index": 3,
@@ -902,7 +910,7 @@
    },
    "cost_usd": 0.000244,
    "paid_usd": 0.0,
-   "latency_s": 0.0
+   "latency_s": null
   },
   {
    "sample_index": 4,
@@ -1017,7 +1025,7 @@
    },
    "cost_usd": 0.000223,
    "paid_usd": 0.0,
-   "latency_s": 0.0
+   "latency_s": null
   }
  ],
  "degradations": [
@@ -1045,7 +1053,7 @@
   "output_tokens": 2333,
   "cost_usd": 0.001122,
   "paid_usd_this_run": 0.0,
-  "latency_s": 0.0,
+  "latency_s": null,
   "estimated_cost_usd": 0.0
  },
  "errors": []

@@ -10,6 +10,13 @@
  "input_dir": "data/sample/B",
  "prompt_version": "v2",
  "transport": "batch",
+ "candidate_set": "nonzero",
+ "fusion_primary_weight": 0.5,
+ "code": {
+  "git_revision": "4fa089c8915166b4b2a09a7045d655a5bd1d3add",
+  "git_dirty": true,
+  "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+ },
  "batch_ids": [],
  "bugs": [
   {
@@ -53,7 +60,7 @@
    "output_tokens": 1685,
    "cost_usd": 0.001997,
    "paid_usd_this_run": 0.0,
-   "latency_s": 0.0,
+   "latency_s": null,
    "estimated_cost_usd": 0.0
   },
   {
@@ -97,7 +104,7 @@
    "output_tokens": 3782,
    "cost_usd": 0.0022,
    "paid_usd_this_run": 0.0,
-   "latency_s": 0.0,
+   "latency_s": null,
    "estimated_cost_usd": 0.0
   },
   {
@@ -141,7 +148,7 @@
    "output_tokens": 2333,
    "cost_usd": 0.001122,
    "paid_usd_this_run": 0.0,
-   "latency_s": 0.0,
+   "latency_s": null,
    "estimated_cost_usd": 0.0
   }
  ],
@@ -153,7 +160,7 @@
   "cost_usd": 0.005319,
   "paid_usd_this_run": 0.0,
   "estimated_cost_usd": 0.0,
-  "latency_s": 0.0
+  "latency_s": null
  },
  "ledger_spent_usd": {
   "before": 1.687156,
