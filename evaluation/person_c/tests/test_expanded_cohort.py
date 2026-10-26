@@ -29,8 +29,10 @@ class ExpandedCohortTests(unittest.TestCase):
         self.assertEqual(len(self.docs["manifest.json"]["bugs"]), 10)
         self.assertTrue(all(b["split"] == "eval" and b["included"] for b in self.docs["manifest.json"]["bugs"]))
 
-    def test_new_labels_do_not_inherit_human_confirmation(self):
-        self.assertTrue(all(r["status"] == "reviewed" and r["human_review_status"] == "pending"
+    def test_new_labels_have_explicit_dated_human_confirmation(self):
+        self.assertTrue(all(r["status"] == "reviewed" and r["human_review_status"] == "completed"
+                            and r["human_review_date"] == "2026-10-26"
+                            and r["human_review_basis"] == "reviewer_confirmation"
                             for r in self.docs["labels.json"]["records"]))
 
     def test_mixed_field_cases_and_multiple_labels_retained(self):

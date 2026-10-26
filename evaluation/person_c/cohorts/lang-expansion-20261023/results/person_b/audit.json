@@ -1,0 +1,88 @@
+{
+  "b_revision": "f645e781833eb2c417b2c44e2597079dfd2e9ae2",
+  "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54",
+  "runs": [
+    {
+      "run": "langexp1023-opus-v2-k20-s5",
+      "totals": {
+        "calls": 50,
+        "cache_hits": 0,
+        "input_tokens": 465355,
+        "output_tokens": 13215,
+        "cost_usd": 2.12572,
+        "paid_usd_this_run": 2.12572,
+        "estimated_cost_usd": 0.0,
+        "latency_s": 228.94
+      },
+      "sample_status": {
+        "ok": 50
+      }
+    },
+    {
+      "run": "langexp1023-haiku-v2-k20-s5",
+      "totals": {
+        "calls": 51,
+        "cache_hits": 0,
+        "input_tokens": 474907,
+        "output_tokens": 27946,
+        "cost_usd": 0.061462,
+        "paid_usd_this_run": 0.061462,
+        "estimated_cost_usd": 0.0,
+        "latency_s": 176.004
+      },
+      "sample_status": {
+        "ok": 50
+      }
+    },
+    {
+      "run": "langexp1023-opus-v2-nz-s5",
+      "totals": {
+        "calls": 50,
+        "cache_hits": 25,
+        "input_tokens": 315520,
+        "output_tokens": 11398,
+        "cost_usd": 1.49004,
+        "paid_usd_this_run": 0.39314,
+        "estimated_cost_usd": 0.0,
+        "latency_s": 190.154
+      },
+      "sample_status": {
+        "ok": 50
+      }
+    }
+  ],
+  "sample_records": 150,
+  "attempt_records": 151,
+  "unique_request_keys": 126,
+  "deduplicated_recorded_cost_usd": 2.580323699999999,
+  "retries": [
+    {
+      "run": "langexp1023-haiku-v2-k20-s5",
+      "bug_id": "Lang-5",
+      "sample_index": 3,
+      "attempt_issues": [
+        [
+          "duplicate label C18"
+        ],
+        []
+      ]
+    }
+  ],
+  "checks": [
+    "Input SHA256",
+    "Frozen B code hash",
+    "Full offline pipeline replay",
+    "Prompt/request hashes",
+    "Raw response parsing and retry selection",
+    "Candidate permutations",
+    "Means and fusion",
+    "Evidence/degradation records",
+    "Call logs",
+    "Configured price arithmetic and run totals"
+  ],
+  "limitations": [
+    "Committed response records are not independent provider attestation or invoices",
+    "Replay uses frozen B implementation; it does not establish semantic correctness of explanations",
+    "No new model calls, Java tests or coverage collection"
+  ]
+}

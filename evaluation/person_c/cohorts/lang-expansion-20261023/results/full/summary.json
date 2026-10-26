@@ -13,82 +13,82 @@
     {
       "bug_id": "Lang-5",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-6",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-7",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-8",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-9",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-10",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-11",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-12",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-13",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-14",
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     }
   ],
   "rank_cutoff": 0,
@@ -613,19 +613,19 @@
   ],
   "input_files": [
     {
-      "path": "evaluation/person_c/runs/lang-expansion-validated/manifest.json",
+      "path": "evaluation/person_c/runs/expanded-confirmed-20261026/manifest.json",
       "sha256": "3091b5f79735ab87e9b846cdf4d1d86eb0ee48d361ab85e7a7ea13bbd3d4ba36"
     },
     {
-      "path": "evaluation/person_c/runs/lang-expansion-validated/labels.json",
-      "sha256": "7d8b3e61032c0b64eb8ea03cb30582d1383fc3dbf40c1464cafab8d3a3c3369a"
+      "path": "evaluation/person_c/runs/expanded-confirmed-20261026/labels.json",
+      "sha256": "6ac648c82c46aadd78f8aebc0becd358b6873c2b24a769a83f63e739b6144223"
     },
     {
-      "path": "evaluation/person_c/runs/lang-expansion-validated/ochiai.json",
+      "path": "evaluation/person_c/runs/expanded-confirmed-20261026/ochiai.json",
       "sha256": "fa14d3dc4ea0fca424cad95f31b9a049b378e5e5a8e63dad18b4100d91fe3568"
     },
     {
-      "path": "evaluation/person_c/runs/lang-expansion-validated/dstar.json",
+      "path": "evaluation/person_c/runs/expanded-confirmed-20261026/dstar.json",
       "sha256": "9e24259bc1096810ebdc95298d34c5e82d54a5505fe51033751dc3218480ac00"
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "review_type": "Patch/source validation completed; independent human confirmation pending for this new cohort",
+  "review_type": "Patch/source validation completed; Person C review confirmed on 2026-10-26",
   "records": [
     {
       "bug_id": "Lang-5",
@@ -12,10 +12,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Deleted locale-prefix handling is inside existing toLocale(String).",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-6",
@@ -28,10 +28,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Changed codepoint offset is inside existing translate(CharSequence,Writer).",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-7",
@@ -45,10 +45,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Patch touches both createNumber and createBigDecimal; preserve both rather than selecting the best-ranked label.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-8",
@@ -67,10 +67,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Retain explicit nested TimeZoneNameRule constructor and appendTo; the zone field at buggy line 1098 is recorded separately.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null,
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation",
       "outside_method_policy": "Include mixed field/method changes under patch-touched-existing-method labels; retain outside changes explicitly and do not claim complete causal-root coverage."
     },
     {
@@ -84,10 +84,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Removed trailing-pattern guard lies inside init(); insertion gap is strictly inside that method.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-10",
@@ -100,10 +100,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Whitespace tracking changes are entirely inside escapeRegex.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-11",
@@ -116,10 +116,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Removed argument-range check lies inside the existing random overload.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-12",
@@ -132,10 +132,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Removed empty-array guard and char-range handling map to the same existing random overload.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     },
     {
       "bug_id": "Lang-13",
@@ -154,10 +154,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Retain ClassLoaderAwareObjectInputStream constructor and resolveClass; primitiveTypes field insertion gap 238 remains outside methods.",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null,
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation",
       "outside_method_policy": "Include mixed field/method changes under patch-touched-existing-method labels; retain outside changes explicitly and do not claim complete causal-root coverage."
     },
     {
@@ -171,10 +171,10 @@
       "included": true,
       "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
       "rationale": "Removed CharSequence-specific branch lies inside equals(CharSequence,CharSequence).",
-      "human_review_status": "pending",
-      "human_reviewer": null,
-      "human_review_date": null,
-      "human_review_basis": null
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
     }
   ]
 }
