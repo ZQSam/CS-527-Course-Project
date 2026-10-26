@@ -20,6 +20,10 @@ Person A 的下一批固定为 **Lang-5 至 Lang-14**，按 active 编号选择�
 [完整状态报告](results/lang_expansion_20261023/report.md)。十例均已完成复现、覆盖率和 B/C 数据交接。
 该批次独立放在 `data/batches/`，不替换原三例 dev 数据。
 
+## Person C 中期评估材料
+
+数据核验、人工确认、评分口径、结果对比、逐例分析、局限和附件统一见 [Person C 中期评估材料](docs/person_c_midterm_evaluation.md)。新增十例的主要 Top-1 结果：SBFL 5/10、Opus 重排 9/10、固定 0.50 融合 7/10。
+
 ## 我应该从哪里开始？
 
 | 角色 | 立即使用的材料 | 开始阅读 |

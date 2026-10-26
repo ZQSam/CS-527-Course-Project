@@ -2,7 +2,7 @@
 
 ## 输入与划分
 
-A 的数据来自 `person-a/lang-expansion-20261023`，提交 `fc9946d63bc26716dc621fcb1d4f7456ff98ebcf`。本次检查时该分支没有 PR，也未合入 main。B 原来的 PR #3 已合入 main；C 的 B 输出适配 PR #2 仍独立待合并。
+A 的数据来自 `person-a/lang-expansion-20261023`，提交 `fc9946d63bc26716dc621fcb1d4f7456ff98ebcf`。本集成分支包含 A 扩充提交和 C 的评分适配器；B 新原始输出由 B 单独合并。C 的完整中期材料见 [独立汇总文档](../../../../docs/person_c_midterm_evaluation.md)。
 
 A 在 `e19f54f` 单独预登记 Lang-5 至 Lang-14，采集后的登记文件与该提交字节一致。十例均 ready，没有运行失败或替换样本。C 于 2026-10-25 在查看新标签与命中排名前，把全部十例固定为 eval，并单独提交 [split_decision.json](split_decision.json)；原来 Lang-1/3/4 保留为 dev。冻结的 B 配置来自 `f97c09a`，后续不得根据这十例得分调模型、prompt、K 或融合权重。
 
@@ -102,16 +102,14 @@ Lang-8/9/10 的上下文有重复测试/stack 内容，Lang-10 的 helper 因预
 
 ### 复现 B 审计与 C 评分
 
-先执行前面的 A 导入命令生成 `runs/expanded`。评分依赖 PR #2 中的 `import_person_b.py`（固定版本来自 `da1a1b9c16bc5547ae87228d3a231d8fc4a38aec`），与本 PR 可以无冲突合并。若 PR #2 尚未合入，可以把适配器及本分支的 `evaluate.py` 导出到忽略目录后直接运行：
+先执行前面的 A 导入命令生成 `runs/expanded`。本集成已包含 `import_person_b.py`，可直接评分；B 的固定提交只需 fetch，不需要先合入 main。
 
 ```bash
-git fetch origin person-b/lang-expansion person-c-b-output-evaluation
-mkdir -p evaluation/person_c/runs/b-snapshot evaluation/person_c/runs/adapter
+git fetch origin person-b/lang-expansion
+mkdir -p evaluation/person_c/runs/b-snapshot
 git archive f645e781833eb2c417b2c44e2597079dfd2e9ae2 | tar -x -C evaluation/person_c/runs/b-snapshot
 python3 evaluation/person_c/audit_expanded_b.py --b-root evaluation/person_c/runs/b-snapshot --output evaluation/person_c/runs/b-replay-audit.json
-git show da1a1b9c16bc5547ae87228d3a231d8fc4a38aec:evaluation/person_c/import_person_b.py > evaluation/person_c/runs/adapter/import_person_b.py
-cp evaluation/person_c/evaluate.py evaluation/person_c/runs/adapter/evaluate.py
-python3 evaluation/person_c/runs/adapter/import_person_b.py --b-ref f645e781833eb2c417b2c44e2597079dfd2e9ae2 --run langexp1023-opus-v2-k20-s5 --run langexp1023-haiku-v2-k20-s5 --run langexp1023-opus-v2-nz-s5 --manifest evaluation/person_c/runs/expanded/manifest.json --labels evaluation/person_c/runs/expanded/labels.json --baseline evaluation/person_c/runs/expanded/ochiai.json --baseline evaluation/person_c/runs/expanded/dstar.json --output-dir evaluation/person_c/runs/expanded-b
+python3 evaluation/person_c/import_person_b.py --b-ref f645e781833eb2c417b2c44e2597079dfd2e9ae2 --run langexp1023-opus-v2-k20-s5 --run langexp1023-haiku-v2-k20-s5 --run langexp1023-opus-v2-nz-s5 --manifest evaluation/person_c/runs/expanded/manifest.json --labels evaluation/person_c/runs/expanded/labels.json --baseline evaluation/person_c/runs/expanded/ochiai.json --baseline evaluation/person_c/runs/expanded/dstar.json --output-dir evaluation/person_c/runs/expanded-b
 ```
 
 适配器生成的通用报告含一条只适用于 dev 的旧模板说明，本目录的归档报告已把它改为本批 eval 的冻结口径；不影响 JSON 或评分计算。`derived/predictions_template.json` 仍仅是 `not_run` 接口模板，真实成绩请使用上面的 `results/person_b/`。

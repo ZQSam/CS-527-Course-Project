@@ -2,7 +2,7 @@ Validation: 2026-10-26
 A commit: fc9946d63bc26716dc621fcb1d4f7456ff98ebcf
 Original A suite on macOS: 79 passed, 7 WSL/Linux skips, 1 path-alias error in test_failure_remains_after_successful_retry.
 After resolving the repository root in collect_attempts: 80 root-suite tests passed, 7 WSL/Linux skips.
-C suite: 32 tests passed, including 6 expanded-cohort checks.
+C suite after adapter integration: 54 tests passed, including 6 expanded-cohort checks.
 B/C profile hashes verified; 1920 C manifest files checked.
 Shared parser reparse: 992 source file copies, 23166 methods matched.
 Raw coverage normalization and Ochiai/DStar full rankings independently recomputed for all 10 bugs.
@@ -14,3 +14,5 @@ B f645e78: 150 successful final samples, 151 attempts, 126 unique request keys.
 Full offline pipeline replay matched all three runs, including one Haiku retry.
 C adapter scored 36 B variants plus two baselines on all ten eval bugs.
 Frozen Opus single/mean: Top-1 9/10, MRR@20 0.9; mean fusion at 0.50: Top-1 7/10, MRR@20 0.73.
+Integrated adapter reproduced the archived expanded B summary exactly.
+Standalone C midterm document links verified.
