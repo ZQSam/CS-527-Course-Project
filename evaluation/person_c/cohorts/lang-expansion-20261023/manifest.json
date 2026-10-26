@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "purpose": "Frozen new Lang cohort for evaluation; original Lang-1/3/4 are development only",
+  "selection": "All ten preregistered new bugs are eval; existing Lang-1/3/4 remain dev. Split recorded before inspecting new patch labels or baseline hit ranks. Model/prompt/weights are frozen in B f97c09a. No performance-based removal or replacement.",
+  "bugs": [
+    {
+      "bug_id": "Lang-5",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-6",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-7",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-8",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-9",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-10",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-11",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-12",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-13",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-14",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    }
+  ],
+  "cohort_id": "lang-expansion-20261023",
+  "split_decision_sha256": "ff19051ef8aa3a32786993ca1930516ec79b9da2361589847d6fdd2981c30b1d"
+}

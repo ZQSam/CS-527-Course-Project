@@ -1,0 +1,57 @@
+{
+  "defects4j_commit": "01f13c69425fb8a0db290d12b1d48da1641bf6a9",
+  "retrieved_date": "2026-10-25",
+  "patch_direction": "fixed_to_buggy",
+  "files": [
+    {
+      "file": "evidence/patches/Lang-10.src.patch",
+      "sha256": "42968c8753e84024667d77992e6d098bf7d231abc10e37831bafff7c53ee151a",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/10.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-11.src.patch",
+      "sha256": "9ab79c99f7c87820773904a533499370c06a4f70742193bcc38f8388622ff90c",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/11.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-12.src.patch",
+      "sha256": "7197b4b2ffd7ea84d7231eb394a98700dd81a0163c66f2312d524c69584ccadd",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/12.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-13.src.patch",
+      "sha256": "9b6897eb664e73e64fde187f723ba21861dbf84816dbd2e799f15f68d2b19423",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/13.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-14.src.patch",
+      "sha256": "8ee8530e2155b88445140aa62b3d5f59362fca9fc2321ee82b9e5a15023117c8",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/14.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-5.src.patch",
+      "sha256": "4742c0b5972295de0c0eb45d5c0f405c3606c9e35e633b445ffa068859670f17",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/5.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-6.src.patch",
+      "sha256": "3af46d22f5c1d17a7d57f26ff4bc80257cd9f19cf0cbc858b5868421b7c229ed",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/6.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-7.src.patch",
+      "sha256": "00c7b1a1ac155973dcb00bd05a3e9ccf00249f331aa60f0ae0867962c7ca68a9",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/7.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-8.src.patch",
+      "sha256": "7b9d925eb73a36a371295403aeadba218b6fae4462ae7abca94ab1ec15d76b43",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/8.src.patch"
+    },
+    {
+      "file": "evidence/patches/Lang-9.src.patch",
+      "sha256": "c6550c3bad7e4b55452da688531821a45f2f838148fc1d5d9a1200b27ef60b51",
+      "url": "https://raw.githubusercontent.com/rjust/defects4j/01f13c69425fb8a0db290d12b1d48da1641bf6a9/framework/projects/Lang/patches/9.src.patch"
+    }
+  ]
+}

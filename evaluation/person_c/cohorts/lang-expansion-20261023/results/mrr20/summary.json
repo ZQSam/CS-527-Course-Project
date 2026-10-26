@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "data_kind": "real",
+  "dataset": {
+    "name": "Defects4J",
+    "version": "v2.0.0",
+    "revision": "01f13c69425fb8a0db290d12b1d48da1641bf6a9"
+  },
+  "split": "eval",
+  "purpose": "Frozen new Lang cohort for evaluation; original Lang-1/3/4 are development only",
+  "label_definition": "patch-touched existing production methods and explicit constructors",
+  "label_reviews": [
+    {
+      "bug_id": "Lang-5",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-6",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-7",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-8",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-9",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-10",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-11",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-12",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-13",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    },
+    {
+      "bug_id": "Lang-14",
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "human_review_status": "pending",
+      "human_reviewer": null,
+      "human_review_date": null,
+      "human_review_basis": null
+    }
+  ],
+  "rank_cutoff": 20,
+  "mrr_metric": "MRR@20",
+  "failure_policy": "zero-credit; no implicit fallback or dropped cases",
+  "included_bug_ids": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "excluded_bugs": [],
+  "results": [
+    {
+      "configuration_id": "ochiai",
+      "ranking_scope": "full",
+      "configuration": {
+        "code_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+        "tie_policy": "score descending, method_id ascending",
+        "method_score": "maximum physical-line score",
+        "dstar_exponent": null,
+        "candidate_set_origin": "A Ochiai top20, shared with B"
+      },
+      "ignored_registered_records": 0,
+      "summary": {
+        "n": 10,
+        "status_counts": {
+          "ok": 10
+        },
+        "top1_hits": 5,
+        "top1_accuracy": 0.5,
+        "top3_hits": 7,
+        "top3_accuracy": 0.7,
+        "top5_hits": 7,
+        "top5_accuracy": 0.7,
+        "mean_reciprocal_rank": 0.5976874003189793,
+        "candidate_sets_known": 10,
+        "candidate_sets_total": 10,
+        "candidate_set_sizes": {
+          "20": 10
+        },
+        "candidate_hits_known": 9,
+        "candidate_hit_rate_observed": 0.9,
+        "candidate_recall": 0.9,
+        "usage": {
+          "input_tokens": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "output_tokens": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "cost_usd": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "latency_seconds": {
+            "known_records": 0,
+            "total_records": 10,
+            "observed_total": null,
+            "total_if_complete": null,
+            "mean_if_complete": null
+          }
+        }
+      },
+      "per_bug": [
+        {
+          "bug_id": "Lang-5",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-6",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": null,
+          "reciprocal_rank": 0.0,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": false,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-7",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-8",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top1": 0,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-9",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 11,
+          "reciprocal_rank": 0.09090909090909091,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-10",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 19,
+          "reciprocal_rank": 0.05263157894736842,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-11",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-12",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-13",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top1": 0,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-14",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        }
+      ]
+    },
+    {
+      "configuration_id": "dstar",
+      "ranking_scope": "full",
+      "configuration": {
+        "code_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+        "tie_policy": "score descending, method_id ascending",
+        "method_score": "maximum physical-line score",
+        "dstar_exponent": 2,
+        "candidate_set_origin": "A Ochiai top20, shared with B"
+      },
+      "ignored_registered_records": 0,
+      "summary": {
+        "n": 10,
+        "status_counts": {
+          "ok": 10
+        },
+        "top1_hits": 5,
+        "top1_accuracy": 0.5,
+        "top3_hits": 7,
+        "top3_accuracy": 0.7,
+        "top5_hits": 7,
+        "top5_accuracy": 0.7,
+        "mean_reciprocal_rank": 0.5976874003189793,
+        "candidate_sets_known": 10,
+        "candidate_sets_total": 10,
+        "candidate_set_sizes": {
+          "20": 10
+        },
+        "candidate_hits_known": 9,
+        "candidate_hit_rate_observed": 0.9,
+        "candidate_recall": 0.9,
+        "usage": {
+          "input_tokens": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "output_tokens": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "cost_usd": {
+            "known_records": 10,
+            "total_records": 10,
+            "observed_total": 0,
+            "total_if_complete": 0,
+            "mean_if_complete": 0.0
+          },
+          "latency_seconds": {
+            "known_records": 0,
+            "total_records": 10,
+            "observed_total": null,
+            "total_if_complete": null,
+            "mean_if_complete": null
+          }
+        }
+      },
+      "per_bug": [
+        {
+          "bug_id": "Lang-5",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-6",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": null,
+          "reciprocal_rank": 0.0,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": false,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-7",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-8",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top1": 0,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-9",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 11,
+          "reciprocal_rank": 0.09090909090909091,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-10",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 19,
+          "reciprocal_rank": 0.05263157894736842,
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-11",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-12",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-13",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top1": 0,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        },
+        {
+          "bug_id": "Lang-14",
+          "status": "ok",
+          "issue": "",
+          "first_hit_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top1": 1,
+          "top3": 1,
+          "top5": 1,
+          "candidate_hit": true,
+          "candidate_count": 20,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0,
+            "latency_seconds": null
+          }
+        }
+      ]
+    }
+  ],
+  "paired_against_first_configuration": [
+    {
+      "baseline": "ochiai",
+      "configuration_id": "dstar",
+      "top1_improved_bug_ids": [],
+      "top1_regressed_bug_ids": [],
+      "top1_net_change": 0,
+      "candidate_set_mismatch_bug_ids": [],
+      "candidate_set_unknown_bug_ids": [],
+      "candidate_sets_verified_equal": true
+    }
+  ],
+  "input_files": [
+    {
+      "path": "evaluation/person_c/runs/lang-expansion-validated/manifest.json",
+      "sha256": "3091b5f79735ab87e9b846cdf4d1d86eb0ee48d361ab85e7a7ea13bbd3d4ba36"
+    },
+    {
+      "path": "evaluation/person_c/runs/lang-expansion-validated/labels.json",
+      "sha256": "7d8b3e61032c0b64eb8ea03cb30582d1383fc3dbf40c1464cafab8d3a3c3369a"
+    },
+    {
+      "path": "evaluation/person_c/runs/lang-expansion-validated/ochiai.json",
+      "sha256": "fa14d3dc4ea0fca424cad95f31b9a049b378e5e5a8e63dad18b4100d91fe3568"
+    },
+    {
+      "path": "evaluation/person_c/runs/lang-expansion-validated/dstar.json",
+      "sha256": "9e24259bc1096810ebdc95298d34c5e82d54a5505fe51033751dc3218480ac00"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "a_commit": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+  "archive_sha256": "fafe5bd9ee46996152c50bd6ea54043d7d9fee56823e0ec47f8c7ac59b2f23e1",
+  "verified_manifest_files": 1920,
+  "bugs": [
+    {
+      "bug_id": "Lang-5",
+      "method_count": 2382,
+      "source_files_checked": 101,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2270,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-6",
+      "method_count": 2371,
+      "source_files_checked": 100,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2262,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-7",
+      "method_count": 2370,
+      "source_files_checked": 100,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2260,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-8",
+      "method_count": 2309,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2203,
+        "FAIL": 2
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-9",
+      "method_count": 2313,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2198,
+        "FAIL": 2
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-10",
+      "method_count": 2313,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2196,
+        "FAIL": 2
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": false
+    },
+    {
+      "bug_id": "Lang-11",
+      "method_count": 2292,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2137,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-12",
+      "method_count": 2292,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2135,
+        "FAIL": 2
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-13",
+      "method_count": 2294,
+      "source_files_checked": 99,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2134,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    },
+    {
+      "bug_id": "Lang-14",
+      "method_count": 2230,
+      "source_files_checked": 97,
+      "source_reparse": "matched",
+      "test_outcomes": {
+        "PASS": 2072,
+        "FAIL": 1
+      },
+      "candidate_count": 20,
+      "candidate_set_matches_ochiai_top20": true,
+      "ochiai_dstar_identical_order": true
+    }
+  ],
+  "historical_operational_failures": [],
+  "coverage_recollected": false
+}

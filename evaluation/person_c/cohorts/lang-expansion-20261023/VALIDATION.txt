@@ -1,0 +1,12 @@
+Validation: 2026-10-25
+A commit: fc9946d63bc26716dc621fcb1d4f7456ff98ebcf
+Original A suite on macOS: 79 passed, 7 WSL/Linux skips, 1 path-alias error in test_failure_remains_after_successful_retry.
+After resolving the repository root in collect_attempts: 80 root-suite tests passed, 7 WSL/Linux skips.
+C suite: 32 tests passed, including 6 expanded-cohort checks.
+B/C profile hashes verified; 1920 C manifest files checked.
+Shared parser reparse: 992 source file copies, 23166 methods matched.
+Raw coverage normalization and Ochiai/DStar full rankings independently recomputed for all 10 bugs.
+Official patches: all 10 buggy and reconstructed fixed blob identities matched.
+No methodological exclusions; Lang-6 remains in N=10 despite missing the top-20 candidate set.
+New human review confirmations remain pending; no prior confirmation copied.
+No new Java execution, coverage collection or model calls.

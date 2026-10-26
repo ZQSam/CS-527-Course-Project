@@ -7,6 +7,7 @@ from fl.handoff import require, repo_path
 
 
 def collect_attempts(repository: Path, relative_root: str, requested: list[str], phase: str):
+    repository = repository.resolve()
     latest, failures, paths = {}, [], []
     root = repo_path(repository, relative_root)
     for path in sorted(root.glob("runs/*/Lang-*/result.json")):

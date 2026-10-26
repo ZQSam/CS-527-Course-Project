@@ -1,0 +1,188 @@
+{
+  "scope": "Fixed candidate sets; tie sensitivity changes baseline order only, not B inputs",
+  "cutoff": 20,
+  "metrics": {
+    "ochiai": {
+      "stable": {
+        "top1_hits": 5,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.5976874003189793
+      },
+      "optimistic": {
+        "top1_hits": 6,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.6476874003189793
+      },
+      "pessimistic": {
+        "top1_hits": 5,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.5976874003189793
+      }
+    },
+    "dstar": {
+      "stable": {
+        "top1_hits": 5,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.5976874003189793
+      },
+      "optimistic": {
+        "top1_hits": 6,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.6476874003189793
+      },
+      "pessimistic": {
+        "top1_hits": 5,
+        "top3_hits": 7,
+        "top5_hits": 7,
+        "mrr20": 0.5976874003189793
+      }
+    }
+  },
+  "per_bug": {
+    "Lang-5": {
+      "ochiai": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      }
+    },
+    "Lang-6": {
+      "ochiai": {
+        "stable": 22,
+        "optimistic": 22,
+        "pessimistic": 22,
+        "candidate_hit": false
+      },
+      "dstar": {
+        "stable": 22,
+        "optimistic": 22,
+        "pessimistic": 22,
+        "candidate_hit": false
+      }
+    },
+    "Lang-7": {
+      "ochiai": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      }
+    },
+    "Lang-8": {
+      "ochiai": {
+        "stable": 3,
+        "optimistic": 3,
+        "pessimistic": 3,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 3,
+        "optimistic": 3,
+        "pessimistic": 3,
+        "candidate_hit": true
+      }
+    },
+    "Lang-9": {
+      "ochiai": {
+        "stable": 11,
+        "optimistic": 11,
+        "pessimistic": 11,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 11,
+        "optimistic": 11,
+        "pessimistic": 11,
+        "candidate_hit": true
+      }
+    },
+    "Lang-10": {
+      "ochiai": {
+        "stable": 19,
+        "optimistic": 19,
+        "pessimistic": 19,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 19,
+        "optimistic": 19,
+        "pessimistic": 19,
+        "candidate_hit": true
+      }
+    },
+    "Lang-11": {
+      "ochiai": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      }
+    },
+    "Lang-12": {
+      "ochiai": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      }
+    },
+    "Lang-13": {
+      "ochiai": {
+        "stable": 2,
+        "optimistic": 1,
+        "pessimistic": 2,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 2,
+        "optimistic": 1,
+        "pessimistic": 2,
+        "candidate_hit": true
+      }
+    },
+    "Lang-14": {
+      "ochiai": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      },
+      "dstar": {
+        "stable": 1,
+        "optimistic": 1,
+        "pessimistic": 1,
+        "candidate_hit": true
+      }
+    }
+  }
+}
