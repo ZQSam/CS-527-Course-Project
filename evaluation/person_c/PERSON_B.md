@@ -72,6 +72,8 @@ python3 evaluation/person_c/import_person_b.py \
 
 ## 下一批接入
 
+适配器按每个 run 的 `summary.json.input_dir` 读取同一固定提交里的 A 输入，支持 `data/batches/lang-expansion-20261023/B` 等新批次目录；旧记录未声明时使用 `data/sample/B`。输入身份与哈希仍必须一致。新批次评分请显式使用 `--run` 选择对应的新 run，避免将旧三例的历史 run 混入新十例 manifest。
+
 先冻结 manifest 的 bug 范围与 dev/eval 划分，再由 A/B 产出数据、C 独立准备标签和对应 baseline。使用新的 `--b-ref`、manifest、labels、baseline 和输出目录。缺失 B 结果不删除 bug；整个 run 无结果时停止，因为无法推断其配置。主模型、prompt、样本数、候选展示策略和融合权重只用 dev 确定，eval 用于冻结后的比较。
 
 标签与补丁只交给 C 评分端。B 模型输入仍来自 A 的 `data/sample/B/`。

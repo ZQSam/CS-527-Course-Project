@@ -8,7 +8,7 @@ import math
 import re
 import subprocess
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from evaluate import InputError, evaluate, ids, load, require, validate_header, validate_usage
 
@@ -194,6 +194,11 @@ def adapt_run(source, run_id, manifest):
     prefix = f"results/rerank/{run_id}/"
     summary = json.loads(source.read(prefix + "summary.json"))
     require(summary.get("run_id") == run_id and summary.get("dry_run") is False, "dry run or mismatched summary")
+    input_dir = summary.get("input_dir", "data/sample/B")
+    require(isinstance(input_dir, str) and input_dir.startswith("data/") and "\\" not in input_dir
+            and ".." not in PurePosixPath(input_dir).parts
+            and str(PurePosixPath(input_dir)) == input_dir,
+            "input_dir must be a normalized repository-relative data path")
     registered = {b["bug_id"] for b in manifest["bugs"]}
     summary_ids = [b["bug_id"] for b in summary["bugs"]]
     require(len(set(summary_ids)) == len(summary_ids) and set(summary_ids) <= registered,
@@ -210,7 +215,7 @@ def adapt_run(source, run_id, manifest):
         if result_path not in source.paths:
             rows.append({"bug_id": bug, "status": "missing", "issues": ["No B result; stays in scoring denominator"]})
             continue
-        model_raw = source.read(f"data/sample/B/{bug}.json")
+        model_raw = source.read(f"{input_dir}/{bug}.json")
         model_input = json.loads(model_raw)
         require(model_input.get("bug_id") == bug, "A filename/bug identity mismatch")
         result = json.loads(source.read(result_path))
@@ -226,6 +231,7 @@ def adapt_run(source, run_id, manifest):
             doc = docs.setdefault(name, {**{k: manifest[k] for k in ("schema_version", "data_kind", "dataset")},
                                          "configuration_id": f"{run_id}/{name}", "ranking_scope": "candidates",
                                          "configuration": {"b_revision": source.revision, "run_id": run_id,
+                                                           "input_dir": input_dir,
                                                            "variant": name, "failure_policy": POLICY,
                                                            "b_config": common_cfg,
                                                            "cost_note": "Reused responses; do not sum costs across variants or cached runs."},

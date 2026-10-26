@@ -41,3 +41,5 @@ Validation update: 2026-10-22, Person C B-output integration.
 - Input files are read from Git blobs at the resolved commit; tests confirm working-copy edits cannot replace those blobs.
 - Current reproduction commands and the strict failure policy are in PERSON_B.md.
 - No new model calls or Java runs. No provider-attestation, invoice, semantic explanation, or held-out effectiveness claim.
+
+Validation update: 2026-10-25. Read B model inputs from the run summary input_dir; reject non-normalized paths. 48 C tests passed, including 2 batch-directory regressions. Historical 108-variant pilot was regenerated without changing scores.

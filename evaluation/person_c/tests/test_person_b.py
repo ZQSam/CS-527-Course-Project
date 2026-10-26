@@ -177,6 +177,28 @@ class AdapterTests(unittest.TestCase):
         with self.assertRaises(InputError):
             adapt_run(source, "fixture", self.manifest)
 
+    def test_batch_input_directory_from_summary(self):
+        source = FakeSource(self.manifest, self.result, self.raw)
+        path = "results/rerank/fixture/summary.json"
+        summary = json.loads(source.files[path])
+        summary["input_dir"] = "data/batches/lang-expansion-20261023/B"
+        source.files[path] = json.dumps(summary).encode()
+        source.files[summary["input_dir"] + "/Demo-1.json"] = source.files.pop("data/sample/B/Demo-1.json")
+        source.paths = set(source.files)
+        docs, _, _ = adapt_run(source, "fixture", self.manifest)
+        self.assertEqual(docs[0]["records"][0]["status"], "ok")
+        self.assertEqual(docs[0]["configuration"]["input_dir"], summary["input_dir"])
+
+    def test_input_directory_traversal_rejected(self):
+        for directory in ("/tmp/B", "data/../evaluation", "data//B", "data\\B"):
+            source = FakeSource(self.manifest, self.result, self.raw)
+            path = "results/rerank/fixture/summary.json"
+            summary = json.loads(source.files[path])
+            summary["input_dir"] = directory
+            source.files[path] = json.dumps(summary).encode()
+            with self.assertRaisesRegex(InputError, "input_dir"):
+                adapt_run(source, "fixture", self.manifest)
+
     def test_duplicate_sample_index_rejected(self):
         self.result["samples"][1]["sample_index"] = 0
         with self.assertRaises(InputError):

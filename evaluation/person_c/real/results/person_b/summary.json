@@ -13937,7 +13937,7 @@
     }
   ],
   "implementation_hashes": {
-    "import_person_b.py": "0c0532555dcf36e5fc4a50eb0bcb9337c05e1b1eafe025fda3fc19dbf4d16781",
+    "import_person_b.py": "b8772778b61249c56407dedc2cb66bc81163b7afce99036bee26737203d8407f",
     "evaluate.py": "d91bbd547b3faecd96f694ac042fd9d2ca7cd4038225f2525b3b939fd98e393b"
   },
   "adapter_policy": "strict: single needs sample 0 ok; mean needs every planned sample ok; no repair/fallback credit"
