@@ -176,8 +176,12 @@ def verify_ranking(rows, method_ids, metric):
               "Tie metadata mismatch")
 
 
-def build(archive, evidence_dir, reviews=None, reparse=False):
-    check(sha(archive.read_bytes()) == ARCHIVE_SHA, "Not the pinned Person A archive")
+def build(archive, evidence_dir, reviews=None, reparse=False, cohort=None):
+    archive_sha = ARCHIVE_SHA if cohort is None else cohort["archive_sha256"]
+    a_commit = A_COMMIT if cohort is None else cohort["a_commit"]
+    requested = ["Lang-1", "Lang-3", "Lang-4"] if cohort is None else [b["bug_id"] for b in cohort["bugs"]]
+    check(len(requested) == len(set(requested)), "Duplicate cohort bug")
+    check(sha(archive.read_bytes()) == archive_sha, "Not the pinned Person A archive")
     if reparse:
         from importlib.metadata import version
         check(version("tree-sitter") == "0.25.2" and version("tree-sitter-java") == "0.23.5",
@@ -201,7 +205,7 @@ def build(archive, evidence_dir, reviews=None, reparse=False):
             raw = z.read(f["path"])
             check(len(raw) == f["size_bytes"] and sha(raw) == f["sha256"], "Artifact hash mismatch")
         entries = read("index.json")["bugs"]
-        check([b["bug_id"] for b in entries] == ["Lang-1", "Lang-3", "Lang-4"], "Unexpected cohort")
+        check([b["bug_id"] for b in entries] == requested, "Unexpected cohort")
         for entry in entries:
             bug = entry["bug_id"]
             model, methods_doc = read(entry["model_input"]), read(entry["methods"])
@@ -270,17 +274,23 @@ def build(archive, evidence_dir, reviews=None, reparse=False):
                            "candidate_count": len(candidates), "candidate_set_matches_ochiai_top20": True,
                            "ochiai_dstar_identical_order": preds["ochiai"][-1]["ranking"] == preds["dstar"][-1]["ranking"]})
         failures = [json.loads(line) for line in z.read("failures.jsonl").decode().splitlines()]
-    documents = {"manifest.json": {**HEADER, "purpose": "integration/development pilot; not held-out evaluation",
+    manifest = {**HEADER, "purpose": "integration/development pilot; not held-out evaluation",
         "selection": "All three bugs supplied by A, assigned dev before patch-derived scoring; no performance-based exclusions",
-        "bugs": [{"bug_id": b["bug_id"], "split": "dev", "included": True, "exclusion_reason": None} for b in entries]},
+        "bugs": [{"bug_id": b["bug_id"], "split": "dev", "included": True, "exclusion_reason": None} for b in entries]}
+    if cohort is not None:
+        check(all(b["split"] in {"dev", "eval"} and b["included"] is True for b in cohort["bugs"]),
+              "This adapter imports complete included cohorts; structural exclusions need separate review")
+        manifest.update(purpose=cohort["purpose"], selection=cohort["selection"], bugs=cohort["bugs"],
+                        cohort_id=cohort["cohort_id"], split_decision_sha256=cohort["split_decision_sha256"])
+    documents = {"manifest.json": manifest,
         "labels.json": {**HEADER, "label_definition": "patch-touched existing production methods and explicit constructors",
                         "records": labels}, "mapping.json": mapped,
-        "audit.json": {"a_commit": A_COMMIT, "archive_sha256": ARCHIVE_SHA,
+        "audit.json": {"a_commit": a_commit, "archive_sha256": archive_sha,
                        "verified_manifest_files": len(files), "bugs": audits,
                        "historical_operational_failures": failures, "coverage_recollected": False}}
     for metric, records in preds.items():
         documents[metric + ".json"] = {**HEADER, "configuration_id": metric, "ranking_scope": "full",
-            "configuration": {"code_revision": A_COMMIT, "tie_policy": "score descending, method_id ascending",
+            "configuration": {"code_revision": a_commit, "tie_policy": "score descending, method_id ascending",
                               "method_score": "maximum physical-line score", "dstar_exponent": 2 if metric == "dstar" else None,
                               "candidate_set_origin": "A Ochiai top20, shared with B"}, "records": records}
     return documents, sources
@@ -293,17 +303,19 @@ def main():
     parser.add_argument("--evidence-dir", type=Path, default=ROOT / "real/evidence")
     parser.add_argument("--reviews", type=Path)
     parser.add_argument("--reparse", action="store_true")
+    parser.add_argument("--cohort", type=Path, help="Explicit pinned archive/cohort contract; omitted keeps original pilot")
     args = parser.parse_args()
     check(not args.output_dir.exists(), "Output directory exists; use a fresh directory")
     reviews = json.loads(args.reviews.read_text()) if args.reviews else None
-    documents, sources = build(args.archive, args.evidence_dir, reviews, args.reparse)
+    cohort = json.loads(args.cohort.read_text()) if args.cohort else None
+    documents, sources = build(args.archive, args.evidence_dir, reviews, args.reparse, cohort)
     for name, doc in documents.items():
         write_json(args.output_dir / name, doc)
     for name, raw in sources.items():
         path = args.output_dir / "buggy_sources" / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(raw)
-    print(f"Imported 3 real dev bugs; label status: {'patch-validated' if reviews else 'pending review'}")
+    print(f"Imported {len(documents['manifest.json']['bugs'])} real bugs; label status: {'patch-validated' if reviews else 'pending review'}")
 
 
 if __name__ == "__main__":
