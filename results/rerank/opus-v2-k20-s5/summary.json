@@ -1,0 +1,166 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_run_summary",
+ "run_id": "opus-v2-k20-s5",
+ "provider": "anthropic",
+ "model_key": "opus",
+ "model": "claude-opus-5-5",
+ "num_samples": 5,
+ "dry_run": false,
+ "input_dir": "data/sample/B",
+ "prompt_version": "v2",
+ "transport": "messages",
+ "candidate_set": "all",
+ "fusion_primary_weight": 0.5,
+ "code": {
+  "git_revision": "4fa089c8915166b4b2a09a7045d655a5bd1d3add",
+  "git_dirty": true,
+  "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+ },
+ "batch_ids": [],
+ "bugs": [
+  {
+   "bug_id": "Lang-1",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 1,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.2547,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "method_truncated": 1
+   },
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 10,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 59010,
+   "output_tokens": 1428,
+   "cost_usd": 0.2646,
+   "paid_usd_this_run": 0.2646,
+   "latency_s": 23.175,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-3",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.3179,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 55325,
+   "output_tokens": 1354,
+   "cost_usd": 0.24838,
+   "paid_usd_this_run": 0.24838,
+   "latency_s": 21.657,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-4",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.5789,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 42990,
+   "output_tokens": 1416,
+   "cost_usd": 0.20028,
+   "paid_usd_this_run": 0.20028,
+   "latency_s": 22.251,
+   "estimated_cost_usd": 0.0
+  }
+ ],
+ "totals": {
+  "calls": 15,
+  "cache_hits": 0,
+  "input_tokens": 157325,
+  "output_tokens": 4198,
+  "cost_usd": 0.71326,
+  "paid_usd_this_run": 0.71326,
+  "estimated_cost_usd": 0.0,
+  "latency_s": 67.083
+ },
+ "ledger_spent_usd": {
+  "before": 1.687156,
+  "after": 2.400416,
+  "cap": 25.0
+ }
+}
