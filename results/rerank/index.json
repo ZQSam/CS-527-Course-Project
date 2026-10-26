@@ -3,6 +3,42 @@
  "artifact_kind": "rerank_index",
  "runs": [
   {
+   "run_id": "langexp1023-opus-v2-k20-s5",
+   "role": "main",
+   "model": "claude-opus-5-5",
+   "effort": "low",
+   "prompt_version": "v2",
+   "num_samples": 5,
+   "order": "shuffle",
+   "candidates_shown": "all",
+   "bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+   ],
+   "sample_status": [
+    "ok"
+   ],
+   "transport": "messages",
+   "totals": {
+    "calls": 50,
+    "cache_hits": 0,
+    "input_tokens": 465355,
+    "output_tokens": 13215,
+    "cost_usd": 2.12572,
+    "paid_usd_this_run": 2.12572,
+    "estimated_cost_usd": 0.0,
+    "latency_s": 228.94
+   }
+  },
+  {
    "run_id": "opus-v2-k20-s5",
    "role": "main",
    "model": "claude-opus-5-5",
@@ -58,6 +94,78 @@
     "paid_usd_this_run": 0.019839,
     "estimated_cost_usd": 0.0,
     "latency_s": 55.188
+   }
+  },
+  {
+   "run_id": "langexp1023-haiku-v2-k20-s5",
+   "role": "extra-haiku",
+   "model": "claude-haiku-5-5",
+   "effort": "low",
+   "prompt_version": "v2",
+   "num_samples": 5,
+   "order": "shuffle",
+   "candidates_shown": "all",
+   "bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+   ],
+   "sample_status": [
+    "ok"
+   ],
+   "transport": "messages",
+   "totals": {
+    "calls": 51,
+    "cache_hits": 0,
+    "input_tokens": 474907,
+    "output_tokens": 27946,
+    "cost_usd": 0.061462,
+    "paid_usd_this_run": 0.061462,
+    "estimated_cost_usd": 0.0,
+    "latency_s": 176.004
+   }
+  },
+  {
+   "run_id": "langexp1023-opus-v2-nz-s5",
+   "role": "secondary-nonzero",
+   "model": "claude-opus-5-5",
+   "effort": "low",
+   "prompt_version": "v2",
+   "num_samples": 5,
+   "order": "shuffle",
+   "candidates_shown": "Ochiai > 0",
+   "bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+   ],
+   "sample_status": [
+    "ok"
+   ],
+   "transport": "messages",
+   "totals": {
+    "calls": 50,
+    "cache_hits": 25,
+    "input_tokens": 315520,
+    "output_tokens": 11398,
+    "cost_usd": 1.49004,
+    "paid_usd_this_run": 0.39314,
+    "estimated_cost_usd": 0.0,
+    "latency_s": 190.154
    }
   },
   {

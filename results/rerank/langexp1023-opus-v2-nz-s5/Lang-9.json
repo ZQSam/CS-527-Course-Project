@@ -1,0 +1,1415 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-opus-v2-nz-s5",
+ "bug_id": "Lang-9",
+ "input_sha256": "bd41c0a76c264b0e302d46ff910a1173511d611c5aeea5e7d786d01b5f0dc680",
+ "status": "complete",
+ "created_at": "2026-10-26T05:28:17Z",
+ "config": {
+  "model_key": "opus",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "nonzero",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": true,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [],
+  "estimated_tokens": 10726,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": true
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()": 10.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)": 6.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)": 5.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)": 14.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)": 12.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)": 2.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)": 13.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)": 18.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)": 19.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()": 19.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()": 1.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)": 3.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)": 7.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)": 4.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)": 8.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()": 10.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)": 7.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)": 14.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)": 16.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 15.8
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()": 1.1661903789690602,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)": 0.48989794855663565,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)": 1.0198039027185568,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)": 0.6324555320336759,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)": 1.9390719429665317,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)": 1.8547236990991407,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)": 1.4696938456699067,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()": 0.7483314773547882,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)": 1.0198039027185568,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)": 0.8944271909999159,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 1.469693845669907
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.8884,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 17807298082330855257,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C18",
+     "reason": "L132-L134 stop silently when the formatPattern matcher fails to match the remaining unterminated quote, instead of detecting leftover pattern and throwing IllegalArgumentException.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       132,
+       134
+      ],
+      "in_candidate": [
+       132,
+       134
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C06",
+     "reason": "L536-L542 accept any quote-starting field without verifying it is properly terminated, so an unterminated quote yields a CopyQuotedStrategy.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       536,
+       542
+      ],
+      "in_candidate": [
+       536,
+       542
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C14",
+     "reason": "L309-L311 silently return on a trailing lone quote rather than signalling an unterminated quote error.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       309,
+       311
+      ],
+      "in_candidate": [
+       309,
+       311
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "76c27c3f31bb0ccd9f1afe02834056c2b1c0f6ce03bb5e2111d7c37c21256f04",
+     "cache_hit": true,
+     "cost_usd": 0.049152,
+     "paid_usd": 0.0,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10938,
+      "output_tokens": 270,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.038,
+     "request_id": "req_011CgQHjCodSqyEFJaWn542V",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C18\",\"C06\",\"C14\",\"C16\",\"C17\",\"C07\",\"C09\",\"C01\",\"C20\",\"C08\",\"C12\",\"C02\",\"C10\",\"C05\",\"C15\",\"C03\",\"C04\",\"C11\",\"C13\",\"C19\"],\"top3_reasons\":[{\"candidate\":\"C18\",\"reason\":\"L132-L134 stop silently when the formatPattern matcher fails to match the remaining unterminated quote, instead of detecting leftover pattern and throwing IllegalArgumentException.\"},{\"candidate\":\"C06\",\"reason\":\"L536-L542 accept any quote-starting field without verifying it is properly terminated, so an unterminated quote yields a CopyQuotedStrategy.\"},{\"candidate\":\"C14\",\"reason\":\"L309-L311 silently return on a trailing lone quote rather than signalling an unterminated quote error.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10938,
+    "output_tokens": 270
+   },
+   "cost_usd": 0.049152,
+   "paid_usd": 0.0,
+   "latency_s": 4.038,
+   "prompt_text": "Bug: Lang-9 (2 failing tests)\n\n## Failing test 1: org.apache.commons.lang3.time.FastDateFormat_ParserTest::testLANG_832\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Parsed dates should be equal expected:<null> but was:<Fri Jan 02 21:00:00 PST 1970>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testSdfAndFdp(FastDateParserTest.java:393)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testLANG_832(FastDateParserTest.java:348)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  345 | @Test\n  346 |     public void testLANG_832() throws Exception {\n  347 |         testSdfAndFdp(\"'d'd\" ,\"d3\", false); // OK\n>>348 |         testSdfAndFdp(\"'d'd'\",\"d3\", true); // should fail (unterminated quote)\n  349 |     }\n```\n\n## Failing test 2: org.apache.commons.lang3.time.FastDateParserTest::testLANG_832\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Expected FDF failure, but got Fri Jan 02 21:00:00 PST 1970 for ['d'd',d3] using d(\\p{IsNd}++)\n\tat junit.framework.Assert.fail(Assert.java:57)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testSdfAndFdp(FastDateParserTest.java:382)\n\t... 41 framework/runner frames omitted\n```\n### Test method source\n```java\n  345 | @Test\n  346 |     public void testLANG_832() throws Exception {\n  347 |         testSdfAndFdp(\"'d'd\" ,\"d3\", false); // OK\n>>348 |         testSdfAndFdp(\"'d'd'\",\"d3\", true); // should fail (unterminated quote)\n  349 |     }\n```\n\n## Helper methods called by the failing test(s)\n```java\n// helper testSdfAndFdp from org.apache.commons.lang3.time.FastDateFormat_ParserTest::testLANG_832's test class (line 356)\n    private void testSdfAndFdp(String format, String date, boolean shouldFail)\n            throws Exception {\n        Date dfdp = null;\n        Date dsdf = null;\n        Throwable f = null;\n        Throwable s = null;\n\n        try {\n            SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);\n            sdf.setTimeZone(NEW_YORK);\n            dsdf = sdf.parse(date);\n            if (shouldFail) {\n                Assert.fail(\"Expected SDF failure, but got \" + dsdf + \" for [\"+format+\",\"+date+\"]\");\n            }\n        } catch (Exception e) {\n            s = e;\n            if (!shouldFail) {\n                throw e;\n            }\n//            System.out.println(\"sdf:\"+format+\"/\"+date+\"=>\"+e);\n        }\n\n        try {\n            DateParser fdp = getInstance(format, NEW_YORK, Locale.US);\n            dfdp = fdp.parse(date);\n            if (shouldFail) {\n                Assert.fail(\"Expected FDF failure, but got \" + dfdp + \" for [\"+format+\",\"+date+\"] using \"+((FastDateParser)fdp).getParsePattern());\n            }\n        } catch (Exception e) {\n            f = e;\n            if (!shouldFail) {\n                throw e;\n            }\n//            System.out.println(\"fdf:\"+format+\"/\"+date+\"=>\"+e);\n        }\n        // SDF and FDF should produce equivalent results\n        assertTrue(\"Should both or neither throw Exceptions\", (f==null)==(s==null));\n        assertEquals(\"Parsed dates should be equal\", dsdf, dfdp);\n    }\n\n// helper testSdfAndFdp from org.apache.commons.lang3.time.FastDateParserTest::testLANG_832's test class (line 356)\n    private void testSdfAndFdp(String format, String date, boolean shouldFail)\n            throws Exception {\n        Date dfdp = null;\n        Date dsdf = null;\n        Throwable f = null;\n        Throwable s = null;\n\n        try {\n            SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);\n            sdf.setTimeZone(NEW_YORK);\n            dsdf = sdf.parse(date);\n            if (shouldFail) {\n                Assert.fail(\"Expected SDF failure, but got \" + dsdf + \" for [\"+format+\",\"+date+\"]\");\n            }\n        } catch (Exception e) {\n            s = e;\n            if (!shouldFail) {\n                throw e;\n            }\n//            System.out.println(\"sdf:\"+format+\"/\"+date+\"=>\"+e);\n        }\n\n        try {\n            DateParser fdp = getInstance(format, NEW_YORK, Locale.US);\n            dfdp = fdp.parse(date);\n            if (shouldFail) {\n                Assert.fail(\"Expected FDF failure, but got \" + dfdp + \" for [\"+format+\",\"+date+\"] using \"+((FastDateParser)fdp).getParsePattern());\n            }\n        } catch (Exception e) {\n            f = e;\n            if (!shouldFail) {\n                throw e;\n            }\n//            System.out.println(\"fdf:\"+format+\"/\"+date+\"=>\"+e);\n        }\n        // SDF and FDF should produce equivalent results\n        assertTrue(\"Should both or neither throw Exceptions\", (f==null)==(s==null));\n        assertEquals(\"Parsed dates should be equal\", dsdf, dfdp);\n    }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 716-725)\n```java\n  716 | @Override\n  717 |         public boolean addRegex(FastDateParser parser, StringBuilder regex) {\n  718 |             if(parser.isNextNumber()) {\n  719 |                 regex.append(\"(\\\\p{IsNd}{\").append(parser.getFieldWidth()).append(\"}+)\");\n  720 |             }\n  721 |             else {\n  722 |                 regex.append(\"(\\\\p{IsNd}++)\");\n  723 |             }\n  724 |             return true;\n  725 |         }\n```\n\n## C02\nmethod: org.apache.commons.lang3.time.FastDateParser#getParsePattern()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 179-181)\n```java\n  179 | Pattern getParsePattern() {\n  180 |         return parsePattern;\n  181 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 740-742)\n```java\n  740 | public int modify(int iValue) {\n  741 |             return iValue;\n  742 |         }\n```\n\n## C04\nmethod: org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 646-648)\n```java\n  646 | TextStrategy(int field) {\n  647 |             this.field= field;\n  648 |         }\n```\n\n## C05\nmethod: org.apache.commons.lang3.time.FastDatePrinter#parsePattern()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 167-288)\n```java\n  167 | protected List<Rule> parsePattern() {\n  168 |         DateFormatSymbols symbols = new DateFormatSymbols(mLocale);\n  169 |         List<Rule> rules = new ArrayList<Rule>();\n  170 | \n  171 |         String[] ERAs = symbols.getEras();\n  172 |         String[] months = symbols.getMonths();\n  173 |         String[] shortMonths = symbols.getShortMonths();\n  174 |         String[] weekdays = symbols.getWeekdays();\n  175 |         String[] shortWeekdays = symbols.getShortWeekdays();\n  176 |         String[] AmPmStrings = symbols.getAmPmStrings();\n  177 | \n  178 |         int length = mPattern.length();\n  179 |         int[] indexRef = new int[1];\n  180 | \n  181 |         for (int i = 0; i < length; i++) {\n  182 |             indexRef[0] = i;\n  183 |             String token = parseToken(mPattern, indexRef);\n  184 |             i = indexRef[0];\n  185 | \n  186 |             int tokenLen = token.length();\n  187 |             if (tokenLen == 0) {\n  188 |                 break;\n  189 |             }\n  190 | \n  191 |             Rule rule;\n  192 |             char c = token.charAt(0);\n  193 | \n  194 |             switch (c) {\n  195 |             case 'G': // era designator (text)\n  196 |                 rule = new TextField(Calendar.ERA, ERAs);\n  197 |                 break;\n  198 |             case 'y': // year (number)\n  199 |                 if (tokenLen == 2) {\n  200 |                     rule = TwoDigitYearField.INSTANCE;\n  201 |                 } else {\n  202 |                     rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);\n  203 |                 }\n  204 |                 break;\n  205 |             case 'M': // month in year (text and number)\n  206 |                 if (tokenLen >= 4) {\n  207 |                     rule = new TextField(Calendar.MONTH, months);\n  208 |                 } else if (tokenLen == 3) {\n  209 |                     rule = new TextField(Calendar.MONTH, shortMonths);\n  210 |                 } else if (tokenLen == 2) {\n  211 |                     rule = TwoDigitMonthField.INSTANCE;\n  212 |                 } else {\n  213 |                     rule = UnpaddedMonthField.INSTANCE;\n  214 |                 }\n  215 |                 break;\n  216 |             case 'd': // day in month (number)\n  217 |                 rule = selectNumberRule(Calendar.DAY_OF_MONTH, tokenLen);\n  218 |                 break;\n  219 |             case 'h': // hour in am/pm (number, 1..12)\n  220 |                 rule = new TwelveHourField(selectNumberRule(Calendar.HOUR, tokenLen));\n  221 |                 break;\n  222 |             case 'H': // hour in day (number, 0..23)\n  223 |                 rule = selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen);\n  224 |                 break;\n  225 |             case 'm': // minute in hour (number)\n  226 |                 rule = selectNumberRule(Calendar.MINUTE, tokenLen);\n  227 |                 break;\n  228 |             case 's': // second in minute (number)\n  229 |                 rule = selectNumberRule(Calendar.SECOND, tokenLen);\n  230 |                 break;\n  231 |             case 'S': // millisecond (number)\n  232 |                 rule = selectNumberRule(Calendar.MILLISECOND, tokenLen);\n  233 |                 break;\n  234 |             case 'E': // day in week (text)\n  235 |                 rule = new TextField(Calendar.DAY_OF_WEEK, tokenLen < 4 ? shortWeekdays : weekdays);\n  236 |                 break;\n  237 |             case 'D': // day in year (number)\n  238 |                 rule = selectNumberRule(Calendar.DAY_OF_YEAR, tokenLen);\n  239 |                 break;\n  240 |             case 'F': // day of week in month (number)\n  241 |                 rule = selectNumberRule(Calendar.DAY_OF_WEEK_IN_MONTH, tokenLen);\n  242 |                 break;\n  243 |             case 'w': // week in year (number)\n  244 |                 rule = selectNumberRule(Calendar.WEEK_OF_YEAR, tokenLen);\n  245 |                 break;\n  246 |             case 'W': // week in month (number)\n  247 |                 rule = selectNumberRule(Calendar.WEEK_OF_MONTH, tokenLen);\n  248 |                 break;\n  249 |             case 'a': // am/pm marker (text)\n  250 |                 rule = new TextField(Calendar.AM_PM, AmPmStrings);\n  251 |                 break;\n  252 |             case 'k': // hour in day (1..24)\n  253 |                 rule = new TwentyFourHourField(selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen));\n  254 |                 break;\n  255 |             case 'K': // hour in am/pm (0..11)\n  256 |                 rule = selectNumberRule(Calendar.HOUR, tokenLen);\n  257 |                 break;\n  258 |             case 'z': // time zone (text)\n  259 |                 if (tokenLen >= 4) {\n  260 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.LONG);\n  261 |                 } else {\n  262 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.SHORT);\n  263 |                 }\n  264 |                 break;\n  265 |             case 'Z': // time zone (value)\n  266 |                 if (tokenLen == 1) {\n  267 |                     rule = TimeZoneNumberRule.INSTANCE_NO_COLON;\n  268 |                 } else {\n  269 |                     rule = TimeZoneNumberRule.INSTANCE_COLON;\n  270 |                 }\n  271 |                 break;\n  272 |             case '\\'': // literal text\n  273 |                 String sub = token.substring(1);\n  274 |                 if (sub.length() == 1) {\n  275 |                     rule = new CharacterLiteral(sub.charAt(0));\n  276 |                 } else {\n  277 |                     rule = new StringLiteral(sub);\n  278 |                 }\n  279 |                 break;\n  280 |             default:\n  281 |                 throw new IllegalArgumentException(\"Illegal pattern component: \" + token);\n  282 |             }\n  283 | \n  284 |             rules.add(rule);\n  285 |         }\n  286 | \n  287 |         return rules;\n  288 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.time.FastDateParser#getStrategy(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 534-591)\n```java\n  534 | private Strategy getStrategy(String formatField) {\n  535 |         switch(formatField.charAt(0)) {\n  536 |         case '\\'':\n  537 |             if(formatField.length()>2) {\n  538 |                 formatField= formatField.substring(1, formatField.length()-1);\n  539 |             }\n  540 |             //$FALL-THROUGH$\n  541 |         default:\n  542 |             return new CopyQuotedStrategy(formatField);\n  543 |         case 'D':\n  544 |             return DAY_OF_YEAR_STRATEGY;\n  545 |         case 'E':\n  546 |             return DAY_OF_WEEK_STRATEGY;\n  547 |         case 'F':\n  548 |             return DAY_OF_WEEK_IN_MONTH_STRATEGY;\n  549 |         case 'G':\n  550 |             return ERA_STRATEGY;\n  551 |         case 'H':\n  552 |             return MODULO_HOUR_OF_DAY_STRATEGY;\n  553 |         case 'K':\n  554 |             return HOUR_STRATEGY;\n  555 |         case 'M':\n  556 |             return formatField.length()>=3 ?TEXT_MONTH_STRATEGY :NUMBER_MONTH_STRATEGY;\n  557 |         case 'S':\n  558 |             return MILLISECOND_STRATEGY;\n  559 |         case 'W':\n  560 |             return WEEK_OF_MONTH_STRATEGY;\n  561 |         case 'Z':\n  562 |             break;\n  563 |         case 'a':\n  564 |             return AM_PM_STRATEGY;\n  565 |         case 'd':\n  566 |             return DAY_OF_MONTH_STRATEGY;\n  567 |         case 'h':\n  568 |             return MODULO_HOUR_STRATEGY;\n  569 |         case 'k':\n  570 |             return HOUR_OF_DAY_STRATEGY;\n  571 |         case 'm':\n  572 |             return MINUTE_STRATEGY;\n  573 |         case 's':\n  574 |             return SECOND_STRATEGY;\n  575 |         case 'w':\n  576 |             return WEEK_OF_YEAR_STRATEGY;\n  577 |         case 'y':\n  578 |             return formatField.length()>2 ?LITERAL_YEAR_STRATEGY :ABBREVIATED_YEAR_STRATEGY;\n  579 |         case 'z':\n  580 |             break;\n  581 |         }\n  582 |         TimeZoneStrategy tzs= tzsCache.get(locale);\n  583 |         if(tzs==null) {\n  584 |             tzs= new TimeZoneStrategy(locale);\n  585 |             TimeZoneStrategy inCache= tzsCache.putIfAbsent(locale, tzs);\n  586 |             if(inCache!=null) {\n  587 |                 return inCache;\n  588 |             }\n  589 |         }\n  590 |         return tzs;\n  591 |     }\n```\n\n## C07\nmethod: org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 603-605)\n```java\n  603 | CopyQuotedStrategy(String formatField) {\n  604 |             this.formatField= formatField;\n  605 |         }\n```\n\n## C08\nmethod: org.apache.commons.lang3.time.FastDateParser#isNextNumber()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 484-486)\n```java\n  484 | boolean isNextNumber() {\n  485 |         return nextStrategy!=null && nextStrategy.isNumber();\n  486 |     }\n```\n\n## C09\nmethod: org.apache.commons.lang3.time.FastDateParser#parse(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 248-261)\n```java\n  248 | @Override\n  249 |     public Date parse(String source) throws ParseException {\n  250 |         Date date= parse(source, new ParsePosition(0));\n  251 |         if(date==null) {\n  252 |             // Add a note re supported date range\n  253 |             if (locale.equals(JAPANESE_IMPERIAL)) {\n  254 |                 throw new ParseException(\n  255 |                         \"(The \" +locale + \" locale does not support dates before 1868 AD)\\n\" +\n  256 |                                 \"Unparseable date: \\\"\"+source+\"\\\" does not match \"+parsePattern.pattern(), 0);\n  257 |             }\n  258 |             throw new ParseException(\"Unparseable date: \\\"\"+source+\"\\\" does not match \"+parsePattern.pattern(), 0);\n  259 |         }\n  260 |         return date;\n  261 |     }\n```\n\n## C10\nmethod: org.apache.commons.lang3.time.FastDateFormat#parse(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateFormat.java (lines 470-473)\n```java\n  470 | @Override\n  471 |     public Date parse(String source) throws ParseException {\n  472 |         return parser.parse(source);\n  473 |     }\n```\n\n## C11\nmethod: org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 356-365)\n```java\n  356 | protected NumberRule selectNumberRule(int field, int padding) {\n  357 |         switch (padding) {\n  358 |         case 1:\n  359 |             return new UnpaddedNumberField(field);\n  360 |         case 2:\n  361 |             return new TwoDigitNumberField(field);\n  362 |         default:\n  363 |             return new PaddedNumberField(field, padding);\n  364 |         }\n  365 |     }\n```\n\n## C12\nmethod: org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 730-733)\n```java\n  730 | @Override\n  731 |         public void setCalendar(FastDateParser parser, Calendar cal, String value) {\n  732 |             cal.set(field, modify(Integer.parseInt(value)));\n  733 |         }\n```\n\n## C13\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 707-709)\n```java\n  707 | UnpaddedNumberField(int field) {\n  708 |             mField = field;\n  709 |         }\n```\n\n## C14\nmethod: org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 303-334)\n```java\n  303 | private static StringBuilder escapeRegex(StringBuilder regex, String value, boolean unquote) {\n  304 |         for(int i= 0; i<value.length(); ++i) {\n  305 |             char c= value.charAt(i);\n  306 |             switch(c) {\n  307 |             case '\\'':\n  308 |                 if(unquote) {\n  309 |                     if(++i==value.length()) {\n  310 |                         return regex;\n  311 |                     }\n  312 |                     c= value.charAt(i);\n  313 |                 }\n  314 |                 break;\n  315 |             case '?':\n  316 |             case '[':\n  317 |             case ']':\n  318 |             case '(':\n  319 |             case ')':\n  320 |             case '{':\n  321 |             case '}':\n  322 |             case '\\\\':\n  323 |             case '|':\n  324 |             case '*':\n  325 |             case '+':\n  326 |             case '^':\n  327 |             case '$':\n  328 |             case '.':\n  329 |                 regex.append('\\\\');\n  330 |             }\n  331 |             regex.append(c);\n  332 |         }\n  333 |         return regex;\n  334 |     }\n```\n\n## C15\nmethod: org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 701-703)\n```java\n  701 | NumberStrategy(int field) {\n  702 |              this.field= field;\n  703 |         }\n```\n\n## C16\nmethod: org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 622-626)\n```java\n  622 | @Override\n  623 |         public boolean addRegex(FastDateParser parser, StringBuilder regex) {\n  624 |             escapeRegex(regex, formatField, true);\n  625 |             return false;\n  626 |         }\n```\n\n## C17\nmethod: org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 274-291)\n```java\n  274 | @Override\n  275 |     public Date parse(String source, ParsePosition pos) {\n  276 |         int offset= pos.getIndex();\n  277 |         Matcher matcher= parsePattern.matcher(source.substring(offset));\n  278 |         if(!matcher.lookingAt()) {\n  279 |             return null;\n  280 |         }\n  281 |         // timing tests indicate getting new instance is 19% faster than cloning\n  282 |         Calendar cal= Calendar.getInstance(timeZone, locale);\n  283 |         cal.clear();\n  284 | \n  285 |         for(int i=0; i<strategies.length;) {\n  286 |             Strategy strategy= strategies[i++];\n  287 |             strategy.setCalendar(this, cal, matcher.group(i));\n  288 |         }\n  289 |         pos.setIndex(offset+matcher.end());\n  290 |         return cal.getTime();\n  291 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.time.FastDateParser#init()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 115-150)\n```java\n  115 | private void init() {\n  116 |         thisYear= Calendar.getInstance(timeZone, locale).get(Calendar.YEAR);\n  117 | \n  118 |         nameValues= new ConcurrentHashMap<Integer, KeyValue[]>();\n  119 | \n  120 |         StringBuilder regex= new StringBuilder();\n  121 |         List<Strategy> collector = new ArrayList<Strategy>();\n  122 | \n  123 |         Matcher patternMatcher= formatPattern.matcher(pattern);\n  124 |         if(!patternMatcher.lookingAt()) {\n  125 |             throw new IllegalArgumentException(\"Invalid pattern\");\n  126 |         }\n  127 | \n  128 |         currentFormatField= patternMatcher.group();\n  129 |         Strategy currentStrategy= getStrategy(currentFormatField);\n  130 |         for(;;) {\n  131 |             patternMatcher.region(patternMatcher.end(), patternMatcher.regionEnd());\n  132 |             if(!patternMatcher.lookingAt()) {\n  133 |                 nextStrategy = null;\n  134 |                 break;\n  135 |             }\n  136 |             String nextFormatField= patternMatcher.group();\n  137 |             nextStrategy = getStrategy(nextFormatField);\n  138 |             if(currentStrategy.addRegex(this, regex)) {\n  139 |                 collector.add(currentStrategy);\n  140 |             }\n  141 |             currentFormatField= nextFormatField;\n  142 |             currentStrategy= nextStrategy;\n  143 |         }\n  144 |         if(currentStrategy.addRegex(this, regex)) {\n  145 |             collector.add(currentStrategy);\n  146 |         }\n  147 |         currentFormatField= null;\n  148 |         strategies= collector.toArray(new Strategy[collector.size()]);\n  149 |         parsePattern= Pattern.compile(regex.toString());\n  150 |     }\n```\n\n## C19\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 714-717)\n```java\n  714 | @Override\n  715 |         public int estimateLength() {\n  716 |             return 4;\n  717 |         }\n```\n\n## C20\nmethod: org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 104-109)\n```java\n  104 | protected FastDateParser(String pattern, TimeZone timeZone, Locale locale) {\n  105 |         this.pattern = pattern;\n  106 |         this.timeZone = timeZone;\n  107 |         this.locale = locale;\n  108 |         init();\n  109 |     }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 14643672340660937130,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C18",
+     "reason": "L130-L135 stop the loop when lookingAt fails without checking that the whole pattern was consumed, so the unterminated trailing quote is silently ignored instead of throwing.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       130,
+       135
+      ],
+      "in_candidate": [
+       130,
+       135
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C07",
+     "reason": "L536-L542 accept a quoted field and build a CopyQuotedStrategy without validating that the quote is terminated.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       536,
+       542
+      ],
+      "in_candidate": [
+       536,
+       542
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C06",
+     "reason": "L309-L310 silently return when a quote is the last character instead of signalling an unterminated quote.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       309,
+       310
+      ],
+      "in_candidate": [
+       309,
+       310
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "cee7f28724a68d4250c38da3b48c9edb207ca41ec99ce5a48095ba142774d7fe",
+     "cache_hit": true,
+     "cost_usd": 0.048832,
+     "paid_usd": 0.0,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10938,
+      "output_tokens": 254,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.004,
+     "request_id": "req_011CgQHjW4hti2JyP4hLtR14",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C18\",\"C07\",\"C06\",\"C10\",\"C19\",\"C15\",\"C01\",\"C02\",\"C05\",\"C03\",\"C14\",\"C20\",\"C16\",\"C09\",\"C12\",\"C04\",\"C17\",\"C11\",\"C08\",\"C13\"],\"top3_reasons\":[{\"candidate\":\"C18\",\"reason\":\"L130-L135 stop the loop when lookingAt fails without checking that the whole pattern was consumed, so the unterminated trailing quote is silently ignored instead of throwing.\"},{\"candidate\":\"C07\",\"reason\":\"L536-L542 accept a quoted field and build a CopyQuotedStrategy without validating that the quote is terminated.\"},{\"candidate\":\"C06\",\"reason\":\"L309-L310 silently return when a quote is the last character instead of signalling an unterminated quote.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10938,
+    "output_tokens": 254
+   },
+   "cost_usd": 0.048832,
+   "paid_usd": 0.0,
+   "latency_s": 4.004
+  },
+  {
+   "sample_index": 2,
+   "seed": 16141556654973793415,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C18",
+     "reason": "L130-135 stop the loop when patternMatcher.lookingAt() fails but never check that the whole pattern was consumed (regionEnd), so the unterminated trailing quote is silently ignored instead of throwing.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       130,
+       135
+      ],
+      "in_candidate": [
+       130,
+       135
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C11",
+     "reason": "L536-542 treat any quote-led field as a literal without validating termination, contributing to accepting the malformed pattern.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       536,
+       542
+      ],
+      "in_candidate": [
+       536,
+       542
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C08",
+     "reason": "L309-311 silently return on a dangling quote rather than signaling an error, so unterminated quotes produce a valid regex.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       309,
+       311
+      ],
+      "in_candidate": [
+       309,
+       311
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "8f7159ab72ca4f623a91e4123340b2f28e4280db3d86a72dd5f3dbd8be22dd0d",
+     "cache_hit": true,
+     "cost_usd": 0.049252,
+     "paid_usd": 0.0,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10938,
+      "output_tokens": 275,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.42,
+     "request_id": "req_011CgQHjoBLWLpAubE7c29Ju",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C18\",\"C11\",\"C08\",\"C20\",\"C03\",\"C04\",\"C17\",\"C19\",\"C14\",\"C15\",\"C01\",\"C05\",\"C07\",\"C12\",\"C02\",\"C10\",\"C16\",\"C06\",\"C09\",\"C13\"],\"top3_reasons\":[{\"candidate\":\"C18\",\"reason\":\"L130-135 stop the loop when patternMatcher.lookingAt() fails but never check that the whole pattern was consumed (regionEnd), so the unterminated trailing quote is silently ignored instead of throwing.\"},{\"candidate\":\"C11\",\"reason\":\"L536-542 treat any quote-led field as a literal without validating termination, contributing to accepting the malformed pattern.\"},{\"candidate\":\"C08\",\"reason\":\"L309-311 silently return on a dangling quote rather than signaling an error, so unterminated quotes produce a valid regex.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10938,
+    "output_tokens": 275
+   },
+   "cost_usd": 0.049252,
+   "paid_usd": 0.0,
+   "latency_s": 4.42
+  },
+  {
+   "sample_index": 3,
+   "seed": 13931289094867876703,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C02",
+     "reason": "L131-L135 silently break when the pattern matcher stops matching before the end of the pattern (the unterminated quote), never checking that the whole pattern was consumed, so no error is thrown.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       131,
+       135
+      ],
+      "in_candidate": [
+       131,
+       135
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C20",
+     "reason": "L536-L542 accept any quote-prefixed field and build a CopyQuotedStrategy without validating that the quote is terminated.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       536,
+       542
+      ],
+      "in_candidate": [
+       536,
+       542
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C11",
+     "reason": "L309-L310 silently return when a quote is the last character instead of signalling an unterminated quote.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       309,
+       310
+      ],
+      "in_candidate": [
+       309,
+       310
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "8b3dc9b1a10ed748af562d794e4e61ef293e9dbfccf6162832a4fd5c29abe4f6",
+     "cache_hit": true,
+     "cost_usd": 0.048972,
+     "paid_usd": 0.0,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10938,
+      "output_tokens": 261,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.195,
+     "request_id": "req_011CgQHk86NrdnfDXTqXw38D",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C02\",\"C20\",\"C11\",\"C10\",\"C16\",\"C18\",\"C07\",\"C04\",\"C01\",\"C08\",\"C17\",\"C14\",\"C13\",\"C03\",\"C12\",\"C09\",\"C06\",\"C19\",\"C05\",\"C15\"],\"top3_reasons\":[{\"candidate\":\"C02\",\"reason\":\"L131-L135 silently break when the pattern matcher stops matching before the end of the pattern (the unterminated quote), never checking that the whole pattern was consumed, so no error is thrown.\"},{\"candidate\":\"C20\",\"reason\":\"L536-L542 accept any quote-prefixed field and build a CopyQuotedStrategy without validating that the quote is terminated.\"},{\"candidate\":\"C11\",\"reason\":\"L309-L310 silently return when a quote is the last character instead of signalling an unterminated quote.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10938,
+    "output_tokens": 261
+   },
+   "cost_usd": 0.048972,
+   "paid_usd": 0.0,
+   "latency_s": 4.195
+  },
+  {
+   "sample_index": 4,
+   "seed": 4904346503581496495,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#<init>(String,TimeZone,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$CopyQuotedStrategy#<init>(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#isNextNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C17",
+     "reason": "L131-L135 simply stop when the format matcher can no longer match, so the trailing unterminated quote is silently ignored instead of throwing like L125 does.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       125,
+       131,
+       135
+      ],
+      "in_candidate": [
+       125,
+       131,
+       135
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C20",
+     "reason": "L536-L542 turn a quoted field into a CopyQuotedStrategy without verifying that the quote is terminated, so the malformed pattern is accepted.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       536,
+       542
+      ],
+      "in_candidate": [
+       536,
+       542
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C11",
+     "reason": "L309-L311 silently return when a quote is at the end of the value, swallowing the unterminated quote instead of reporting an error.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       309,
+       311
+      ],
+      "in_candidate": [
+       309,
+       311
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "c52eb6021c2897865863ea40b3bd189ef17a309e5dbfb2c130e1d34ebea2fcb6",
+     "cache_hit": true,
+     "cost_usd": 0.049152,
+     "paid_usd": 0.0,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10938,
+      "output_tokens": 270,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.09,
+     "request_id": "req_011CgQHkS3tJMqiRih4qAyP1",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C17\",\"C20\",\"C11\",\"C03\",\"C14\",\"C04\",\"C19\",\"C10\",\"C13\",\"C08\",\"C05\",\"C16\",\"C15\",\"C06\",\"C09\",\"C18\",\"C12\",\"C02\",\"C07\",\"C01\"],\"top3_reasons\":[{\"candidate\":\"C17\",\"reason\":\"L131-L135 simply stop when the format matcher can no longer match, so the trailing unterminated quote is silently ignored instead of throwing like L125 does.\"},{\"candidate\":\"C20\",\"reason\":\"L536-L542 turn a quoted field into a CopyQuotedStrategy without verifying that the quote is terminated, so the malformed pattern is accepted.\"},{\"candidate\":\"C11\",\"reason\":\"L309-L311 silently return when a quote is at the end of the value, swallowing the unterminated quote instead of reporting an error.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10938,
+    "output_tokens": 270
+   },
+   "cost_usd": 0.049152,
+   "paid_usd": 0.0,
+   "latency_s": 4.09
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 0,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 5,
+  "input_tokens": 54690,
+  "output_tokens": 1330,
+  "cost_usd": 0.24536,
+  "paid_usd_this_run": 0.0,
+  "latency_s": 20.747,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

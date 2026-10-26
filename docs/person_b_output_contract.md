@@ -33,6 +33,34 @@ B 读取 A 的 `data/sample/B/`，输出每个 bug 的 SBFL / 单次 LLM / 多�
 
 `fused.single[*]` 与其他权重同样复用已有调用，只作补充或敏感性分析。
 
+## Eval 批次：`lang-expansion-20261023`（Lang-5 至 Lang-14）
+
+C 的 `split_decision.json`（2026-10-25）把 A 预登记的这 10 例全部定为 **eval**，Lang-1/3/4 仍是 dev。
+B 在冻结后、**未接触任何 eval 标签、补丁或 baseline 命中名次**的情况下运行上表三个配置；没有修改任何功能代码，
+所有结果的 `config.code.code_sha256` 都等于冻结提交 `f97c09a` 的代码哈希
+`8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54`，且 `git_dirty = false`。
+
+| 角色 | run（`results/rerank/` 下） | 本次实际花费 | sample 状态 |
+| --- | --- | ---: | --- |
+| `main` | `langexp1023-opus-v2-k20-s5` | $2.1257 | 50/50 `ok` |
+| `extra-haiku` | `langexp1023-haiku-v2-k20-s5` | $0.0615 | 50/50 `ok`（1 个 sample 经一次纠错重试后 `ok`） |
+| `secondary-nonzero` | `langexp1023-opus-v2-nz-s5` | $0.3931 | 50/50 `ok` |
+
+- 配置文件：A 提供的 `configs/batches/lang-expansion-20261023/rerank.json`，与 `configs/rerank.json` 仅 `input_dir`
+  不同（`data/batches/lang-expansion-20261023/B`）；结果的 `summary.json` 记录该 `input_dir`，C 的适配器据此读取输入。
+- 运行命令：`python scripts/run_rerank.py --config configs/batches/lang-expansion-20261023/rerank.json --model opus --samples 5 --run-id langexp1023-opus-v2-k20-s5`
+  （Haiku 换 `--model haiku`；附加配置加 `--nonzero-only`）。
+- `run_id` 以 `langexp1023-` 开头的是 eval 批次；没有该前缀的同角色 run 是 dev（Lang-1/3/4）联调结果。评分时请用
+  `--run` 显式选择这三个 run，并使用 `--split eval`。
+- **Lang-6 至 Lang-10 的 20 个候选全部 Ochiai > 0**，因此 `secondary-nonzero` 与 `main` 在这 5 例上的请求逐字节相同，
+  直接复用了同一批缓存调用（`cache_hit = true`，本次花费 $0）。这 5 例上两配置的排名相同、不是独立证据；
+  对比两种候选策略时只有 Lang-5、11、12、13、14 有区别。该 run 的 `cost.cost_usd` 合计为 $1.49（含复用调用的原始成本），
+  实际账单只有 $0.39；跨配置汇总费用请按 `cache_key` 去重。
+- 已知局限（冻结后不修改，如实报告）：Lang-8/9/10 的两个失败测试是同一个继承来的测试方法（由两个测试类执行），
+  上下文中会重复出现一次相同的测试源码与调用栈；Lang-10 的测试 helper 因预算省略（记入 `degradations`）。
+- 失败处理规则：只有 API/网络错误（`sample_error`）允许原样重跑补齐；解析失败、修复或拒答都按原样保留并由 C 计分，
+  不为改善结果而重跑或换配置。本批次没有出现上述任何情况。
+
 ## 目录
 
 ```

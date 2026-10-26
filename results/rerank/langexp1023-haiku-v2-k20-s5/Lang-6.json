@@ -1,0 +1,1427 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-haiku-v2-k20-s5",
+ "bug_id": "Lang-6",
+ "input_sha256": "6976bf2c256a24dbf9b626f831252f69a264d496e14ca083f1788e225827ceb3",
+ "status": "complete",
+ "created_at": "2026-10-26T05:25:39Z",
+ "config": {
+  "model_key": "haiku",
+  "provider": "anthropic",
+  "model": "claude-haiku-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)"
+  ],
+  "estimated_tokens": 5369,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)": 2.8,
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)": 1.0,
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])": 2.2,
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])": 4.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])": 4.8,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()": 16.0,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()": 15.8,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()": 13.4,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()": 16.0,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()": 15.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()": 18.2,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()": 15.2,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()": 13.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()": 14.0,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()": 15.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])": 5.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)": 7.8,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])": 11.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])": 8.6,
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)": 7.6
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)": 0.0,
+   "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])": 0.48989794855663565,
+   "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])": 0.7483314773547882,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()": 2.6076809620810595,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()": 2.315167380558045,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()": 3.4985711369071804,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()": 2.8284271247461903,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()": 3.4985711369071804,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()": 1.5999999999999999,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()": 2.6381811916545836,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()": 2.33238075793812,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()": 2.1908902300206643,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()": 2.1540659228538015,
+   "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)": 0.7483314773547882,
+   "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])": 3.2,
+   "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)": 0.48989794855663565
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.7011,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 12835303987642941784,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C02": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "C03": "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "C05": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "C06": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "C07": "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "C09": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "C10": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "C13": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "C14": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "C15": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "C17": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "C19": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "C20": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+     "label": "C15",
+     "reason": "CsvEscaper.translate calls containsNone on the input and returns input.length() at L160 and L167, so it is the direct per-codepoint handler that interacts with the surrogate-pair index logic at the top of the failing path.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       160,
+       167
+      ],
+      "in_candidate": [
+       160,
+       167
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+     "label": "C05",
+     "reason": "containsNone has surrogate-specific branching at L1748-L1753 that reads cs.charAt(i + 1) and searchChars[j + 1], which is the only candidate code handling surrogates and could mishandle the pair.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1748,
+       1753
+      ],
+      "in_candidate": [
+       1748,
+       1753
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+     "label": "C02",
+     "reason": "escapeCsv at L556 is the entry point that hands the raw surrogate-pair string to the translator chain, so it is on the failing path even though the exception is thrown deeper.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       556
+      ],
+      "in_candidate": [
+       556
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       556
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "148ca8b2b8d8736307b5e4563cc87505d6392caa70ecb81935235c75cb0ff1fa",
+     "cache_hit": false,
+     "cost_usd": 0.0009743999999999999,
+     "paid_usd": 0.0009743999999999999,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 5964,
+      "output_tokens": 756,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.385,
+     "request_id": "req_011CgQHuo2wj7vM4Ffw5ZgKR",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C15\",\"C05\",\"C02\",\"C07\",\"C03\",\"C01\",\"C11\",\"C17\",\"C08\",\"C12\",\"C10\",\"C09\",\"C14\",\"C06\",\"C18\",\"C19\",\"C13\",\"C16\",\"C20\",\"C04\"],\"top3_reasons\":[{\"candidate\":\"C15\",\"reason\":\"CsvEscaper.translate calls containsNone on the input and returns input.length() at L160 and L167, so it is the direct per-codepoint handler that interacts with the surrogate-pair index logic at the top of the failing path.\"},{\"candidate\":\"C05\",\"reason\":\"containsNone has surrogate-specific branching at L1748-L1753 that reads cs.charAt(i + 1) and searchChars[j + 1], which is the only candidate code handling surrogates and could mishandle the pair.\"},{\"candidate\":\"C02\",\"reason\":\"escapeCsv at L556 is the entry point that hands the raw surrogate-pair string to the translator chain, so it is on the failing path even though the exception is thrown deeper.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 5964,
+    "output_tokens": 756
+   },
+   "cost_usd": 0.000974,
+   "paid_usd": 0.000974,
+   "latency_s": 4.385,
+   "prompt_text": "Bug: Lang-6 (1 failing test)\n\n## Failing test 1: org.apache.commons.lang3.StringUtilsTest::testEscapeSurrogatePairs\n### Error and stack trace (filtered)\n```\njava.lang.StringIndexOutOfBoundsException: String index out of range: 2\n\tat java.lang.String.charAt(String.java:658)\n\tat java.lang.Character.codePointAt(Character.java:4902)\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:95)\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:59)\n\tat org.apache.commons.lang3.StringEscapeUtils.escapeCsv(StringEscapeUtils.java:556)\n\tat org.apache.commons.lang3.StringUtilsTest.testEscapeSurrogatePairs(StringUtilsTest.java:2187)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  2185 | @Test\n  2186 |     public void testEscapeSurrogatePairs() throws Exception {\n>>2187 |         assertEquals(\"\\uD83D\\uDE30\", StringEscapeUtils.escapeCsv(\"\\uD83D\\uDE30\"));\n  2188 |         // Examples from https://en.wikipedia.org/wiki/UTF-16\n  2189 |         assertEquals(\"\\uD800\\uDC00\", StringEscapeUtils.escapeCsv(\"\\uD800\\uDC00\"));\n  2190 |         assertEquals(\"\\uD834\\uDD1E\", StringEscapeUtils.escapeCsv(\"\\uD834\\uDD1E\"));\n  2191 |         assertEquals(\"\\uDBFF\\uDFFD\", StringEscapeUtils.escapeCsv(\"\\uDBFF\\uDFFD\"));\n  2192 |         \n  2193 |     }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])\nfile: src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java (lines 40-58)\n```java\n  40 | public LookupTranslator(CharSequence[]... lookup) {\n  41 |         lookupMap = new HashMap<CharSequence, CharSequence>();\n  42 |         int _shortest = Integer.MAX_VALUE;\n  43 |         int _longest = 0;\n  44 |         if (lookup != null) {\n  45 |             for (CharSequence[] seq : lookup) {\n  46 |                 this.lookupMap.put(seq[0], seq[1]);\n  47 |                 int sz = seq[0].length();\n  48 |                 if (sz < _shortest) {\n  49 |                     _shortest = sz;\n  50 |                 }\n  51 |                 if (sz > _longest) {\n  52 |                     _longest = sz;\n  53 |                 }\n  54 |             }\n  55 |         }\n  56 |         shortest = _shortest;\n  57 |         longest = _longest;\n  58 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)\nfile: src/main/java/org/apache/commons/lang3/StringEscapeUtils.java (lines 555-557)\n```java\n  555 | public static final String escapeCsv(String input) {\n>>556 |         return ESCAPE_CSV.translate(input);\n  557 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])\nfile: src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java (lines 40-42)\n```java\n  40 | public AggregateTranslator(CharSequenceTranslator... translators) {\n  41 |         this.translators = ArrayUtils.clone(translators);\n  42 |     }\n```\n\n## C04\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 349-349)\n```java\n  349 | public static String[][] HTML40_EXTENDED_UNESCAPE() { return HTML40_EXTENDED_UNESCAPE.clone(); }\n```\n\n## C05\nmethod: org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])\nfile: src/main/java/org/apache/commons/lang3/StringUtils.java (lines 1736-1764)\n```java\n  1736 | public static boolean containsNone(CharSequence cs, char... searchChars) {\n  1737 |         if (cs == null || searchChars == null) {\n  1738 |             return true;\n  1739 |         }\n  1740 |         int csLen = cs.length();\n  1741 |         int csLast = csLen - 1;\n  1742 |         int searchLen = searchChars.length;\n  1743 |         int searchLast = searchLen - 1;\n  1744 |         for (int i = 0; i < csLen; i++) {\n  1745 |             char ch = cs.charAt(i);\n  1746 |             for (int j = 0; j < searchLen; j++) {\n  1747 |                 if (searchChars[j] == ch) {\n  1748 |                     if (Character.isHighSurrogate(ch)) {\n  1749 |                         if (j == searchLast) {\n  1750 |                             // missing low surrogate, fine, like String.indexOf(String)\n  1751 |                             return false;\n  1752 |                         }\n  1753 |                         if (i < csLast && searchChars[j + 1] == cs.charAt(i + 1)) {\n  1754 |                             return false;\n  1755 |                         }\n  1756 |                     } else {\n  1757 |                         // ch is in the Basic Multilingual Plane\n  1758 |                         return false;\n  1759 |                     }\n  1760 |                 }\n  1761 |             }\n  1762 |         }\n  1763 |         return true;\n  1764 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 408-408)\n```java\n  408 | public static String[][] JAVA_CTRL_CHARS_UNESCAPE() { return JAVA_CTRL_CHARS_UNESCAPE.clone(); }\n```\n\n## C07\nmethod: org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])\nfile: src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java (lines 107-112)\n```java\n  107 | public final CharSequenceTranslator with(CharSequenceTranslator... translators) {\n  108 |         CharSequenceTranslator[] newArray = new CharSequenceTranslator[translators.length + 1];\n  109 |         newArray[0] = this;\n  110 |         System.arraycopy(translators, 0, newArray, 1, translators.length);\n  111 |         return new AggregateTranslator(newArray);\n  112 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])\nfile: src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java (lines 56-62)\n```java\n  56 | public NumericEntityUnescaper(OPTION... options) {\n  57 |         if(options.length > 0) {\n  58 |             this.options = EnumSet.copyOf(Arrays.asList(options));\n  59 |         } else {\n  60 |             this.options = EnumSet.copyOf(Arrays.asList(new OPTION[] { OPTION.semiColonRequired }));\n  61 |         }\n  62 |     }\n```\n\n## C09\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 370-370)\n```java\n  370 | public static String[][] BASIC_UNESCAPE() { return BASIC_UNESCAPE.clone(); }\n```\n\n## C10\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 358-358)\n```java\n  358 | public static String[][] BASIC_ESCAPE() { return BASIC_ESCAPE.clone(); }\n```\n\n## C11\nmethod: org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)\nfile: src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java (lines 51-55)\n```java\n  51 | private UnicodeEscaper(int below, int above, boolean between) {\n  52 |         this.below = below;\n  53 |         this.above = above;\n  54 |         this.between = between;\n  55 |     }\n```\n\n## C12\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 416-423)\n```java\n  416 | public static String[][] invert(String[][] array) {\n  417 |         String[][] newarray = new String[array.length][2];\n  418 |         for(int i = 0; i<array.length; i++) {\n  419 |             newarray[i][0] = array[i][1];\n  420 |             newarray[i][1] = array[i][0];\n  421 |         }\n  422 |         return newarray;\n  423 |     }\n```\n\n## C13\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 147-147)\n```java\n  147 | public static String[][] HTML40_EXTENDED_ESCAPE() { return HTML40_EXTENDED_ESCAPE.clone(); }\n```\n\n## C14\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 395-395)\n```java\n  395 | public static String[][] JAVA_CTRL_CHARS_ESCAPE() { return JAVA_CTRL_CHARS_ESCAPE.clone(); }\n```\n\n## C15\nmethod: org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)\nfile: src/main/java/org/apache/commons/lang3/StringEscapeUtils.java (lines 153-168)\n```java\n  153 | @Override\n  154 |         public int translate(CharSequence input, int index, Writer out) throws IOException {\n  155 | \n  156 |             if(index != 0) {\n  157 |                 throw new IllegalStateException(\"CsvEscaper should never reach the [1] index\");\n  158 |             }\n  159 | \n  160 |             if (StringUtils.containsNone(input.toString(), CSV_SEARCH_CHARS)) {\n  161 |                 out.write(input.toString());\n  162 |             } else {\n  163 |                 out.write(CSV_QUOTE);\n  164 |                 out.write(StringUtils.replace(input.toString(), CSV_QUOTE_STR, CSV_QUOTE_STR + CSV_QUOTE_STR));\n  165 |                 out.write(CSV_QUOTE);\n  166 |             }\n  167 |             return input.length();\n  168 |         }\n```\n\n## C16\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 34-34)\n```java\n  34 | public static String[][] ISO8859_1_ESCAPE() { return ISO8859_1_ESCAPE.clone(); }\n```\n\n## C17\nmethod: org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)\nfile: src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java (lines 84-86)\n```java\n  84 | public static UnicodeEscaper outsideOf(int codepointLow, int codepointHigh) {\n  85 |         return new UnicodeEscaper(codepointLow, codepointHigh, false);\n  86 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 377-377)\n```java\n  377 | public static String[][] APOS_ESCAPE() { return APOS_ESCAPE.clone(); }\n```\n\n## C19\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 386-386)\n```java\n  386 | public static String[][] APOS_UNESCAPE() { return APOS_UNESCAPE.clone(); }\n```\n\n## C20\nmethod: org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()\nfile: src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java (lines 138-138)\n```java\n  138 | public static String[][] ISO8859_1_UNESCAPE() { return ISO8859_1_UNESCAPE.clone(); }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 8250739917025955471,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C02": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "C03": "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "C05": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "C06": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "C07": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "C09": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "C10": "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "C13": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "C14": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "C15": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "C17": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "C19": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "C20": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+     "label": "C05",
+     "reason": "L167 returns input.length() (a UTF-16 char count) while the caller advances by code points, so a surrogate pair of length 2 pushes the index past the end and triggers the out-of-range codePointAt, with L160 showing the non-escaping path that returns this length.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       160,
+       167
+      ],
+      "in_candidate": [
+       160,
+       167
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+     "label": "C17",
+     "reason": "L1753 and L1754 handle surrogate pairs only when a search char matches, so containsNone's surrogate logic feeds the CsvEscaper branch at L160 that decides the length-returning path for valid pairs.",
+     "evidence": {
+      "status": "partial",
+      "cited_lines": [
+       160,
+       1753,
+       1754
+      ],
+      "in_candidate": [
+       1753,
+       1754
+      ],
+      "outside_candidate": [
+       160
+      ],
+      "sibling_candidate": [],
+      "unverified": [
+       160
+      ],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+     "label": "C13",
+     "reason": "L556 is the call site that enters the CSV translator chain and exposes the failing input to the length-based translation, though the defect is more likely below it.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       556
+      ],
+      "in_candidate": [
+       556
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       556
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "d88d6648152fc8a0599a0b70e34b30677778cc4b90692085978d8cf0cff64684",
+     "cache_hit": false,
+     "cost_usd": 0.0012099,
+     "paid_usd": 0.0012099,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 5964,
+      "output_tokens": 1227,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 7.304,
+     "request_id": "req_011CgQHv7kpLdKVT3NTaUTS7",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C05\",\"C17\",\"C13\",\"C10\",\"C03\",\"C01\",\"C09\",\"C08\",\"C16\",\"C02\",\"C04\",\"C06\",\"C07\",\"C11\",\"C12\",\"C14\",\"C15\",\"C18\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C05\",\"reason\":\"L167 returns input.length() (a UTF-16 char count) while the caller advances by code points, so a surrogate pair of length 2 pushes the index past the end and triggers the out-of-range codePointAt, with L160 showing the non-escaping path that returns this length.\"},{\"candidate\":\"C17\",\"reason\":\"L1753 and L1754 handle surrogate pairs only when a search char matches, so containsNone's surrogate logic feeds the CsvEscaper branch at L160 that decides the length-returning path for valid pairs.\"},{\"candidate\":\"C13\",\"reason\":\"L556 is the call site that enters the CSV translator chain and exposes the failing input to the length-based translation, though the defect is more likely below it.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 5964,
+    "output_tokens": 1227
+   },
+   "cost_usd": 0.00121,
+   "paid_usd": 0.00121,
+   "latency_s": 7.304
+  },
+  {
+   "sample_index": 2,
+   "seed": 10377063722515225302,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "C02": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "C03": "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "C05": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C06": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "C07": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "C09": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "C10": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "C13": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "C14": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "C15": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "C17": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "C19": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "C20": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+     "label": "C19",
+     "reason": "CsvEscaper.translate at L160 calls StringUtils.containsNone with the raw input and returns input.length() at L167, and the surrogate pair handling and index logic here feed the translator loop that throws the out-of-range exception.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       160,
+       167
+      ],
+      "in_candidate": [
+       160,
+       167
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+     "label": "C10",
+     "reason": "containsNone's surrogate handling at L1753 reads cs.charAt(i+1) and compares it to searchChars[j+1], which is the likely place where the surrogate pair is mishandled and an index goes out of range.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1753
+      ],
+      "in_candidate": [
+       1753
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+     "label": "C07",
+     "reason": "escapeCsv at L556 is the entry point of the failing call chain and passes the surrogate-pair input straight into the translator without any guard.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       556
+      ],
+      "in_candidate": [
+       556
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       556
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "854f45355df500bc64a496b6bfdb9b3a1f2e30fc82d3e7929c59f65d74325dec",
+     "cache_hit": false,
+     "cost_usd": 0.0007553999999999999,
+     "paid_usd": 0.0007553999999999999,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 5964,
+      "output_tokens": 318,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.37,
+     "request_id": "req_011CgQHvf2zxSZsL3swWySJz",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C19\",\"C10\",\"C07\",\"C08\",\"C03\",\"C05\",\"C01\",\"C17\",\"C11\",\"C02\",\"C04\",\"C06\",\"C09\",\"C12\",\"C13\",\"C14\",\"C15\",\"C16\",\"C18\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C19\",\"reason\":\"CsvEscaper.translate at L160 calls StringUtils.containsNone with the raw input and returns input.length() at L167, and the surrogate pair handling and index logic here feed the translator loop that throws the out-of-range exception.\"},{\"candidate\":\"C10\",\"reason\":\"containsNone's surrogate handling at L1753 reads cs.charAt(i+1) and compares it to searchChars[j+1], which is the likely place where the surrogate pair is mishandled and an index goes out of range.\"},{\"candidate\":\"C07\",\"reason\":\"escapeCsv at L556 is the entry point of the failing call chain and passes the surrogate-pair input straight into the translator without any guard.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 5964,
+    "output_tokens": 318
+   },
+   "cost_usd": 0.000755,
+   "paid_usd": 0.000755,
+   "latency_s": 2.37
+  },
+  {
+   "sample_index": 3,
+   "seed": 9970653994987976346,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "C02": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "C03": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "C05": "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "C06": "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "C07": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "C09": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "C10": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "C13": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "C14": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "C15": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "C17": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "C19": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "C20": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+     "label": "C09",
+     "reason": "L160 uses StringUtils.containsNone and L164 replaces quotes, and L167 returns input.length() while the translator loop in CharSequenceTranslator advances by code points, so the returned index mismatch with surrogate pairs can cause the out-of-range access (the CsvEscaper's index handling around L156-L167 is the likeliest source).",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       156,
+       160,
+       164,
+       167
+      ],
+      "in_candidate": [
+       156,
+       160,
+       164,
+       167
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+     "label": "C19",
+     "reason": "L556 directly invokes ESCAPE_CSV.translate(input), the entry point of the failing call chain, so the input handling passed into the translator originates here.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       556
+      ],
+      "in_candidate": [
+       556
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       556
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+     "label": "C17",
+     "reason": "L1744-L1753 scan surrogate pairs with manual index arithmetic (i < csLast and cs.charAt(i + 1)), which is the helper consulted by CsvEscaper at L160 and may mishandle surrogate pairs.",
+     "evidence": {
+      "status": "partial",
+      "cited_lines": [
+       160,
+       1744,
+       1753
+      ],
+      "in_candidate": [
+       1744,
+       1753
+      ],
+      "outside_candidate": [
+       160
+      ],
+      "sibling_candidate": [],
+      "unverified": [
+       160
+      ],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "213f76257ce275ab9929224143da19ea0bb4c57c648e506fdbc4e275b962a6b0",
+     "cache_hit": false,
+     "cost_usd": 0.0007823999999999999,
+     "paid_usd": 0.0007823999999999999,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 5964,
+      "output_tokens": 372,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.919,
+     "request_id": "req_011CgQHvqCSkh3JTSZhBuQPM",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C09\",\"C19\",\"C17\",\"C06\",\"C16\",\"C20\",\"C05\",\"C15\",\"C18\",\"C03\",\"C01\",\"C02\",\"C04\",\"C07\",\"C08\",\"C10\",\"C11\",\"C12\",\"C13\",\"C14\"],\"top3_reasons\":[{\"candidate\":\"C09\",\"reason\":\"L160 uses StringUtils.containsNone and L164 replaces quotes, and L167 returns input.length() while the translator loop in CharSequenceTranslator advances by code points, so the returned index mismatch with surrogate pairs can cause the out-of-range access (the CsvEscaper's index handling around L156-L167 is the likeliest source).\"},{\"candidate\":\"C19\",\"reason\":\"L556 directly invokes ESCAPE_CSV.translate(input), the entry point of the failing call chain, so the input handling passed into the translator originates here.\"},{\"candidate\":\"C17\",\"reason\":\"L1744-L1753 scan surrogate pairs with manual index arithmetic (i < csLast and cs.charAt(i + 1)), which is the helper consulted by CsvEscaper at L160 and may mishandle surrogate pairs.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 5964,
+    "output_tokens": 372
+   },
+   "cost_usd": 0.000782,
+   "paid_usd": 0.000782,
+   "latency_s": 2.919
+  },
+  {
+   "sample_index": 4,
+   "seed": 1016399514993404430,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "C02": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "C03": "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "C04": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "C05": "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "C06": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "C07": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "C08": "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "C09": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "C10": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "C11": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "C12": "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "C13": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "C14": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "C15": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "C16": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "C17": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "C18": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "C19": "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()",
+    "C20": "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+    "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+    "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+    "src/main/java/org/apache/commons/lang3/text/translate/LookupTranslator.java::org.apache.commons.lang3.text.translate.LookupTranslator#<init>(CharSequence[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/AggregateTranslator.java::org.apache.commons.lang3.text.translate.AggregateTranslator#<init>(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#with(CharSequenceTranslator[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#outsideOf(int,int)",
+    "src/main/java/org/apache/commons/lang3/text/translate/UnicodeEscaper.java::org.apache.commons.lang3.text.translate.UnicodeEscaper#<init>(int,int,boolean)",
+    "src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java::org.apache.commons.lang3.text.translate.NumericEntityUnescaper#<init>(OPTION[])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#invert(String[][])",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#BASIC_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#JAVA_CTRL_CHARS_ESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#HTML40_EXTENDED_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#ISO8859_1_UNESCAPE()",
+    "src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java::org.apache.commons.lang3.text.translate.EntityArrays#APOS_ESCAPE()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+     "label": "C01",
+     "reason": "L167 returns input.length() as the consumed count, which is a code-unit count rather than a code-point count, so the surrogate pair is handled incorrectly by the translate loop in the caller, and L160 quoting logic is otherwise unaffected.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       160,
+       167
+      ],
+      "in_candidate": [
+       160,
+       167
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#containsNone(CharSequence,char[])",
+     "label": "C09",
+     "reason": "The surrogate-pair branch at L1748-L1753 compares searchChars against cs.charAt(i+1) with edge-case logic, which determines whether the CSV escaper takes the quoting path for surrogate input.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1748,
+       1753
+      ],
+      "in_candidate": [
+       1748,
+       1753
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils#escapeCsv(String)",
+     "label": "C15",
+     "reason": "L556 is the entry point that passes the surrogate-containing input straight into ESCAPE_CSV.translate with no pre-processing, so it is the direct caller in the failing stack.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       556
+      ],
+      "in_candidate": [
+       556
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       556
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "54c2556b4845d9f9789451f575b3d988dd2bb828a947c0428a98a6681adaf735",
+     "cache_hit": false,
+     "cost_usd": 0.0010324000000000002,
+     "paid_usd": 0.0010324000000000002,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 5964,
+      "output_tokens": 872,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.566,
+     "request_id": "req_011CgQHw3hmVDfoJ2updBChz",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C01\",\"C09\",\"C15\",\"C03\",\"C05\",\"C20\",\"C11\",\"C12\",\"C08\",\"C18\",\"C02\",\"C04\",\"C06\",\"C07\",\"C10\",\"C13\",\"C14\",\"C16\",\"C17\",\"C19\"],\"top3_reasons\":[{\"candidate\":\"C01\",\"reason\":\"L167 returns input.length() as the consumed count, which is a code-unit count rather than a code-point count, so the surrogate pair is handled incorrectly by the translate loop in the caller, and L160 quoting logic is otherwise unaffected.\"},{\"candidate\":\"C09\",\"reason\":\"The surrogate-pair branch at L1748-L1753 compares searchChars against cs.charAt(i+1) with edge-case logic, which determines whether the CSV escaper takes the quoting path for surrogate input.\"},{\"candidate\":\"C15\",\"reason\":\"L556 is the entry point that passes the surrogate-containing input straight into ESCAPE_CSV.translate with no pre-processing, so it is the direct caller in the failing stack.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 5964,
+    "output_tokens": 872
+   },
+   "cost_usd": 0.001032,
+   "paid_usd": 0.001032,
+   "latency_s": 4.566
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 13,
+  "partial": 2,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 5,
+  "grounded_rate": 0.8667,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 29820,
+  "output_tokens": 3545,
+  "cost_usd": 0.004753,
+  "paid_usd_this_run": 0.004753,
+  "latency_s": 21.544,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

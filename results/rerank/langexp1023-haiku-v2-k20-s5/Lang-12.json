@@ -1,0 +1,1440 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-haiku-v2-k20-s5",
+ "bug_id": "Lang-12",
+ "input_sha256": "0608bc2d75381605d92c8e6674f6f551f6f4e6a7d2e6e013c2160bea8626e923",
+ "status": "complete",
+ "created_at": "2026-10-26T05:27:29Z",
+ "config": {
+  "model_key": "haiku",
+  "provider": "anthropic",
+  "model": "claude-haiku-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+  ],
+  "estimated_tokens": 9483,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)": 1.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])": 2.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)": 5.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)": 4.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)": 3.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 18.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 14.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 9.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 9.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 9.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 13.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 12.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 13.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 10.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 14.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 15.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 17.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 17.6,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 10.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 9.0
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)": 0.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])": 0.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)": 0.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)": 0.0,
+   "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 2.5298221281347035,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 2.727636339397171,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 2.939387691339814,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 2.481934729198171,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 0.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 1.7204650534085253,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 3.6110940170535577,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 3.3823069050575527,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 2.7129319932501073,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 2.7856776554368237,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 4.621688003316537,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 1.0954451150103321,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 4.31740662898458,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 4.147288270665544,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 3.521363372331802
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.6021,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 16183285045317648482,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C02": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C05": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C08": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C10": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C14": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C17": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C18": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+     "label": "C10",
+     "reason": "L248 indexes chars[random.nextInt(gap)+start] using gap from L241, which is end-start, and L231-233 set end to Integer.MAX_VALUE when start and end are 0 with no letters or numbers, so the index can far exceed chars.length and the array is never bounded or validated.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       231,
+       233,
+       241,
+       248
+      ],
+      "in_candidate": [
+       231,
+       233,
+       241,
+       248
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       248
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+     "label": "C14",
+     "reason": "L321 passes end=chars.length with start=0 and no check for an empty array, so random(1, new char[0]) and random(3, 'a') reach the faulty indexing in C10 with an invalid range.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       321
+      ],
+      "in_candidate": [
+       321
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       321
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+     "label": "C05",
+     "reason": "L163 forwards the caller's start and end unchanged to the core random method with null chars, so the (0,0) defaults that lead to the oversized gap in C10 originate in this delegation path.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       163
+      ],
+      "in_candidate": [
+       163
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "71123b9b99bb77ee97d0d0225221208a3d6bc91c7db168504b0bf28a1e1da1a4",
+     "cache_hit": false,
+     "cost_usd": 0.001459,
+     "paid_usd": 0.001459,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 9435,
+      "output_tokens": 1031,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 5.484,
+     "request_id": "req_011CgQJ4LSnWYyuTrhQvKvMC",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C10\",\"C14\",\"C05\",\"C18\",\"C08\",\"C02\",\"C17\",\"C03\",\"C01\",\"C20\",\"C19\",\"C07\",\"C09\",\"C06\",\"C16\",\"C12\",\"C13\",\"C11\",\"C15\",\"C04\"],\"top3_reasons\":[{\"candidate\":\"C10\",\"reason\":\"L248 indexes chars[random.nextInt(gap)+start] using gap from L241, which is end-start, and L231-233 set end to Integer.MAX_VALUE when start and end are 0 with no letters or numbers, so the index can far exceed chars.length and the array is never bounded or validated.\"},{\"candidate\":\"C14\",\"reason\":\"L321 passes end=chars.length with start=0 and no check for an empty array, so random(1, new char[0]) and random(3, 'a') reach the faulty indexing in C10 with an invalid range.\"},{\"candidate\":\"C05\",\"reason\":\"L163 forwards the caller's start and end unchanged to the core random method with null chars, so the (0,0) defaults that lead to the oversized gap in C10 originate in this delegation path.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 9435,
+    "output_tokens": 1031
+   },
+   "cost_usd": 0.001459,
+   "paid_usd": 0.001459,
+   "latency_s": 5.484,
+   "prompt_text": "Bug: Lang-12 (2 failing tests)\n\n## Failing test 1: org.apache.commons.lang3.RandomStringUtilsTest::testExceptions\n### Error and stack trace (filtered)\n```\njava.lang.ArrayIndexOutOfBoundsException: 1558306320\n\tat org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:248)\n\tat org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:321)\n\tat org.apache.commons.lang3.RandomStringUtilsTest.testExceptions(RandomStringUtilsTest.java:148)\n\t... 34 framework/runner frames omitted\n```\n### Test method source\n```java\n  133 | public void testExceptions() {\n  134 |         final char[] DUMMY = new char[]{'a'}; // valid char array\n  135 |         try {\n  136 |             RandomStringUtils.random(-1);\n  137 |             fail();\n  138 |         } catch (IllegalArgumentException ex) {}\n  139 |         try {\n  140 |             RandomStringUtils.random(-1, true, true);\n  141 |             fail();\n  142 |         } catch (IllegalArgumentException ex) {}\n  143 |         try {\n  144 |             RandomStringUtils.random(-1, DUMMY);\n  145 |             fail();\n  146 |         } catch (IllegalArgumentException ex) {}\n  147 |         try {\n>>148 |             RandomStringUtils.random(1, new char[0]); // must not provide empty array => IAE\n  149 |             fail();\n  150 |         } catch (IllegalArgumentException ex) {}\n  151 |         try {\n  152 |             RandomStringUtils.random(-1, \"\");\n  153 |             fail();\n  154 |         } catch (IllegalArgumentException ex) {}\n  155 |         try {\n  156 |             RandomStringUtils.random(-1, (String)null);\n  157 |             fail();\n  158 |         } catch (IllegalArgumentException ex) {}\n  159 |         try {\n  160 |             RandomStringUtils.random(-1, 'a', 'z', false, false);\n  161 |             fail();\n  162 |         } catch (IllegalArgumentException ex) {}\n  163 |         try {\n  164 |             RandomStringUtils.random(-1, 'a', 'z', false, false, DUMMY);\n  165 |             fail();\n  166 |         } catch (IllegalArgumentException ex) {}\n  167 |         try {\n  168 |             RandomStringUtils.random(-1, 'a', 'z', false, false, DUMMY, new Random());\n  169 |             fail();\n  170 |         } catch (IllegalArgumentException ex) {}\n  171 |     }\n```\n\n## Failing test 2: org.apache.commons.lang3.RandomStringUtilsTest::testLANG805\n### Error and stack trace (filtered)\n```\njava.lang.ArrayIndexOutOfBoundsException: 1222485936\n\tat org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:248)\n\tat org.apache.commons.lang3.RandomStringUtilsTest.testLANG805(RandomStringUtilsTest.java:130)\n\t... 34 framework/runner frames omitted\n```\n### Test method source\n```java\n  128 | public void testLANG805() {\n  129 |         long seed = System.currentTimeMillis();\n>>130 |         assertEquals(\"aaa\", RandomStringUtils.random(3,0,0,false,false,new char[]{'a'},new Random(seed)));\n  131 |     }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 263-277)\n```java\n  263 | private static boolean memberEquals(Class<?> type, Object o1, Object o2) {\n  264 |         if (o1 == o2) {\n  265 |             return true;\n  266 |         }\n  267 |         if (o1 == null || o2 == null) {\n  268 |             return false;\n  269 |         }\n  270 |         if (type.isArray()) {\n  271 |             return arrayMemberEquals(type.getComponentType(), o1, o2);\n  272 |         }\n  273 |         if (type.isAnnotation()) {\n  274 |             return equals((Annotation) o1, (Annotation) o2);\n  275 |         }\n  276 |         return o1.equals(o2);\n  277 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 4292-4312)\n```java\n  4292 | private static Object add(Object array, int index, Object element, Class<?> clss) {\n  4293 |         if (array == null) {\n  4294 |             if (index != 0) {\n  4295 |                 throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: 0\");\n  4296 |             }\n  4297 |             Object joinedArray = Array.newInstance(clss, 1);\n  4298 |             Array.set(joinedArray, 0, element);\n  4299 |             return joinedArray;\n  4300 |         }\n  4301 |         int length = Array.getLength(array);\n  4302 |         if (index > length || index < 0) {\n  4303 |             throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: \" + length);\n  4304 |         }\n  4305 |         Object result = Array.newInstance(clss, length + 1);\n  4306 |         System.arraycopy(array, 0, result, 0, index);\n  4307 |         Array.set(result, index, element);\n  4308 |         if (index < length) {\n  4309 |             System.arraycopy(array, index, result, index + 1, length - index);\n  4310 |         }\n  4311 |         return result;\n  4312 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 287-316)\n```java\n  287 | private static boolean arrayMemberEquals(Class<?> componentType, Object o1, Object o2) {\n  288 |         if (componentType.isAnnotation()) {\n  289 |             return annotationArrayMemberEquals((Annotation[]) o1, (Annotation[]) o2);\n  290 |         }\n  291 |         if (componentType.equals(Byte.TYPE)) {\n  292 |             return Arrays.equals((byte[]) o1, (byte[]) o2);\n  293 |         }\n  294 |         if (componentType.equals(Short.TYPE)) {\n  295 |             return Arrays.equals((short[]) o1, (short[]) o2);\n  296 |         }\n  297 |         if (componentType.equals(Integer.TYPE)) {\n  298 |             return Arrays.equals((int[]) o1, (int[]) o2);\n  299 |         }\n  300 |         if (componentType.equals(Character.TYPE)) {\n  301 |             return Arrays.equals((char[]) o1, (char[]) o2);\n  302 |         }\n  303 |         if (componentType.equals(Long.TYPE)) {\n  304 |             return Arrays.equals((long[]) o1, (long[]) o2);\n  305 |         }\n  306 |         if (componentType.equals(Float.TYPE)) {\n  307 |             return Arrays.equals((float[]) o1, (float[]) o2);\n  308 |         }\n  309 |         if (componentType.equals(Double.TYPE)) {\n  310 |             return Arrays.equals((double[]) o1, (double[]) o2);\n  311 |         }\n  312 |         if (componentType.equals(Boolean.TYPE)) {\n  313 |             return Arrays.equals((boolean[]) o1, (boolean[]) o2);\n  314 |         }\n  315 |         return Arrays.equals((Object[]) o1, (Object[]) o2);\n  316 |     }\n```\n\n## C04\nmethod: org.apache.commons.lang3.ArrayUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 137-139)\n```java\n  137 | public ArrayUtils() {\n  138 |       super();\n  139 |     }\n```\n\n## C05\nmethod: org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)\nfile: src/main/java/org/apache/commons/lang3/RandomStringUtils.java (lines 162-164)\n```java\n  162 | public static String random(int count, int start, int end, boolean letters, boolean numbers) {\n  163 |         return random(count, start, end, letters, numbers, null, RANDOM);\n  164 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 344-370)\n```java\n  344 | private static int arrayMemberHash(Class<?> componentType, Object o) {\n  345 |         if (componentType.equals(Byte.TYPE)) {\n  346 |             return Arrays.hashCode((byte[]) o);\n  347 |         }\n  348 |         if (componentType.equals(Short.TYPE)) {\n  349 |             return Arrays.hashCode((short[]) o);\n  350 |         }\n  351 |         if (componentType.equals(Integer.TYPE)) {\n  352 |             return Arrays.hashCode((int[]) o);\n  353 |         }\n  354 |         if (componentType.equals(Character.TYPE)) {\n  355 |             return Arrays.hashCode((char[]) o);\n  356 |         }\n  357 |         if (componentType.equals(Long.TYPE)) {\n  358 |             return Arrays.hashCode((long[]) o);\n  359 |         }\n  360 |         if (componentType.equals(Float.TYPE)) {\n  361 |             return Arrays.hashCode((float[]) o);\n  362 |         }\n  363 |         if (componentType.equals(Double.TYPE)) {\n  364 |             return Arrays.hashCode((double[]) o);\n  365 |         }\n  366 |         if (componentType.equals(Boolean.TYPE)) {\n  367 |             return Arrays.hashCode((boolean[]) o);\n  368 |         }\n  369 |         return Arrays.hashCode((Object[]) o);\n  370 |     }\n```\n\n## C07\nmethod: org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 167-185)\n```java\n  167 | public static int hashCode(Annotation a) {\n  168 |         int result = 0;\n  169 |         Class<? extends Annotation> type = a.annotationType();\n  170 |         for (Method m : type.getDeclaredMethods()) {\n  171 |             try {\n  172 |                 Object value = m.invoke(a);\n  173 |                 if (value == null) {\n  174 |                     throw new IllegalStateException(\n  175 |                             String.format(\"Annotation method %s returned null\", m));\n  176 |                 }\n  177 |                 result += hashMember(m.getName(), value);\n  178 |             } catch (RuntimeException ex) {\n  179 |                 throw ex;\n  180 |             } catch (Exception ex) {\n  181 |                 throw new RuntimeException(ex);\n  182 |             }\n  183 |         }\n  184 |         return result;\n  185 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.RandomStringUtils#random(int)\nfile: src/main/java/org/apache/commons/lang3/RandomStringUtils.java (lines 68-70)\n```java\n  68 | public static String random(int count) {\n  69 |         return random(count, false, false);\n  70 |     }\n```\n\n## C09\nmethod: org.apache.commons.lang3.AnnotationUtils#toString(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 195-210)\n```java\n  195 | public static String toString(final Annotation a) {\n  196 |         ToStringBuilder builder = new ToStringBuilder(a, TO_STRING_STYLE);\n  197 |         for (Method m : a.annotationType().getDeclaredMethods()) {\n  198 |             if (m.getParameterTypes().length > 0) {\n  199 |                 continue; //wtf?\n  200 |             }\n  201 |             try {\n  202 |                 builder.append(m.getName(), m.invoke(a));\n  203 |             } catch (RuntimeException ex) {\n  204 |                 throw ex;\n  205 |             } catch (Exception ex) {\n  206 |                 throw new RuntimeException(ex);\n  207 |             }\n  208 |         }\n  209 |         return builder.build();\n  210 |     }\n```\n\n## C10\nmethod: org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)\nfile: src/main/java/org/apache/commons/lang3/RandomStringUtils.java (lines 223-282)\n```java\n  223 | public static String random(int count, int start, int end, boolean letters, boolean numbers,\n  224 |                                 char[] chars, Random random) {\n  225 |         if (count == 0) {\n  226 |             return \"\";\n  227 |         } else if (count < 0) {\n  228 |             throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");\n  229 |         }\n  230 | \n  231 |         if (start == 0 && end == 0) {\n  232 |                 if (!letters && !numbers) {\n  233 |                     end = Integer.MAX_VALUE;\n  234 |                 } else {\n  235 |                     end = 'z' + 1;\n  236 |                     start = ' ';                \n  237 |                 }\n  238 |         }\n  239 | \n  240 |         char[] buffer = new char[count];\n  241 |         int gap = end - start;\n  242 | \n  243 |         while (count-- != 0) {\n  244 |             char ch;\n  245 |             if (chars == null) {\n  246 |                 ch = (char) (random.nextInt(gap) + start);\n  247 |             } else {\n>>248 |                 ch = chars[random.nextInt(gap) + start];\n  249 |             }\n  250 |             if (letters && Character.isLetter(ch)\n  251 |                     || numbers && Character.isDigit(ch)\n  252 |                     || !letters && !numbers) {\n  253 |                 if(ch >= 56320 && ch <= 57343) {\n  254 |                     if(count == 0) {\n  255 |                         count++;\n  256 |                     } else {\n  257 |                         // low surrogate, insert high surrogate after putting it in\n  258 |                         buffer[count] = ch;\n  259 |                         count--;\n  260 |                         buffer[count] = (char) (55296 + random.nextInt(128));\n  261 |                     }\n  262 |                 } else if(ch >= 55296 && ch <= 56191) {\n  263 |                     if(count == 0) {\n  264 |                         count++;\n  265 |                     } else {\n  266 |                         // high surrogate, insert low surrogate before putting it in\n  267 |                         buffer[count] = (char) (56320 + random.nextInt(128));\n  268 |                         count--;\n  269 |                         buffer[count] = ch;\n  270 |                     }\n  271 |                 } else if(ch >= 56192 && ch <= 56319) {\n  272 |                     // private high surrogate, no effing clue, so skip it\n  273 |                     count++;\n  274 |                 } else {\n  275 |                     buffer[count] = ch;\n  276 |                 }\n  277 |             } else {\n  278 |                 count++;\n  279 |             }\n  280 |         }\n  281 |         return new String(buffer);\n  282 |     }\n```\n\n## C11\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 90-96)\n```java\n  90 | @Override\n  91 |         protected void appendDetail(StringBuffer buffer, String fieldName, Object value) {\n  92 |             if (value instanceof Annotation) {\n  93 |                 value = AnnotationUtils.toString((Annotation) value);\n  94 |             }\n  95 |             super.appendDetail(buffer, fieldName, value);\n  96 |         }\n```\n\n## C12\nmethod: org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 223-232)\n```java\n  223 | public static boolean isValidAnnotationMemberType(Class<?> type) {\n  224 |         if (type == null) {\n  225 |             return false;\n  226 |         }\n  227 |         if (type.isArray()) {\n  228 |             type = type.getComponentType();\n  229 |         }\n  230 |         return type.isPrimitive() || type.isEnum() || type.isAnnotation()\n  231 |                 || String.class.equals(type) || Class.class.equals(type);\n  232 |     }\n```\n\n## C13\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 71-85)\n```java\n  71 | @Override\n  72 |         protected String getShortClassName(java.lang.Class<?> cls) {\n  73 |             Class<? extends Annotation> annotationType = null;\n  74 |             for (Class<?> iface : ClassUtils.getAllInterfaces(cls)) {\n  75 |                 if (Annotation.class.isAssignableFrom(iface)) {\n  76 |                     @SuppressWarnings(\"unchecked\")\n  77 |                     //because we just checked the assignability\n  78 |                     Class<? extends Annotation> found = (Class<? extends Annotation>) iface;\n  79 |                     annotationType = found;\n  80 |                     break;\n  81 |                 }\n  82 |             }\n  83 |             return new StringBuilder(annotationType == null ? \"\" : annotationType.getName())\n  84 |                     .insert(0, '@').toString();\n  85 |         }\n```\n\n## C14\nmethod: org.apache.commons.lang3.RandomStringUtils#random(int,char[])\nfile: src/main/java/org/apache/commons/lang3/RandomStringUtils.java (lines 317-322)\n```java\n  317 | public static String random(int count, char... chars) {\n  318 |         if (chars == null) {\n  319 |             return random(count, 0, 0, false, false, null, RANDOM);\n  320 |         }\n>>321 |         return random(count, 0, chars.length, false, false, chars, RANDOM);\n  322 |     }\n```\n\n## C15\nmethod: org.apache.commons.lang3.AnnotationUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 107-108)\n```java\n  107 | public AnnotationUtils() {\n  108 |     }\n```\n\n## C16\nmethod: org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 325-335)\n```java\n  325 | private static boolean annotationArrayMemberEquals(Annotation[] a1, Annotation[] a2) {\n  326 |         if (a1.length != a2.length) {\n  327 |             return false;\n  328 |         }\n  329 |         for (int i = 0; i < a1.length; i++) {\n  330 |             if (!equals(a1[i], a2[i])) {\n  331 |                 return false;\n  332 |             }\n  333 |         }\n  334 |         return true;\n  335 |     }\n```\n\n## C17\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object[],Object)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 3738-3751)\n```java\n  3738 | public static <T> T[] add(T[] array, T element) {\n  3739 |         Class<?> type;\n  3740 |         if (array != null){\n  3741 |             type = array.getClass();\n  3742 |         } else if (element != null) {\n  3743 |             type = element.getClass();\n  3744 |         } else {\n  3745 |             throw new IllegalArgumentException(\"Arguments cannot both be null\");\n  3746 |         }\n  3747 |         @SuppressWarnings(\"unchecked\") // type must be T\n  3748 |         T[] newArray = (T[]) copyArrayGrow1(array, type);\n  3749 |         newArray[newArray.length - 1] = element;\n  3750 |         return newArray;\n  3751 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)\nfile: src/main/java/org/apache/commons/lang3/RandomStringUtils.java (lines 142-144)\n```java\n  142 | public static String random(int count, boolean letters, boolean numbers) {\n  143 |         return random(count, 0, 0, letters, numbers);\n  144 |     }\n```\n\n## C19\nmethod: org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 242-251)\n```java\n  242 | private static int hashMember(String name, Object value) {\n  243 |         int part1 = name.hashCode() * 127;\n  244 |         if (value.getClass().isArray()) {\n  245 |             return part1 ^ arrayMemberHash(value.getClass().getComponentType(), value);\n  246 |         }\n  247 |         if (value instanceof Annotation) {\n  248 |             return part1 ^ hashCode((Annotation) value);\n  249 |         }\n  250 |         return part1 ^ value.hashCode();\n  251 |     }\n```\n\n## C20\nmethod: org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 122-153)\n```java\n  122 | public static boolean equals(Annotation a1, Annotation a2) {\n  123 |         if (a1 == a2) {\n  124 |             return true;\n  125 |         }\n  126 |         if (a1 == null || a2 == null) {\n  127 |             return false;\n  128 |         }\n  129 |         Class<? extends Annotation> type = a1.annotationType();\n  130 |         Class<? extends Annotation> type2 = a2.annotationType();\n  131 |         Validate.notNull(type, \"Annotation %s with null annotationType()\", a1);\n  132 |         Validate.notNull(type2, \"Annotation %s with null annotationType()\", a2);\n  133 |         if (!type.equals(type2)) {\n  134 |             return false;\n  135 |         }\n  136 |         try {\n  137 |             for (Method m : type.getDeclaredMethods()) {\n  138 |                 if (m.getParameterTypes().length == 0\n  139 |                         && isValidAnnotationMemberType(m.getReturnType())) {\n  140 |                     Object v1 = m.invoke(a1);\n  141 |                     Object v2 = m.invoke(a2);\n  142 |                     if (!memberEquals(m.getReturnType(), v1, v2)) {\n  143 |                         return false;\n  144 |                     }\n  145 |                 }\n  146 |             }\n  147 |         } catch (IllegalAccessException ex) {\n  148 |             return false;\n  149 |         } catch (InvocationTargetException ex) {\n  150 |             return false;\n  151 |         }\n  152 |         return true;\n  153 |     }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 4281734282546318229,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C03": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C08": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C09": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C13": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "C14": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C19": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+     "label": "C19",
+     "reason": "L248 indexes chars[random.nextInt(gap)+start] without checking that chars is non-empty or that gap is bounded by chars.length, and the empty-array case in test 1 (new char[0]) with count 1 produces the out-of-bounds index, while L231-L238 leave start/end at 0 for the chars path so the gap is wrong.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       231,
+       238,
+       248
+      ],
+      "in_candidate": [
+       231,
+       238,
+       248
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       248
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+     "label": "C01",
+     "reason": "L321 computes end as chars.length and passes an empty array through without rejecting it, so the empty-array IAE check the test expects is never performed before reaching the random() body.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       321
+      ],
+      "in_candidate": [
+       321
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       321
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+     "label": "C13",
+     "reason": "L163 forwards start/end straight to the core random method with null chars, so the bad-input path for the chars-based overloads is funneled into C19 without validation.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       163
+      ],
+      "in_candidate": [
+       163
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "eb22832cb8840a0fe48763fd795b609c6e91fc4bddf158af0f807a594d6ed9bd",
+     "cache_hit": false,
+     "cost_usd": 0.001114,
+     "paid_usd": 0.001114,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 9435,
+      "output_tokens": 341,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.11,
+     "request_id": "req_011CgQJ4joyCuii7aRhiLffp",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C19\",\"C01\",\"C13\",\"C03\",\"C14\",\"C08\",\"C09\",\"C10\",\"C02\",\"C04\",\"C05\",\"C06\",\"C07\",\"C12\",\"C16\",\"C18\",\"C20\",\"C15\",\"C11\",\"C17\"],\"top3_reasons\":[{\"candidate\":\"C19\",\"reason\":\"L248 indexes chars[random.nextInt(gap)+start] without checking that chars is non-empty or that gap is bounded by chars.length, and the empty-array case in test 1 (new char[0]) with count 1 produces the out-of-bounds index, while L231-L238 leave start/end at 0 for the chars path so the gap is wrong.\"},{\"candidate\":\"C01\",\"reason\":\"L321 computes end as chars.length and passes an empty array through without rejecting it, so the empty-array IAE check the test expects is never performed before reaching the random() body.\"},{\"candidate\":\"C13\",\"reason\":\"L163 forwards start/end straight to the core random method with null chars, so the bad-input path for the chars-based overloads is funneled into C19 without validation.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 9435,
+    "output_tokens": 341
+   },
+   "cost_usd": 0.001114,
+   "paid_usd": 0.001114,
+   "latency_s": 2.11
+  },
+  {
+   "sample_index": 2,
+   "seed": 8413896809469565790,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C03": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C05": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C07": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "C08": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "C09": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C12": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C15": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C20": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+     "label": "C08",
+     "reason": "L241 computes gap as end - start without validating that chars is non-empty or that gap is positive, so L246-L248 index chars with random.nextInt(gap)+start out of bounds for an empty or too-small array, which matches the ArrayIndexOutOfBounds at L248.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       241,
+       246,
+       248
+      ],
+      "in_candidate": [
+       241,
+       246,
+       248
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       248
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+     "label": "C15",
+     "reason": "L318-L321 forwards chars.length as end without rejecting an empty array, so random(1, new char[0]) yields start=0,end=0 and the bounded range is wrong, leading to the out-of-bounds index in C08.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       318,
+       321
+      ],
+      "in_candidate": [
+       318,
+       321
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       321
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+     "label": "C03",
+     "reason": "L163 forwards start, end and letters/numbers unchanged to the core method, so the zero-range defaults and missing empty-chars validation pass through unchecked, though the defect is less direct.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       163
+      ],
+      "in_candidate": [
+       163
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "a08f13aca35f3ceab8e815c30b67ee5f9d4016fc1d3289db53fae30d4c6f2ab9",
+     "cache_hit": false,
+     "cost_usd": 0.0011185,
+     "paid_usd": 0.0011185,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 9435,
+      "output_tokens": 350,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.635,
+     "request_id": "req_011CgQJ4tqT41GwqkzHSuiZY",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C08\",\"C15\",\"C03\",\"C07\",\"C20\",\"C01\",\"C02\",\"C04\",\"C05\",\"C06\",\"C09\",\"C10\",\"C11\",\"C12\",\"C13\",\"C14\",\"C16\",\"C17\",\"C18\",\"C19\"],\"top3_reasons\":[{\"candidate\":\"C08\",\"reason\":\"L241 computes gap as end - start without validating that chars is non-empty or that gap is positive, so L246-L248 index chars with random.nextInt(gap)+start out of bounds for an empty or too-small array, which matches the ArrayIndexOutOfBounds at L248.\"},{\"candidate\":\"C15\",\"reason\":\"L318-L321 forwards chars.length as end without rejecting an empty array, so random(1, new char[0]) yields start=0,end=0 and the bounded range is wrong, leading to the out-of-bounds index in C08.\"},{\"candidate\":\"C03\",\"reason\":\"L163 forwards start, end and letters/numbers unchanged to the core method, so the zero-range defaults and missing empty-chars validation pass through unchecked, though the defect is less direct.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 9435,
+    "output_tokens": 350
+   },
+   "cost_usd": 0.001118,
+   "paid_usd": 0.001118,
+   "latency_s": 2.635
+  },
+  {
+   "sample_index": 3,
+   "seed": 16095005946207010738,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "C05": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C07": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C10": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C13": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "C14": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C15": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C18": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+     "label": "C04",
+     "reason": "L241 computes gap as end - start, and when chars is supplied with start=0 and end=0 (the chars-array path) L246-L248 index chars with random.nextInt(gap)+start, so the gap is not bounded by chars.length and no empty-array check exists, causing the out-of-bounds index.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       241,
+       246,
+       248
+      ],
+      "in_candidate": [
+       241,
+       246,
+       248
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       248
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+     "label": "C13",
+     "reason": "L321 passes chars.length as end with start 0 without rejecting an empty array, so random(1, new char[0]) reaches gap=0 and nextInt(0) or an invalid index, which is the direct precondition for the failing test.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       321
+      ],
+      "in_candidate": [
+       321
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       321
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+     "label": "C18",
+     "reason": "L163 forwards start and end unchanged into the core random method, so the zero-length chars case used by testLANG805 relies on the core method's gap computation and indexing without any guard.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       163
+      ],
+      "in_candidate": [
+       163
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "2c96dca4ae3724731346dc0bbe501f69b3f083f23c4003a28258da6fdafeee08",
+     "cache_hit": false,
+     "cost_usd": 0.00112,
+     "paid_usd": 0.00112,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 9435,
+      "output_tokens": 353,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.005,
+     "request_id": "req_011CgQJ568b9EvTWxKLDnXNx",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C04\",\"C13\",\"C18\",\"C07\",\"C15\",\"C03\",\"C17\",\"C09\",\"C11\",\"C12\",\"C20\",\"C19\",\"C08\",\"C06\",\"C05\",\"C14\",\"C02\",\"C16\",\"C10\",\"C01\"],\"top3_reasons\":[{\"candidate\":\"C04\",\"reason\":\"L241 computes gap as end - start, and when chars is supplied with start=0 and end=0 (the chars-array path) L246-L248 index chars with random.nextInt(gap)+start, so the gap is not bounded by chars.length and no empty-array check exists, causing the out-of-bounds index.\"},{\"candidate\":\"C13\",\"reason\":\"L321 passes chars.length as end with start 0 without rejecting an empty array, so random(1, new char[0]) reaches gap=0 and nextInt(0) or an invalid index, which is the direct precondition for the failing test.\"},{\"candidate\":\"C18\",\"reason\":\"L163 forwards start and end unchanged into the core random method, so the zero-length chars case used by testLANG805 relies on the core method's gap computation and indexing without any guard.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 9435,
+    "output_tokens": 353
+   },
+   "cost_usd": 0.00112,
+   "paid_usd": 0.00112,
+   "latency_s": 3.005
+  },
+  {
+   "sample_index": 4,
+   "seed": 15789188077021644661,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C03": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "C04": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C10": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C13": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C18": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "C19": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,boolean,boolean)",
+    "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+     "label": "C03",
+     "reason": "L245-L248 index chars with random.nextInt(gap)+start without checking gap against chars.length, so the out-of-bounds read occurs here, and the L225-L229 and L231-L238 guards do not reject an empty chars array (test expects IAE for new char[0]).",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       225,
+       229,
+       231,
+       238,
+       245,
+       248
+      ],
+      "in_candidate": [
+       225,
+       229,
+       231,
+       238,
+       245,
+       248
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       248
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,char[])",
+     "label": "C04",
+     "reason": "L317-L321 passes chars.length as end without rejecting an empty array, so random(1, new char[0]) yields gap=0 and reaches the faulty indexing path in the callee.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       317,
+       321
+      ],
+      "in_candidate": [
+       317,
+       321
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       321
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean)",
+     "label": "C20",
+     "reason": "L162-L163 forwards arguments unchanged to the core random method, so it propagates the missing validation of the chars array and the start/end values for the LANG-805 and empty-array cases.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       162,
+       163
+      ],
+      "in_candidate": [
+       162,
+       163
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "4a0803aaa96376fdd28aa52b86d05bb25ce65fbbd680254512d403728dafac46",
+     "cache_hit": false,
+     "cost_usd": 0.00111,
+     "paid_usd": 0.00111,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 9435,
+      "output_tokens": 333,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.29,
+     "request_id": "req_011CgQJ5Jyke9wBqxvKrrAis",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C03\",\"C04\",\"C20\",\"C18\",\"C13\",\"C19\",\"C10\",\"C07\",\"C08\",\"C02\",\"C16\",\"C17\",\"C14\",\"C12\",\"C06\",\"C09\",\"C05\",\"C11\",\"C01\",\"C15\"],\"top3_reasons\":[{\"candidate\":\"C03\",\"reason\":\"L245-L248 index chars with random.nextInt(gap)+start without checking gap against chars.length, so the out-of-bounds read occurs here, and the L225-L229 and L231-L238 guards do not reject an empty chars array (test expects IAE for new char[0]).\"},{\"candidate\":\"C04\",\"reason\":\"L317-L321 passes chars.length as end without rejecting an empty array, so random(1, new char[0]) yields gap=0 and reaches the faulty indexing path in the callee.\"},{\"candidate\":\"C20\",\"reason\":\"L162-L163 forwards arguments unchanged to the core random method, so it propagates the missing validation of the chars array and the start/end values for the LANG-805 and empty-array cases.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 9435,
+    "output_tokens": 333
+   },
+   "cost_usd": 0.00111,
+   "paid_usd": 0.00111,
+   "latency_s": 2.29
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 10,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 47175,
+  "output_tokens": 2408,
+  "cost_usd": 0.005921,
+  "paid_usd_this_run": 0.005921,
+  "latency_s": 15.524,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

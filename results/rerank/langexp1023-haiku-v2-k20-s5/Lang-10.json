@@ -1,0 +1,1420 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-haiku-v2-k20-s5",
+ "bug_id": "Lang-10",
+ "input_sha256": "1e9762b0aef458beb4525269621dea372bcaad0277699f566b89be2a00d3998b",
+ "status": "complete",
+ "created_at": "2026-10-26T05:27:02Z",
+ "config": {
+  "model_key": "haiku",
+  "provider": "anthropic",
+  "model": "claude-haiku-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [],
+  "estimated_tokens": 10844,
+  "helpers_omitted_for_budget": true,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()": 17.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)": 5.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)": 13.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)": 9.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)": 4.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)": 8.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)": 7.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)": 6.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 16.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()": 19.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()": 18.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])": 10.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])": 11.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])": 9.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)": 15.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)": 1.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)": 14.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)": 11.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)": 1.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()": 6.2
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()": 1.6733200530681511,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)": 1.7204650534085253,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)": 5.083306010855534,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)": 3.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)": 3.9698866482558417,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)": 1.3564659966250536,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)": 4.715930449020639,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 2.0976176963403033,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])": 1.1661903789690602,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])": 1.1661903789690602,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])": 1.1661903789690602,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)": 1.4966629547095764,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)": 0.4000000000000001,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)": 2.33238075793812,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)": 3.1240998703626617,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)": 0.4000000000000001,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()": 1.9390719429665317
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.6526,
+   "top1_agreement": 0.8,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 747250997241196107,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+     "label": "C03",
+     "reason": "TextStrategy#addRegex builds the alternation from display names with escapeRegex and replaces the trailing character at L676 without checking for an empty list, and the failing regex (\\p{IsNd}++)\\s*+(Fri|...|Tue|...) shows the day-of-week text group is what the parser relies on to reject \"3  Tue\".",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       676
+      ],
+      "in_candidate": [
+       676
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C18",
+     "reason": "escapeRegex converts whitespace to \\s*+ at L307-L310, which lets the \"M E\" pattern's space match the double space in \"3  Tue\" and produces the unexpected success, so the bug likely lies in how whitespace is handled here.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       307,
+       310
+      ],
+      "in_candidate": [
+       307,
+       310
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+     "label": "C13",
+     "reason": "TextStrategy#setCalendar at L686-L696 resolves the matched text by binary search and would throw for unknown text, so its behavior for the \"Tue\" value after a numeric match is relevant to whether the parse should fail.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       686,
+       696
+      ],
+      "in_candidate": [
+       686,
+       696
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "7c3e608fefbadb0a6dd3dbb5874bc0ae74e3d6f1afa4a1a3ce8f639be09fc657",
+     "cache_hit": false,
+     "cost_usd": 0.0013105,
+     "paid_usd": 0.0013105,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 11100,
+      "output_tokens": 401,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.456,
+     "request_id": "req_011CgQJ1ZtpwKJ6wid2ZQ8gJ",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C03\",\"C18\",\"C13\",\"C14\",\"C10\",\"C04\",\"C05\",\"C16\",\"C09\",\"C07\",\"C06\",\"C08\",\"C20\",\"C19\",\"C17\",\"C12\",\"C01\",\"C02\",\"C11\",\"C15\"],\"top3_reasons\":[{\"candidate\":\"C03\",\"reason\":\"TextStrategy#addRegex builds the alternation from display names with escapeRegex and replaces the trailing character at L676 without checking for an empty list, and the failing regex (\\\\p{IsNd}++)\\\\s*+(Fri|...|Tue|...) shows the day-of-week text group is what the parser relies on to reject \\\"3  Tue\\\".\"},{\"candidate\":\"C18\",\"reason\":\"escapeRegex converts whitespace to \\\\s*+ at L307-L310, which lets the \\\"M E\\\" pattern's space match the double space in \\\"3  Tue\\\" and produces the unexpected success, so the bug likely lies in how whitespace is handled here.\"},{\"candidate\":\"C13\",\"reason\":\"TextStrategy#setCalendar at L686-L696 resolves the matched text by binary search and would throw for unknown text, so its behavior for the \\\"Tue\\\" value after a numeric match is relevant to whether the parse should fail.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 11100,
+    "output_tokens": 401
+   },
+   "cost_usd": 0.001311,
+   "paid_usd": 0.001311,
+   "latency_s": 2.456,
+   "prompt_text": "Bug: Lang-10 (2 failing tests)\n\n## Failing test 1: org.apache.commons.lang3.time.FastDateFormat_ParserTest::testLANG_831\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Parsed dates should be equal expected:<null> but was:<Mon Mar 02 21:00:00 PST 1970>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testSdfAndFdp(FastDateParserTest.java:388)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testLANG_831(FastDateParserTest.java:348)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  346 | @Test\n  347 |     public void testLANG_831() throws Exception {\n>>348 |         testSdfAndFdp(\"M E\",\"3  Tue\", true);\n  349 |     }\n```\n\n## Failing test 2: org.apache.commons.lang3.time.FastDateParserTest::testLANG_831\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: Expected FDF failure, but got Mon Mar 02 21:00:00 PST 1970 for [M E,3  Tue] using (\\p{IsNd}++)\\s*+(Fri|Friday|Mon|Monday|Sat|Saturday|Sun|Sunday|Thu|Thursday|Tue|Tuesday|Wed|Wednesday)\n\tat junit.framework.Assert.fail(Assert.java:57)\n\tat org.apache.commons.lang3.time.FastDateParserTest.testSdfAndFdp(FastDateParserTest.java:377)\n\t... 41 framework/runner frames omitted\n```\n### Test method source\n```java\n  346 | @Test\n  347 |     public void testLANG_831() throws Exception {\n>>348 |         testSdfAndFdp(\"M E\",\"3  Tue\", true);\n  349 |     }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 848-851)\n```java\n  848 | @Override\n  849 |         public int modify(int iValue) {\n  850 |             return iValue-1;\n  851 |         }\n```\n\n## C02\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 760-763)\n```java\n  760 | @Override\n  761 |         public int estimateLength() {\n  762 |             return 2;\n  763 |         }\n```\n\n## C03\nmethod: org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 670-678)\n```java\n  670 | @Override\n  671 |         public boolean addRegex(FastDateParser parser, StringBuilder regex) {\n  672 |             regex.append('(');\n  673 |             for(KeyValue textKeyValue : parser.getDisplayNames(field)) {\n  674 |                 escapeRegex(regex, textKeyValue.key, false).append('|');\n  675 |             }\n  676 |             regex.setCharAt(regex.length()-1, ')');\n  677 |             return true;\n  678 |         }\n```\n\n## C04\nmethod: org.apache.commons.lang3.time.FastDateFormat#parse(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateFormat.java (lines 470-473)\n```java\n  470 | @Override\n  471 |     public Date parse(String source) throws ParseException {\n  472 |         return parser.parse(source);\n  473 |     }\n```\n\n## C05\nmethod: org.apache.commons.lang3.time.FastDateParser#init()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 115-150)\n```java\n  115 | private void init() {\n  116 |         thisYear= Calendar.getInstance(timeZone, locale).get(Calendar.YEAR);\n  117 | \n  118 |         nameValues= new ConcurrentHashMap<Integer, KeyValue[]>();\n  119 | \n  120 |         StringBuilder regex= new StringBuilder();\n  121 |         List<Strategy> collector = new ArrayList<Strategy>();\n  122 | \n  123 |         Matcher patternMatcher= formatPattern.matcher(pattern);\n  124 |         if(!patternMatcher.lookingAt()) {\n  125 |             throw new IllegalArgumentException(\"Invalid pattern\");\n  126 |         }\n  127 | \n  128 |         currentFormatField= patternMatcher.group();\n  129 |         Strategy currentStrategy= getStrategy(currentFormatField);\n  130 |         for(;;) {\n  131 |             patternMatcher.region(patternMatcher.end(), patternMatcher.regionEnd());\n  132 |             if(!patternMatcher.lookingAt()) {\n  133 |                 nextStrategy = null;\n  134 |                 break;\n  135 |             }\n  136 |             String nextFormatField= patternMatcher.group();\n  137 |             nextStrategy = getStrategy(nextFormatField);\n  138 |             if(currentStrategy.addRegex(this, regex)) {\n  139 |                 collector.add(currentStrategy);\n  140 |             }\n  141 |             currentFormatField= nextFormatField;\n  142 |             currentStrategy= nextStrategy;\n  143 |         }\n  144 |         if(currentStrategy.addRegex(this, regex)) {\n  145 |             collector.add(currentStrategy);\n  146 |         }\n  147 |         currentFormatField= null;\n  148 |         strategies= collector.toArray(new Strategy[collector.size()]);\n  149 |         parsePattern= Pattern.compile(regex.toString());\n  150 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.time.FastDateParser#count(String[])\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 445-455)\n```java\n  445 | private static int count(String[] values) {\n  446 |         int count= 0;\n  447 |         if(values!=null) {\n  448 |             for(String value : values) {\n  449 |                 if(value.length()>0) {\n  450 |                     ++count;\n  451 |                 }\n  452 |             }\n  453 |         }\n  454 |         return count;\n  455 |     }\n```\n\n## C07\nmethod: org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 464-474)\n```java\n  464 | private static int copy(KeyValue[] fieldKeyValues, int offset, String[] values) {\n  465 |         if(values!=null) {\n  466 |             for(int i= 0; i<values.length; ++i) {\n  467 |                 String value= values[i];\n  468 |                 if(value.length()>0) {\n  469 |                     fieldKeyValues[offset++]= new KeyValue(value, i);\n  470 |                 }\n  471 |             }\n  472 |         }\n  473 |         return offset;\n  474 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 367-370)\n```java\n  367 | @Override\n  368 |         public int compare(KeyValue left, KeyValue right) {\n  369 |             return left.key.compareToIgnoreCase(right.key);\n  370 |         }\n```\n\n## C09\nmethod: org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 433-438)\n```java\n  433 | private static KeyValue[] createKeyValues(String[] longValues, String[] shortValues) {\n  434 |         KeyValue[] fieldKeyValues= new KeyValue[count(longValues)+count(shortValues)];\n  435 |         copy(fieldKeyValues, copy(fieldKeyValues, 0, longValues), shortValues);\n  436 |         Arrays.sort(fieldKeyValues, IGNORE_CASE_COMPARATOR);\n  437 |         return fieldKeyValues;\n  438 |     }\n```\n\n## C10\nmethod: org.apache.commons.lang3.time.FastDateParser#parse(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 248-261)\n```java\n  248 | @Override\n  249 |     public Date parse(String source) throws ParseException {\n  250 |         Date date= parse(source, new ParsePosition(0));\n  251 |         if(date==null) {\n  252 |             // Add a note re supported date range\n  253 |             if (locale.equals(JAPANESE_IMPERIAL)) {\n  254 |                 throw new ParseException(\n  255 |                         \"(The \" +locale + \" locale does not support dates before 1868 AD)\\n\" +\n  256 |                                 \"Unparseable date: \\\"\"+source+\"\\\" does not match \"+parsePattern.pattern(), 0);\n  257 |             }\n  258 |             throw new ParseException(\"Unparseable date: \\\"\"+source+\"\\\" does not match \"+parsePattern.pattern(), 0);\n  259 |         }\n  260 |         return date;\n  261 |     }\n```\n\n## C11\nmethod: org.apache.commons.lang3.time.FastDateParser#getParsePattern()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 179-181)\n```java\n  179 | Pattern getParsePattern() {\n  180 |         return parsePattern;\n  181 |     }\n```\n\n## C12\nmethod: org.apache.commons.lang3.time.FastDatePrinter#parsePattern()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 167-288)\n```java\n  167 | protected List<Rule> parsePattern() {\n  168 |         DateFormatSymbols symbols = new DateFormatSymbols(mLocale);\n  169 |         List<Rule> rules = new ArrayList<Rule>();\n  170 | \n  171 |         String[] ERAs = symbols.getEras();\n  172 |         String[] months = symbols.getMonths();\n  173 |         String[] shortMonths = symbols.getShortMonths();\n  174 |         String[] weekdays = symbols.getWeekdays();\n  175 |         String[] shortWeekdays = symbols.getShortWeekdays();\n  176 |         String[] AmPmStrings = symbols.getAmPmStrings();\n  177 | \n  178 |         int length = mPattern.length();\n  179 |         int[] indexRef = new int[1];\n  180 | \n  181 |         for (int i = 0; i < length; i++) {\n  182 |             indexRef[0] = i;\n  183 |             String token = parseToken(mPattern, indexRef);\n  184 |             i = indexRef[0];\n  185 | \n  186 |             int tokenLen = token.length();\n  187 |             if (tokenLen == 0) {\n  188 |                 break;\n  189 |             }\n  190 | \n  191 |             Rule rule;\n  192 |             char c = token.charAt(0);\n  193 | \n  194 |             switch (c) {\n  195 |             case 'G': // era designator (text)\n  196 |                 rule = new TextField(Calendar.ERA, ERAs);\n  197 |                 break;\n  198 |             case 'y': // year (number)\n  199 |                 if (tokenLen == 2) {\n  200 |                     rule = TwoDigitYearField.INSTANCE;\n  201 |                 } else {\n  202 |                     rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);\n  203 |                 }\n  204 |                 break;\n  205 |             case 'M': // month in year (text and number)\n  206 |                 if (tokenLen >= 4) {\n  207 |                     rule = new TextField(Calendar.MONTH, months);\n  208 |                 } else if (tokenLen == 3) {\n  209 |                     rule = new TextField(Calendar.MONTH, shortMonths);\n  210 |                 } else if (tokenLen == 2) {\n  211 |                     rule = TwoDigitMonthField.INSTANCE;\n  212 |                 } else {\n  213 |                     rule = UnpaddedMonthField.INSTANCE;\n  214 |                 }\n  215 |                 break;\n  216 |             case 'd': // day in month (number)\n  217 |                 rule = selectNumberRule(Calendar.DAY_OF_MONTH, tokenLen);\n  218 |                 break;\n  219 |             case 'h': // hour in am/pm (number, 1..12)\n  220 |                 rule = new TwelveHourField(selectNumberRule(Calendar.HOUR, tokenLen));\n  221 |                 break;\n  222 |             case 'H': // hour in day (number, 0..23)\n  223 |                 rule = selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen);\n  224 |                 break;\n  225 |             case 'm': // minute in hour (number)\n  226 |                 rule = selectNumberRule(Calendar.MINUTE, tokenLen);\n  227 |                 break;\n  228 |             case 's': // second in minute (number)\n  229 |                 rule = selectNumberRule(Calendar.SECOND, tokenLen);\n  230 |                 break;\n  231 |             case 'S': // millisecond (number)\n  232 |                 rule = selectNumberRule(Calendar.MILLISECOND, tokenLen);\n  233 |                 break;\n  234 |             case 'E': // day in week (text)\n  235 |                 rule = new TextField(Calendar.DAY_OF_WEEK, tokenLen < 4 ? shortWeekdays : weekdays);\n  236 |                 break;\n  237 |             case 'D': // day in year (number)\n  238 |                 rule = selectNumberRule(Calendar.DAY_OF_YEAR, tokenLen);\n  239 |                 break;\n  240 |             case 'F': // day of week in month (number)\n  241 |                 rule = selectNumberRule(Calendar.DAY_OF_WEEK_IN_MONTH, tokenLen);\n  242 |                 break;\n  243 |             case 'w': // week in year (number)\n  244 |                 rule = selectNumberRule(Calendar.WEEK_OF_YEAR, tokenLen);\n  245 |                 break;\n  246 |             case 'W': // week in month (number)\n  247 |                 rule = selectNumberRule(Calendar.WEEK_OF_MONTH, tokenLen);\n  248 |                 break;\n  249 |             case 'a': // am/pm marker (text)\n  250 |                 rule = new TextField(Calendar.AM_PM, AmPmStrings);\n  251 |                 break;\n  252 |             case 'k': // hour in day (1..24)\n  253 |                 rule = new TwentyFourHourField(selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen));\n  254 |                 break;\n  255 |             case 'K': // hour in am/pm (0..11)\n  256 |                 rule = selectNumberRule(Calendar.HOUR, tokenLen);\n  257 |                 break;\n  258 |             case 'z': // time zone (text)\n  259 |                 if (tokenLen >= 4) {\n  260 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.LONG);\n  261 |                 } else {\n  262 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.SHORT);\n  263 |                 }\n  264 |                 break;\n  265 |             case 'Z': // time zone (value)\n  266 |                 if (tokenLen == 1) {\n  267 |                     rule = TimeZoneNumberRule.INSTANCE_NO_COLON;\n  268 |                 } else {\n  269 |                     rule = TimeZoneNumberRule.INSTANCE_COLON;\n  270 |                 }\n  271 |                 break;\n  272 |             case '\\'': // literal text\n  273 |                 String sub = token.substring(1);\n  274 |                 if (sub.length() == 1) {\n  275 |                     rule = new CharacterLiteral(sub.charAt(0));\n  276 |                 } else {\n  277 |                     rule = new StringLiteral(sub);\n  278 |                 }\n  279 |                 break;\n  280 |             default:\n  281 |                 throw new IllegalArgumentException(\"Illegal pattern component: \" + token);\n  282 |             }\n  283 | \n  284 |             rules.add(rule);\n  285 |         }\n  286 | \n  287 |         return rules;\n  288 |     }\n```\n\n## C13\nmethod: org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 683-697)\n```java\n  683 | @Override\n  684 |         public void setCalendar(FastDateParser parser, Calendar cal, String value) {\n  685 |             KeyValue[] textKeyValues= parser.getDisplayNames(field);\n  686 |             int idx= Arrays.binarySearch(textKeyValues, new KeyValue(value, -1), IGNORE_CASE_COMPARATOR);\n  687 |             if(idx<0) {\n  688 |                 StringBuilder sb= new StringBuilder(value);\n  689 |                 sb.append(\" not in (\");\n  690 |                 for(KeyValue textKeyValue : textKeyValues) {\n  691 |                     sb.append(textKeyValue.key).append(' ');\n  692 |                 }\n  693 |                 sb.setCharAt(sb.length()-1, ')');\n  694 |                 throw new IllegalArgumentException(sb.toString());\n  695 |             }\n  696 |             cal.set(field, textKeyValues[idx].value);\n  697 |         }\n```\n\n## C14\nmethod: org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 274-291)\n```java\n  274 | @Override\n  275 |     public Date parse(String source, ParsePosition pos) {\n  276 |         int offset= pos.getIndex();\n  277 |         Matcher matcher= parsePattern.matcher(source.substring(offset));\n  278 |         if(!matcher.lookingAt()) {\n  279 |             return null;\n  280 |         }\n  281 |         // timing tests indicate getting new instance is 19% faster than cloning\n  282 |         Calendar cal= Calendar.getInstance(timeZone, locale);\n  283 |         cal.clear();\n  284 | \n  285 |         for(int i=0; i<strategies.length;) {\n  286 |             Strategy strategy= strategies[i++];\n  287 |             strategy.setCalendar(this, cal, matcher.group(i));\n  288 |         }\n  289 |         pos.setIndex(offset+matcher.end());\n  290 |         return cal.getTime();\n  291 |     }\n```\n\n## C15\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 753-755)\n```java\n  753 | UnpaddedMonthField() {\n  754 |             super();\n  755 |         }\n```\n\n## C16\nmethod: org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 378-412)\n```java\n  378 | KeyValue[] getDisplayNames(int field) {\n  379 |         Integer fieldInt = Integer.valueOf(field);\n  380 |         KeyValue[] fieldKeyValues= nameValues.get(fieldInt);\n  381 |         if(fieldKeyValues==null) {\n  382 |             DateFormatSymbols symbols= DateFormatSymbols.getInstance(locale);\n  383 |             switch(field) {\n  384 |             case Calendar.ERA:\n  385 |                 // DateFormatSymbols#getEras() only returns AD/BC or translations\n  386 |                 // It does not work for the Thai Buddhist or Japanese Imperial calendars.\n  387 |                 // see: https://issues.apache.org/jira/browse/TRINIDAD-2126\n  388 |                 Calendar c = Calendar.getInstance(locale);\n  389 |                 // N.B. Some calendars have different short and long symbols, e.g. ja_JP_JP\n  390 |                 String[] shortEras = toArray(c.getDisplayNames(Calendar.ERA, Calendar.SHORT, locale));\n  391 |                 String[] longEras = toArray(c.getDisplayNames(Calendar.ERA, Calendar.LONG, locale));\n  392 |                 fieldKeyValues= createKeyValues(longEras, shortEras);\n  393 |                 break;\n  394 |             case Calendar.DAY_OF_WEEK:\n  395 |                 fieldKeyValues= createKeyValues(symbols.getWeekdays(), symbols.getShortWeekdays());\n  396 |                 break;\n  397 |             case Calendar.AM_PM:\n  398 |                 fieldKeyValues= createKeyValues(symbols.getAmPmStrings(), null);\n  399 |                 break;\n  400 |             case Calendar.MONTH:\n  401 |                 fieldKeyValues= createKeyValues(symbols.getMonths(), symbols.getShortMonths());\n  402 |                 break;\n  403 |             default:\n  404 |                 throw new IllegalArgumentException(\"Invalid field value \"+field);\n  405 |             }\n  406 |             KeyValue[] prior = nameValues.putIfAbsent(fieldInt, fieldKeyValues);\n  407 |             if(prior!=null) {\n  408 |                 fieldKeyValues= prior;\n  409 |             }\n  410 |         }\n  411 |         return fieldKeyValues;\n  412 |     }\n```\n\n## C17\nmethod: org.apache.commons.lang3.time.FastDateParser#getStrategy(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 543-600)\n```java\n  543 | private Strategy getStrategy(String formatField) {\n  544 |         switch(formatField.charAt(0)) {\n  545 |         case '\\'':\n  546 |             if(formatField.length()>2) {\n  547 |                 formatField= formatField.substring(1, formatField.length()-1);\n  548 |             }\n  549 |             //$FALL-THROUGH$\n  550 |         default:\n  551 |             return new CopyQuotedStrategy(formatField);\n  552 |         case 'D':\n  553 |             return DAY_OF_YEAR_STRATEGY;\n  554 |         case 'E':\n  555 |             return DAY_OF_WEEK_STRATEGY;\n  556 |         case 'F':\n  557 |             return DAY_OF_WEEK_IN_MONTH_STRATEGY;\n  558 |         case 'G':\n  559 |             return ERA_STRATEGY;\n  560 |         case 'H':\n  561 |             return MODULO_HOUR_OF_DAY_STRATEGY;\n  562 |         case 'K':\n  563 |             return HOUR_STRATEGY;\n  564 |         case 'M':\n  565 |             return formatField.length()>=3 ?TEXT_MONTH_STRATEGY :NUMBER_MONTH_STRATEGY;\n  566 |         case 'S':\n  567 |             return MILLISECOND_STRATEGY;\n  568 |         case 'W':\n  569 |             return WEEK_OF_MONTH_STRATEGY;\n  570 |         case 'Z':\n  571 |             break;\n  572 |         case 'a':\n  573 |             return AM_PM_STRATEGY;\n  574 |         case 'd':\n  575 |             return DAY_OF_MONTH_STRATEGY;\n  576 |         case 'h':\n  577 |             return MODULO_HOUR_STRATEGY;\n  578 |         case 'k':\n  579 |             return HOUR_OF_DAY_STRATEGY;\n  580 |         case 'm':\n  581 |             return MINUTE_STRATEGY;\n  582 |         case 's':\n  583 |             return SECOND_STRATEGY;\n  584 |         case 'w':\n  585 |             return WEEK_OF_YEAR_STRATEGY;\n  586 |         case 'y':\n  587 |             return formatField.length()>2 ?LITERAL_YEAR_STRATEGY :ABBREVIATED_YEAR_STRATEGY;\n  588 |         case 'z':\n  589 |             break;\n  590 |         }\n  591 |         TimeZoneStrategy tzs= tzsCache.get(locale);\n  592 |         if(tzs==null) {\n  593 |             tzs= new TimeZoneStrategy(locale);\n  594 |             TimeZoneStrategy inCache= tzsCache.putIfAbsent(locale, tzs);\n  595 |             if(inCache!=null) {\n  596 |                 return inCache;\n  597 |             }\n  598 |         }\n  599 |         return tzs;\n  600 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 303-343)\n```java\n  303 | private static StringBuilder escapeRegex(StringBuilder regex, String value, boolean unquote) {\n  304 |         boolean wasWhite= false;\n  305 |         for(int i= 0; i<value.length(); ++i) {\n  306 |             char c= value.charAt(i);\n  307 |             if(Character.isWhitespace(c)) {\n  308 |                 if(!wasWhite) {\n  309 |                     wasWhite= true;\n  310 |                     regex.append(\"\\\\s*+\");\n  311 |                 }\n  312 |                 continue;\n  313 |             }\n  314 |             wasWhite= false;\n  315 |             switch(c) {\n  316 |             case '\\'':\n  317 |                 if(unquote) {\n  318 |                     if(++i==value.length()) {\n  319 |                         return regex;\n  320 |                     }\n  321 |                     c= value.charAt(i);\n  322 |                 }\n  323 |                 break;\n  324 |             case '?':\n  325 |             case '[':\n  326 |             case ']':\n  327 |             case '(':\n  328 |             case ')':\n  329 |             case '{':\n  330 |             case '}':\n  331 |             case '\\\\':\n  332 |             case '|':\n  333 |             case '*':\n  334 |             case '+':\n  335 |             case '^':\n  336 |             case '$':\n  337 |             case '.':\n  338 |                 regex.append('\\\\');\n  339 |             }\n  340 |             regex.append(c);\n  341 |         }\n  342 |         return regex;\n  343 |     }\n```\n\n## C19\nmethod: org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 739-742)\n```java\n  739 | @Override\n  740 |         public void setCalendar(FastDateParser parser, Calendar cal, String value) {\n  741 |             cal.set(field, modify(Integer.parseInt(value)));\n  742 |         }\n```\n\n## C20\nmethod: org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 357-360)\n```java\n  357 | public KeyValue(String key, int value) {\n  358 |             this.key= key;\n  359 |             this.value= value;\n  360 |         }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 18129453215875362607,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C15",
+     "reason": "L307-L310 collapse any run of whitespace into a single \\s*+ and L314 resets the flag, so the pattern's space between 'M' and 'E' becomes a lenient regex that accepts '3  Tue', which the expected failure contradicts.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       307,
+       310,
+       314
+      ],
+      "in_candidate": [
+       307,
+       310,
+       314
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+     "label": "C09",
+     "reason": "L673-L674 build the text alternation by passing each display name through escapeRegex, so the whitespace handling in C15 flows directly into the month/weekday regex used to match the input.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       673,
+       674
+      ],
+      "in_candidate": [
+       673,
+       674
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C05",
+     "reason": "L551 routes literal text such as the space in 'M E' to CopyQuotedStrategy, which is the path that turns the pattern's whitespace into the lenient regex, so its dispatch is a plausible origin of the over-matching.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       551
+      ],
+      "in_candidate": [
+       551
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "c1c9a51d67ba8cc15df182aba2e3acd26a49370d7cef798124a3e768f023c04a",
+     "cache_hit": false,
+     "cost_usd": 0.0015855,
+     "paid_usd": 0.0015855,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 11100,
+      "output_tokens": 951,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 5.005,
+     "request_id": "req_011CgQJ1kNsRCfQLgBtBSWUz",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C15\",\"C09\",\"C05\",\"C17\",\"C01\",\"C03\",\"C13\",\"C16\",\"C11\",\"C07\",\"C19\",\"C02\",\"C10\",\"C12\",\"C14\",\"C08\",\"C04\",\"C06\",\"C18\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C15\",\"reason\":\"L307-L310 collapse any run of whitespace into a single \\\\s*+ and L314 resets the flag, so the pattern's space between 'M' and 'E' becomes a lenient regex that accepts '3  Tue', which the expected failure contradicts.\"},{\"candidate\":\"C09\",\"reason\":\"L673-L674 build the text alternation by passing each display name through escapeRegex, so the whitespace handling in C15 flows directly into the month/weekday regex used to match the input.\"},{\"candidate\":\"C05\",\"reason\":\"L551 routes literal text such as the space in 'M E' to CopyQuotedStrategy, which is the path that turns the pattern's whitespace into the lenient regex, so its dispatch is a plausible origin of the over-matching.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 11100,
+    "output_tokens": 951
+   },
+   "cost_usd": 0.001586,
+   "paid_usd": 0.001586,
+   "latency_s": 5.005
+  },
+  {
+   "sample_index": 2,
+   "seed": 5531467866423713712,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C01",
+     "reason": "The whitespace branch at L307-L313 collapses any run of whitespace into a single \\s*+ and the literal-escape switch at L315-L340 is the only place the \"M E\" pattern's space and the input's double space are reconciled, so the loose whitespace handling is the likeliest source of the wrongly accepted \"3  Tue\".",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       307,
+       313,
+       315,
+       340
+      ],
+      "in_candidate": [
+       307,
+       313,
+       315,
+       340
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+     "label": "C13",
+     "reason": "TextStrategy.addRegex at L672-L677 builds the alternation for day names and months that the \"E\" token matches against \"Tue\", so any mistake in how these alternatives are assembled directly controls whether \"3  Tue\" is accepted.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       672,
+       677
+      ],
+      "in_candidate": [
+       672,
+       677
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C04",
+     "reason": "getStrategy at L554-L555 maps 'E' to DAY_OF_WEEK_STRATEGY and L565 selects the month strategy from the token length, determining which regex and setter handle the \"M E\" tokens.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       554,
+       555,
+       565
+      ],
+      "in_candidate": [
+       554,
+       555,
+       565
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "dc85da4cfa540a366306e1ea9b07f6f689c5e76c44de7d1e0d9ee3eaf47a2920",
+     "cache_hit": false,
+     "cost_usd": 0.0016315,
+     "paid_usd": 0.0016315,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 11100,
+      "output_tokens": 1043,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 5.731,
+     "request_id": "req_011CgQJ27qhsTxbg479yVdD9",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C01\",\"C13\",\"C04\",\"C18\",\"C17\",\"C11\",\"C05\",\"C19\",\"C20\",\"C16\",\"C12\",\"C10\",\"C08\",\"C02\",\"C07\",\"C06\",\"C15\",\"C14\",\"C03\",\"C09\"],\"top3_reasons\":[{\"candidate\":\"C01\",\"reason\":\"The whitespace branch at L307-L313 collapses any run of whitespace into a single \\\\s*+ and the literal-escape switch at L315-L340 is the only place the \\\"M E\\\" pattern's space and the input's double space are reconciled, so the loose whitespace handling is the likeliest source of the wrongly accepted \\\"3  Tue\\\".\"},{\"candidate\":\"C13\",\"reason\":\"TextStrategy.addRegex at L672-L677 builds the alternation for day names and months that the \\\"E\\\" token matches against \\\"Tue\\\", so any mistake in how these alternatives are assembled directly controls whether \\\"3  Tue\\\" is accepted.\"},{\"candidate\":\"C04\",\"reason\":\"getStrategy at L554-L555 maps 'E' to DAY_OF_WEEK_STRATEGY and L565 selects the month strategy from the token length, determining which regex and setter handle the \\\"M E\\\" tokens.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 11100,
+    "output_tokens": 1043
+   },
+   "cost_usd": 0.001631,
+   "paid_usd": 0.001631,
+   "latency_s": 5.731
+  },
+  {
+   "sample_index": 3,
+   "seed": 13297097980291377467,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C14",
+     "reason": "L310 emits \\s*+ for any whitespace run, so the pattern \"M E\" accepts \"3  Tue\" with the space absorbed into a possessive quantifier, which is the core mismatch the test rejects.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       310
+      ],
+      "in_candidate": [
+       310
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+     "label": "C09",
+     "reason": "L672-676 builds the day-name alternation from escapeRegex output, so the text day-of-week portion of the regex that matches \"Tue\" after the whitespace originates here.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       672,
+       676
+      ],
+      "in_candidate": [
+       672,
+       676
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+     "label": "C20",
+     "reason": "L564-565 selects NUMBER_MONTH_STRATEGY versus TEXT_MONTH_STRATEGY for 'M', determining the numeric-month regex that precedes the whitespace and day-name segment in the failing pattern.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       564,
+       565
+      ],
+      "in_candidate": [
+       564,
+       565
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "e4887608b39999179b90d6211ae468cc389f052e15a7632485c6eedd5a281ec8",
+     "cache_hit": false,
+     "cost_usd": 0.001648,
+     "paid_usd": 0.001648,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 11100,
+      "output_tokens": 1076,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 5.836,
+     "request_id": "req_011CgQJ2YMb85ssGgKD2JGpK",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C14\",\"C09\",\"C20\",\"C18\",\"C12\",\"C06\",\"C05\",\"C13\",\"C03\",\"C19\",\"C17\",\"C11\",\"C01\",\"C07\",\"C08\",\"C02\",\"C04\",\"C10\",\"C15\",\"C16\"],\"top3_reasons\":[{\"candidate\":\"C14\",\"reason\":\"L310 emits \\\\s*+ for any whitespace run, so the pattern \\\"M E\\\" accepts \\\"3  Tue\\\" with the space absorbed into a possessive quantifier, which is the core mismatch the test rejects.\"},{\"candidate\":\"C09\",\"reason\":\"L672-676 builds the day-name alternation from escapeRegex output, so the text day-of-week portion of the regex that matches \\\"Tue\\\" after the whitespace originates here.\"},{\"candidate\":\"C20\",\"reason\":\"L564-565 selects NUMBER_MONTH_STRATEGY versus TEXT_MONTH_STRATEGY for 'M', determining the numeric-month regex that precedes the whitespace and day-name segment in the failing pattern.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 11100,
+    "output_tokens": 1076
+   },
+   "cost_usd": 0.001648,
+   "paid_usd": 0.001648,
+   "latency_s": 5.836
+  },
+  {
+   "sample_index": 4,
+   "seed": 3331237603785553331,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String,ParsePosition)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$NumberStrategy#setCalendar(FastDateParser,Calendar,String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@847:59#modify(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getDisplayNames(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#parse(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#createKeyValues(String[],String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#copy(KeyValue[],int,String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#count(String[])",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$KeyValue#<init>(String,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getParsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$anonymous@366:72#compare(KeyValue,KeyValue)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+     "label": "C11",
+     "reason": "L310 emits a possessive \\s*+ for each whitespace run, and the L307-L313 whitespace collapsing governs how the literal \"M E\" pattern's space matches the \"3  Tue\" input, so the regex accepts input SimpleDateFormat rejects.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       307,
+       310,
+       313
+      ],
+      "in_candidate": [
+       307,
+       310,
+       313
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+     "label": "C04",
+     "reason": "L674 builds the text alternation via escapeRegex for the day-name strings, which determines the Tue alternative that lets \"3  Tue\" match when it should fail.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       674
+      ],
+      "in_candidate": [
+       674
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()",
+     "label": "C18",
+     "reason": "L143-L149 assemble the strategy list and final parse regex from adjacent format fields, so any mis-joined pattern between the M and E fields would produce the wrongly accepting regex.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       143,
+       149
+      ],
+      "in_candidate": [
+       143,
+       149
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "7ef494c7b00afcaf438f084a49472bcfcc2b9d27775ae6bca38305a441f573b0",
+     "cache_hit": false,
+     "cost_usd": 0.0017045,
+     "paid_usd": 0.0017045,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 11100,
+      "output_tokens": 1189,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 7.369,
+     "request_id": "req_011CgQJ2yHHetiVwGPeQ7EH6",
+     "response_model": "claude-haiku-5-5",
+     "raw_response": "{\"ranking\":[\"C11\",\"C04\",\"C18\",\"C01\",\"C14\",\"C20\",\"C12\",\"C19\",\"C17\",\"C10\",\"C03\",\"C13\",\"C16\",\"C07\",\"C15\",\"C05\",\"C08\",\"C06\",\"C02\",\"C09\"],\"top3_reasons\":[{\"candidate\":\"C11\",\"reason\":\"L310 emits a possessive \\\\s*+ for each whitespace run, and the L307-L313 whitespace collapsing governs how the literal \\\"M E\\\" pattern's space matches the \\\"3  Tue\\\" input, so the regex accepts input SimpleDateFormat rejects.\"},{\"candidate\":\"C04\",\"reason\":\"L674 builds the text alternation via escapeRegex for the day-name strings, which determines the Tue alternative that lets \\\"3  Tue\\\" match when it should fail.\"},{\"candidate\":\"C18\",\"reason\":\"L143-L149 assemble the strategy list and final parse regex from adjacent format fields, so any mis-joined pattern between the M and E fields would produce the wrongly accepting regex.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 11100,
+    "output_tokens": 1189
+   },
+   "cost_usd": 0.001705,
+   "paid_usd": 0.001705,
+   "latency_s": 7.369
+  }
+ ],
+ "degradations": [
+  {
+   "kind": "helpers_omitted_for_budget",
+   "stage": "context"
+  }
+ ],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 0,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 55500,
+  "output_tokens": 4660,
+  "cost_usd": 0.007881,
+  "paid_usd_this_run": 0.007881,
+  "latency_s": 26.397,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

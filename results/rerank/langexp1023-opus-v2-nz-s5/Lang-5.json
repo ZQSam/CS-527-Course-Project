@@ -1,0 +1,1157 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-opus-v2-nz-s5",
+ "bug_id": "Lang-5",
+ "input_sha256": "c3023299fe26f150ed277e7c4189919f1b469e3a65277dd82584eadbca00b6bf",
+ "status": "complete",
+ "created_at": "2026-10-26T05:28:17Z",
+ "config": {
+  "model_key": "opus",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "nonzero",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": true,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)"
+  ],
+  "dropped": [
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+  ],
+  "truncated": [],
+  "stack_marked_candidates": [
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+  ],
+  "estimated_tokens": 2776,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)": 1.0,
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()": 3.0,
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)": 2.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 4.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 5.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 6.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 7.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 8.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 9.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 10.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 11.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 12.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 13.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 14.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 15.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 16.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 17.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 18.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)": 19.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)": 20.0
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)": 0.0,
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()": 0.0,
+   "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 0.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 0.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 0.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)": 0.0,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)": 0.0
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 1.0,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 10777086608845089442,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "C03": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+     "label": "C03",
+     "reason": "L98-L99 reject any string whose first char is not lowercase, with no branch handling a leading underscore like \"_GB\", so it throws.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       98,
+       99
+      ],
+      "in_candidate": [
+       98,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+     "label": "C01",
+     "reason": "L218 only checks list membership and is not involved in parsing \"_GB\".",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       218
+      ],
+      "in_candidate": [
+       218
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+     "label": "C02",
+     "reason": "L193 just returns a cached list and plays no role in the failing parse.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       193
+      ],
+      "in_candidate": [
+       193
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "98770d0c2b8061de91ef4d6ba4d4d6919cc9a3158ef7a7af63208a293167e34f",
+     "cache_hit": false,
+     "cost_usd": 0.01534,
+     "paid_usd": 0.01534,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 2990,
+      "output_tokens": 169,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.0,
+     "request_id": "req_011CgQJ7jVwgAWcJFy8fRgzn",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C03\",\"C01\",\"C02\"],\"top3_reasons\":[{\"candidate\":\"C03\",\"reason\":\"L98-L99 reject any string whose first char is not lowercase, with no branch handling a leading underscore like \\\"_GB\\\", so it throws.\"},{\"candidate\":\"C01\",\"reason\":\"L218 only checks list membership and is not involved in parsing \\\"_GB\\\".\"},{\"candidate\":\"C02\",\"reason\":\"L193 just returns a cached list and plays no role in the failing parse.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 2990,
+    "output_tokens": 169
+   },
+   "cost_usd": 0.01534,
+   "paid_usd": 0.01534,
+   "latency_s": 4.0,
+   "prompt_text": "Bug: Lang-5 (1 failing test)\n\n## Failing test 1: org.apache.commons.lang3.LocaleUtilsTest::testLang865\n### Error and stack trace (filtered)\n```\njava.lang.IllegalArgumentException: Invalid locale format: _GB\n\tat org.apache.commons.lang3.LocaleUtils.toLocale(LocaleUtils.java:99)\n\tat org.apache.commons.lang3.LocaleUtilsTest.assertValidToLocale(LocaleUtilsTest.java:119)\n\t... 42 framework/runner frames omitted\n```\n### Test method source\n```java\n  503 | @Test\n  504 |     public void testLang865() {\n>>505 |         assertValidToLocale(\"_GB\", \"\", \"GB\", \"\");\n  506 |         assertValidToLocale(\"_GB_P\", \"\", \"GB\", \"P\");\n  507 |         assertValidToLocale(\"_GB_POSIX\", \"\", \"GB\", \"POSIX\");\n  508 |         try {\n  509 |             LocaleUtils.toLocale(\"_G\");\n  510 |             fail(\"Must be at least 3 chars if starts with underscore\");\n  511 |         } catch (final IllegalArgumentException iae) {\n  512 |         }\n  513 |         try {\n  514 |             LocaleUtils.toLocale(\"_Gb\");\n  515 |             fail(\"Must be uppercase if starts with underscore\");\n  516 |         } catch (final IllegalArgumentException iae) {\n  517 |         }\n  518 |         try {\n  519 |             LocaleUtils.toLocale(\"_gB\");\n  520 |             fail(\"Must be uppercase if starts with underscore\");\n  521 |         } catch (final IllegalArgumentException iae) {\n  522 |         }\n  523 |         try {\n  524 |             LocaleUtils.toLocale(\"_1B\");\n  525 |             fail(\"Must be letter if starts with underscore\");\n  526 |         } catch (final IllegalArgumentException iae) {\n  527 |         }\n  528 |         try {\n  529 |             LocaleUtils.toLocale(\"_G1\");\n  530 |             fail(\"Must be letter if starts with underscore\");\n  531 |         } catch (final IllegalArgumentException iae) {\n  532 |         }\n  533 |         try {\n  534 |             LocaleUtils.toLocale(\"_GB_\");\n  535 |             fail(\"Must be at least 5 chars if starts with underscore\");\n  536 |         } catch (final IllegalArgumentException iae) {\n  537 |         }\n  538 |         try {\n  539 |             LocaleUtils.toLocale(\"_GBAP\");\n  540 |             fail(\"Must have underscore after the country if starts with underscore and is at least 5 chars\");\n  541 |         } catch (final IllegalArgumentException iae) {\n  542 |         }\n  543 |     }\n```\n\n# Candidate methods (3)\n\n## C01\nmethod: org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)\nfile: src/main/java/org/apache/commons/lang3/LocaleUtils.java (lines 217-219)\n```java\n  217 | public static boolean isAvailableLocale(Locale locale) {\n  218 |         return availableLocaleList().contains(locale);\n  219 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.LocaleUtils#availableLocaleList()\nfile: src/main/java/org/apache/commons/lang3/LocaleUtils.java (lines 192-194)\n```java\n  192 | public static List<Locale> availableLocaleList() {\n  193 |         return SyncAvoid.AVAILABLE_LOCALE_LIST;\n  194 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.LocaleUtils#toLocale(String)\nfile: src/main/java/org/apache/commons/lang3/LocaleUtils.java (lines 88-128)\n```java\n   88 | public static Locale toLocale(final String str) {\n   89 |         if (str == null) {\n   90 |             return null;\n   91 |         }\n   92 |         final int len = str.length();\n   93 |         if (len < 2) {\n   94 |             throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n   95 |         }\n   96 |         final char ch0 = str.charAt(0);\n   97 |             final char ch1 = str.charAt(1);\n   98 |             if (!Character.isLowerCase(ch0) || !Character.isLowerCase(ch1)) {\n>> 99 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  100 |             }\n  101 |             if (len == 2) {\n  102 |                 return new Locale(str);\n  103 |             }\n  104 |             if (len < 5) {\n  105 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  106 |             }\n  107 |             if (str.charAt(2) != '_') {\n  108 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  109 |             }\n  110 |             final char ch3 = str.charAt(3);\n  111 |             if (ch3 == '_') {\n  112 |                 return new Locale(str.substring(0, 2), \"\", str.substring(4));\n  113 |             }\n  114 |             final char ch4 = str.charAt(4);\n  115 |             if (!Character.isUpperCase(ch3) || !Character.isUpperCase(ch4)) {\n  116 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  117 |             }\n  118 |             if (len == 5) {\n  119 |                 return new Locale(str.substring(0, 2), str.substring(3, 5));\n  120 |             }\n  121 |             if (len < 7) {\n  122 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  123 |             }\n  124 |             if (str.charAt(5) != '_') {\n  125 |                 throw new IllegalArgumentException(\"Invalid locale format: \" + str);\n  126 |             }\n  127 |             return new Locale(str.substring(0, 2), str.substring(3, 5), str.substring(6));\n  128 |     }\n```\n\nRank all 3 candidates (C01..C03) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 6682372324877861806,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "C03": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+     "label": "C02",
+     "reason": "L96-L99 require the first two chars to be lowercase and never handle a leading underscore, so \"_GB\" is rejected instead of yielding Locale(\"\", \"GB\").",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       96,
+       99
+      ],
+      "in_candidate": [
+       96,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+     "label": "C01",
+     "reason": "L218 only checks list membership and is not involved in parsing the \"_GB\" string.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       218
+      ],
+      "in_candidate": [
+       218
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+     "label": "C03",
+     "reason": "L193 just returns a cached list and is unrelated to the parsing failure.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       193
+      ],
+      "in_candidate": [
+       193
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "7f371217e822304db13bcb1f49c4eee186a159c08ab0c4c9d68021c712dc6e3d",
+     "cache_hit": false,
+     "cost_usd": 0.01574,
+     "paid_usd": 0.01574,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 2990,
+      "output_tokens": 189,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.757,
+     "request_id": "req_011CgQJ82MUJ7op7rvijjeDj",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C02\",\"C01\",\"C03\"],\"top3_reasons\":[{\"candidate\":\"C02\",\"reason\":\"L96-L99 require the first two chars to be lowercase and never handle a leading underscore, so \\\"_GB\\\" is rejected instead of yielding Locale(\\\"\\\", \\\"GB\\\").\"},{\"candidate\":\"C01\",\"reason\":\"L218 only checks list membership and is not involved in parsing the \\\"_GB\\\" string.\"},{\"candidate\":\"C03\",\"reason\":\"L193 just returns a cached list and is unrelated to the parsing failure.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 2990,
+    "output_tokens": 189
+   },
+   "cost_usd": 0.01574,
+   "paid_usd": 0.01574,
+   "latency_s": 3.757
+  },
+  {
+   "sample_index": 2,
+   "seed": 4220770156866167424,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "C03": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+     "label": "C02",
+     "reason": "L96-L99 require the first two chars to be lowercase with no branch handling a leading underscore, so \"_GB\" is rejected at L99.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       96,
+       99
+      ],
+      "in_candidate": [
+       96,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+     "label": "C01",
+     "reason": "L218 only checks list membership and is not invoked by the failing path; unlikely related.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       218
+      ],
+      "in_candidate": [
+       218
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+     "label": "C03",
+     "reason": "L193 simply returns a cached list and plays no role in parsing \"_GB\".",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       193
+      ],
+      "in_candidate": [
+       193
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "a5f2a44b42712632a2024df88260048fcff6c527fff0a12ff097fcf3b9c94fe5",
+     "cache_hit": false,
+     "cost_usd": 0.0155,
+     "paid_usd": 0.0155,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 2990,
+      "output_tokens": 177,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 2.758,
+     "request_id": "req_011CgQJ8JT6fkprvipeekgBY",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C02\",\"C01\",\"C03\"],\"top3_reasons\":[{\"candidate\":\"C02\",\"reason\":\"L96-L99 require the first two chars to be lowercase with no branch handling a leading underscore, so \\\"_GB\\\" is rejected at L99.\"},{\"candidate\":\"C01\",\"reason\":\"L218 only checks list membership and is not invoked by the failing path; unlikely related.\"},{\"candidate\":\"C03\",\"reason\":\"L193 simply returns a cached list and plays no role in parsing \\\"_GB\\\".\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 2990,
+    "output_tokens": 177
+   },
+   "cost_usd": 0.0155,
+   "paid_usd": 0.0155,
+   "latency_s": 2.758
+  },
+  {
+   "sample_index": 3,
+   "seed": 6484270736652442612,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "C02": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "C03": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+     "label": "C02",
+     "reason": "L98-L99 reject any string whose first char is not lowercase, with no branch handling a leading underscore like \"_GB\", so the country-only format throws.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       98,
+       99
+      ],
+      "in_candidate": [
+       98,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+     "label": "C03",
+     "reason": "L218 checks availability via the locale list and is used by the test helper's assertions, but the failure occurs before it is reached.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       218
+      ],
+      "in_candidate": [
+       218
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+     "label": "C01",
+     "reason": "L193 just returns a cached list and plays no part in parsing \"_GB\".",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       193
+      ],
+      "in_candidate": [
+       193
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "b7e59cc32bc3ba8a8161cb909781ba0a0394cf8f17e4a3957c14a0a1edb5b4cf",
+     "cache_hit": false,
+     "cost_usd": 0.01576,
+     "paid_usd": 0.01576,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 2990,
+      "output_tokens": 190,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.63,
+     "request_id": "req_011CgQJ8WDXBwcQ2G8tb5HY1",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C02\",\"C03\",\"C01\"],\"top3_reasons\":[{\"candidate\":\"C02\",\"reason\":\"L98-L99 reject any string whose first char is not lowercase, with no branch handling a leading underscore like \\\"_GB\\\", so the country-only format throws.\"},{\"candidate\":\"C03\",\"reason\":\"L218 checks availability via the locale list and is used by the test helper's assertions, but the failure occurs before it is reached.\"},{\"candidate\":\"C01\",\"reason\":\"L193 just returns a cached list and plays no part in parsing \\\"_GB\\\".\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 2990,
+    "output_tokens": 190
+   },
+   "cost_usd": 0.01576,
+   "paid_usd": 0.01576,
+   "latency_s": 3.63
+  },
+  {
+   "sample_index": 4,
+   "seed": 1702569345708711574,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "C03": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+    "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object[],int,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(boolean[],boolean)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+     "label": "C03",
+     "reason": "L96-L99 require the first two chars to be lowercase with no branch handling a leading underscore, so \"_GB\" throws at L99.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       96,
+       99
+      ],
+      "in_candidate": [
+       96,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#isAvailableLocale(Locale)",
+     "label": "C01",
+     "reason": "L218 only checks list membership and is not involved in parsing the \"_GB\" string.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       218
+      ],
+      "in_candidate": [
+       218
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#availableLocaleList()",
+     "label": "C02",
+     "reason": "L193 just returns a cached list, so it is unrelated to the parsing failure.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       193
+      ],
+      "in_candidate": [
+       193
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "21f5943e7fd0b5fae2d718d47f5165e31bd65781ee94adac4f3b294ce760680b",
+     "cache_hit": false,
+     "cost_usd": 0.01544,
+     "paid_usd": 0.01544,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 2990,
+      "output_tokens": 174,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.322,
+     "request_id": "req_011CgQJ8mjvKgEn5gHF5URFw",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C03\",\"C01\",\"C02\"],\"top3_reasons\":[{\"candidate\":\"C03\",\"reason\":\"L96-L99 require the first two chars to be lowercase with no branch handling a leading underscore, so \\\"_GB\\\" throws at L99.\"},{\"candidate\":\"C01\",\"reason\":\"L218 only checks list membership and is not involved in parsing the \\\"_GB\\\" string.\"},{\"candidate\":\"C02\",\"reason\":\"L193 just returns a cached list, so it is unrelated to the parsing failure.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 2990,
+    "output_tokens": 174
+   },
+   "cost_usd": 0.01544,
+   "paid_usd": 0.01544,
+   "latency_s": 3.322
+  }
+ ],
+ "degradations": [
+  {
+   "kind": "zero_score_omitted",
+   "stage": "context",
+   "count": 17
+  }
+ ],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 5,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 14950,
+  "output_tokens": 899,
+  "cost_usd": 0.07778,
+  "paid_usd_this_run": 0.07778,
+  "latency_s": 17.467,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

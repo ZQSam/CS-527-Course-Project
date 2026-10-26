@@ -1,0 +1,462 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_run_summary",
+ "run_id": "langexp1023-haiku-v2-k20-s5",
+ "provider": "anthropic",
+ "model_key": "haiku",
+ "model": "claude-haiku-5-5",
+ "num_samples": 5,
+ "dry_run": false,
+ "input_dir": "data/batches/lang-expansion-20261023/B",
+ "prompt_version": "v2",
+ "transport": "messages",
+ "candidate_set": "all",
+ "fusion_primary_weight": 0.5,
+ "code": {
+  "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+  "git_dirty": false,
+  "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+ },
+ "batch_ids": [],
+ "bugs": [
+  {
+   "bug_id": "Lang-5",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.6632,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "sample_retried": 1
+   },
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 5,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 6,
+   "cache_hits": 0,
+   "input_tokens": 55457,
+   "output_tokens": 1884,
+   "cost_usd": 0.006488,
+   "paid_usd_this_run": 0.006488,
+   "latency_s": 15.126,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-6",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.7011,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/StringEscapeUtils.java::org.apache.commons.lang3.StringEscapeUtils$CsvEscaper#translate(CharSequence,int,Writer)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 13,
+    "partial": 2,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 5,
+    "grounded_rate": 0.8667,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 29820,
+   "output_tokens": 3545,
+   "cost_usd": 0.004753,
+   "paid_usd_this_run": 0.004753,
+   "latency_s": 21.544,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-7",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.8232,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 49525,
+   "output_tokens": 2839,
+   "cost_usd": 0.006371,
+   "paid_usd_this_run": 0.006371,
+   "latency_s": 17.499,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-8",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.7516,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 50695,
+   "output_tokens": 3138,
+   "cost_usd": 0.006639,
+   "paid_usd_this_run": 0.006639,
+   "latency_s": 19.138,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-9",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.6737,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 54690,
+   "output_tokens": 3384,
+   "cost_usd": 0.00716,
+   "paid_usd_this_run": 0.00716,
+   "latency_s": 19.998,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-10",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#addRegex(FastDateParser,StringBuilder)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.6526,
+    "top1_agreement": 0.8,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {
+    "helpers_omitted_for_budget": 1
+   },
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 55500,
+   "output_tokens": 4660,
+   "cost_usd": 0.007881,
+   "paid_usd_this_run": 0.007881,
+   "latency_s": 26.397,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-11",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.2611,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 14,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 1,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 0.9333,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 45180,
+   "output_tokens": 1594,
+   "cost_usd": 0.005316,
+   "paid_usd_this_run": 0.005316,
+   "latency_s": 11.091,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-12",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.6021,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 10,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 47175,
+   "output_tokens": 2408,
+   "cost_usd": 0.005921,
+   "paid_usd_this_run": 0.005921,
+   "latency_s": 15.524,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-13",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.4842,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 10,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 43695,
+   "output_tokens": 1909,
+   "cost_usd": 0.005324,
+   "paid_usd_this_run": 0.005324,
+   "latency_s": 12.842,
+   "estimated_cost_usd": 0.0
+  },
+  {
+   "bug_id": "Lang-14",
+   "status": "complete",
+   "shown": 20,
+   "dropped": 0,
+   "truncated": 0,
+   "sample_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "top1_single": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#equals(CharSequence,CharSequence)",
+   "top1_mean": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#equals(CharSequence,CharSequence)",
+   "stability": {
+    "pairwise_kendall_tau_mean": 0.7389,
+    "top1_agreement": 1.0,
+    "top1_mode": "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#equals(CharSequence,CharSequence)"
+   },
+   "effective_num_samples": 5,
+   "degradations": {},
+   "evidence": {
+    "reasons": 15,
+    "grounded": 15,
+    "partial": 0,
+    "test_only": 0,
+    "ungrounded": 0,
+    "no_citation": 0,
+    "cites_stack_line": 0,
+    "grounded_rate": 1.0,
+    "citation_rate": 1.0
+   },
+   "calls": 5,
+   "cache_hits": 0,
+   "input_tokens": 43170,
+   "output_tokens": 2585,
+   "cost_usd": 0.005609,
+   "paid_usd_this_run": 0.005609,
+   "latency_s": 16.845,
+   "estimated_cost_usd": 0.0
+  }
+ ],
+ "totals": {
+  "calls": 51,
+  "cache_hits": 0,
+  "input_tokens": 474907,
+  "output_tokens": 27946,
+  "cost_usd": 0.061462,
+  "paid_usd_this_run": 0.061462,
+  "estimated_cost_usd": 0.0,
+  "latency_s": 176.004
+ },
+ "ledger_spent_usd": {
+  "before": 4.545976,
+  "after": 4.60744,
+  "cap": 25.0
+ }
+}

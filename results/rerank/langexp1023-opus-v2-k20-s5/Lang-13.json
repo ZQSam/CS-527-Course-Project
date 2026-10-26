@@ -1,0 +1,1439 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-opus-v2-k20-s5",
+ "bug_id": "Lang-13",
+ "input_sha256": "19c7335405133a074ec478142a712bcfd9235814053fbb799a6ea791f459d3f4",
+ "status": "complete",
+ "created_at": "2026-10-26T05:24:36Z",
+ "config": {
+  "model_key": "opus",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)"
+  ],
+  "estimated_tokens": 8741,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": false
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)": 2.6,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)": 1.0,
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)": 6.0,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)": 2.4,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)": 4.8,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)": 4.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 13.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 13.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 12.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 15.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 10.8,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 14.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 14.2,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 11.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 12.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 13.6,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 13.4,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 17.6,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 15.6,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 11.2
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)": 0.0,
+   "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)": 0.0,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()": 4.454211490264017,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])": 2.870540018881465,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)": 2.0591260281974,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)": 2.993325909419153,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)": 3.9698866482558413,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)": 3.006659275674582,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)": 2.85657137141714,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)": 5.535341001239219,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)": 2.8000000000000003,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)": 3.4985711369071804,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)": 3.7202150475476548,
+   "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()": 5.083306010855534,
+   "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)": 4.166533331199932
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.5053,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 4813900575772064776,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C02": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C05": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C07": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C10": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C19": "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "C20": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+     "label": "C10",
+     "reason": "L266/L268 use Class.forName, which cannot resolve primitive type names like \"byte\", and there is no fallback map for primitive types, so a ClassNotFoundException is thrown.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       266,
+       268
+      ],
+      "in_candidate": [
+       266,
+       268
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       268
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+     "label": "C20",
+     "reason": "L249-L250 construct the stream with only a classloader and set up no primitive-type lookup table that resolveClass could use as a fallback.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       249,
+       250
+      ],
+      "in_candidate": [
+       249,
+       250
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+     "label": "C16",
+     "reason": "L88 passes object.getClass().getClassLoader(), which for a Class object is the bootstrap (null) loader, and L95 triggers the failing deserialization.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       88,
+       95
+      ],
+      "in_candidate": [
+       88,
+       95
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       95
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "a6082899415a43ecd55cb4542c442f200cb77b73610ac1276e1560c8cf69b24b",
+     "cache_hit": false,
+     "cost_usd": 0.040656,
+     "paid_usd": 0.040656,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8739,
+      "output_tokens": 285,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.801,
+     "request_id": "req_011CgQHqAmFektkwX7Ud3oEZ",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C10\",\"C20\",\"C16\",\"C07\",\"C05\",\"C19\",\"C04\",\"C06\",\"C15\",\"C11\",\"C18\",\"C08\",\"C09\",\"C14\",\"C01\",\"C03\",\"C12\",\"C13\",\"C02\",\"C17\"],\"top3_reasons\":[{\"candidate\":\"C10\",\"reason\":\"L266/L268 use Class.forName, which cannot resolve primitive type names like \\\"byte\\\", and there is no fallback map for primitive types, so a ClassNotFoundException is thrown.\"},{\"candidate\":\"C20\",\"reason\":\"L249-L250 construct the stream with only a classloader and set up no primitive-type lookup table that resolveClass could use as a fallback.\"},{\"candidate\":\"C16\",\"reason\":\"L88 passes object.getClass().getClassLoader(), which for a Class object is the bootstrap (null) loader, and L95 triggers the failing deserialization.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8739,
+    "output_tokens": 285
+   },
+   "cost_usd": 0.040656,
+   "paid_usd": 0.040656,
+   "latency_s": 4.801,
+   "prompt_text": "Bug: Lang-13 (1 failing test)\n\n## Failing test 1: org.apache.commons.lang3.SerializationUtilsTest::testPrimitiveTypeClassSerialization\n### Error and stack trace (filtered)\n```\norg.apache.commons.lang3.SerializationException: ClassNotFoundException while reading cloned object data\n\tat org.apache.commons.lang3.SerializationUtils.clone(SerializationUtils.java:99)\n\tat org.apache.commons.lang3.SerializationUtilsTest.testPrimitiveTypeClassSerialization(SerializationUtilsTest.java:373)\nCaused by: java.lang.ClassNotFoundException: byte\n\t... 2 library frames omitted\n\tat org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1068)\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:351)\n\tat java.lang.Class.forName0(Native Method)\n\tat java.lang.Class.forName(Class.java:348)\n\tat org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream.resolveClass(SerializationUtils.java:268)\n\tat org.apache.commons.lang3.SerializationUtils.clone(SerializationUtils.java:95)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  368 | public void testPrimitiveTypeClassSerialization() {\n  369 |         Class<?>[] primitiveTypes = { byte.class, short.class, int.class, long.class, float.class, double.class,\n  370 |                 boolean.class, char.class, void.class };\n  371 | \n  372 |         for (Class<?> primitiveType : primitiveTypes) {\n>>373 |             Class<?> clone = SerializationUtils.clone(primitiveType);\n  374 |             assertEquals(primitiveType, clone);\n  375 |         }\n  376 |     }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 325-335)\n```java\n  325 | private static boolean annotationArrayMemberEquals(Annotation[] a1, Annotation[] a2) {\n  326 |         if (a1.length != a2.length) {\n  327 |             return false;\n  328 |         }\n  329 |         for (int i = 0; i < a1.length; i++) {\n  330 |             if (!equals(a1[i], a2[i])) {\n  331 |                 return false;\n  332 |             }\n  333 |         }\n  334 |         return true;\n  335 |     }\n```\n\n## C02\nmethod: org.apache.commons.lang3.ArrayUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 137-139)\n```java\n  137 | public ArrayUtils() {\n  138 |       super();\n  139 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 90-96)\n```java\n  90 | @Override\n  91 |         protected void appendDetail(StringBuffer buffer, String fieldName, Object value) {\n  92 |             if (value instanceof Annotation) {\n  93 |                 value = AnnotationUtils.toString((Annotation) value);\n  94 |             }\n  95 |             super.appendDetail(buffer, fieldName, value);\n  96 |         }\n```\n\n## C04\nmethod: org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 223-232)\n```java\n  223 | public static boolean isValidAnnotationMemberType(Class<?> type) {\n  224 |         if (type == null) {\n  225 |             return false;\n  226 |         }\n  227 |         if (type.isArray()) {\n  228 |             type = type.getComponentType();\n  229 |         }\n  230 |         return type.isPrimitive() || type.isEnum() || type.isAnnotation()\n  231 |                 || String.class.equals(type) || Class.class.equals(type);\n  232 |     }\n```\n\n## C05\nmethod: org.apache.commons.lang3.SerializationUtils#serialize(Serializable)\nfile: src/main/java/org/apache/commons/lang3/SerializationUtils.java (lines 161-165)\n```java\n  161 | public static byte[] serialize(Serializable obj) {\n  162 |         ByteArrayOutputStream baos = new ByteArrayOutputStream(512);\n  163 |         serialize(obj, baos);\n  164 |         return baos.toByteArray();\n  165 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 122-153)\n```java\n  122 | public static boolean equals(Annotation a1, Annotation a2) {\n  123 |         if (a1 == a2) {\n  124 |             return true;\n  125 |         }\n  126 |         if (a1 == null || a2 == null) {\n  127 |             return false;\n  128 |         }\n  129 |         Class<? extends Annotation> type = a1.annotationType();\n  130 |         Class<? extends Annotation> type2 = a2.annotationType();\n  131 |         Validate.notNull(type, \"Annotation %s with null annotationType()\", a1);\n  132 |         Validate.notNull(type2, \"Annotation %s with null annotationType()\", a2);\n  133 |         if (!type.equals(type2)) {\n  134 |             return false;\n  135 |         }\n  136 |         try {\n  137 |             for (Method m : type.getDeclaredMethods()) {\n  138 |                 if (m.getParameterTypes().length == 0\n  139 |                         && isValidAnnotationMemberType(m.getReturnType())) {\n  140 |                     Object v1 = m.invoke(a1);\n  141 |                     Object v2 = m.invoke(a2);\n  142 |                     if (!memberEquals(m.getReturnType(), v1, v2)) {\n  143 |                         return false;\n  144 |                     }\n  145 |                 }\n  146 |             }\n  147 |         } catch (IllegalAccessException ex) {\n  148 |             return false;\n  149 |         } catch (InvocationTargetException ex) {\n  150 |             return false;\n  151 |         }\n  152 |         return true;\n  153 |     }\n```\n\n## C07\nmethod: org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)\nfile: src/main/java/org/apache/commons/lang3/SerializationUtils.java (lines 130-151)\n```java\n  130 | public static void serialize(Serializable obj, OutputStream outputStream) {\n  131 |         if (outputStream == null) {\n  132 |             throw new IllegalArgumentException(\"The OutputStream must not be null\");\n  133 |         }\n  134 |         ObjectOutputStream out = null;\n  135 |         try {\n  136 |             // stream closed in the finally\n  137 |             out = new ObjectOutputStream(outputStream);\n  138 |             out.writeObject(obj);\n  139 | \n  140 |         } catch (IOException ex) {\n  141 |             throw new SerializationException(ex);\n  142 |         } finally {\n  143 |             try {\n  144 |                 if (out != null) {\n  145 |                     out.close();\n  146 |                 }\n  147 |             } catch (IOException ex) { // NOPMD\n  148 |                 // ignore close exception\n  149 |             }\n  150 |         }\n  151 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 242-251)\n```java\n  242 | private static int hashMember(String name, Object value) {\n  243 |         int part1 = name.hashCode() * 127;\n  244 |         if (value.getClass().isArray()) {\n  245 |             return part1 ^ arrayMemberHash(value.getClass().getComponentType(), value);\n  246 |         }\n  247 |         if (value instanceof Annotation) {\n  248 |             return part1 ^ hashCode((Annotation) value);\n  249 |         }\n  250 |         return part1 ^ value.hashCode();\n  251 |     }\n```\n\n## C09\nmethod: org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 167-185)\n```java\n  167 | public static int hashCode(Annotation a) {\n  168 |         int result = 0;\n  169 |         Class<? extends Annotation> type = a.annotationType();\n  170 |         for (Method m : type.getDeclaredMethods()) {\n  171 |             try {\n  172 |                 Object value = m.invoke(a);\n  173 |                 if (value == null) {\n  174 |                     throw new IllegalStateException(\n  175 |                             String.format(\"Annotation method %s returned null\", m));\n  176 |                 }\n  177 |                 result += hashMember(m.getName(), value);\n  178 |             } catch (RuntimeException ex) {\n  179 |                 throw ex;\n  180 |             } catch (Exception ex) {\n  181 |                 throw new RuntimeException(ex);\n  182 |             }\n  183 |         }\n  184 |         return result;\n  185 |     }\n```\n\n## C10\nmethod: org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)\nfile: src/main/java/org/apache/commons/lang3/SerializationUtils.java (lines 262-270)\n```java\n  262 | @Override\n  263 |         protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {\n  264 |             String name = desc.getName();\n  265 |             try {\n  266 |                 return Class.forName(name, false, classLoader);\n  267 |             } catch (ClassNotFoundException ex) {\n>>268 |                     return Class.forName(name, false, Thread.currentThread().getContextClassLoader());\n  269 |             }\n  270 |         }\n```\n\n## C11\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 287-316)\n```java\n  287 | private static boolean arrayMemberEquals(Class<?> componentType, Object o1, Object o2) {\n  288 |         if (componentType.isAnnotation()) {\n  289 |             return annotationArrayMemberEquals((Annotation[]) o1, (Annotation[]) o2);\n  290 |         }\n  291 |         if (componentType.equals(Byte.TYPE)) {\n  292 |             return Arrays.equals((byte[]) o1, (byte[]) o2);\n  293 |         }\n  294 |         if (componentType.equals(Short.TYPE)) {\n  295 |             return Arrays.equals((short[]) o1, (short[]) o2);\n  296 |         }\n  297 |         if (componentType.equals(Integer.TYPE)) {\n  298 |             return Arrays.equals((int[]) o1, (int[]) o2);\n  299 |         }\n  300 |         if (componentType.equals(Character.TYPE)) {\n  301 |             return Arrays.equals((char[]) o1, (char[]) o2);\n  302 |         }\n  303 |         if (componentType.equals(Long.TYPE)) {\n  304 |             return Arrays.equals((long[]) o1, (long[]) o2);\n  305 |         }\n  306 |         if (componentType.equals(Float.TYPE)) {\n  307 |             return Arrays.equals((float[]) o1, (float[]) o2);\n  308 |         }\n  309 |         if (componentType.equals(Double.TYPE)) {\n  310 |             return Arrays.equals((double[]) o1, (double[]) o2);\n  311 |         }\n  312 |         if (componentType.equals(Boolean.TYPE)) {\n  313 |             return Arrays.equals((boolean[]) o1, (boolean[]) o2);\n  314 |         }\n  315 |         return Arrays.equals((Object[]) o1, (Object[]) o2);\n  316 |     }\n```\n\n## C12\nmethod: org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 71-85)\n```java\n  71 | @Override\n  72 |         protected String getShortClassName(java.lang.Class<?> cls) {\n  73 |             Class<? extends Annotation> annotationType = null;\n  74 |             for (Class<?> iface : ClassUtils.getAllInterfaces(cls)) {\n  75 |                 if (Annotation.class.isAssignableFrom(iface)) {\n  76 |                     @SuppressWarnings(\"unchecked\")\n  77 |                     //because we just checked the assignability\n  78 |                     Class<? extends Annotation> found = (Class<? extends Annotation>) iface;\n  79 |                     annotationType = found;\n  80 |                     break;\n  81 |                 }\n  82 |             }\n  83 |             return new StringBuilder(annotationType == null ? \"\" : annotationType.getName())\n  84 |                     .insert(0, '@').toString();\n  85 |         }\n```\n\n## C13\nmethod: org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)\nfile: src/main/java/org/apache/commons/lang3/ArrayUtils.java (lines 4292-4312)\n```java\n  4292 | private static Object add(Object array, int index, Object element, Class<?> clss) {\n  4293 |         if (array == null) {\n  4294 |             if (index != 0) {\n  4295 |                 throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: 0\");\n  4296 |             }\n  4297 |             Object joinedArray = Array.newInstance(clss, 1);\n  4298 |             Array.set(joinedArray, 0, element);\n  4299 |             return joinedArray;\n  4300 |         }\n  4301 |         int length = Array.getLength(array);\n  4302 |         if (index > length || index < 0) {\n  4303 |             throw new IndexOutOfBoundsException(\"Index: \" + index + \", Length: \" + length);\n  4304 |         }\n  4305 |         Object result = Array.newInstance(clss, length + 1);\n  4306 |         System.arraycopy(array, 0, result, 0, index);\n  4307 |         Array.set(result, index, element);\n  4308 |         if (index < length) {\n  4309 |             System.arraycopy(array, index, result, index + 1, length - index);\n  4310 |         }\n  4311 |         return result;\n  4312 |     }\n```\n\n## C14\nmethod: org.apache.commons.lang3.AnnotationUtils#toString(Annotation)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 195-210)\n```java\n  195 | public static String toString(final Annotation a) {\n  196 |         ToStringBuilder builder = new ToStringBuilder(a, TO_STRING_STYLE);\n  197 |         for (Method m : a.annotationType().getDeclaredMethods()) {\n  198 |             if (m.getParameterTypes().length > 0) {\n  199 |                 continue; //wtf?\n  200 |             }\n  201 |             try {\n  202 |                 builder.append(m.getName(), m.invoke(a));\n  203 |             } catch (RuntimeException ex) {\n  204 |                 throw ex;\n  205 |             } catch (Exception ex) {\n  206 |                 throw new RuntimeException(ex);\n  207 |             }\n  208 |         }\n  209 |         return builder.build();\n  210 |     }\n```\n\n## C15\nmethod: org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 263-277)\n```java\n  263 | private static boolean memberEquals(Class<?> type, Object o1, Object o2) {\n  264 |         if (o1 == o2) {\n  265 |             return true;\n  266 |         }\n  267 |         if (o1 == null || o2 == null) {\n  268 |             return false;\n  269 |         }\n  270 |         if (type.isArray()) {\n  271 |             return arrayMemberEquals(type.getComponentType(), o1, o2);\n  272 |         }\n  273 |         if (type.isAnnotation()) {\n  274 |             return equals((Annotation) o1, (Annotation) o2);\n  275 |         }\n  276 |         return o1.equals(o2);\n  277 |     }\n```\n\n## C16\nmethod: org.apache.commons.lang3.SerializationUtils#clone(Serializable)\nfile: src/main/java/org/apache/commons/lang3/SerializationUtils.java (lines 78-111)\n```java\n   78 | public static <T extends Serializable> T clone(T object) {\n   79 |         if (object == null) {\n   80 |             return null;\n   81 |         }\n   82 |         byte[] objectData = serialize(object);\n   83 |         ByteArrayInputStream bais = new ByteArrayInputStream(objectData);\n   84 | \n   85 |         ClassLoaderAwareObjectInputStream in = null;\n   86 |         try {\n   87 |             // stream closed in the finally\n   88 |             in = new ClassLoaderAwareObjectInputStream(bais, object.getClass().getClassLoader());\n   89 |             /*\n   90 |              * when we serialize and deserialize an object,\n   91 |              * it is reasonable to assume the deserialized object\n   92 |              * is of the same type as the original serialized object\n   93 |              */\n   94 |             @SuppressWarnings(\"unchecked\") // see above\n>> 95 |             T readObject = (T) in.readObject();\n   96 |             return readObject;\n   97 | \n   98 |         } catch (ClassNotFoundException ex) {\n>> 99 |             throw new SerializationException(\"ClassNotFoundException while reading cloned object data\", ex);\n  100 |         } catch (IOException ex) {\n  101 |             throw new SerializationException(\"IOException while reading cloned object data\", ex);\n  102 |         } finally {\n  103 |             try {\n  104 |                 if (in != null) {\n  105 |                     in.close();\n  106 |                 }\n  107 |             } catch (IOException ex) {\n  108 |                 throw new SerializationException(\"IOException on closing cloned object data InputStream.\", ex);\n  109 |             }\n  110 |         }\n  111 |     }\n```\n\n## C17\nmethod: org.apache.commons.lang3.AnnotationUtils#<init>()\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 107-108)\n```java\n  107 | public AnnotationUtils() {\n  108 |     }\n```\n\n## C18\nmethod: org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)\nfile: src/main/java/org/apache/commons/lang3/AnnotationUtils.java (lines 344-370)\n```java\n  344 | private static int arrayMemberHash(Class<?> componentType, Object o) {\n  345 |         if (componentType.equals(Byte.TYPE)) {\n  346 |             return Arrays.hashCode((byte[]) o);\n  347 |         }\n  348 |         if (componentType.equals(Short.TYPE)) {\n  349 |             return Arrays.hashCode((short[]) o);\n  350 |         }\n  351 |         if (componentType.equals(Integer.TYPE)) {\n  352 |             return Arrays.hashCode((int[]) o);\n  353 |         }\n  354 |         if (componentType.equals(Character.TYPE)) {\n  355 |             return Arrays.hashCode((char[]) o);\n  356 |         }\n  357 |         if (componentType.equals(Long.TYPE)) {\n  358 |             return Arrays.hashCode((long[]) o);\n  359 |         }\n  360 |         if (componentType.equals(Float.TYPE)) {\n  361 |             return Arrays.hashCode((float[]) o);\n  362 |         }\n  363 |         if (componentType.equals(Double.TYPE)) {\n  364 |             return Arrays.hashCode((double[]) o);\n  365 |         }\n  366 |         if (componentType.equals(Boolean.TYPE)) {\n  367 |             return Arrays.hashCode((boolean[]) o);\n  368 |         }\n  369 |         return Arrays.hashCode((Object[]) o);\n  370 |     }\n```\n\n## C19\nmethod: org.apache.commons.lang3.SerializationException#<init>(String,Throwable)\nfile: src/main/java/org/apache/commons/lang3/SerializationException.java (lines 74-76)\n```java\n  74 | public SerializationException(String msg, Throwable cause) {\n  75 |         super(msg, cause);\n  76 |     }\n```\n\n## C20\nmethod: org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)\nfile: src/main/java/org/apache/commons/lang3/SerializationUtils.java (lines 248-252)\n```java\n  248 | public ClassLoaderAwareObjectInputStream(InputStream in, ClassLoader classLoader) throws IOException {\n  249 |             super(in);\n  250 |             this.classLoader = classLoader;\n  251 | \n  252 |         }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 17194079015132327118,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C03": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C04": "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C06": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "C07": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C08": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C10": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "C11": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+     "label": "C06",
+     "reason": "L266-L268 resolve class names only via Class.forName, which cannot resolve primitive type names like \"byte\", so a primitive-name lookup map is missing.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       266,
+       268
+      ],
+      "in_candidate": [
+       266,
+       268
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       268
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+     "label": "C08",
+     "reason": "L95 deserializes via the custom stream and L99 wraps the resulting ClassNotFoundException; L88 passes a null loader for primitive classes.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       88,
+       95,
+       99
+      ],
+      "in_candidate": [
+       88,
+       95,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       95,
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+     "label": "C10",
+     "reason": "L250 stores the provided classLoader which is null for primitive class objects, feeding resolveClass's failing lookups.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       250
+      ],
+      "in_candidate": [
+       250
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "e55b2374d6df60f3f51e13735987620b852a8a892e45a69a44b3d0bd1a4f27d3",
+     "cache_hit": false,
+     "cost_usd": 0.040296,
+     "paid_usd": 0.040296,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8739,
+      "output_tokens": 267,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.007,
+     "request_id": "req_011CgQHqXL1nRfDTutiugWhP",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C06\",\"C08\",\"C10\",\"C14\",\"C11\",\"C04\",\"C01\",\"C02\",\"C03\",\"C05\",\"C07\",\"C09\",\"C12\",\"C13\",\"C15\",\"C16\",\"C17\",\"C18\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C06\",\"reason\":\"L266-L268 resolve class names only via Class.forName, which cannot resolve primitive type names like \\\"byte\\\", so a primitive-name lookup map is missing.\"},{\"candidate\":\"C08\",\"reason\":\"L95 deserializes via the custom stream and L99 wraps the resulting ClassNotFoundException; L88 passes a null loader for primitive classes.\"},{\"candidate\":\"C10\",\"reason\":\"L250 stores the provided classLoader which is null for primitive class objects, feeding resolveClass's failing lookups.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8739,
+    "output_tokens": 267
+   },
+   "cost_usd": 0.040296,
+   "paid_usd": 0.040296,
+   "latency_s": 4.007
+  },
+  {
+   "sample_index": 2,
+   "seed": 4259930605674958286,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "C02": "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C09": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C10": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "C11": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "C12": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C13": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C15": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C20": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+     "label": "C10",
+     "reason": "L266/L268 use Class.forName for primitive type names like \"byte\", which always fails; it needs a primitive-type map fallback.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       266,
+       268
+      ],
+      "in_candidate": [
+       266,
+       268
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       268
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+     "label": "C01",
+     "reason": "L248-L250 build the stream; the fix could add the primitive-name lookup map here, alongside the classLoader setup.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       248,
+       250
+      ],
+      "in_candidate": [
+       248,
+       250
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+     "label": "C13",
+     "reason": "L88 passes the Class object's class loader and L95 calls readObject, which triggers the failing resolveClass.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       88,
+       95
+      ],
+      "in_candidate": [
+       88,
+       95
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       95
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "753b68511c4d01962ffc7410fa04cc35592cf9a83647bf47c05434f48cb60267",
+     "cache_hit": false,
+     "cost_usd": 0.039856,
+     "paid_usd": 0.039856,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8739,
+      "output_tokens": 245,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.559,
+     "request_id": "req_011CgQHqpV9LTazunXdRGxWE",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C10\",\"C01\",\"C13\",\"C15\",\"C11\",\"C02\",\"C18\",\"C04\",\"C03\",\"C05\",\"C06\",\"C07\",\"C08\",\"C09\",\"C12\",\"C14\",\"C16\",\"C17\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C10\",\"reason\":\"L266/L268 use Class.forName for primitive type names like \\\"byte\\\", which always fails; it needs a primitive-type map fallback.\"},{\"candidate\":\"C01\",\"reason\":\"L248-L250 build the stream; the fix could add the primitive-name lookup map here, alongside the classLoader setup.\"},{\"candidate\":\"C13\",\"reason\":\"L88 passes the Class object's class loader and L95 calls readObject, which triggers the failing resolveClass.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8739,
+    "output_tokens": 245
+   },
+   "cost_usd": 0.039856,
+   "paid_usd": 0.039856,
+   "latency_s": 3.559
+  },
+  {
+   "sample_index": 3,
+   "seed": 10957441062726674557,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "C02": "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "C03": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C05": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C06": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C09": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "C10": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C12": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C16": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "C17": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C18": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "C19": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C20": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+     "label": "C12",
+     "reason": "L266-L268 use Class.forName for the class name with no fallback mapping for primitive type names like \"byte\", so deserializing primitive Class objects throws ClassNotFoundException.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       266,
+       268
+      ],
+      "in_candidate": [
+       266,
+       268
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       268
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+     "label": "C09",
+     "reason": "L88 supplies object.getClass().getClassLoader() and L95 calls readObject, which ends in the failing resolveClass; L99 wraps the resulting exception.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       88,
+       95,
+       99
+      ],
+      "in_candidate": [
+       88,
+       95,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       95,
+       99
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+     "label": "C06",
+     "reason": "L250 stores the class loader that resolveClass uses; it has no primitive-type map, though the defect is more likely in resolveClass itself.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       250
+      ],
+      "in_candidate": [
+       250
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "b44126c2fa5d47ff5c2b9d1689f04b71b198e62ca5ffdabf50a7a7fb9b17ba2f",
+     "cache_hit": false,
+     "cost_usd": 0.040696,
+     "paid_usd": 0.040696,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8739,
+      "output_tokens": 287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.46,
+     "request_id": "req_011CgQHr5o99ysfFJuKAbRTX",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C12\",\"C09\",\"C06\",\"C18\",\"C16\",\"C02\",\"C05\",\"C01\",\"C03\",\"C04\",\"C07\",\"C08\",\"C10\",\"C11\",\"C13\",\"C14\",\"C15\",\"C17\",\"C19\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C12\",\"reason\":\"L266-L268 use Class.forName for the class name with no fallback mapping for primitive type names like \\\"byte\\\", so deserializing primitive Class objects throws ClassNotFoundException.\"},{\"candidate\":\"C09\",\"reason\":\"L88 supplies object.getClass().getClassLoader() and L95 calls readObject, which ends in the failing resolveClass; L99 wraps the resulting exception.\"},{\"candidate\":\"C06\",\"reason\":\"L250 stores the class loader that resolveClass uses; it has no primitive-type map, though the defect is more likely in resolveClass itself.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8739,
+    "output_tokens": 287
+   },
+   "cost_usd": 0.040696,
+   "paid_usd": 0.040696,
+   "latency_s": 4.46
+  },
+  {
+   "sample_index": 4,
+   "seed": 6769504926926153330,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "C02": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "C03": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "C04": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "C05": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "C07": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "C08": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "C09": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "C10": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "C11": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "C12": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "C13": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "C14": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "C15": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "C16": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "C17": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "C18": "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "C19": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "C20": "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable,OutputStream)",
+    "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#serialize(Serializable)",
+    "src/main/java/org/apache/commons/lang3/SerializationException.java::org.apache.commons.lang3.SerializationException#<init>(String,Throwable)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#equals(Annotation,Annotation)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#<init>()",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#memberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#annotationArrayMemberEquals(Annotation[],Annotation[])",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberEquals(Class,Object,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashMember(String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#toString(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#add(Object,int,Object,Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#arrayMemberHash(Class,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#isValidAnnotationMemberType(Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#getShortClassName(java.lang.Class)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils$anonymous@51:58#appendDetail(StringBuffer,String,Object)",
+    "src/main/java/org/apache/commons/lang3/AnnotationUtils.java::org.apache.commons.lang3.AnnotationUtils#hashCode(Annotation)",
+    "src/main/java/org/apache/commons/lang3/ArrayUtils.java::org.apache.commons.lang3.ArrayUtils#<init>()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)",
+     "label": "C19",
+     "reason": "L266/L268 use Class.forName, which cannot resolve primitive type names like \"byte\", and there is no fallback map for primitive types, causing the ClassNotFoundException.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       266,
+       268
+      ],
+      "in_candidate": [
+       266,
+       268
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       268
+      ]
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+     "label": "C03",
+     "reason": "L250 stores the class loader; the constructor could initialize a primitive-type lookup map, but does not.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       250
+      ],
+      "in_candidate": [
+       250
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils#clone(Serializable)",
+     "label": "C17",
+     "reason": "L88 passes object.getClass().getClassLoader() and L95 calls readObject, which delegates to the faulty resolveClass; L99 merely wraps the exception.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       88,
+       95,
+       99
+      ],
+      "in_candidate": [
+       88,
+       95,
+       99
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": [
+       95,
+       99
+      ]
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "7fd3dfc26609aa2a11da437c6ddce34e4d8670102b3e2436e221b41b48b2a86e",
+     "cache_hit": false,
+     "cost_usd": 0.040416,
+     "paid_usd": 0.040416,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 8739,
+      "output_tokens": 273,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.718,
+     "request_id": "req_011CgQHrQp8Msajw98qd3kMM",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C19\",\"C03\",\"C17\",\"C10\",\"C09\",\"C01\",\"C02\",\"C04\",\"C05\",\"C06\",\"C07\",\"C08\",\"C11\",\"C12\",\"C13\",\"C14\",\"C15\",\"C16\",\"C18\",\"C20\"],\"top3_reasons\":[{\"candidate\":\"C19\",\"reason\":\"L266/L268 use Class.forName, which cannot resolve primitive type names like \\\"byte\\\", and there is no fallback map for primitive types, causing the ClassNotFoundException.\"},{\"candidate\":\"C03\",\"reason\":\"L250 stores the class loader; the constructor could initialize a primitive-type lookup map, but does not.\"},{\"candidate\":\"C17\",\"reason\":\"L88 passes object.getClass().getClassLoader() and L95 calls readObject, which delegates to the faulty resolveClass; L99 merely wraps the exception.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 8739,
+    "output_tokens": 273
+   },
+   "cost_usd": 0.040416,
+   "paid_usd": 0.040416,
+   "latency_s": 3.718
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 10,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 43695,
+  "output_tokens": 1357,
+  "cost_usd": 0.20192,
+  "paid_usd_this_run": 0.20192,
+  "latency_s": 20.545,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}

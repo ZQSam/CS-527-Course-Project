@@ -1,0 +1,1407 @@
+{
+ "schema_version": "1.1",
+ "artifact_kind": "rerank_result",
+ "run_id": "langexp1023-opus-v2-k20-s5",
+ "bug_id": "Lang-8",
+ "input_sha256": "4dbb2f63a8ce6b9bea21fd3da5f4bb1a2c194f7d1f80715f28896b6b6166ac1f",
+ "status": "complete",
+ "created_at": "2026-10-26T05:22:54Z",
+ "config": {
+  "model_key": "opus",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_tokens": 8000,
+  "prompt_version": "v2",
+  "num_samples": 5,
+  "effective_num_samples": 5,
+  "transport": "messages",
+  "candidate_set": "all",
+  "prompt_sha256": "9b6ef534651a87e5595d30e7047fb93348024228a4a4d87b9aa007ade316d72b",
+  "code": {
+   "git_revision": "fc9946d63bc26716dc621fcb1d4f7456ff98ebcf",
+   "git_dirty": false,
+   "code_sha256": "8aca713913e872a45cac8c1755f4e215b6e5297e4a4ef1d5109183738da7da54"
+  },
+  "sampling": {
+   "num_samples": 5,
+   "base_seed": 527,
+   "order": "shuffle",
+   "adaptive": {
+    "enabled": false,
+    "single_sample_max_shown": 2
+   }
+  },
+  "context": {
+   "token_budget": 12000,
+   "chars_per_token": 2.4,
+   "drop_zero_score": false,
+   "show_sbfl_scores": false,
+   "max_jdk_frames": 4,
+   "max_project_frames": 12,
+   "include_test_helpers": true,
+   "max_helper_lines": 40,
+   "max_full_tests": 3,
+   "per_candidate_overhead_chars": 40
+  },
+  "validation": {
+   "max_attempts": 2
+  },
+  "fusion": {
+   "method": "weighted_rank",
+   "weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "primary_weight": 0.5,
+   "rrf_k": 60
+  }
+ },
+ "context": {
+  "shown": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)"
+  ],
+  "dropped": [],
+  "truncated": [],
+  "stack_marked_candidates": [],
+  "estimated_tokens": 9695,
+  "helpers_omitted_for_budget": false,
+  "helpers_included": true
+ },
+ "rankings": {
+  "sbfl": [
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)"
+  ],
+  "mean": [
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+  ],
+  "single": [
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+  ]
+ },
+ "mean_rank_stats": {
+  "samples_used": 5,
+  "mean": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()": 20.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)": 11.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)": 1.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)": 8.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)": 14.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)": 4.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 2.8,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)": 11.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)": 7.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()": 9.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)": 2.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()": 5.4,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)": 14.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()": 15.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)": 14.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)": 16.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()": 18.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)": 19.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)": 6.2,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)": 8.0
+  },
+  "std": {
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)": 1.6,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()": 0.7999999999999999,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)": 0.39999999999999997,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()": 1.0198039027185568,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)": 0.7483314773547882,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()": 1.4696938456699067,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)": 0.7483314773547882,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)": 0.4898979485566356,
+   "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)": 0.0,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)": 1.469693845669907,
+   "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)": 1.6733200530681511
+  },
+  "stability": {
+   "pairwise_kendall_tau_mean": 0.9011,
+   "top1_agreement": 1.0,
+   "top1_mode": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)"
+  }
+ },
+ "fused": {
+  "method": "weighted_rank",
+  "weights": [
+   "0.00",
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "mean": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ]
+  },
+  "single": {
+   "0.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)"
+   ],
+   "0.25": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "0.50": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "0.75": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)"
+   ],
+   "1.00": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ]
+  }
+ },
+ "samples": [
+  {
+   "sample_index": 0,
+   "seed": 8617469831968524587,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+     "label": "C04",
+     "reason": "L1134-L1138 use the rule's fixed 'zone' (default zone) instead of calendar.getTimeZone(), so the calendar's zone is ignored, printing PST instead of ICT.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1134,
+       1138
+      ],
+      "in_candidate": [
+       1134,
+       1138
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+     "label": "C03",
+     "reason": "L260/L262 bind TimeZoneNameRule to mTimeZone (the printer's default zone) rather than deferring to the calendar's zone.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       260,
+       262
+      ],
+      "in_candidate": [
+       260,
+       262
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+     "label": "C08",
+     "reason": "L1112 stores the constructor timeZone as the zone used for display, fixing output to the printer's zone.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1112
+      ],
+      "in_candidate": [
+       1112
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "00b9ac7c3a206d47874ece6d054040fff25722520cef08b8cd96f6b7d296e85b",
+     "cache_hit": false,
+     "cost_usd": 0.046036,
+     "paid_usd": 0.046036,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10139,
+      "output_tokens": 274,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.885,
+     "request_id": "req_011CgQHhazJndecFeLSuoUST",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C04\",\"C03\",\"C08\",\"C02\",\"C05\",\"C10\",\"C13\",\"C15\",\"C17\",\"C14\",\"C20\",\"C11\",\"C16\",\"C09\",\"C06\",\"C01\",\"C12\",\"C18\",\"C07\",\"C19\"],\"top3_reasons\":[{\"candidate\":\"C04\",\"reason\":\"L1134-L1138 use the rule's fixed 'zone' (default zone) instead of calendar.getTimeZone(), so the calendar's zone is ignored, printing PST instead of ICT.\"},{\"candidate\":\"C03\",\"reason\":\"L260/L262 bind TimeZoneNameRule to mTimeZone (the printer's default zone) rather than deferring to the calendar's zone.\"},{\"candidate\":\"C08\",\"reason\":\"L1112 stores the constructor timeZone as the zone used for display, fixing output to the printer's zone.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10139,
+    "output_tokens": 274
+   },
+   "cost_usd": 0.046036,
+   "paid_usd": 0.046036,
+   "latency_s": 3.885,
+   "prompt_text": "Bug: Lang-8 (2 failing tests)\n\n## Failing test 1: org.apache.commons.lang3.time.FastDateFormat_PrinterTest::testCalendarTimezoneRespected\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: expected:<6:36AM [IC]T> but was:<6:36AM [PS]T>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat org.apache.commons.lang3.time.FastDatePrinterTest.testCalendarTimezoneRespected(FastDatePrinterTest.java:286)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  265 | @Test\n  266 |     public void testCalendarTimezoneRespected() {\n  267 |         String[] availableZones = TimeZone.getAvailableIDs();\n  268 |         TimeZone currentZone = TimeZone.getDefault();\n  269 |         \n  270 |         TimeZone anotherZone = null;\n  271 |         for (String zone : availableZones) {\n  272 |             if (!zone.equals(currentZone.getID())) {\n  273 |                 anotherZone = TimeZone.getTimeZone(zone);\n  274 |             }\n  275 |         }\n  276 |         \n  277 |         assertNotNull(\"Cannot find another timezone\", anotherZone);\n  278 |         \n  279 |         final String pattern = \"h:mma z\";\n  280 |         final Calendar cal = Calendar.getInstance(anotherZone);\n  281 |         \n  282 |         SimpleDateFormat sdf = new SimpleDateFormat(pattern);\n  283 |         sdf.setTimeZone(anotherZone);\n  284 |         String expectedValue = sdf.format(cal.getTime());\n  285 |         String actualValue = FastDateFormat.getInstance(pattern).format(cal);\n>>286 |         assertEquals(expectedValue, actualValue);\n  287 |     }\n```\n\n## Failing test 2: org.apache.commons.lang3.time.FastDatePrinterTest::testCalendarTimezoneRespected\n### Error and stack trace (filtered)\n```\njunit.framework.AssertionFailedError: expected:<6:36AM [IC]T> but was:<6:36AM [PS]T>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat org.apache.commons.lang3.time.FastDatePrinterTest.testCalendarTimezoneRespected(FastDatePrinterTest.java:286)\n\t... 40 framework/runner frames omitted\n```\n### Test method source\n```java\n  265 | @Test\n  266 |     public void testCalendarTimezoneRespected() {\n  267 |         String[] availableZones = TimeZone.getAvailableIDs();\n  268 |         TimeZone currentZone = TimeZone.getDefault();\n  269 |         \n  270 |         TimeZone anotherZone = null;\n  271 |         for (String zone : availableZones) {\n  272 |             if (!zone.equals(currentZone.getID())) {\n  273 |                 anotherZone = TimeZone.getTimeZone(zone);\n  274 |             }\n  275 |         }\n  276 |         \n  277 |         assertNotNull(\"Cannot find another timezone\", anotherZone);\n  278 |         \n  279 |         final String pattern = \"h:mma z\";\n  280 |         final Calendar cal = Calendar.getInstance(anotherZone);\n  281 |         \n  282 |         SimpleDateFormat sdf = new SimpleDateFormat(pattern);\n  283 |         sdf.setTimeZone(anotherZone);\n  284 |         String expectedValue = sdf.format(cal.getTime());\n  285 |         String actualValue = FastDateFormat.getInstance(pattern).format(cal);\n>>286 |         assertEquals(expectedValue, actualValue);\n  287 |     }\n```\n\n## Helper methods called by the failing test(s)\n```java\n// helper getInstance from org.apache.commons.lang3.time.FastDateFormat_PrinterTest::testCalendarTimezoneRespected's test class (line 46)\n        DatePrinter getInstance(String format) {\n        return getInstance(format, TimeZone.getDefault(), Locale.getDefault());\n    }\n\n// helper getInstance from org.apache.commons.lang3.time.FastDatePrinterTest::testCalendarTimezoneRespected's test class (line 46)\n        DatePrinter getInstance(String format) {\n        return getInstance(format, TimeZone.getDefault(), Locale.getDefault());\n    }\n```\n\n# Candidate methods (20)\n\n## C01\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 707-709)\n```java\n  707 | UnpaddedNumberField(int field) {\n  708 |             mField = field;\n  709 |         }\n```\n\n## C02\nmethod: org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1078-1090)\n```java\n  1078 | static String getTimeZoneDisplay(TimeZone tz, boolean daylight, int style, Locale locale) {\n  1079 |         TimeZoneDisplayKey key = new TimeZoneDisplayKey(tz, daylight, style, locale);\n  1080 |         String value = cTimeZoneDisplayCache.get(key);\n  1081 |         if (value == null) {\n  1082 |             // This is a very slow call, so cache the results.\n  1083 |             value = tz.getDisplayName(daylight, style, locale);\n  1084 |             String prior = cTimeZoneDisplayCache.putIfAbsent(key, value);\n  1085 |             if (prior != null) {\n  1086 |                 value= prior;\n  1087 |             }\n  1088 |         }\n  1089 |         return value;\n  1090 |     }\n```\n\n## C03\nmethod: org.apache.commons.lang3.time.FastDatePrinter#parsePattern()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 167-288)\n```java\n  167 | protected List<Rule> parsePattern() {\n  168 |         DateFormatSymbols symbols = new DateFormatSymbols(mLocale);\n  169 |         List<Rule> rules = new ArrayList<Rule>();\n  170 | \n  171 |         String[] ERAs = symbols.getEras();\n  172 |         String[] months = symbols.getMonths();\n  173 |         String[] shortMonths = symbols.getShortMonths();\n  174 |         String[] weekdays = symbols.getWeekdays();\n  175 |         String[] shortWeekdays = symbols.getShortWeekdays();\n  176 |         String[] AmPmStrings = symbols.getAmPmStrings();\n  177 | \n  178 |         int length = mPattern.length();\n  179 |         int[] indexRef = new int[1];\n  180 | \n  181 |         for (int i = 0; i < length; i++) {\n  182 |             indexRef[0] = i;\n  183 |             String token = parseToken(mPattern, indexRef);\n  184 |             i = indexRef[0];\n  185 | \n  186 |             int tokenLen = token.length();\n  187 |             if (tokenLen == 0) {\n  188 |                 break;\n  189 |             }\n  190 | \n  191 |             Rule rule;\n  192 |             char c = token.charAt(0);\n  193 | \n  194 |             switch (c) {\n  195 |             case 'G': // era designator (text)\n  196 |                 rule = new TextField(Calendar.ERA, ERAs);\n  197 |                 break;\n  198 |             case 'y': // year (number)\n  199 |                 if (tokenLen == 2) {\n  200 |                     rule = TwoDigitYearField.INSTANCE;\n  201 |                 } else {\n  202 |                     rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);\n  203 |                 }\n  204 |                 break;\n  205 |             case 'M': // month in year (text and number)\n  206 |                 if (tokenLen >= 4) {\n  207 |                     rule = new TextField(Calendar.MONTH, months);\n  208 |                 } else if (tokenLen == 3) {\n  209 |                     rule = new TextField(Calendar.MONTH, shortMonths);\n  210 |                 } else if (tokenLen == 2) {\n  211 |                     rule = TwoDigitMonthField.INSTANCE;\n  212 |                 } else {\n  213 |                     rule = UnpaddedMonthField.INSTANCE;\n  214 |                 }\n  215 |                 break;\n  216 |             case 'd': // day in month (number)\n  217 |                 rule = selectNumberRule(Calendar.DAY_OF_MONTH, tokenLen);\n  218 |                 break;\n  219 |             case 'h': // hour in am/pm (number, 1..12)\n  220 |                 rule = new TwelveHourField(selectNumberRule(Calendar.HOUR, tokenLen));\n  221 |                 break;\n  222 |             case 'H': // hour in day (number, 0..23)\n  223 |                 rule = selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen);\n  224 |                 break;\n  225 |             case 'm': // minute in hour (number)\n  226 |                 rule = selectNumberRule(Calendar.MINUTE, tokenLen);\n  227 |                 break;\n  228 |             case 's': // second in minute (number)\n  229 |                 rule = selectNumberRule(Calendar.SECOND, tokenLen);\n  230 |                 break;\n  231 |             case 'S': // millisecond (number)\n  232 |                 rule = selectNumberRule(Calendar.MILLISECOND, tokenLen);\n  233 |                 break;\n  234 |             case 'E': // day in week (text)\n  235 |                 rule = new TextField(Calendar.DAY_OF_WEEK, tokenLen < 4 ? shortWeekdays : weekdays);\n  236 |                 break;\n  237 |             case 'D': // day in year (number)\n  238 |                 rule = selectNumberRule(Calendar.DAY_OF_YEAR, tokenLen);\n  239 |                 break;\n  240 |             case 'F': // day of week in month (number)\n  241 |                 rule = selectNumberRule(Calendar.DAY_OF_WEEK_IN_MONTH, tokenLen);\n  242 |                 break;\n  243 |             case 'w': // week in year (number)\n  244 |                 rule = selectNumberRule(Calendar.WEEK_OF_YEAR, tokenLen);\n  245 |                 break;\n  246 |             case 'W': // week in month (number)\n  247 |                 rule = selectNumberRule(Calendar.WEEK_OF_MONTH, tokenLen);\n  248 |                 break;\n  249 |             case 'a': // am/pm marker (text)\n  250 |                 rule = new TextField(Calendar.AM_PM, AmPmStrings);\n  251 |                 break;\n  252 |             case 'k': // hour in day (1..24)\n  253 |                 rule = new TwentyFourHourField(selectNumberRule(Calendar.HOUR_OF_DAY, tokenLen));\n  254 |                 break;\n  255 |             case 'K': // hour in am/pm (0..11)\n  256 |                 rule = selectNumberRule(Calendar.HOUR, tokenLen);\n  257 |                 break;\n  258 |             case 'z': // time zone (text)\n  259 |                 if (tokenLen >= 4) {\n  260 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.LONG);\n  261 |                 } else {\n  262 |                     rule = new TimeZoneNameRule(mTimeZone, mLocale, TimeZone.SHORT);\n  263 |                 }\n  264 |                 break;\n  265 |             case 'Z': // time zone (value)\n  266 |                 if (tokenLen == 1) {\n  267 |                     rule = TimeZoneNumberRule.INSTANCE_NO_COLON;\n  268 |                 } else {\n  269 |                     rule = TimeZoneNumberRule.INSTANCE_COLON;\n  270 |                 }\n  271 |                 break;\n  272 |             case '\\'': // literal text\n  273 |                 String sub = token.substring(1);\n  274 |                 if (sub.length() == 1) {\n  275 |                     rule = new CharacterLiteral(sub.charAt(0));\n  276 |                 } else {\n  277 |                     rule = new StringLiteral(sub);\n  278 |                 }\n  279 |                 break;\n  280 |             default:\n  281 |                 throw new IllegalArgumentException(\"Illegal pattern component: \" + token);\n  282 |             }\n  283 | \n  284 |             rules.add(rule);\n  285 |         }\n  286 | \n  287 |         return rules;\n  288 |     }\n```\n\n## C04\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1132-1140)\n```java\n  1132 | @Override\n  1133 |         public void appendTo(StringBuffer buffer, Calendar calendar) {\n  1134 |             if (zone.useDaylightTime()\n  1135 |                     && calendar.get(Calendar.DST_OFFSET) != 0) {\n  1136 |                 buffer.append(getTimeZoneDisplay(zone, true, mStyle, mLocale));\n  1137 |             } else {\n  1138 |                 buffer.append(getTimeZoneDisplay(zone, false, mStyle, mLocale));\n  1139 |             }\n  1140 |         }\n```\n\n## C05\nmethod: org.apache.commons.lang3.time.FastDateFormat#format(Calendar)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateFormat.java (lines 418-421)\n```java\n  418 | @Override\n  419 |     public String format(Calendar calendar) {\n  420 |         return printer.format(calendar);\n  421 |     }\n```\n\n## C06\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 730-740)\n```java\n  730 | @Override\n  731 |         public final void appendTo(StringBuffer buffer, int value) {\n  732 |             if (value < 10) {\n  733 |                 buffer.append((char)(value + '0'));\n  734 |             } else if (value < 100) {\n  735 |                 buffer.append((char)(value / 10 + '0'));\n  736 |                 buffer.append((char)(value % 10 + '0'));\n  737 |             } else {\n  738 |                 buffer.append(Integer.toString(value));\n  739 |             }\n  740 |         }\n```\n\n## C07\nmethod: org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 418-465)\n```java\n  418 | private Strategy getStrategy(String formatField, Calendar definingCalendar) {\n  419 |         switch(formatField.charAt(0)) {\n  420 |         case '\\'':\n  421 |             if(formatField.length()>2) {\n  422 |                 formatField= formatField.substring(1, formatField.length()-1);\n  423 |             }\n  424 |             //$FALL-THROUGH$\n  425 |         default:\n  426 |             return new CopyQuotedStrategy(formatField);\n  427 |         case 'D':\n  428 |             return DAY_OF_YEAR_STRATEGY;\n  429 |         case 'E':\n  430 |             return getLocaleSpecificStrategy(Calendar.DAY_OF_WEEK, definingCalendar);\n  431 |         case 'F':\n  432 |             return DAY_OF_WEEK_IN_MONTH_STRATEGY;\n  433 |         case 'G':\n  434 |             return getLocaleSpecificStrategy(Calendar.ERA, definingCalendar);\n  435 |         case 'H':\n  436 |             return MODULO_HOUR_OF_DAY_STRATEGY;\n  437 |         case 'K':\n  438 |             return HOUR_STRATEGY;\n  439 |         case 'M':\n  440 |             return formatField.length()>=3 ?getLocaleSpecificStrategy(Calendar.MONTH, definingCalendar) :NUMBER_MONTH_STRATEGY;\n  441 |         case 'S':\n  442 |             return MILLISECOND_STRATEGY;\n  443 |         case 'W':\n  444 |             return WEEK_OF_MONTH_STRATEGY;\n  445 |         case 'a':\n  446 |             return getLocaleSpecificStrategy(Calendar.AM_PM, definingCalendar);\n  447 |         case 'd':\n  448 |             return DAY_OF_MONTH_STRATEGY;\n  449 |         case 'h':\n  450 |             return MODULO_HOUR_STRATEGY;\n  451 |         case 'k':\n  452 |             return HOUR_OF_DAY_STRATEGY;\n  453 |         case 'm':\n  454 |             return MINUTE_STRATEGY;\n  455 |         case 's':\n  456 |             return SECOND_STRATEGY;\n  457 |         case 'w':\n  458 |             return WEEK_OF_YEAR_STRATEGY;\n  459 |         case 'y':\n  460 |             return formatField.length()>2 ?LITERAL_YEAR_STRATEGY :ABBREVIATED_YEAR_STRATEGY;\n  461 |         case 'Z':\n  462 |         case 'z':\n  463 |         \treturn getLocaleSpecificStrategy(Calendar.ZONE_OFFSET, definingCalendar);\n  464 |         }\n  465 |     }\n```\n\n## C08\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1109-1116)\n```java\n  1109 | TimeZoneNameRule(TimeZone timeZone, Locale locale, int style) {\n  1110 |             mLocale = locale;\n  1111 |             mStyle = style;\n  1112 |             zone = timeZone;\n  1113 |             \n  1114 |             mStandard = getTimeZoneDisplay(timeZone, false, style, locale);\n  1115 |             mDaylight = getTimeZoneDisplay(timeZone, true, style, locale);\n  1116 |         }\n```\n\n## C09\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 987-989)\n```java\n  987 | TwelveHourField(NumberRule rule) {\n  988 |             mRule = rule;\n  989 |         }\n```\n\n## C10\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1121-1127)\n```java\n  1121 | @Override\n  1122 |         public int estimateLength() {\n  1123 |             // We have no access to the Calendar object that will be passed to\n  1124 |             // appendTo so base estimate on the TimeZone passed to the\n  1125 |             // constructor\n  1126 |             return Math.max(mStandard.length(), mDaylight.length());\n  1127 |         }\n```\n\n## C11\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1002-1009)\n```java\n  1002 | @Override\n  1003 |         public void appendTo(StringBuffer buffer, Calendar calendar) {\n  1004 |             int value = calendar.get(Calendar.HOUR);\n  1005 |             if (value == 0) {\n  1006 |                 value = calendar.getLeastMaximum(Calendar.HOUR) + 1;\n  1007 |             }\n  1008 |             mRule.appendTo(buffer, value);\n  1009 |         }\n```\n\n## C12\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 994-997)\n```java\n  994 | @Override\n  995 |         public int estimateLength() {\n  996 |             return mRule.estimateLength();\n  997 |         }\n```\n\n## C13\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1215-1223)\n```java\n  1215 | TimeZoneDisplayKey(TimeZone timeZone,\n  1216 |                            boolean daylight, int style, Locale locale) {\n  1217 |             mTimeZone = timeZone;\n  1218 |             if (daylight) {\n  1219 |                 style |= 0x80000000;\n  1220 |             }\n  1221 |             mStyle = style;\n  1222 |             mLocale = locale;\n  1223 |         }\n```\n\n## C14\nmethod: org.apache.commons.lang3.time.FastDateFormat#getInstance(String)\nfile: src/main/java/org/apache/commons/lang3/time/FastDateFormat.java (lines 118-120)\n```java\n  118 | public static FastDateFormat getInstance(String pattern) {\n  119 |         return cache.getInstance(pattern, null, null);\n  120 |     }\n```\n\n## C15\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1236-1249)\n```java\n  1236 | @Override\n  1237 |         public boolean equals(Object obj) {\n  1238 |             if (this == obj) {\n  1239 |                 return true;\n  1240 |             }\n  1241 |             if (obj instanceof TimeZoneDisplayKey) {\n  1242 |                 TimeZoneDisplayKey other = (TimeZoneDisplayKey)obj;\n  1243 |                 return\n  1244 |                     mTimeZone.equals(other.mTimeZone) &&\n  1245 |                     mStyle == other.mStyle &&\n  1246 |                     mLocale.equals(other.mLocale);\n  1247 |             }\n  1248 |             return false;\n  1249 |         }\n```\n\n## C16\nmethod: org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 356-365)\n```java\n  356 | protected NumberRule selectNumberRule(int field, int padding) {\n  357 |         switch (padding) {\n  358 |         case 1:\n  359 |             return new UnpaddedNumberField(field);\n  360 |         case 2:\n  361 |             return new TwoDigitNumberField(field);\n  362 |         default:\n  363 |             return new PaddedNumberField(field, padding);\n  364 |         }\n  365 |     }\n```\n\n## C17\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 1228-1231)\n```java\n  1228 | @Override\n  1229 |         public int hashCode() {\n  1230 |             return (mStyle * 31 + mLocale.hashCode() ) * 31 + mTimeZone.hashCode();\n  1231 |         }\n```\n\n## C18\nmethod: org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 714-717)\n```java\n  714 | @Override\n  715 |         public int estimateLength() {\n  716 |             return 4;\n  717 |         }\n```\n\n## C19\nmethod: org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()\nfile: src/main/java/org/apache/commons/lang3/time/FastDateParser.java (lines 568-571)\n```java\n  568 | @Override\n  569 |         public boolean isNumber() {\n  570 |             return false;\n  571 |         }\n```\n\n## C20\nmethod: org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)\nfile: src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java (lines 690-693)\n```java\n  690 | @Override\n  691 |         public void appendTo(StringBuffer buffer, Calendar calendar) {\n  692 |             buffer.append(mValues[calendar.get(mField)]);\n  693 |         }\n```\n\nRank all 20 candidates (C01..C20) as JSON; cite candidate line numbers as L<number> in each reason."
+  },
+  {
+   "sample_index": 1,
+   "seed": 17993993942456992227,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+     "label": "C02",
+     "reason": "L1134-L1138 use the printer's construction-time `zone` field instead of calendar.getTimeZone(), so the calendar's own timezone (ICT) is ignored and the default (PST) is printed.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1134,
+       1138
+      ],
+      "in_candidate": [
+       1134,
+       1138
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+     "label": "C12",
+     "reason": "L1112 stores the fixed printer timezone as `zone`, which appendTo later uses instead of the calendar's zone.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1112
+      ],
+      "in_candidate": [
+       1112
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+     "label": "C15",
+     "reason": "L260/L262 construct TimeZoneNameRule bound to mTimeZone (the default zone) rather than deferring to the calendar's timezone at format time.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       260,
+       262
+      ],
+      "in_candidate": [
+       260,
+       262
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "ca703d87e2c3d63da43a1639f0f584b77a49a6f73b2d6478ee4c8e520684a5ce",
+     "cache_hit": false,
+     "cost_usd": 0.046256,
+     "paid_usd": 0.046256,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10139,
+      "output_tokens": 285,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.194,
+     "request_id": "req_011CgQHhsgAW6WrMBSonHyH1",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C02\",\"C12\",\"C15\",\"C19\",\"C14\",\"C01\",\"C05\",\"C11\",\"C09\",\"C08\",\"C20\",\"C03\",\"C13\",\"C16\",\"C10\",\"C04\",\"C17\",\"C18\",\"C07\",\"C06\"],\"top3_reasons\":[{\"candidate\":\"C02\",\"reason\":\"L1134-L1138 use the printer's construction-time `zone` field instead of calendar.getTimeZone(), so the calendar's own timezone (ICT) is ignored and the default (PST) is printed.\"},{\"candidate\":\"C12\",\"reason\":\"L1112 stores the fixed printer timezone as `zone`, which appendTo later uses instead of the calendar's zone.\"},{\"candidate\":\"C15\",\"reason\":\"L260/L262 construct TimeZoneNameRule bound to mTimeZone (the default zone) rather than deferring to the calendar's timezone at format time.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10139,
+    "output_tokens": 285
+   },
+   "cost_usd": 0.046256,
+   "paid_usd": 0.046256,
+   "latency_s": 4.194
+  },
+  {
+   "sample_index": 2,
+   "seed": 4105959810847200679,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+     "label": "C17",
+     "reason": "L1134-L1138 use the printer's stored zone instead of calendar.getTimeZone(), so the calendar's zone (ICT) is ignored and PST is printed.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1134,
+       1138
+      ],
+      "in_candidate": [
+       1134,
+       1138
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+     "label": "C12",
+     "reason": "L1112 stores the printer's default timezone as the zone used for display, which is the source of the wrong zone name.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1112
+      ],
+      "in_candidate": [
+       1112
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+     "label": "C07",
+     "reason": "L260-L262 construct TimeZoneNameRule with mTimeZone (default zone) rather than deferring to the calendar's zone.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       260,
+       262
+      ],
+      "in_candidate": [
+       260,
+       262
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "925d80d2d34c7011c76c0e081f09b659855494a44f924115dcae298263e064c1",
+     "cache_hit": false,
+     "cost_usd": 0.045796,
+     "paid_usd": 0.045796,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10139,
+      "output_tokens": 262,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 3.477,
+     "request_id": "req_011CgQHiBaRtRfopu62D3YLT",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C17\",\"C12\",\"C07\",\"C04\",\"C02\",\"C20\",\"C14\",\"C09\",\"C18\",\"C15\",\"C16\",\"C10\",\"C08\",\"C19\",\"C11\",\"C03\",\"C01\",\"C06\",\"C05\",\"C13\"],\"top3_reasons\":[{\"candidate\":\"C17\",\"reason\":\"L1134-L1138 use the printer's stored zone instead of calendar.getTimeZone(), so the calendar's zone (ICT) is ignored and PST is printed.\"},{\"candidate\":\"C12\",\"reason\":\"L1112 stores the printer's default timezone as the zone used for display, which is the source of the wrong zone name.\"},{\"candidate\":\"C07\",\"reason\":\"L260-L262 construct TimeZoneNameRule with mTimeZone (default zone) rather than deferring to the calendar's zone.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10139,
+    "output_tokens": 262
+   },
+   "cost_usd": 0.045796,
+   "paid_usd": 0.045796,
+   "latency_s": 3.477
+  },
+  {
+   "sample_index": 3,
+   "seed": 3519258990219894175,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+     "label": "C01",
+     "reason": "L1134-L1138 use the printer's fixed `zone` field instead of calendar.getTimeZone(), so the calendar's own timezone (ICT) is ignored and PST is printed.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1134,
+       1138
+      ],
+      "in_candidate": [
+       1134,
+       1138
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+     "label": "C17",
+     "reason": "L1112 binds the rule to the formatter's default timezone and L1114-L1115 precompute names for it, which the appendTo path relies on instead of the calendar zone.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1112,
+       1114,
+       1115
+      ],
+      "in_candidate": [
+       1112,
+       1114,
+       1115
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+     "label": "C07",
+     "reason": "L260-L262 construct TimeZoneNameRule with mTimeZone (the default zone), feeding the wrong zone into the rule.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       260,
+       262
+      ],
+      "in_candidate": [
+       260,
+       262
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "fe2ef18c81785cc09f77ee033c44e12acee1b4e6aed58ea7ef3e8205eaaaaccb",
+     "cache_hit": false,
+     "cost_usd": 0.046316,
+     "paid_usd": 0.046316,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10139,
+      "output_tokens": 288,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 6.042,
+     "request_id": "req_011CgQHiSTPSq2LGzd7Qr1uf",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C01\",\"C17\",\"C07\",\"C15\",\"C12\",\"C20\",\"C09\",\"C02\",\"C03\",\"C16\",\"C08\",\"C06\",\"C14\",\"C18\",\"C13\",\"C05\",\"C10\",\"C19\",\"C04\",\"C11\"],\"top3_reasons\":[{\"candidate\":\"C01\",\"reason\":\"L1134-L1138 use the printer's fixed `zone` field instead of calendar.getTimeZone(), so the calendar's own timezone (ICT) is ignored and PST is printed.\"},{\"candidate\":\"C17\",\"reason\":\"L1112 binds the rule to the formatter's default timezone and L1114-L1115 precompute names for it, which the appendTo path relies on instead of the calendar zone.\"},{\"candidate\":\"C07\",\"reason\":\"L260-L262 construct TimeZoneNameRule with mTimeZone (the default zone), feeding the wrong zone into the rule.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10139,
+    "output_tokens": 288
+   },
+   "cost_usd": 0.046316,
+   "paid_usd": 0.046316,
+   "latency_s": 6.042
+  },
+  {
+   "sample_index": 4,
+   "seed": 6807362753793614451,
+   "order_mode": "shuffle",
+   "display_order": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   ],
+   "labels": {
+    "C01": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "C02": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "C03": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "C04": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "C05": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "C06": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "C07": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "C08": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "C09": "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()",
+    "C10": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "C11": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "C12": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "C13": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "C14": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "C15": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "C16": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "C17": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "C18": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "C19": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "C20": "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)"
+   },
+   "status": "ok",
+   "issues": [],
+   "llm_ranking_shown": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "filled_from_sbfl": [],
+   "ranking": [
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#getTimeZoneDisplay(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#format(Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateFormat.java::org.apache.commons.lang3.time.FastDateFormat#getInstance(String)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#<init>(TimeZone,boolean,int,Locale)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#equals(Object)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneDisplayKey#hashCode()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TextField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#appendTo(StringBuffer,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#<init>(NumberRule)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#selectNumberRule(int,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#<init>(int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#appendTo(StringBuffer,int)",
+    "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$UnpaddedNumberField#estimateLength()",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#getStrategy(String,Calendar)",
+    "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser$TextStrategy#isNumber()"
+   ],
+   "top3_reasons": [
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)",
+     "label": "C07",
+     "reason": "L1134-L1138 use the printer's stored zone instead of calendar.getTimeZone(), so the calendar's zone (ICT) is ignored and PST is printed.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1134,
+       1138
+      ],
+      "in_candidate": [
+       1134,
+       1138
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+     "label": "C03",
+     "reason": "L1112 binds the rule to the printer's default TimeZone at construction, fixing the zone regardless of the calendar passed later.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       1112
+      ],
+      "in_candidate": [
+       1112
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    },
+    {
+     "method_id": "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter#parsePattern()",
+     "label": "C11",
+     "reason": "L260/L262 construct TimeZoneNameRule with mTimeZone (default zone), feeding the wrong zone into the rule.",
+     "evidence": {
+      "status": "grounded",
+      "cited_lines": [
+       260,
+       262
+      ],
+      "in_candidate": [
+       260,
+       262
+      ],
+      "outside_candidate": [],
+      "sibling_candidate": [],
+      "unverified": [],
+      "stack_marked": []
+     }
+    }
+   ],
+   "attempts": [
+    {
+     "attempt": 0,
+     "cache_key": "1eea96880900852828e2e24cd156c3965ba4b6ddb0a0f2b1e0767be263743135",
+     "cache_hit": false,
+     "cost_usd": 0.045916,
+     "paid_usd": 0.045916,
+     "status": "ok",
+     "issues": [],
+     "stop_reason": "end_turn",
+     "stop_details": null,
+     "usage": {
+      "input_tokens": 10139,
+      "output_tokens": 268,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+     },
+     "latency_s": 4.306,
+     "request_id": "req_011CgQHitKsrCPVxcijSTUrB",
+     "response_model": "claude-opus-5-5",
+     "raw_response": "{\"ranking\":[\"C07\",\"C03\",\"C11\",\"C01\",\"C20\",\"C06\",\"C13\",\"C18\",\"C14\",\"C17\",\"C16\",\"C19\",\"C12\",\"C04\",\"C02\",\"C08\",\"C10\",\"C15\",\"C05\",\"C09\"],\"top3_reasons\":[{\"candidate\":\"C07\",\"reason\":\"L1134-L1138 use the printer's stored zone instead of calendar.getTimeZone(), so the calendar's zone (ICT) is ignored and PST is printed.\"},{\"candidate\":\"C03\",\"reason\":\"L1112 binds the rule to the printer's default TimeZone at construction, fixing the zone regardless of the calendar passed later.\"},{\"candidate\":\"C11\",\"reason\":\"L260/L262 construct TimeZoneNameRule with mTimeZone (default zone), feeding the wrong zone into the rule.\"}]}"
+    }
+   ],
+   "usage": {
+    "input_tokens": 10139,
+    "output_tokens": 268
+   },
+   "cost_usd": 0.045916,
+   "paid_usd": 0.045916,
+   "latency_s": 4.306
+  }
+ ],
+ "degradations": [],
+ "evidence_summary": {
+  "reasons": 15,
+  "grounded": 15,
+  "partial": 0,
+  "test_only": 0,
+  "ungrounded": 0,
+  "no_citation": 0,
+  "cites_stack_line": 0,
+  "grounded_rate": 1.0,
+  "citation_rate": 1.0
+ },
+ "cost": {
+  "calls": 5,
+  "cache_hits": 0,
+  "input_tokens": 50695,
+  "output_tokens": 1377,
+  "cost_usd": 0.23032,
+  "paid_usd_this_run": 0.23032,
+  "latency_s": 21.904,
+  "estimated_cost_usd": 0.0
+ },
+ "errors": []
+}
