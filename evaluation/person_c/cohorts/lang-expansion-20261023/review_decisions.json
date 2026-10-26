@@ -1,0 +1,180 @@
+{
+  "review_type": "Patch/source validation completed; Person C review confirmed on 2026-10-26",
+  "records": [
+    {
+      "bug_id": "Lang-5",
+      "patch_sha256": "4742c0b5972295de0c0eb45d5c0f405c3606c9e35e633b445ffa068859670f17",
+      "buggy_sha256": "07105235863b4aa396faafee0468e728f6d5f0984d4f40821b1f6415ddb30847",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/LocaleUtils.java::org.apache.commons.lang3.LocaleUtils#toLocale(String)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Deleted locale-prefix handling is inside existing toLocale(String).",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-6",
+      "patch_sha256": "3af46d22f5c1d17a7d57f26ff4bc80257cd9f19cf0cbc858b5868421b7c229ed",
+      "buggy_sha256": "e10c49074084efdce9867cce111f1331091db7a36f1537823a6880d537eb8cd3",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java::org.apache.commons.lang3.text.translate.CharSequenceTranslator#translate(CharSequence,Writer)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Changed codepoint offset is inside existing translate(CharSequence,Writer).",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-7",
+      "patch_sha256": "00c7b1a1ac155973dcb00bd05a3e9ccf00249f331aa60f0ae0867962c7ca68a9",
+      "buggy_sha256": "7369b687257a512f8619d2a2ce93577eba08663bbbef916a1b7698381df19161",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createBigDecimal(String)",
+        "src/main/java/org/apache/commons/lang3/math/NumberUtils.java::org.apache.commons.lang3.math.NumberUtils#createNumber(String)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Patch touches both createNumber and createBigDecimal; preserve both rather than selecting the best-ranked label.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-8",
+      "patch_sha256": "7b9d925eb73a36a371295403aeadba218b6fae4462ae7abca94ab1ec15d76b43",
+      "buggy_sha256": "90b39367f5d2ca91d6e966cb0a139c59ae27f394e4caefc29af4b147997bd5c7",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#<init>(TimeZone,Locale,int)",
+        "src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java::org.apache.commons.lang3.time.FastDatePrinter$TimeZoneNameRule#appendTo(StringBuffer,Calendar)"
+      ],
+      "outside_method_changes": [
+        {
+          "buggy_line": 1098,
+          "insertion_gap": null
+        }
+      ],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Retain explicit nested TimeZoneNameRule constructor and appendTo; the zone field at buggy line 1098 is recorded separately.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation",
+      "outside_method_policy": "Include mixed field/method changes under patch-touched-existing-method labels; retain outside changes explicitly and do not claim complete causal-root coverage."
+    },
+    {
+      "bug_id": "Lang-9",
+      "patch_sha256": "c6550c3bad7e4b55452da688531821a45f2f838148fc1d5d9a1200b27ef60b51",
+      "buggy_sha256": "91a3f58b660f50cd2660db2b3e9854cd8c25e3a192976763aff5f861ab323e87",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#init()"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Removed trailing-pattern guard lies inside init(); insertion gap is strictly inside that method.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-10",
+      "patch_sha256": "42968c8753e84024667d77992e6d098bf7d231abc10e37831bafff7c53ee151a",
+      "buggy_sha256": "11159a0e7ebeeabb399b3602d55b121dc6f083be7b518e9f0d34050a8267aa4d",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/time/FastDateParser.java::org.apache.commons.lang3.time.FastDateParser#escapeRegex(StringBuilder,String,boolean)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Whitespace tracking changes are entirely inside escapeRegex.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-11",
+      "patch_sha256": "9ab79c99f7c87820773904a533499370c06a4f70742193bcc38f8388622ff90c",
+      "buggy_sha256": "50033a86f5eef61c7b6e1c71a2d2073bf9e248f370fb73c77912a589949644a1",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Removed argument-range check lies inside the existing random overload.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-12",
+      "patch_sha256": "7197b4b2ffd7ea84d7231eb394a98700dd81a0163c66f2312d524c69584ccadd",
+      "buggy_sha256": "29dd42d102e478a5979cc84df50fb9b93db5d69e0346c55f29f77563f8eca00d",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/RandomStringUtils.java::org.apache.commons.lang3.RandomStringUtils#random(int,int,int,boolean,boolean,char[],Random)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Removed empty-array guard and char-range handling map to the same existing random overload.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    },
+    {
+      "bug_id": "Lang-13",
+      "patch_sha256": "9b6897eb664e73e64fde187f723ba21861dbf84816dbd2e799f15f68d2b19423",
+      "buggy_sha256": "69e028be43541214ff2e987429d59a41f9fbf37238fe1d171badfe4ee6990cd8",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#<init>(InputStream,ClassLoader)",
+        "src/main/java/org/apache/commons/lang3/SerializationUtils.java::org.apache.commons.lang3.SerializationUtils$ClassLoaderAwareObjectInputStream#resolveClass(ObjectStreamClass)"
+      ],
+      "outside_method_changes": [
+        {
+          "buggy_line": null,
+          "insertion_gap": 238
+        }
+      ],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Retain ClassLoaderAwareObjectInputStream constructor and resolveClass; primitiveTypes field insertion gap 238 remains outside methods.",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation",
+      "outside_method_policy": "Include mixed field/method changes under patch-touched-existing-method labels; retain outside changes explicitly and do not claim complete causal-root coverage."
+    },
+    {
+      "bug_id": "Lang-14",
+      "patch_sha256": "8ee8530e2155b88445140aa62b3d5f59362fca9fc2321ee82b9e5a15023117c8",
+      "buggy_sha256": "97bd599c2cde34e0ebad11a5a91c7a43bfa4524cdb1c05566e88c5840683e3d9",
+      "mapped_method_ids": [
+        "src/main/java/org/apache/commons/lang3/StringUtils.java::org.apache.commons.lang3.StringUtils#equals(CharSequence,CharSequence)"
+      ],
+      "outside_method_changes": [],
+      "included": true,
+      "validation_method": "Official fixed-to-buggy patch, both blob IDs, exact buggy source and shared-parser method boundaries verified",
+      "rationale": "Removed CharSequence-specific branch lies inside equals(CharSequence,CharSequence).",
+      "human_review_status": "completed",
+      "human_reviewer": "Alina Wu (Person C)",
+      "human_review_date": "2026-10-26",
+      "human_review_basis": "reviewer_confirmation"
+    }
+  ]
+}

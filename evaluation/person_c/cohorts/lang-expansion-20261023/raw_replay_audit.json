@@ -1,0 +1,163 @@
+{
+  "cohort_id": "lang-expansion-20261023",
+  "profile_validation": {
+    "profile": "C",
+    "status": "passed",
+    "bugs": [
+      {
+        "bug_id": "Lang-5",
+        "passing_tests": 2270,
+        "failing_tests": 1,
+        "ranked_methods": 2382,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-6",
+        "passing_tests": 2262,
+        "failing_tests": 1,
+        "ranked_methods": 2371,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-7",
+        "passing_tests": 2260,
+        "failing_tests": 1,
+        "ranked_methods": 2370,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-8",
+        "passing_tests": 2203,
+        "failing_tests": 2,
+        "ranked_methods": 2309,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-9",
+        "passing_tests": 2198,
+        "failing_tests": 2,
+        "ranked_methods": 2313,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-10",
+        "passing_tests": 2196,
+        "failing_tests": 2,
+        "ranked_methods": 2313,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-11",
+        "passing_tests": 2137,
+        "failing_tests": 1,
+        "ranked_methods": 2292,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-12",
+        "passing_tests": 2135,
+        "failing_tests": 2,
+        "ranked_methods": 2292,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-13",
+        "passing_tests": 2134,
+        "failing_tests": 1,
+        "ranked_methods": 2294,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      },
+      {
+        "bug_id": "Lang-14",
+        "passing_tests": 2072,
+        "failing_tests": 1,
+        "ranked_methods": 2230,
+        "candidate_count": 20,
+        "source_reparse": "matched"
+      }
+    ]
+  },
+  "bugs": [
+    {
+      "bug_id": "Lang-5",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2382
+    },
+    {
+      "bug_id": "Lang-6",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2371
+    },
+    {
+      "bug_id": "Lang-7",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2370
+    },
+    {
+      "bug_id": "Lang-8",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2309
+    },
+    {
+      "bug_id": "Lang-9",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2313
+    },
+    {
+      "bug_id": "Lang-10",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2313
+    },
+    {
+      "bug_id": "Lang-11",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2292
+    },
+    {
+      "bug_id": "Lang-12",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2292
+    },
+    {
+      "bug_id": "Lang-13",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2294
+    },
+    {
+      "bug_id": "Lang-14",
+      "raw_replay": "matched",
+      "rank_recomputation": "matched",
+      "b_c_inputs": "byte_identical",
+      "methods": 2230
+    }
+  ],
+  "java_tests_rerun": false,
+  "coverage_recollected": false
+}

@@ -19,6 +19,7 @@ python3 evaluate.py --manifest real/data/manifest.json --labels real/data/labels
 
 ## 材料
 
+- [Lang-5 至 Lang-14：新评估集、标签与 baseline](cohorts/lang-expansion-20261023/README.md)
 - [真实结果、标签定义和复现细节](real/README.md)
 - [标签及排除审核记录](real/review_decisions.json)
 - [逐块补丁映射证据](real/data/mapping.json)

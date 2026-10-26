@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project": "Lang",
+  "bug_ids": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "baseline_summary": "results/lang_expansion_20261023/reproduction/summary.json",
+  "results_root": "results/lang_expansion_20261023/coverage",
+  "coverage_root": "data/coverage/lang-expansion-20261023",
+  "ranking_root": "data/sbfl/lang-expansion-20261023",
+  "coverage_timeout_seconds": 900,
+  "top_k": 20,
+  "dstar_exponent": 2
+}

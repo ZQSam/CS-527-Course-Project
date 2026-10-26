@@ -16,3 +16,4 @@ evaluation/person_c/real/results/person_b/summary.json linguist-generated=true
 # Preserve upstream evidence bytes, including original whitespace.
 evaluation/person_c/real/data/buggy_sources/** -text -whitespace
 evaluation/person_c/real/evidence/patches/*.patch -text -whitespace
+evaluation/person_c/cohorts/*/evidence/patches/*.patch -text -whitespace

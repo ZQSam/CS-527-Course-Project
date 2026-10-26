@@ -1,5 +1,7 @@
 # Person C 交接：标签与评估
 
+**最新十例的完整交付请阅读 [Person C 中期评估材料](person_c_midterm_evaluation.md)。** 下文保留初始 Lang-1/3/4 的 dev 联调记录，任务状态与旧测试数量不代表扩充批次的当前状态。
+
 已完成 Lang-1/3/4 的补丁映射验证、方法级标签、A 数据转换与 baseline 评分，代码和证据在 [evaluation/person_c](../evaluation/person_c/README.md)。
 
 - Ochiai、DStar：Top-1/3/5 均为 3/3，MRR@20 与完整 MRR 均为 1.0。

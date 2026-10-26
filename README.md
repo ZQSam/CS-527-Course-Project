@@ -13,6 +13,17 @@ cd cs527-llm-fl
 
 已有仓库的队友请先保存自己的改动，再正常 `git pull`。
 
+## 新增 Lang 批次（先登记、再采集）
+
+Person A 的下一批固定为 **Lang-5 至 Lang-14**，按 active 编号选择，保留所有成功与失败，
+不会因为 baseline 已排第一而删除案例。见[批次交接说明](docs/person_a_lang_expansion.md)和
+[完整状态报告](results/lang_expansion_20261023/report.md)。十例均已完成复现、覆盖率和 B/C 数据交接。
+该批次独立放在 `data/batches/`，不替换原三例 dev 数据。
+
+## Person C 中期评估材料
+
+数据核验、人工确认、评分口径、结果对比、逐例分析、局限和附件统一见 [Person C 中期评估材料](docs/person_c_midterm_evaluation.md)。新增十例的主要 Top-1 结果：SBFL 5/10、Opus 重排 9/10、固定 0.50 融合 7/10。
+
 ## 我应该从哪里开始？
 
 | 角色 | 立即使用的材料 | 开始阅读 |
@@ -74,7 +85,7 @@ PYTHONPATH="$PWD/.deps" python3 scripts/prepare_sample.py --profile C --check-so
 只在首次安装解析依赖时需要网络。验证样本不需要 Docker、模型 API 或原机器的 checkout。
 快照用于检查与补丁映射；创建可编译的完整 checkout 请使用[复现步骤](docs/reproducing_person_a.md)。
 
-## 本次已验证的样本
+## 原始三例 dev 样本
 
 以下数字来自 [`results/shared_sample/summary.json`](results/shared_sample/summary.json)。
 

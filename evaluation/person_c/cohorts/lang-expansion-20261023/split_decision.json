@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "cohort_id": "lang-expansion-20261023",
+  "split_frozen_date": "2026-10-25",
+  "a_commit": "fc9946d",
+  "policy": "All ten preregistered new bugs are eval; existing Lang-1/3/4 remain dev. Split recorded before inspecting new patch labels or baseline hit ranks. Model/prompt/weights are frozen in B f97c09a. No performance-based removal or replacement.",
+  "method_eligibility": "Existing production methods or explicit constructors touched by verified fixed-to-buggy patches. Pure field/class changes or unrepresentable added/deleted methods require an explicit structural exclusion; mixed changes retain mapped methods and disclose unmapped changes. Ambiguity stays pending until resolved.",
+  "human_review": "New labels do not inherit the old pilot human-review confirmation.",
+  "bugs": [
+    {
+      "bug_id": "Lang-5",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-6",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-7",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-8",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-9",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-10",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-11",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-12",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-13",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    },
+    {
+      "bug_id": "Lang-14",
+      "split": "eval",
+      "included": true,
+      "exclusion_reason": null
+    }
+  ]
+}

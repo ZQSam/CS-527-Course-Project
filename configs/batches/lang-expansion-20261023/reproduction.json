@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "project": "Lang",
+  "bug_ids": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "work_root": ".work/defects4j/lang-expansion-20261023",
+  "results_root": "results/lang_expansion_20261023/reproduction",
+  "timeouts_seconds": {
+    "checkout": 900,
+    "compile": 600,
+    "test": 600,
+    "export": 120
+  }
+}
