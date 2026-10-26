@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": {
+    "image_id": "sha256:f521454ed5a8354e230e941f7c25857ef071b2dada226a2f8db7924d779cbb60",
+    "active_catalog": "matched",
+    "artifact_sha256": true,
+    "java": true,
+    "javac": true,
+    "defects4j_commit": true,
+    "gzoltar_version": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "cohort_id": "lang-expansion-20261023",
+  "base_revision": "f17acd13825149134a92139d0031279f402f7cbb",
+  "environment": {
+    "recorded_at_utc": "2026-10-23T23:35:00.406345+00:00",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "timezone": "America/Los_Angeles",
+    "defects4j_release": "v2.0.0",
+    "gzoltar_release": "1.7.3",
+    "commands": {
+      "java": {
+        "command": [
+          "java",
+          "-version"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "openjdk version \"1.8.0_504\"\nOpenJDK Runtime Environment (Temurin)(build 1.8.0_504-b01)\nOpenJDK 64-Bit Server VM (Temurin)(build 25.504-b01, mixed mode)\n"
+      },
+      "javac": {
+        "command": [
+          "javac",
+          "-version"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "javac 1.8.0_504\n"
+      },
+      "python": {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "Python 3.10.12\n",
+        "stderr": ""
+      },
+      "git": {
+        "command": [
+          "git",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "git version 2.34.1\n",
+        "stderr": ""
+      },
+      "perl": {
+        "command": [
+          "perl",
+          "-e",
+          "print $^V"
+        ],
+        "returncode": 0,
+        "stdout": "v5.34.0",
+        "stderr": ""
+      },
+      "defects4j_commit": {
+        "command": [
+          "git",
+          "-C",
+          "/opt/defects4j",
+          "rev-parse",
+          "HEAD"
+        ],
+        "returncode": 0,
+        "stdout": "01f13c69425fb8a0db290d12b1d48da1641bf6a9\n",
+        "stderr": ""
+      },
+      "gzoltar_help": {
+        "command": [
+          "java",
+          "-jar",
+          "/opt/gzoltar/com.gzoltar.cli-1.7.3-jar-with-dependencies.jar",
+          "--help"
+        ],
+        "returncode": 0,
+        "stdout": "Command line interface for GZoltar.\n\nUsage: java -jar gzoltarcli.jar --help | <command>\n <command> : version|listTestMethods|instrument|runTestMethods|faultLocalization\n             Report\n --help    : show help (default: true)\n --quiet   : suppress all output on stdout (default: false)\n",
+        "stderr": ""
+      },
+      "gzoltar_version": {
+        "command": [
+          "java",
+          "-jar",
+          "/opt/gzoltar/com.gzoltar.cli-1.7.3-jar-with-dependencies.jar",
+          "version"
+        ],
+        "returncode": 0,
+        "stdout": "   ____ _____     _ _               \n  / ___|__  /___ | | |_ __ _ _ __   \n | |  _  / // _ \\| | __/ _` | '__| \n | |_| |/ /| (_) | | || (_| | |     \n  \\____/____\\___/|_|\\__\\__,_|_| \n\nv1.7.3.202203230322\n",
+        "stderr": ""
+      },
+      "java_user_properties": {
+        "command": [
+          "java",
+          "-XshowSettings:properties",
+          "-version"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Property settings:\n    awt.toolkit = sun.awt.X11.XToolkit\n    file.encoding = UTF-8\n    file.encoding.pkg = sun.io\n    file.separator = /\n    java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment\n    java.awt.printerjob = sun.print.PSPrinterJob\n    java.class.path = .\n    java.class.version = 52.0\n    java.endorsed.dirs = /opt/java/openjdk/jre/lib/endorsed\n    java.ext.dirs = /opt/java/openjdk/jre/lib/ext\n        /usr/java/packages/lib/ext\n    java.home = /opt/java/openjdk/jre\n    java.io.tmpdir = /tmp\n    java.library.path = /usr/java/packages/lib/amd64\n        /usr/lib64\n        /lib64\n        /lib\n        /usr/lib\n    java.runtime.name = OpenJDK Runtime Environment\n    java.runtime.version = 1.8.0_504-b01\n    java.specification.maintenance.version = 6\n    java.specification.name = Java Platform API Specification\n    java.specification.vendor = Oracle Corporation\n    java.specification.version = 1.8\n    java.vendor = Temurin\n    java.vendor.url = https://adoptium.net/\n    java.vendor.url.bug = https://github.com/adoptium/adoptium-support/issues\n    java.version = 1.8.0_504\n    java.vm.info = mixed mode\n    java.vm.name = OpenJDK 64-Bit Server VM\n    java.vm.specification.name = Java Virtual Machine Specification\n    java.vm.specification.vendor = Oracle Corporation\n    java.vm.specification.version = 1.8\n    java.vm.vendor = Temurin\n    java.vm.version = 25.504-b01\n    line.separator = \\n \n    os.arch = amd64\n    os.name = Linux\n    os.version = 6.6.87.2-microsoft-standard-WSL2\n    path.separator = :\n    sun.arch.data.model = 64\n    sun.boot.class.path = /opt/java/openjdk/jre/lib/resources.jar\n        /opt/java/openjdk/jre/lib/rt.jar\n        /opt/java/openjdk/jre/lib/sunrsasign.jar\n        /opt/java/openjdk/jre/lib/jsse.jar\n        /opt/java/openjdk/jre/lib/jce.jar\n        /opt/java/openjdk/jre/lib/charsets.jar\n        /opt/java/openjdk/jre/lib/jfr.jar\n        /opt/java/openjdk/jre/classes\n    sun.boot.library.path = /opt/java/openjdk/jre/lib/amd64\n    sun.cpu.endian = little\n    sun.cpu.isalist = \n    sun.io.unicode.encoding = UnicodeLittle\n    sun.java.launcher = SUN_STANDARD\n    sun.jnu.encoding = UTF-8\n    sun.management.compiler = HotSpot 64-Bit Tiered Compilers\n    sun.os.patch.level = unknown\n    user.country = US\n    user.dir = /workspace\n    user.home = /home/researcher\n    user.language = en\n    user.name = researcher\n    user.timezone = \n\nopenjdk version \"1.8.0_504\"\nOpenJDK Runtime Environment (Temurin)(build 1.8.0_504-b01)\nOpenJDK 64-Bit Server VM (Temurin)(build 25.504-b01, mixed mode)\n"
+      }
+    },
+    "artifact_sha256": {
+      "com.gzoltar.cli-1.7.3-jar-with-dependencies.jar": "c82e1e894a08988091b76609c1acf3e804094cd88b350e6c106eb5ffa6b5b7b3",
+      "com.gzoltar.agent.rt-1.7.3-all.jar": "6e4878641568dbc93e20edd7027c3f5895872a4833ff0a1a6bfcc7c81e11e971"
+    }
+  },
+  "environment_check": {
+    "status": "passed",
+    "checks": {
+      "image_id": "sha256:f521454ed5a8354e230e941f7c25857ef071b2dada226a2f8db7924d779cbb60",
+      "active_catalog": "matched",
+      "artifact_sha256": true,
+      "java": true,
+      "javac": true,
+      "defects4j_commit": true,
+      "gzoltar_version": true
+    }
+  },
+  "image_id": "sha256:f521454ed5a8354e230e941f7c25857ef071b2dada226a2f8db7924d779cbb60",
+  "collector_sha256": {
+    "fl/__init__.py": "48d9bef860bdf33070f227fe18a26be84c2cab9bab7832fab738b2aa5448e95a",
+    "fl/batch.py": "d128cd125fb8fc9649655fb2c3161ead66b8ea394144ff60bba3c0bf7c74883c",
+    "fl/coverage.py": "962603f07ab65b4ad4546d5c5270fb24121de27ab7fb6c33d6265d045200a13b",
+    "fl/d4j.py": "5d3e8f3c5a37e2b3a46c5837cd0e523c33bc591d6ff8d727be87b2f6743017a6",
+    "fl/handoff.py": "7a715fd93133d1c22afeb32f4d664d512bec305b16ed85f9979efd73fc166c33",
+    "fl/java.py": "cdb49410edfa318917b7e143efa0634482bc7bb76f5e5b413099c4cc4a237722",
+    "fl/sbfl.py": "d51ae8b07fe1fe0218412c1c9154cafa70f82a03014ca769e18dae80f8c3bb6f"
+  },
+  "scope": "No labels, evaluation metrics, model calls, or performance-based selection"
+}

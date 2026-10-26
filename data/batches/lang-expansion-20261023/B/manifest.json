@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "profile": "B",
+  "run_id": "20261023T234552849322Z",
+  "bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "files": [
+    {
+      "path": "Lang-10.json",
+      "sha256": "1e9762b0aef458beb4525269621dea372bcaad0277699f566b89be2a00d3998b",
+      "size_bytes": 88557
+    },
+    {
+      "path": "Lang-11.json",
+      "sha256": "084097774f029e81a87e1e7d8282ad87912a5856fa202c63a6de0536f50ee609",
+      "size_bytes": 51927
+    },
+    {
+      "path": "Lang-12.json",
+      "sha256": "0608bc2d75381605d92c8e6674f6f551f6f4e6a7d2e6e013c2160bea8626e923",
+      "size_bytes": 72596
+    },
+    {
+      "path": "Lang-13.json",
+      "sha256": "19c7335405133a074ec478142a712bcfd9235814053fbb799a6ea791f459d3f4",
+      "size_bytes": 52147
+    },
+    {
+      "path": "Lang-14.json",
+      "sha256": "0d7cbc18ca1999590e6acb7205d75ec7ddd3f51dce52a1e0d390527f7e212fcd",
+      "size_bytes": 86507
+    },
+    {
+      "path": "Lang-5.json",
+      "sha256": "c3023299fe26f150ed277e7c4189919f1b469e3a65277dd82584eadbca00b6bf",
+      "size_bytes": 59060
+    },
+    {
+      "path": "Lang-6.json",
+      "sha256": "6976bf2c256a24dbf9b626f831252f69a264d496e14ca083f1788e225827ceb3",
+      "size_bytes": 140630
+    },
+    {
+      "path": "Lang-7.json",
+      "sha256": "cdc96a47fb290ddd70fa846696ca5a13b03ec64007d2ef4af09b339c586f4885",
+      "size_bytes": 101776
+    },
+    {
+      "path": "Lang-8.json",
+      "sha256": "4dbb2f63a8ce6b9bea21fd3da5f4bb1a2c194f7d1f80715f28896b6b6166ac1f",
+      "size_bytes": 68093
+    },
+    {
+      "path": "Lang-9.json",
+      "sha256": "bd41c0a76c264b0e302d46ff910a1173511d611c5aeea5e7d786d01b5f0dc680",
+      "size_bytes": 85696
+    },
+    {
+      "path": "README.md",
+      "sha256": "5854f7cbcfaeb59e519be0a996f7520653f8bd3205bebff4b83df8c30985d03d",
+      "size_bytes": 217
+    },
+    {
+      "path": "cohort.json",
+      "sha256": "0b7b37a4d322a1fd2c85470275a6dc7ff41673eb8c120e54b15030bc359a5d15",
+      "size_bytes": 1572
+    },
+    {
+      "path": "failures.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "index.json",
+      "sha256": "6ba43c5fe4cf96ecb6ee7ee8571109deda6a147a3becfa695bc8d29e8e20dc21",
+      "size_bytes": 2483
+    },
+    {
+      "path": "model_input.schema.json",
+      "sha256": "ab63e12a75f81a60339152d4cc9ebba29782279e360caaafe9f57416c734534c",
+      "size_bytes": 4815
+    },
+    {
+      "path": "status.json",
+      "sha256": "912dc2f323a73299580127511eedbf61870d6837a0c9096cebeeaabcfdd60588",
+      "size_bytes": 5433
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "profile": "B",
+  "cohort_id": "lang-expansion-20261023",
+  "requested_bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "failed_bugs": [],
+  "bugs": [
+    {
+      "bug_id": "Lang-5",
+      "path": "Lang-5.json",
+      "sha256": "c3023299fe26f150ed277e7c4189919f1b469e3a65277dd82584eadbca00b6bf",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-6",
+      "path": "Lang-6.json",
+      "sha256": "6976bf2c256a24dbf9b626f831252f69a264d496e14ca083f1788e225827ceb3",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-7",
+      "path": "Lang-7.json",
+      "sha256": "cdc96a47fb290ddd70fa846696ca5a13b03ec64007d2ef4af09b339c586f4885",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-8",
+      "path": "Lang-8.json",
+      "sha256": "4dbb2f63a8ce6b9bea21fd3da5f4bb1a2c194f7d1f80715f28896b6b6166ac1f",
+      "candidate_count": 20,
+      "failing_test_count": 2
+    },
+    {
+      "bug_id": "Lang-9",
+      "path": "Lang-9.json",
+      "sha256": "bd41c0a76c264b0e302d46ff910a1173511d611c5aeea5e7d786d01b5f0dc680",
+      "candidate_count": 20,
+      "failing_test_count": 2
+    },
+    {
+      "bug_id": "Lang-10",
+      "path": "Lang-10.json",
+      "sha256": "1e9762b0aef458beb4525269621dea372bcaad0277699f566b89be2a00d3998b",
+      "candidate_count": 20,
+      "failing_test_count": 2
+    },
+    {
+      "bug_id": "Lang-11",
+      "path": "Lang-11.json",
+      "sha256": "084097774f029e81a87e1e7d8282ad87912a5856fa202c63a6de0536f50ee609",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-12",
+      "path": "Lang-12.json",
+      "sha256": "0608bc2d75381605d92c8e6674f6f551f6f4e6a7d2e6e013c2160bea8626e923",
+      "candidate_count": 20,
+      "failing_test_count": 2
+    },
+    {
+      "bug_id": "Lang-13",
+      "path": "Lang-13.json",
+      "sha256": "19c7335405133a074ec478142a712bcfd9235814053fbb799a6ea791f459d3f4",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    },
+    {
+      "bug_id": "Lang-14",
+      "path": "Lang-14.json",
+      "sha256": "0d7cbc18ca1999590e6acb7205d75ec7ddd3f51dce52a1e0d390527f7e212fcd",
+      "candidate_count": 20,
+      "failing_test_count": 1
+    }
+  ],
+  "methodological_exclusions_status": "pending_person_c_review"
+}

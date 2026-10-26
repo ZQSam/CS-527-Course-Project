@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "release_id": "lang-expansion-20261023",
+  "requested_bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "bugs": [
+    "Lang-5",
+    "Lang-6",
+    "Lang-7",
+    "Lang-8",
+    "Lang-9",
+    "Lang-10",
+    "Lang-11",
+    "Lang-12",
+    "Lang-13",
+    "Lang-14"
+  ],
+  "failed_bugs": [],
+  "registration_sha256": "84b71749cc1d30569285640a55ddcd4a6ea63f0e018702bc2c8b36a3532dea8a",
+  "B": {
+    "directory": "data/batches/lang-expansion-20261023/B",
+    "manifest_sha256": "3a5256d3dff21ddf1e9d408e9c450ea1c04e894c95345780346b3f174470e065"
+  },
+  "C": {
+    "archive": "data/batches/lang-expansion-20261023/person-a-lang-C.zip",
+    "sha256": "fafe5bd9ee46996152c50bd6ea54043d7d9fee56823e0ec47f8c7ac59b2f23e1",
+    "size_bytes": 19925208,
+    "directory": ".work/batches/lang-expansion-20261023/C"
+  }
+}
